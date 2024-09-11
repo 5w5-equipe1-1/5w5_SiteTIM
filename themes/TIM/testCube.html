@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Cube</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #141414;
+        }
+        .scene {
+            width: 200px;
+            height: 200px;
+            perspective: 600px;
+            transition: perspective 1s;
+        }
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+        }
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .front  { transform: rotateY(  0deg) translateZ(100px); }
+        .back   { transform: rotateY(180deg) translateZ(100px); }
+        .right  { transform: rotateY( 90deg) translateZ(100px); }
+        .left   { transform: rotateY(-90deg) translateZ(100px); }
+        .top    { transform: rotateX( 90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+        .button-27 {
+            appearance: none;
+            background-color: #000000;
+            border: 2px solid #1A1A1A;
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            width: 60%;
+        }
+
+        .button-27:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .button-27:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+
+        #front {
+            background-image: url("palettes/experiment_11coul.png");
+            background-position: center;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h3 {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scene" id="scene">
+        <div class="cube" id="cube">
+            <div class="front" id="front">
+                <h3>3D</h3>
+                <button class="button-27" role="button">Explorer</button>
+            </div>
+            <div class="back" id="back">2</div>
+            <div class="right" id="right">3</div>
+            <div class="left" id="left">4</div>
+            <div class="top" id="top">5</div>
+            <div class="bottom" id="bottom">6</div>
+        </div>
+    </div>
+    <script>
+        let cube = document.getElementById('cube');
+        let scene = document.getElementById('scene');
+        let isCubeSelected = false;
+        let touchStart = { x: 0, y: 0 };
+        let mouseStart = { x: 0, y: 0 };
+        let rotation = { x: 0, y: 0 };
+        let autoRotate = true;  // Variable to control auto-rotation
+        let rotateTimeout;  // Timeout pour démarrer la rotation après 1 seconde
+        const sensitivity = 1.2;  // Augmentation du facteur de rotation
+
+        // Variable pour gérer la vitesse de rotation initiale
+        let initialRotationSpeed = 10;
+        let finalRotationSpeed = 0.12;
+
+        // Rotation continue du cube
+        function rotateCubeAutomatically() {
+            if (autoRotate && !isCubeSelected) {
+                // Si la vitesse initiale est encore active, la diminuer progressivement
+                if (initialRotationSpeed > finalRotationSpeed) {
+                    initialRotationSpeed *= 0.98;  // Diminuer la vitesse progressivement
+                }
+
+                rotation.y -= initialRotationSpeed;  // Rotation sur l'axe Y
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+            }
+            requestAnimationFrame(rotateCubeAutomatically);
+        }
+
+        // Initialiser l'auto-rotation
+        rotateCubeAutomatically();
+
+        function updateCubeRotation() {
+            if (!isCubeSelected) {
+                cube.style.transition = 'none';  // Désactiver les transitions pendant le déplacement
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+            }
+        }
+
+        function onMouseMove(event) {
+            autoRotate = false;  // Désactiver l'auto-rotation en cas d'interaction
+            clearTimeout(rotateTimeout);  // Réinitialiser le délai de rotation
+            const deltaX = event.clientX - mouseStart.x;
+            const deltaY = event.clientY - mouseStart.y;
+
+            rotation.y += deltaX * sensitivity;
+            rotation.x -= deltaY * sensitivity;
+
+            mouseStart = { x: event.clientX, y: event.clientY };
+
+            updateCubeRotation();
+        }
+
+        function onTouchMove(event) {
+            autoRotate = false;  // Désactiver l'auto-rotation en cas d'interaction
+            clearTimeout(rotateTimeout);  // Réinitialiser le délai de rotation
+            if (event.touches.length > 0) {
+                const touch = event.touches[0];
+                const deltaX = touch.clientX - touchStart.x;
+                const deltaY = touch.clientY - touchStart.y;
+
+                rotation.y += deltaX * sensitivity;
+                rotation.x -= deltaY * sensitivity;
+
+                touchStart = { x: touch.clientX, y: touch.clientY };
+
+                updateCubeRotation();
+            }
+        }
+
+        function onMouseUp() {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+            cube.style.transition = 'transform 0.1s ease-out';  // Réactiver la transition après le mouvement
+            // Définir un délai de 1 seconde avant de réactiver l'auto-rotation
+            rotateTimeout = setTimeout(() => {
+                autoRotate = true;
+            }, 1000);  // Délai de 1 seconde
+        }
+
+        function onTouchEnd() {
+            document.removeEventListener('touchmove', onTouchMove);
+            document.removeEventListener('touchend', onTouchEnd);
+            cube.style.transition = 'transform 0.1s ease-out';  // Réactiver la transition après le mouvement
+            // Définir un délai de 1 seconde avant de réactiver l'auto-rotation
+            rotateTimeout = setTimeout(() => {
+                autoRotate = true;
+            }, 0);  // Délai de 1 seconde
+        }
+
+        document.addEventListener('mousedown', function(event) {
+            if (!isCubeSelected || event.target.closest('.cube')) {
+                mouseStart = { x: event.clientX, y: event.clientY };
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            }
+        });
+
+        document.addEventListener('touchstart', function(event) {
+            if (!isCubeSelected || event.target.closest('.cube')) {
+                const touch = event.touches[0];
+                touchStart = { x: touch.clientX, y: touch.clientY };
+                document.addEventListener('touchmove', onTouchMove);
+                document.addEventListener('touchend', onTouchEnd);
+            }
+        });
+
+        document.querySelectorAll('.cube div').forEach(face => {
+            face.addEventListener('click', function() {
+                isCubeSelected = true;
+                autoRotate = false;  // Arrêter l'auto-rotation lorsque zoomé
+                clearTimeout(rotateTimeout);  // Réinitialiser le délai de rotation
+                cube.style.transition = 'transform 1s';  // Réactiver les transitions pour le zoom
+                switch (this.id) {
+                    case 'front':
+                        rotation.x = 0;
+                        rotation.y = 0;
+                        break;
+                    case 'back':
+                        rotation.x = 0;
+                        rotation.y = 180;
+                        break;
+                    case 'right':
+                        rotation.x = 0;
+                        rotation.y = -90;
+                        break;
+                    case 'left':
+                        rotation.x = 0;
+                        rotation.y = 90;
+                        break;
+                    case 'top':
+                        rotation.x = -90;
+                        rotation.y = 0;
+                        break;
+                    case 'bottom':
+                        rotation.x = 90;
+                        rotation.y = 0;
+                        break;
+                }
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+
+                // Ajuster le zoom pour les appareils mobiles
+                if (window.innerWidth <= 768) {
+                    scene.style.perspective = '300px'; // Zoomer plus près pour les mobiles
+                } else {
+                    scene.style.perspective = '140px'; // Zoomer à une distance standard pour les autres appareils
+                }
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.cube')) {
+                isCubeSelected = false;
+                scene.style.perspective = '600px';
+                cube.style.transition = 'transform 0.1s ease-out';  // Réactiver la transition pour revenir à la normale
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+                // Réactiver l'auto-rotation après 1 seconde
+                rotateTimeout = setTimeout(() => {
+                    autoRotate = true;
+                }, 0);
+            }
+        });
+    </script>
+</body>
+</html>
