@@ -44,6 +44,12 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /* ----------------------------------------------------- */
 /*Composants*/
 /* ----------------------------------------------------- */
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--couleur-blanc);
+}
+
 h2 {
   font-weight: bold;
   font-size: 25px;
@@ -54,33 +60,7 @@ h3 {
   font-weight: bold;
   text-align: center;
   font-size: 35px;
-}
-
-.TIM_entete {
-  text-align: left;
-  display: none;
-}
-
-.conteneur_logo_tim {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--margin-left-mobile);
-}
-
-/* ----------------------------------------------------- */
-/*Le Cube*/
-/* ----------------------------------------------------- */
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: var(--couleur-noir);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--couleur-noir);
 }
 
 header {
@@ -96,12 +76,67 @@ header {
   margin-top: 0.5%;
 }
 
-/*style pour le cube*/
+.conteneur_burger_recherche {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--margin-left-mobile);
+  width: 30%;
+}
+
+.TIM_entete {
+  text-align: left;
+  display: none;
+}
+
+.conteneur_logo_tim {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--margin-left-mobile);
+}
+
+.logo_tim {
+  width: 50px;
+  height: 50px;
+}
+
+.text_recherche {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
+  background-color: var(--couleur-noir);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.description_multimedia {
+  margin-top: var(--margin-top-mobile);
+}
+
+p {
+  color: var(--couleur-blanc);
+}
+
+/* ----------------------------------------------------- */
+/*Le Cube*/
+/* ----------------------------------------------------- */
 .scene {
   width: 200px;
   height: 200px;
   perspective: 600px;
   transition: perspective 1s;
+  margin: 0 auto;
+  margin-top: 32vh;
+  margin-bottom: 35vh;
 }
 
 .cube {
@@ -121,8 +156,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
-  font-weight: bold;
   cursor: pointer;
 }
 
