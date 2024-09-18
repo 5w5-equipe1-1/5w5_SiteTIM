@@ -9,7 +9,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main{
+    
+}
+
+//section ou on décrit quest ce que le multimédia
 .description_multimedia{
     margin-top: var(--margin-top-mobile);
 }
 
+//section ou on montre les concours et les événements
+.description_evenements{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+}

@@ -126,6 +126,13 @@ body {
   margin-top: var(--margin-top-mobile);
 }
 
+.description_evenements {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+}
+
 p {
   color: var(--couleur-secondaire);
 }
@@ -149,8 +156,7 @@ button {
   perspective: 600px;
   transition: perspective 1s;
   margin: 0 auto;
-  margin-top: 32vh;
-  margin-bottom: 35vh;
+  position: relative;
 }
 
 .cube {

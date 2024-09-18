@@ -23,6 +23,7 @@ let cube = document.getElementById('cube');
 
                 rotation.y -= initialRotationSpeed;  // Rotation sur l'axe Y
                 cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+                //-------------FAIRE EN SORTE QUE LE CUBE NE SPIN PAS 10ANS APRES AVOIR SELECTIONNER UNE FACE
             }
             requestAnimationFrame(rotateCubeAutomatically);
         }
