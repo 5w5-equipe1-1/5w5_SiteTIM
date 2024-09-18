@@ -37,8 +37,8 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --font-family-text: "Arial", sans-serif;
   --font-family-titre: ;
   --taille-paragrahpe-mobile: ;
-  --couleur-blanc: #f0f0f0;
-  --couleur-noir: #1a1a1a;
+  --couleur-secondaire: #f0f0f0;
+  --couleur-primaire: #1a1a1a;
 }
 
 /* ----------------------------------------------------- */
@@ -47,20 +47,20 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 h1 {
   font-weight: bold;
   font-size: 30px;
-  color: var(--couleur-blanc);
+  color: var(--couleur-secondaire);
 }
 
 h2 {
   font-weight: bold;
   font-size: 25px;
-  color: var(--couleur-blanc);
+  color: var(--couleur-secondaire);
 }
 
 h3 {
   font-weight: bold;
   text-align: center;
   font-size: 35px;
-  color: var(--couleur-noir);
+  color: var(--couleur-primaire);
 }
 
 header {
@@ -72,8 +72,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 99%;
-  margin: 0 auto;
-  margin-top: 0.5%;
+  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
 }
 
 .conteneur_burger_recherche {
@@ -82,7 +81,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: var(--margin-left-mobile);
-  width: 30%;
+  width: 15%;
 }
 
 .TIM_entete {
@@ -107,6 +106,11 @@ header {
   display: none;
 }
 
+.fa-magnifying-glass {
+  color: var(--couleur-secondaire);
+  font-size: 30px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -114,7 +118,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
-  background-color: var(--couleur-noir);
+  background-color: var(--couleur-primaire);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -123,7 +127,17 @@ body {
 }
 
 p {
-  color: var(--couleur-blanc);
+  color: var(--couleur-secondaire);
+}
+
+.info_action {
+  color: var(--couleur-secondaire);
+  opacity: 0.5;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
 
 /* ----------------------------------------------------- */
@@ -151,8 +165,8 @@ p {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: var(--couleur-blanc);
-  border: 0.5px solid var(--couleur-blanc);
+  background: var(--couleur-secondaire);
+  border: 0.5px solid var(--couleur-secondaire);
   display: flex;
   justify-content: center;
   align-items: center;

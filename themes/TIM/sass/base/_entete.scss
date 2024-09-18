@@ -7,8 +7,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 99%;
-    margin: 0 auto;
-    margin-top: 0.5%;
+    margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);  
 }
 
 .conteneur_burger_recherche{
@@ -17,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: var(--margin-left-mobile);
-    width: 30%;
+    width: 15%;
 }
 
 .TIM_entete{
@@ -40,4 +39,9 @@ header {
 
 .text_recherche{
     display: none;
+}
+
+.fa-magnifying-glass{
+    color: var(--couleur-secondaire);
+    font-size: 30px;
 }
