@@ -122,6 +122,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+main {
+  transform: translateY(50vh);
+}
+
 .description_multimedia {
   margin-top: var(--margin-top-mobile);
 }
@@ -131,15 +135,33 @@ body {
   flex-direction: row;
   align-items: top;
   justify-content: space-between;
+  gap: 2vw;
+}
+
+.description_evenements:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+
+.description_evenements p {
+  width: 60vw;
+}
+
+.img_evenements {
+  background-image: none;
+  background-color: var(--couleur-secondaire);
+  width: 150px;
+  height: 150px;
 }
 
 p {
   color: var(--couleur-secondaire);
+  margin: 0;
 }
 
 .info_action {
   color: var(--couleur-secondaire);
   opacity: 0.5;
+  transform: translateY(30vh);
 }
 
 button {
@@ -157,6 +179,7 @@ button {
   transition: perspective 1s;
   margin: 0 auto;
   position: relative;
+  transform: translateY(20vh);
 }
 
 .cube {

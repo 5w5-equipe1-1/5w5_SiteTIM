@@ -10,7 +10,7 @@ body {
 }
 
 main{
-    
+    transform: translateY(50vh);
 }
 
 //section ou on décrit quest ce que le multimédia
@@ -24,4 +24,20 @@ main{
     flex-direction: row;
     align-items: top;
     justify-content: space-between;
+    gap: 2vw;
+}
+
+.description_evenements:nth-of-type(2){
+    flex-direction: row-reverse;
+}
+
+.description_evenements p{
+    width: 60vw;
+}
+
+.img_evenements{
+    background-image: none;
+    background-color: var(--couleur-secondaire);
+    width: 150px;
+    height: 150px;
 }

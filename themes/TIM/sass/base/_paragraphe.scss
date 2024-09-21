@@ -1,8 +1,10 @@
 p{
      color: var(--couleur-secondaire);
+     margin: 0;
 }
 
 .info_action{
      color: var(--couleur-secondaire);
      opacity: 0.5;
+     transform: translateY(30vh);
 }
