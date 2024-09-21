@@ -6,5 +6,10 @@ p{
 .info_action{
      color: var(--couleur-secondaire);
      opacity: 0.5;
-     transform: translateY(30vh);
+     transform: translateY(85vh);
+}
+
+li{
+     color: var(--couleur-secondaire);
+     margin: 10px;
 }
