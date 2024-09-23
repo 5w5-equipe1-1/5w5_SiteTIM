@@ -145,6 +145,17 @@ div {
   flex-direction: row;
   align-items: top;
   justify-content: space-between;
+  background-color: blue;
+}
+
+.description_evenements:nth-of-type(even) {
+  background-color: green;
+  flex-direction: row-reverse;
+}
+
+.bannieres {
+  text-align: center;
+  background-color: var(--couleur-secondaire);
 }
 
 p {
@@ -174,14 +185,13 @@ button {
 /* ----------------------------------------------------- */
 #scene {
   width: 200px;
-  height: 200px !important;
+  height: 200px;
   perspective: 600px;
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 50vh;
+  margin-top: 90vh;
   position: relative;
-  transform: translateY(50vh);
 }
 
 .cube {

@@ -1,14 +1,13 @@
 //style CSS pour le cube 3D - le menu burger quand il est ouvert et un élément de la page d'accueil
 #scene {
     width: 200px;
-    height: 200px !important;
+    height: 200px ;
     perspective: 600px;
     transition: perspective 1s;
     margin: 0 auto;
     margin-bottom: 30vh;
-    margin-top: 50vh;
+    margin-top: 90vh;
     position: relative;
-    transform: translateY(50vh);
 }
 
 .cube {
