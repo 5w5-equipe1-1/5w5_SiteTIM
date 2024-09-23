@@ -6,7 +6,7 @@
     transition: perspective 1s;
     margin: 0 auto;
     margin-bottom: 30vh;
-    margin-top: 90vh;
+    margin-top: 140vh;
     position: relative;
 }
 
@@ -37,3 +37,10 @@
 .left   { transform: rotateY(-90deg) translateZ(100px); }
 .top    { transform: rotateX( 90deg) translateZ(100px); }
 .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+.front, .back, .right, .left, .top, .bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

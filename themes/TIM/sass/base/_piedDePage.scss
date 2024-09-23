@@ -1,0 +1,31 @@
+//feuille de style du pied de page
+footer{
+    background-color: purple;
+    width: 100vw;
+    height: 30vh;
+}
+
+.info_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 80vw;
+    margin-left: 20vw;
+    transform: translateY(-10vh);
+}
+
+.colonne_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    height: 100%;
+}
+
+.titre_footer{
+    transform: rotate(-90deg) translateY(-10vh) translateX(-7vh);
+    color: var(--couleur-secondaire);
+    width: 30vh;
+}

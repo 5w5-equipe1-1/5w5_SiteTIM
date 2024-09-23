@@ -14,11 +14,6 @@ div{
     margin: 0;
 }
 
-main{
-    
-}
-
-
 //section ou on décrit quest ce que le multimédia
 .description_multimedia{
     margin-top: var(--margin-top-mobile);
@@ -43,5 +38,7 @@ main{
 .bannieres{
     text-align: center;
     background-color: var(--couleur-secondaire);
-
+    margin-top: var(--margin-top-mobile);
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
