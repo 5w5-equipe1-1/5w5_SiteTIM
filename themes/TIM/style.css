@@ -66,9 +66,7 @@ h2 {
 
 h3 {
   font-weight: bold;
-  text-align: center;
-  font-size: 35px;
-  color: var(--couleur-primaire);
+  color: var(--couleur-secondaire);
 }
 
 header {
@@ -125,7 +123,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
+  margin-top: var(--margin-top-mobile);
+  margin-bottom: var(--margin-bottom-mobile);
   background-color: var(--couleur-primaire);
   font-family: Arial, Helvetica, sans-serif;
 }
