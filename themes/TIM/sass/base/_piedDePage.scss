@@ -2,7 +2,7 @@
 footer{
     background-color: purple;
     width: 100vw;
-    height: 30vh;
+    height: 100vh;
 }
 
 .info_footer{
@@ -11,9 +11,8 @@ footer{
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 80vw;
-    margin-left: 20vw;
-    transform: translateY(-10vh);
+    width: 90vw;
+    margin: 0 auto;
 }
 
 .colonne_footer{
@@ -25,7 +24,16 @@ footer{
 }
 
 .titre_footer{
-    transform: rotate(-90deg) translateY(-10vh) translateX(-7vh);
     color: var(--couleur-secondaire);
     width: 30vh;
+}
+
+//Style pour tabelette
+@media screen and (min-width: 1280px){
+    
+}
+
+//Style pour Ordinateur
+@media screen and (min-width: 1920px){
+    
 }

@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: var(--margin-left-mobile);
-    width: 15%;
+    width: 15vw;
 }
 
 .TIM_entete{
@@ -44,4 +44,16 @@ header {
 .fa-magnifying-glass{
     color: var(--couleur-secondaire);
     font-size: 30px;
+}
+
+//Style pour tabelette
+@media screen and (min-width: 1280px){
+    .conteneur_burger_recherche{
+        width: 8vw;
+    }
+}
+
+//Style pour Ordinateur
+@media screen and (min-width: 1920px){
+    
 }
