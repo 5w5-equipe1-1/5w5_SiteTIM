@@ -1,7 +1,3 @@
-main{
-    
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -17,13 +13,14 @@ div{
     margin: 0;
 }
 
-
-
+.conteneur{
+    
+}
 
 //section ou on décrit quest ce que le multimédia
 .description_multimedia{
     margin-top: var(--margin-top-mobile);
-    background-color: orange;
+    background-color: red;
     text-align: left;
 }
 

@@ -66,9 +66,15 @@ h2 {
 
 h3 {
   font-weight: bold;
-  text-align: center;
-  font-size: 35px;
+  color: var(--couleur-secondaire);
+}
+
+.cube div h3 {
   color: var(--couleur-primaire);
+}
+
+h4 {
+  margin: 0;
 }
 
 header {
@@ -136,7 +142,7 @@ div {
 
 .description_multimedia {
   margin-top: var(--margin-top-mobile);
-  background-color: orange;
+  background-color: red;
   text-align: left;
 }
 
@@ -156,6 +162,37 @@ div {
 .bannieres {
   text-align: center;
   background-color: var(--couleur-secondaire);
+}
+
+footer {
+  background-color: purple;
+  width: 100vw;
+  height: 30vh;
+}
+
+.info_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 80vw;
+  margin-left: 20vw;
+  transform: translateY(-10vh);
+}
+
+.colonne_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  height: 100%;
+}
+
+.titre_footer {
+  transform: rotate(-90deg) translateY(-10vh) translateX(-7vh);
+  color: var(--couleur-secondaire);
+  width: 30vh;
 }
 
 p {
@@ -178,6 +215,11 @@ li {
 button {
   background-color: transparent;
   border: none;
+}
+
+.bouton_cube a {
+  text-decoration: none;
+  color: var(--couleur-primaire);
 }
 
 /* ----------------------------------------------------- */
@@ -207,7 +249,7 @@ button {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 90vh;
+  margin-top: 140vh;
   position: relative;
 }
 
@@ -253,4 +295,11 @@ button {
 
 .bottom {
   transform: rotateX(-90deg) translateZ(100px);
+}
+
+.front, .back, .right, .left, .top, .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
