@@ -102,19 +102,20 @@
 <body>
     <div class="scene" id="scene">
         <div class="cube" id="cube">
-            <div class="front" id="front">
+            <div class="front face" id="front">
                 <h3>3D</h3>
                 <button class="button-27" role="button">Explorer</button>
             </div>
-            <div class="back" id="back">2</div>
-            <div class="right" id="right">3</div>
-            <div class="left" id="left">4</div>
-            <div class="top" id="top">5</div>
-            <div class="bottom" id="bottom">6</div>
+            <div class="back face" id="back">2</div>
+            <div class="right face" id="right">3</div>
+            <div class="left face" id="left">4</div>
+            <div class="top face" id="top">5</div>
+            <div class="bottom face" id="bottom">6</div>
         </div>
     </div>
     <script>
         let cube = document.getElementById('cube');
+        let lesFaces = document.querySelectorAll('.face');
         let scene = document.getElementById('scene');
         let isCubeSelected = false;
         let touchStart = { x: 0, y: 0 };
@@ -239,19 +240,19 @@
                 if (window.innerWidth <= 768) {
                     scene.style.perspective = '300px'; 
                 } else {
-                    scene.style.perspective = '140px'; 
+                    scene.style.perspective = '160px'; 
                 }
             });
         });
-
+        
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.cube')) {
-                if (!scene.classList.contains('shrink')) return;  // Ignore click if not in shrink state
+                if (scene.classList.contains('shrink')) return;  // Ignore click if not in shrink state
                 // Return to normal state with zoom-out effect
                 scene.classList.remove('shrink');
                 isCubeSelected = false;
                 scene.style.perspective = '600px';
-                cube.style.transition = 'transform 0.5s ease-out';  
+                cube.style.transition = 'transform 0.1s ease-out';  
                 cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
                 setTimeout(() => {
                     autoRotate = true;  
@@ -294,7 +295,15 @@
             document.removeEventListener('touchmove', onTouchMove);
             document.removeEventListener('touchend', onTouchEnd);
         }
-
+      
+        if(scene.classList.contains('shrink')) {
+            for(let face of lesFaces) {
+                face.addEventListener('click', function() {
+                    scene.classList.remove('shrink');
+                    console.log("je click");
+                });
+            }
+        }
     </script>
 </body>
 </html>
