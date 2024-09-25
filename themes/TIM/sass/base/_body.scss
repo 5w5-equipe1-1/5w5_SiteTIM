@@ -4,14 +4,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin-top: var(--margin-top-mobile);
-    margin-bottom: var(--margin-bottom-mobile);
+    margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
     background-color: var(--couleur-primaire);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 div{
     margin: 0;
+}
+
+.conteneur{
+    
 }
 
 //section ou on décrit quest ce que le multimédia
@@ -38,9 +41,7 @@ div{
 .bannieres{
     text-align: center;
     background-color: var(--couleur-secondaire);
-    margin-top: var(--margin-top-mobile);
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+
 }
 
 //Style pour tabelette
