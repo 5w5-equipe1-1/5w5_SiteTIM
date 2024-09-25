@@ -116,211 +116,183 @@
     <script>
         let cube = document.getElementById('cube');
         let scene = document.getElementById('scene');
-        let frontFace = document.getElementById('front');
-        let backFace = document.getElementById('back');
-        let rightFace = document.getElementById('right');
-        let leftFace = document.getElementById('left');
-        let topFace = document.getElementById('top');
-        let bottomFace = document.getElementById('bottom');
         let isCubeSelected = false;
         let touchStart = { x: 0, y: 0 };
         let mouseStart = { x: 0, y: 0 };
         let rotation = { x: 0, y: 0 };
-        let autoRotate = true;  // Variable to control auto-rotation
-        let rotateTimeout;  // Timeout pour démarrer la rotation après 1 seconde
-        const sensitivity = 1.2;  // Augmentation du facteur de rotation
- 
-        // Variable pour gérer la vitesse de rotation initiale
+        let autoRotate = true;  
+        let rotateTimeout;  
+        const sensitivity = 1.2;  
         let initialRotationSpeed = 10;
         let finalRotationSpeed = 0.12;
- 
-        if(!scene.classList.contains('shrink')) {
-            
-            // Rotation continue du cube
-            function rotateCubeAutomatically() {
-                if (autoRotate && !isCubeSelected) {
-                    // Si la vitesse initiale est encore active, la diminuer progressivement
-                    if (initialRotationSpeed > finalRotationSpeed) {
-                        initialRotationSpeed *= 0.98;  // Diminuer la vitesse progressivement
-                    }
-    
-                    rotation.y -= initialRotationSpeed;  // Rotation sur l'axe Y
-                    cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
-                }
-                requestAnimationFrame(rotateCubeAutomatically);
-            }
-    
-            // Initialiser l'auto-rotation
-            rotateCubeAutomatically();
-    
-            //fonction qui fait tourner le cube suite a un appel
-            function updateCubeRotation() {
-                if (!isCubeSelected) {
-                    cube.style.transition = 'none';  // Désactiver les transitions pendant le déplacement
-                    cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
-                    
-                }
-            }
-    
 
-            function onMouseMove(event) {
-                autoRotate = false;  // Désactiver l'auto-rotation en cas d'interaction
-                clearTimeout(rotateTimeout);  // Réinitialiser le délai de rotation
+        // Rotation automatique du cube
+        function rotateCubeAutomatically() {
+            if (autoRotate) {
+                if (initialRotationSpeed > finalRotationSpeed) {
+                    initialRotationSpeed *= 0.98;  
+                }
+                rotation.y -= initialRotationSpeed;  
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+            }
+            requestAnimationFrame(rotateCubeAutomatically);
+        }
+
+        rotateCubeAutomatically();
+
+        function updateCubeRotation() {
+            cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+        }
+
+        function onMouseMove(event) {
+            if (!scene.classList.contains('shrink')) {
+                autoRotate = false;  
                 const deltaX = event.clientX - mouseStart.x;
                 const deltaY = event.clientY - mouseStart.y;
-    
                 rotation.y += deltaX * sensitivity;
                 rotation.x -= deltaY * sensitivity;
-    
                 mouseStart = { x: event.clientX, y: event.clientY };
-    
                 updateCubeRotation();
             }
-    
-            function onTouchMove(event) {
-                autoRotate = false;  // Désactiver l'auto-rotation en cas d'interaction
-                clearTimeout(rotateTimeout);  // Réinitialiser le délai de rotation
-                if (event.touches.length > 0) {
-                    const touch = event.touches[0];
-                    const deltaX = touch.clientX - touchStart.x;
-                    const deltaY = touch.clientY - touchStart.y;
-    
-                    rotation.y += deltaX * sensitivity;
-                    rotation.x -= deltaY * sensitivity;
-    
-                    touchStart = { x: touch.clientX, y: touch.clientY };
-    
-                    updateCubeRotation();
-                }
-            }
-    
-            function onMouseUp() {
-                document.removeEventListener('mousemove', onMouseMove);
-                document.removeEventListener('mouseup', onMouseUp);
-                cube.style.transition = 'transform 0.1s ease-out';  // Réactiver la transition après le mouvement
-                // Définir un délai de 0 seconde avant de réactiver l'auto-rotation
-                rotateTimeout = setTimeout(() => {
-                    autoRotate = true;
-                }, 0);  // Délai de 0 seconde
-            }
-    
-            function onTouchEnd() {
-                document.removeEventListener('touchmove', onTouchMove);
-                document.removeEventListener('touchend', onTouchEnd);
-                cube.style.transition = 'transform 0.1s ease-out';  // Réactiver la transition après le mouvement
-                // Définir un délai de 0 seconde avant de réactiver l'auto-rotation
-                rotateTimeout = setTimeout(() => {
-                    autoRotate = true;
-                }, 0);  // Délai de 0 seconde
-            }
-    
-            document.addEventListener('mousedown', function(event) {
-                if (!isCubeSelected || event.target.closest('.cube')) {
-                    mouseStart = { x: event.clientX, y: event.clientY };
-                    document.addEventListener('mousemove', onMouseMove);
-                    document.addEventListener('mouseup', onMouseUp);
-                }
-            });
-    
-            document.addEventListener('touchstart', function(event) {
-                if (!isCubeSelected || event.target.closest('.cube')) {
-                    const touch = event.touches[0];
-                    touchStart = { x: touch.clientX, y: touch.clientY };
-                    document.addEventListener('touchmove', onTouchMove);
-                    document.addEventListener('touchend', onTouchEnd);
-                }
-            });
-    
-            document.querySelectorAll('.cube div').forEach(face => {
-                face.addEventListener('click', function() {
-                    isCubeSelected = true;
-                    autoRotate = false;  // Arrêter l'auto-rotation lorsque zoomé
-                    clearTimeout(rotateTimeout);  // Réinitialiser le délai de rotation
-                    cube.style.transition = 'transform 1s';  // Réactiver les transitions pour le zoom
-                    switch (this.id) {
-                        case 'front':
-                            rotation.x = 0;
-                            rotation.y = 0;
-                            break;
-                        case 'back':
-                            rotation.x = 0;
-                            rotation.y = 180;
-                            break;
-                        case 'right':
-                            rotation.x = 0;
-                            rotation.y = -90;
-                            break;
-                        case 'left':
-                            rotation.x = 0;
-                            rotation.y = 90;
-                            break;
-                        case 'top':
-                            rotation.x = -90;
-                            rotation.y = 0;
-                            break;
-                        case 'bottom':
-                            rotation.x = 90;
-                            rotation.y = 0;
-                            break;
-                    }
-                    cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
-    
-                    // Ajuster le zoom pour les appareils mobiles
-                    if (window.innerWidth <= 768) {
-                        scene.style.perspective = '300px'; // Zoomer plus près pour les mobiles
-                    } else {
-                        scene.style.perspective = '140px'; // Zoomer à une distance standard pour les autres appareils
-                    }
-                });
-            });
-    
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('.cube')) {
-                    isCubeSelected = false;
-                    scene.style.perspective = '600px';
-                    cube.style.transition = 'transform 0.1s ease-out';  // Réactiver la transition pour revenir à la normale
-                    cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
-                    // Réactiver l'auto-rotation après 1 seconde
-                    rotateTimeout = setTimeout(() => {
-                        autoRotate = true;
-                    }, 0);
-                }
-            });
-
-
-            // Bouton pour changer la taille du cube
-            let boutonChangement = document.querySelector('.button-27');
-
-            boutonChangement.addEventListener('click', function() {
-                scene.classList.toggle('shrink');
-                
-            });
         }
 
-        //quand le cube est petit, on ne peut pas faire tourner le cube
-        else {
-            //enlever la classe shrink pour pouvoir faire tourner le cube et continuer d'intéragir avec
-            // frontFace.addEventListener('click', function() {
-            //     scene.classList.remove('shrink');
-            // });
-            // backFace.addEventListener('click', function() {
-            //     scene.classList.remove('shrink');
-            // });
-            // leftFace.addEventListener('click', function() {
-            //     scene.classList.remove('shrink');
-            // });
-            // rightFace.addEventListener('click', function() {
-            //     scene.classList.remove('shrink');
-            // });
-            // topFace.addEventListener('click', function() {
-            //     scene.classList.remove('shrink');
-            // });
-            // bottomFace.addEventListener('click', function() {
-            //     scene.classList.remove('shrink');
-            // });
-
-
+        function onTouchMove(event) {
+            if (!scene.classList.contains('shrink') && event.touches.length > 0) {
+                autoRotate = false;  
+                const touch = event.touches[0];
+                const deltaX = touch.clientX - touchStart.x;
+                const deltaY = touch.clientY - touchStart.y;
+                rotation.y += deltaX * sensitivity;
+                rotation.x -= deltaY * sensitivity;
+                touchStart = { x: touch.clientX, y: touch.clientY };
+                updateCubeRotation();
+            }
         }
+
+        function onMouseUp() {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+            cube.style.transition = 'transform 0.1s ease-out';  
+            rotateTimeout = setTimeout(() => {
+                autoRotate = true;
+            }, 0);  
+        }
+
+        function onTouchEnd() {
+            document.removeEventListener('touchmove', onTouchMove);
+            document.removeEventListener('touchend', onTouchEnd);
+            cube.style.transition = 'transform 0.1s ease-out';  
+            rotateTimeout = setTimeout(() => {
+                autoRotate = true;
+            }, 0);  
+        }
+
+        document.addEventListener('mousedown', function(event) {
+            mouseStart = { x: event.clientX, y: event.clientY };
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+
+        document.addEventListener('touchstart', function(event) {
+            const touch = event.touches[0];
+            touchStart = { x: touch.clientX, y: touch.clientY };
+            document.addEventListener('touchmove', onTouchMove);
+            document.addEventListener('touchend', onTouchEnd);
+        });
+
+        document.querySelectorAll('.cube div').forEach(face => {
+            face.addEventListener('click', function() {
+                if (scene.classList.contains('shrink')) return;  // Ignore click if in shrink state
+                isCubeSelected = true;
+                autoRotate = false;  
+                clearTimeout(rotateTimeout);  
+                cube.style.transition = 'transform 1s';  
+                switch (this.id) {
+                    case 'front':
+                        rotation.x = 0;
+                        rotation.y = 0;
+                        break;
+                    case 'back':
+                        rotation.x = 0;
+                        rotation.y = 180;
+                        break;
+                    case 'right':
+                        rotation.x = 0;
+                        rotation.y = -90;
+                        break;
+                    case 'left':
+                        rotation.x = 0;
+                        rotation.y = 90;
+                        break;
+                    case 'top':
+                        rotation.x = -90;
+                        rotation.y = 0;
+                        break;
+                    case 'bottom':
+                        rotation.x = 90;
+                        rotation.y = 0;
+                        break;
+                }
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+
+                // Ajuster le zoom pour les appareils mobiles
+                if (window.innerWidth <= 768) {
+                    scene.style.perspective = '300px'; 
+                } else {
+                    scene.style.perspective = '140px'; 
+                }
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.cube')) {
+                if (!scene.classList.contains('shrink')) return;  // Ignore click if not in shrink state
+                isCubeSelected = false;
+                scene.style.perspective = '600px';
+                cube.style.transition = 'transform 0.1s ease-out';  
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+                rotateTimeout = setTimeout(() => {
+                    autoRotate = true;  
+                }, 1000);  
+            }
+        });
+
+        let boutonChangement = document.querySelector('.button-27');
+
+        boutonChangement.addEventListener('click', function() {
+            scene.classList.toggle('shrink');
+            if (scene.classList.contains('shrink')) {
+                // Disable user rotation and enable auto-rotation
+                disableUserRotation();
+                autoRotate = true;  
+            } else {
+                // Enable user rotation when returning to normal state
+                enableUserRotation();
+                autoRotate = false;  
+            }
+        });
+
+        // User Rotation Control
+        let userRotationAllowed = true;
+
+        // Function to enable user rotation
+        function enableUserRotation() {
+            userRotationAllowed = true;
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+            document.addEventListener('touchmove', onTouchMove);
+            document.addEventListener('touchend', onTouchEnd);
+        }
+
+        // Function to disable user rotation
+        function disableUserRotation() {
+            userRotationAllowed = false;
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+            document.removeEventListener('touchmove', onTouchMove);
+            document.removeEventListener('touchend', onTouchEnd);
+        }
+
     </script>
 </body>
 </html>
