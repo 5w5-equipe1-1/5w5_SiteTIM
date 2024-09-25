@@ -17,7 +17,7 @@
             width: 200px;
             height: 200px;
             perspective: 600px;
-            transition: perspective 1s, transform 1s;
+            transition: perspective 1s;
         }
 
         .shrink{
@@ -247,13 +247,15 @@
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.cube')) {
                 if (!scene.classList.contains('shrink')) return;  // Ignore click if not in shrink state
+                // Return to normal state with zoom-out effect
+                scene.classList.remove('shrink');
                 isCubeSelected = false;
                 scene.style.perspective = '600px';
-                cube.style.transition = 'transform 0.1s ease-out';  
+                cube.style.transition = 'transform 0.5s ease-out';  
                 cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
-                rotateTimeout = setTimeout(() => {
+                setTimeout(() => {
                     autoRotate = true;  
-                }, 1000);  
+                }, 0);  
             }
         });
 
