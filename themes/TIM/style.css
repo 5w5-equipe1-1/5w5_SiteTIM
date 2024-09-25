@@ -136,7 +136,7 @@ div {
 
 .description_multimedia {
   margin-top: var(--margin-top-mobile);
-  background-color: red;
+  background-color: orange;
   text-align: left;
 }
 
@@ -178,6 +178,23 @@ li {
 button {
   background-color: transparent;
   border: none;
+}
+
+/* ----------------------------------------------------- */
+/*Animations*/
+/* ----------------------------------------------------- */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.slide-in {
+  animation: slide-in 0.5s forwards;
 }
 
 /* ----------------------------------------------------- */
