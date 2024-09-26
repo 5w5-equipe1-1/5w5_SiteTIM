@@ -1,6 +1,10 @@
 p{
      color: var(--couleur-secondaire);
      width: 90vw;
+     //Style pour tabelette
+     @media screen and (min-width: 1280px){
+           width: 57vw;
+     }
 }
 
 //texte disant interaction pour le cube
