@@ -8,6 +8,11 @@
     margin-bottom: 30vh;
     margin-top: 230vh;
     position: relative;
+    //Style pour tabelette
+    @media screen and (min-width: 1280px){
+        margin-bottom: 30vh;
+        margin-top: 180vh;
+    }
 }
 
 .cube {

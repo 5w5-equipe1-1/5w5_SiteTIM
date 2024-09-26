@@ -33,16 +33,29 @@ div{
     justify-content: space-between;
     background-color: blue;
     width: 100%;
+    //Style pour tabelette
+    @media screen and (min-width: 1280px){
+        flex-direction: row;
+    }
 }
 
 .description_evenements:nth-of-type(even){
     background-color: green;
+    //Style pour tabelette
+    @media screen and (min-width: 1280px){
+        flex-direction: row-reverse;
+    }
 }
 
 .img_evenements{
     width: 90vw;
     height: 90vw;
     background-color: white;
+    //Style pour tabelette
+    @media screen and (min-width: 1280px){
+        width: 40vw;
+        height: 40vw;
+    }
 }
 
 .bannieres{
@@ -51,10 +64,7 @@ div{
 
 }
 
-//Style pour tabelette
-@media screen and (min-width: 1280px){
-    
-}
+
 
 //Style pour Ordinateur
 @media screen and (min-width: 1920px){

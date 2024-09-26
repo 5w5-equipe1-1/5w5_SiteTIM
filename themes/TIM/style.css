@@ -30,10 +30,10 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --padding-right-mobile: 10px;
   --padding-top-mobile: 10px;
   --padding-bottom-mobile: 10px;
-  --margin-left-tablette: 15px;
-  --margin-right-tablette: 15px;
-  --margin-top-tablette: 15px;
-  --margin-bottom-tablette: 15px;
+  --margin-left-tablette: 30px;
+  --margin-right-tablette: 30px;
+  --margin-top-tablette: 30px;
+  --margin-bottom-tablette: 30px;
   --margin-left-ordi: 20px;
   --margin-right-ordi: 20px;
   --margin-top-ordi: 20px;
@@ -90,6 +90,14 @@ header {
   width: 99%;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
 }
+@media screen and (min-width: 1280px) {
+  header {
+    margin-top: 0;
+    margin-left: var(--margin-left-tablette);
+    margin-right: var(--margin-right-tablette);
+    width: 98%;
+  }
+}
 
 .conteneur_burger_recherche {
   display: flex;
@@ -99,10 +107,20 @@ header {
   gap: var(--margin-left-mobile);
   width: 15vw;
 }
+@media screen and (min-width: 1280px) {
+  .conteneur_burger_recherche {
+    width: 6vw;
+  }
+}
 
 header .conteneur_logo_tim .TIM_entete {
   text-align: left;
   display: none;
+}
+@media screen and (min-width: 1280px) {
+  header .conteneur_logo_tim .TIM_entete {
+    display: block;
+  }
 }
 
 .conteneur_logo_tim {
@@ -117,6 +135,12 @@ header .conteneur_logo_tim .TIM_entete {
   width: 50px;
   height: 50px;
 }
+@media screen and (min-width: 1280px) {
+  .logo_tim {
+    width: 94px;
+    height: 94px;
+  }
+}
 
 .text_recherche {
   display: none;
@@ -127,11 +151,6 @@ header .conteneur_logo_tim .TIM_entete {
   font-size: 30px;
 }
 
-@media screen and (min-width: 1280px) {
-  .conteneur_burger_recherche {
-    width: 8vw;
-  }
-}
 body {
   display: flex;
   flex-direction: column;
@@ -166,15 +185,31 @@ div {
   background-color: blue;
   width: 100%;
 }
+@media screen and (min-width: 1280px) {
+  .description_evenements {
+    flex-direction: row;
+  }
+}
 
 .description_evenements:nth-of-type(even) {
   background-color: green;
+}
+@media screen and (min-width: 1280px) {
+  .description_evenements:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
 }
 
 .img_evenements {
   width: 90vw;
   height: 90vw;
   background-color: white;
+}
+@media screen and (min-width: 1280px) {
+  .img_evenements {
+    width: 40vw;
+    height: 40vw;
+  }
 }
 
 .bannieres {
@@ -238,6 +273,11 @@ p {
   color: var(--couleur-secondaire);
   width: 90vw;
 }
+@media screen and (min-width: 1280px) {
+  p {
+    width: 57vw;
+  }
+}
 
 .info_action {
   color: var(--couleur-secondaire);
@@ -292,6 +332,12 @@ button {
   margin-bottom: 30vh;
   margin-top: 230vh;
   position: relative;
+}
+@media screen and (min-width: 1280px) {
+  #scene {
+    margin-bottom: 30vh;
+    margin-top: 180vh;
+  }
 }
 
 .cube {
