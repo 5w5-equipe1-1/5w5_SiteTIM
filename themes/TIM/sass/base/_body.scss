@@ -14,7 +14,7 @@ div{
 }
 
 .conteneur{
-    
+    width: 100vw;
 }
 
 //section ou on décrit quest ce que le multimédia
@@ -22,20 +22,27 @@ div{
     margin-top: var(--margin-top-mobile);
     background-color: red;
     text-align: left;
+    width: 100%;
 }
 
 //section ou on montre les concours et les événements
 .description_evenements{
     display: flex;
-    flex-direction: row;
-    align-items: top;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     background-color: blue;
+    width: 100%;
 }
 
 .description_evenements:nth-of-type(even){
     background-color: green;
-    flex-direction: row-reverse;
+}
+
+.img_evenements{
+    width: 90vw;
+    height: 90vw;
+    background-color: white;
 }
 
 .bannieres{

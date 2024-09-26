@@ -1,13 +1,16 @@
 p{
      color: var(--couleur-secondaire);
-     margin: 0;
+     width: 90vw;
 }
 
+//texte disant interaction pour le cube
 .info_action{
      color: var(--couleur-secondaire);
      opacity: 0.5;
      text-align: center;
      transform: translateY(-20vh);
+     width: fit-content;
+     margin: 0 auto;
 }
 
 li{

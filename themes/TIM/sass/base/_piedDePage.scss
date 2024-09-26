@@ -2,23 +2,43 @@
 footer{
     background-color: purple;
     width: 100vw;
-    height: 100vh;
 }
 
+//titre et logo
+footer .conteneur_logo_tim{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100vw;
+}
+
+footer .conteneur_logo_tim .logo_tim{
+    width: 90px;
+    height: 90px;
+}
+
+footer .conteneur_logo_tim .TIM_entete{
+    text-align: left;
+    display: block;
+    font-size: 23px;
+}
+
+//info dans le footer
 .info_footer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 90vw;
+    width: 100vw;
     margin: 0 auto;
 }
 
 .colonne_footer{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: top;
     align-items: left;
     height: 100%;
 }
@@ -26,6 +46,12 @@ footer{
 .titre_footer{
     color: var(--couleur-secondaire);
     width: 30vh;
+}
+
+//texte dams les colonnes
+.info_colonne_footer {
+    margin: 0;
+    width: fit-content;
 }
 
 //Style pour tabelette
