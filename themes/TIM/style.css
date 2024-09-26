@@ -52,6 +52,7 @@ h1 {
   font-weight: bold;
   font-size: 30px;
   color: var(--couleur-secondaire);
+  margin-left: var(--margin-left-mobile);
 }
 
 h2 {
@@ -67,6 +68,7 @@ h2 {
 h3 {
   font-weight: bold;
   color: var(--couleur-secondaire);
+  margin-left: var(--margin-left-mobile);
 }
 
 .cube div h3 {
@@ -98,7 +100,7 @@ header {
   width: 15vw;
 }
 
-.TIM_entete {
+header .conteneur_logo_tim .TIM_entete {
   text-align: left;
   display: none;
 }
@@ -145,23 +147,34 @@ div {
   margin: 0;
 }
 
+.conteneur {
+  width: 100vw;
+}
+
 .description_multimedia {
   margin-top: var(--margin-top-mobile);
   background-color: red;
   text-align: left;
+  width: 100%;
 }
 
 .description_evenements {
   display: flex;
-  flex-direction: row;
-  align-items: top;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   background-color: blue;
+  width: 100%;
 }
 
 .description_evenements:nth-of-type(even) {
   background-color: green;
-  flex-direction: row-reverse;
+}
+
+.img_evenements {
+  width: 90vw;
+  height: 90vw;
+  background-color: white;
 }
 
 .bannieres {
@@ -172,7 +185,25 @@ div {
 footer {
   background-color: purple;
   width: 100vw;
-  height: 100vh;
+}
+
+footer .conteneur_logo_tim {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100vw;
+}
+
+footer .conteneur_logo_tim .logo_tim {
+  width: 90px;
+  height: 90px;
+}
+
+footer .conteneur_logo_tim .TIM_entete {
+  text-align: left;
+  display: block;
+  font-size: 23px;
 }
 
 .info_footer {
@@ -181,14 +212,14 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  width: 90vw;
+  width: 100vw;
   margin: 0 auto;
 }
 
 .colonne_footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: top;
   align-items: left;
   height: 100%;
 }
@@ -198,9 +229,14 @@ footer {
   width: 30vh;
 }
 
+.info_colonne_footer {
+  margin: 0;
+  width: fit-content;
+}
+
 p {
   color: var(--couleur-secondaire);
-  margin: 0;
+  width: 90vw;
 }
 
 .info_action {
@@ -208,6 +244,8 @@ p {
   opacity: 0.5;
   text-align: center;
   transform: translateY(-20vh);
+  width: fit-content;
+  margin: 0 auto;
 }
 
 li {
@@ -252,7 +290,7 @@ button {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 140vh;
+  margin-top: 230vh;
   position: relative;
 }
 
