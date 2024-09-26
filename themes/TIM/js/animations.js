@@ -1,15 +1,23 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const elementAfficher = document.querySelectorAll('.slide-trigger');
+document.addEventListener('DOMContentLoaded', () => {
+    const hiddenElements = document.querySelectorAll('.hidden');
 
-    const afficherElements = () => {
-        const hauteurFenetre = window.innerHeight;
-        elementAfficher.forEach(element =>{
-            const positionElement =  element.getBoundingClientRect().top;
-            if (positionElement < hauteurFenetre){
-                element.classList.add('slide-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                entry.target.classList.remove('reverse');
+                console.log('show');
+            } else {
+                entry.target.classList.remove('show');
+                entry.target.classList.add('reverse');
+                console.log('reverse');
             }
+        },
+        {
+            threshold: 0.9,
+            rootMargin: '0px 0px -100px 0px'
         });
-    };
-    window.addEventListener('scroll', afficherElements);
-    afficherElements();
+    });
+
+    hiddenElements.forEach((el) => observer.observe(el));
 });
