@@ -32,11 +32,7 @@ div{
     align-items: center;
     justify-content: space-between;
     background-color: blue;
-    width: 100%;
-    //Style pour tabelette
-    @media screen and (min-width: 1280px){
-        flex-direction: row;
-    }
+    height: 40vh;
 }
 
 .description_evenements:nth-of-type(even){

@@ -183,12 +183,7 @@ div {
   align-items: center;
   justify-content: space-between;
   background-color: blue;
-  width: 100%;
-}
-@media screen and (min-width: 1280px) {
-  .description_evenements {
-    flex-direction: row;
-  }
+  height: 40vh;
 }
 
 .description_evenements:nth-of-type(even) {
@@ -306,18 +301,21 @@ button {
 /* ----------------------------------------------------- */
 /*Animations*/
 /* ----------------------------------------------------- */
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s, transform 1s;
 }
-.slide-in {
-  animation: slide-in 0.5s forwards;
+
+.show {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.reverse {
+  opacity: 0; /* Transition vers l'opacité zéro */
+  transform: translateX(-100%); /* L'animation reverse peut être plus rapide */
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in; /* Durée plus courte pour le reverse */
 }
 
 /* ----------------------------------------------------- */
