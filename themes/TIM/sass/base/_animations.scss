@@ -10,7 +10,7 @@
 }
 
 .reverse {
-    opacity: 0;  /* Transition vers l'opacité zéro */
-    transform: translateX(-100%); /* L'animation reverse peut être plus rapide */
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in; /* Durée plus courte pour le reverse */
+    opacity: 0;  
+    transform: translateX(-100%); 
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in; 
 }
