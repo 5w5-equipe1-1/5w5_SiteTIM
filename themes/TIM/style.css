@@ -166,10 +166,6 @@ div {
   margin: 0;
 }
 
-.conteneur {
-  width: 100vw;
-}
-
 .description_multimedia {
   margin-top: var(--margin-top-mobile);
   background-color: red;
