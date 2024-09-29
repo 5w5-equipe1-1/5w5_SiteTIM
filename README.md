@@ -14,7 +14,29 @@ Lorsque chacun aura trouvé assez d’informations, nous allons compléter princ
 Durant cette phase, il est possible que notre équipe commence un début de la maquette dans son ensemble afin d’avoir une idée du style et de l'identité de notre site web. La maquette ne sera toutefois pas complète.
 
 ### Sprint 2 - Fin de la mise en page d'une maquette et debut de la programmation en PHP, etc.
-Lors du sprint 2, notre équipe cherchera à commencer et à compléter un visuel (soit un début ou une continuation de HTML, CSS et SASS) de notre site web et de la maquette à compléter. Nous allons rassembler nos informations du sprint 0 et 1 afin de concevoir le site web suivant les éléments choisis par l’équipe. Les sections les plus importantes sont dans l’ordre suivant: Page d’accueil, Page des projets, Page des cours, Page des stages, Page des professeurs, Page des emplois, Page des concours et la Page des évènements. Lorsque les pages seront en majorité avancées, nous pourrons nous concentrer sur le côté de la programmation de la page web. Par exemple, nous pourrons travailler sur les filtres des différents cours. 
+Lors du sprint 2, notre équipe cherchera à commencer et à compléter un visuel (soit un début ou une continuation de HTML, CSS et SASS) de notre site web et de la maquette à compléter. Nous allons rassembler nos informations du sprint 0 et 1 afin de concevoir le site web suivant les éléments choisis par l’équipe. Les sections les plus importantes sont dans l’ordre suivant: Page d’accueil, Page des projets, Page des cours, Page des stages, Page des professeurs, Page des emplois, Page des concours et la Page des évènements. Lorsque les pages seront en majorité avancées, nous pourrons nous concentrer sur le côté de la programmation de la page web. Par exemple, nous pourrons travailler sur les filtres des différents cours.Nous allons aussi procéder à des tests d’utilisateurs. Nous allons aussi débuter l’intégration du thème dans le site WordPress pour utiliser une base de données. 
+
+
+Tâches : 
+-finir la maquette wireframe en HTML/SASS/JS (~7h, complexité XL)
+    -faire la page 3D (~1h, complexité M)
+    -faire la page Film (~0.5h, complexité M)
+    -faire la page Web (~1h, complexité M)
+    -faire la page Jeux vidéos (~1h, complexité M)
+    -faire la page formation spécifique (~1h, complexité M)
+    -faire la page Design (~1h, complexité M)
+    -faire la page d’accueil (~1.5h, complexité M)
+-faire des animations suite au scroll de la page web avec JS (~1h, complexité S)
+-récupérer plus de médias (~0.5h, complexité XS)
+-inclure les médias dans le site (~1h, complexité M)
+-faire un test utilisateur (~2h, complexité M)
+-Commencer l’intégration dans WordPress (~1h, complexité M)
+    -inclure les médias (~0.5h, complexité XS)
+    -inclure des plugins (~1h, complexité S)
+    -inclure le thème (~0.5h, complexité M)
+    -reset la base de données (~1h, complexité M)
+    -inclure la nouvelle base de données (~1h, complexité M)
+
 
 ### Sprint 3 - Avancement principal de la programmation, mise en page complète
 
