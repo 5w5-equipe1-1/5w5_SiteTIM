@@ -70,6 +70,7 @@
             transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
             user-select: none;
             width: 60%;
+            z-index: 1000000;
         }
  
         .button-27:hover {
@@ -115,7 +116,7 @@
     </div>
     <script>
         let cube = document.getElementById('cube');
-        let lesFaces = document.querySelectorAll('.face');
+        let lesFaces = document.querySelectorAll('face');
         let scene = document.getElementById('scene');
         let isCubeSelected = false;
         let touchStart = { x: 0, y: 0 };
@@ -126,6 +127,10 @@
         const sensitivity = 1.2;  
         let initialRotationSpeed = 10;
         let finalRotationSpeed = 0.12;
+
+        for (let face of lesFaces) {
+                face.addEventListener('click', enleverClassShrink);
+        }
 
         // Rotation automatique du cube
         function rotateCubeAutomatically() {
@@ -295,13 +300,11 @@
             document.removeEventListener('touchmove', onTouchMove);
             document.removeEventListener('touchend', onTouchEnd);
         }
-      
-        if(scene.classList.contains('shrink')) {
-            for(let face of lesFaces) {
-                face.addEventListener('click', function() {
-                    scene.classList.remove('shrink');
-                    console.log("je click");
-                });
+
+        function enleverClassShrink() {
+            console.log('enleverClassShrink');
+            if (scene.classList.contains('shrink')) {
+                scene.classList.remove('shrink');
             }
         }
     </script>
