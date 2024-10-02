@@ -6,15 +6,12 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
-    width: 88%;
+    width: 82%;
     position: fixed;
     left: 0.5%;
     margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);  
     @media screen and (min-width: 1280px){
-       margin-top: 0;
-       margin-left: var(--margin-left-tablette);
-       margin-right: var(--margin-right-tablette);
-       width: 98%;
+        width: 87%;
     }
 }
 
@@ -24,6 +21,10 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    width: 150px;
+    @media screen and (min-width: 1280px){
+        height: 94px;
+    }
 }
 
 header .conteneur_logo_tim .TIM_entete{
