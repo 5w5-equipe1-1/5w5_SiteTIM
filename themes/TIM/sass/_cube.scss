@@ -15,12 +15,27 @@
     }
 }
 
+.sceneBurguer {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    transition: perspective 1s, transform 1s;
+    transform: scale(2) translate(-50vh, 25vh);
+    transform-origin: center center;
+}
+
+.shrink {
+    transform: scale(0.2) translate(0, 0);
+    transform-origin: center center;
+}
+
 .cube {
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(0deg); 
+    transform-origin: center center;
 }
 
 .cube div {
@@ -33,6 +48,16 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+//text sur le cube
+.cube div h3 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.cube div a{
+    font-size: 15px;
 }
 
 //face du cube
