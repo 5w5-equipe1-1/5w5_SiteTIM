@@ -87,7 +87,9 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  width: 80%;
+  width: 88%;
+  position: fixed;
+  left: 0.5%;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
 }
 @media screen and (min-width: 1280px) {
@@ -104,21 +106,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: -7.5%;
-  right: 3%;
-}
-@media screen and (min-width: 1280px) {
-  .conteneur_burger_recherche {
-    top: -7%;
-    right: -3%;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .conteneur_burger_recherche {
-    top: -5%;
-    right: -1%;
-  }
+  height: 50px;
 }
 
 header .conteneur_logo_tim .TIM_entete {
