@@ -42,6 +42,16 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        .cube div h3 {
+            font-size: 35px;
+            margin: 0;
+        }
+
+        .cube div a{
+            font-size: 15px;
+        }
+
         .front  { transform: rotateY(  0deg) translateZ(100px); }
         .back   { transform: rotateY(180deg) translateZ(100px); }
         .right  { transform: rotateY( 90deg) translateZ(100px); }
@@ -154,7 +164,7 @@
         let cube = document.getElementById('cube');
         let lesFaces = document.querySelectorAll('.face');
         let scene = document.getElementById('sceneBurguer');
-        
+
         let isCubeSelected = false;
         let touchStart = { x: 0, y: 0 };
         let mouseStart = { x: 0, y: 0 };

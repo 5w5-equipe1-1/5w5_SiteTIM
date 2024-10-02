@@ -357,7 +357,7 @@ button {
   transform: rotateX(-90deg) translateZ(100px);
 }
 
-.front, .back, .right, .left, .top, .bottom {
+.face {
   display: flex;
   flex-direction: column;
   justify-content: center;
