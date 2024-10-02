@@ -86,6 +86,7 @@ h4 {
 }
 
 header {
+  z-index: 1;
   position: fixed;
   top: 0%;
   text-align: center;
@@ -94,6 +95,8 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 99%;
+  background-color: var(--couleur-primaire);
+  box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
 }
 @media screen and (min-width: 1280px) {
@@ -174,7 +177,7 @@ div {
 
 .description_multimedia {
   margin-top: var(--margin-top-mobile);
-  background-color: red;
+  margin-bottom: 10vh;
   text-align: left;
 }
 
@@ -183,12 +186,10 @@ div {
   flex-direction: row;
   align-items: top;
   justify-content: space-between;
-  background-color: blue;
   height: 40vh;
 }
 
 .description_evenements:nth-of-type(even) {
-  background-color: green;
   flex-direction: row-reverse;
 }
 
@@ -198,7 +199,6 @@ div {
 }
 
 footer {
-  background-color: purple;
   width: 100vw;
 }
 
@@ -208,6 +208,9 @@ footer .conteneur_logo_tim {
   justify-content: left;
   align-items: center;
   width: 100vw;
+  margin-top: 10vh;
+  margin-left: 10%;
+  margin-bottom: 5vh;
 }
 
 footer .conteneur_logo_tim .logo_tim {
@@ -224,9 +227,9 @@ footer .conteneur_logo_tim .TIM_entete {
 .info_footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  height: 100%;
+  height: 80%;
   width: 100vw;
   margin: 0 auto;
 }
@@ -247,6 +250,12 @@ footer .conteneur_logo_tim .TIM_entete {
 .info_colonne_footer {
   margin: 0;
   width: fit-content;
+}
+
+.droitsfooter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 p {
@@ -419,7 +428,7 @@ button {
 .testdegrade {
   position: absolute;
   height: 20vh;
-  width: 14vw;
+  width: 13vw;
   z-index: -1;
   box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 300px 30px;
   border-radius: 50%;
@@ -428,9 +437,9 @@ button {
 .degrade1orange {
   position: absolute;
   height: 20vh;
-  width: 14vw;
+  width: 13vw;
   z-index: -1;
-  box-shadow: var(--couleur-test-orange) 50px -60px 200px 20px;
+  box-shadow: var(--couleur-orange) 50px -60px 200px 20px;
   filter: saturate(2);
   border-radius: 50%;
 }
@@ -438,9 +447,9 @@ button {
 .degrade1cyan {
   position: absolute;
   height: 20vh;
-  width: 14vw;
+  width: 13vw;
   z-index: -1;
-  box-shadow: var(--couleur-test-cyan) -30px 0px 300px 30px;
+  box-shadow: var(--couleur-cyan) -30px 0px 300px 30px;
   filter: saturate(3);
   border-radius: 50%;
 }
@@ -450,7 +459,7 @@ button {
   height: 20vh;
   width: 14vw;
   z-index: -1;
-  box-shadow: var(--couleur-test-magenta) 30px 50px 300px 30px;
+  box-shadow: var(--couleur-magenta) 25px 50px 300px 30px;
   filter: saturate(3);
   border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

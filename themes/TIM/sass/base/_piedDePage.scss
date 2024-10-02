@@ -1,65 +1,73 @@
 //feuille de style du pied de page
-footer{
-    background-color: purple;
-    width: 100vw;
+footer {
+  // background-color: purple;
+  width: 100vw;
 }
 
 //titre et logo
-footer .conteneur_logo_tim{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    width: 100vw;
+footer .conteneur_logo_tim {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100vw;
+
+  margin-top: 10vh;
+  margin-left: 10%;
+  margin-bottom: 5vh;
 }
 
-footer .conteneur_logo_tim .logo_tim{
-    width: 90px;
-    height: 90px;
+footer .conteneur_logo_tim .logo_tim {
+  width: 90px;
+  height: 90px;
 }
 
-footer .conteneur_logo_tim .TIM_entete{
-    text-align: left;
-    display: block;
-    font-size: 23px;
+footer .conteneur_logo_tim .TIM_entete {
+  text-align: left;
+  display: block;
+  font-size: 23px;
 }
 
 //info dans le footer
-.info_footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    width: 100vw;
-    margin: 0 auto;
+.info_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 100vw;
+  margin: 0 auto;
 }
 
-.colonne_footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: left;
-    height: 100%;
+.colonne_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: left;
+  height: 100%;
 }
 
-.titre_footer{
-    color: var(--couleur-secondaire);
-    width: 30vh;
+.titre_footer {
+  color: var(--couleur-secondaire);
+  width: 30vh;
 }
 
 //texte dams les colonnes
 .info_colonne_footer {
-    margin: 0;
-    width: fit-content;
+  margin: 0;
+  width: fit-content;
+}
+
+.droitsfooter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 //Style pour tabelette
-@media screen and (min-width: 1280px){
-    
+@media screen and (min-width: 1280px) {
 }
 
 //Style pour Ordinateur
-@media screen and (min-width: 1920px){
-    
+@media screen and (min-width: 1920px) {
 }

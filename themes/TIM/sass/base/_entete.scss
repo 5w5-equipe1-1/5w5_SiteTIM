@@ -1,4 +1,5 @@
 header {
+  z-index: 1;
   position: fixed;
   top: 0%;
   text-align: center;
@@ -7,7 +8,9 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 99%;
-  //background-color: orange;
+  background-color: var(--couleur-primaire);
+  box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
+
   margin: var(--margin-top-mobile) var(--margin-right-mobile)
     var(--margin-bottom-mobile) var(--margin-left-mobile);
   @media screen and (min-width: 1280px) {
