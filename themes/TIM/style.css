@@ -306,6 +306,23 @@ button {
   opacity: 0;
 }
 
+.parallax img {
+  position: sticky; /* Changer de absolute à fixed */
+  width: 20%;
+  height: 10%;
+  /* Garde les marges pour le positionnement */
+  top: 10%; /* Ajuste selon ton besoin */
+  z-index: 6;
+}
+
+.fence-droite {
+  translate: 70vh;
+}
+
+.fence-gauche {
+  translate: -5vh;
+}
+
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
@@ -315,7 +332,6 @@ button {
   perspective: 600px;
   transition: perspective 1s;
   top: 30vh;
-  margin: 0 auto;
   position: sticky;
   z-index: 5;
   background-color: aqua;

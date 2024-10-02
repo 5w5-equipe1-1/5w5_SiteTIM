@@ -21,3 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hiddenElements.forEach((el) => observer.observe(el));
 });
+
+
+//Parallax
+let fenceGauche = document.querySelector('.fence-gauche');
+let fencedroite = document.querySelector('.fence-droite');
+
+window.addEventListener('scroll', () => {
+    let value = window.scrollY;
+
+    // Ajuste la translation pour donner un effet de mouvement
+    fenceGauche.style.transform = `translateX(${value * 0.4}px)`; 
+    fencedroite.style.transform = `translateX(${value * -0.4}px)`;
+});
