@@ -43,6 +43,12 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
   --couleur-primaire: #1a1a1a;
+  --couleur-orange: #ffd472;
+  --couleur-magenta: #ffaab1;
+  --couleur-cyan: #96e7ff;
+  --couleur-test-orange: #efaa5b;
+  --couleur-test-magenta: #ed5360;
+  --couleur-test-cyan: #67d7f9;
 }
 
 /* ----------------------------------------------------- */
@@ -88,7 +94,6 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 99%;
-  background-color: orange;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
 }
 @media screen and (min-width: 1280px) {
@@ -406,4 +411,46 @@ button {
   /* Grandeur du defilement du cube */
   height: 400vh;
   padding: 50px;
+}
+
+/* ----------------------------------------------------- */
+/*Les Dégradés*/
+/* ----------------------------------------------------- */
+.testdegrade {
+  position: absolute;
+  height: 20vh;
+  width: 14vw;
+  z-index: -1;
+  box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 300px 30px;
+  border-radius: 50%;
+}
+
+.degrade1orange {
+  position: absolute;
+  height: 20vh;
+  width: 14vw;
+  z-index: -1;
+  box-shadow: var(--couleur-test-orange) 50px -60px 200px 20px;
+  filter: saturate(2);
+  border-radius: 50%;
+}
+
+.degrade1cyan {
+  position: absolute;
+  height: 20vh;
+  width: 14vw;
+  z-index: -1;
+  box-shadow: var(--couleur-test-cyan) -30px 0px 300px 30px;
+  filter: saturate(3);
+  border-radius: 50%;
+}
+
+.degrade1magenta {
+  position: absolute;
+  height: 20vh;
+  width: 14vw;
+  z-index: -1;
+  box-shadow: var(--couleur-test-magenta) 30px 50px 300px 30px;
+  filter: saturate(3);
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

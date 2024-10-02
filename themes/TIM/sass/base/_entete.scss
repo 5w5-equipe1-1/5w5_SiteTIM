@@ -1,71 +1,72 @@
 header {
-    position: fixed;
-    top: 0%;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 99%;
-    background-color: orange;
-    margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);  
-    @media screen and (min-width: 1280px){
-       margin-top: 0;
-       margin-left: var(--margin-left-tablette);
-       margin-right: var(--margin-right-tablette);
-       width: 98%;
-    }
+  position: fixed;
+  top: 0%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 99%;
+  //background-color: orange;
+  margin: var(--margin-top-mobile) var(--margin-right-mobile)
+    var(--margin-bottom-mobile) var(--margin-left-mobile);
+  @media screen and (min-width: 1280px) {
+    margin-top: 0;
+    margin-left: var(--margin-left-tablette);
+    margin-right: var(--margin-right-tablette);
+    width: 98%;
+
+    //Ajout test de Gabrielle
+  }
 }
 
-.conteneur_burger_recherche{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--margin-left-mobile);
-    width: 15vw;
-    //Style pour tabelette
-    @media screen and (min-width: 1280px){
-        width: 6vw;
-    }
+.conteneur_burger_recherche {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--margin-left-mobile);
+  width: 15vw;
+  //Style pour tabelette
+  @media screen and (min-width: 1280px) {
+    width: 6vw;
+  }
 }
 
-header .conteneur_logo_tim .TIM_entete{
-    text-align: left;
-    display: none;
-    @media screen and (min-width: 1280px){
-        display: block;
-    }
+header .conteneur_logo_tim .TIM_entete {
+  text-align: left;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
 }
 
-.conteneur_logo_tim{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--margin-left-mobile);
+.conteneur_logo_tim {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--margin-left-mobile);
 }
 
-.logo_tim{
-    width: 50px;
-    height: 50px;
-    @media screen and (min-width: 1280px){
-        width: 94px;
-        height: 94px;
-    }
+.logo_tim {
+  width: 50px;
+  height: 50px;
+  @media screen and (min-width: 1280px) {
+    width: 94px;
+    height: 94px;
+  }
 }
 
-.text_recherche{
-    display: none;
+.text_recherche {
+  display: none;
 }
 
-.fa-magnifying-glass{
-    color: var(--couleur-secondaire);
-    font-size: 30px;
+.fa-magnifying-glass {
+  color: var(--couleur-secondaire);
+  font-size: 30px;
 }
-
 
 //Style pour Ordinateur
-@media screen and (min-width: 1920px){
-    
+@media screen and (min-width: 1920px) {
 }
