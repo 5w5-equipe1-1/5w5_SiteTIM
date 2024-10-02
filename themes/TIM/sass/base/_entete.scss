@@ -7,6 +7,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 99%;
+    background-color: orange;
     margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);  
     @media screen and (min-width: 1280px){
        margin-top: 0;

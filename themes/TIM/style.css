@@ -88,6 +88,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 99%;
+  background-color: orange;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
 }
 @media screen and (min-width: 1280px) {
@@ -297,6 +298,14 @@ button {
   transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 
+.showCube {
+  opacity: 1;
+}
+
+.hideCube {
+  opacity: 0;
+}
+
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
@@ -305,10 +314,11 @@ button {
   height: 200px;
   perspective: 600px;
   transition: perspective 1s;
+  top: 30vh;
   margin: 0 auto;
-  margin-bottom: 30vh;
-  margin-top: 230vh;
-  position: relative;
+  position: sticky;
+  z-index: 5;
+  background-color: aqua;
 }
 @media screen and (min-width: 1280px) {
   #scene {
@@ -323,6 +333,7 @@ button {
   position: relative;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
+  background-color: aqua;
 }
 
 .cube div {
@@ -366,4 +377,14 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.parallax {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  /* Grandeur du defilement du cube */
+  height: 400vh;
+  padding: 50px;
 }/*# sourceMappingURL=style.css.map */

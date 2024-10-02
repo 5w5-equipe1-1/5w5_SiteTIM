@@ -5,13 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-                entry.target.classList.add('showCube');
                 entry.target.classList.remove('reverse');
                 console.log('show');
             } else {
                 entry.target.classList.remove('show');
                 entry.target.classList.add('reverse');
-                entry.target.classList.add('hideCube');
                 console.log('reverse');
             }
         },

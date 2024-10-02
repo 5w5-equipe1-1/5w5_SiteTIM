@@ -4,10 +4,11 @@
     height: 200px ;
     perspective: 600px;
     transition: perspective 1s;
+    top: 30vh;
     margin: 0 auto;
-    margin-bottom: 30vh;
-    margin-top: 230vh;
-    position: relative;
+    position: sticky;
+    z-index: 5;
+    background-color: aqua;
     //Style pour tabelette
     @media screen and (min-width: 1280px){
         margin-bottom: 30vh;
@@ -21,6 +22,7 @@
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(0deg); 
+    background-color: aqua;
 }
 
 .cube div {
@@ -49,3 +51,15 @@
     justify-content: center;
     align-items: center;
 }
+
+.parallax {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+     /* Grandeur du defilement du cube */
+    height: 400vh;
+    padding: 50px;
+    //background-color: rgba(255, 255, 255, 0.8);
+}
+
