@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TIM - Accueil</title>
+    <style>
+        .sceneBurguer {
+            width: 200px;
+            height: 200px;
+            perspective: 600px;
+            transition: perspective 1s, transform 1s;
+            /* position: fixed;
+            top: -8%;
+            right: -3%; */
+            transform: translate(-50vh, 50vh);
+
+        }
+
+        .shrink {
+            transform: scale(0.2) translate(0, 0);
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+        }
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .front  { transform: rotateY(  0deg) translateZ(100px); }
+        .back   { transform: rotateY(180deg) translateZ(100px); }
+        .right  { transform: rotateY( 90deg) translateZ(100px); }
+        .left   { transform: rotateY(-90deg) translateZ(100px); }
+        .top    { transform: rotateX( 90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="conteneur_logo_tim">
+            <img href="index.html" src="images/logo/tim.png" alt="Logo TIM" class="logo_tim">
+            <h2 class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
+        </div>
+        <div class="conteneur_burger_recherche">
+            <div class="conteneur_barre_recherche">
+                <input type="text" placeholder="Rechercher..." class="text_recherche">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="sceneBurguer shrink" id="sceneBurguer">
+                <div class="cube" id="cube">
+                    <div class="front" id="front">
+                        <h3>3D</h3>
+                        <button class="bouton_cube">
+                            <a href="3d.html">En savoir plus</a>
+                        </button>
+                    </div>
+                    <div class="back" id="back">
+                        <h3>Jeux vidéos</h3>
+                        <button class="bouton_cube">
+                            <a href="">En savoir plus</a>
+                        </button>
+                    </div>
+                    <div class="right" id="right">
+                        <h3>Films</h3>
+                        <button class="bouton_cube">
+                            <a href="">En savoir plus</a>
+                        </button>
+                    </div>
+                    <div class="left" id="left">
+                        <h3>Design</h3>
+                        <button class="bouton_cube">
+                            <a href="">En savoir plus</a>
+                        </button>
+                    </div>
+                    <div class="top" id="top">
+                        <h3>Web</h3>
+                        <button class="bouton_cube">
+                            <a href="">En savoir plus</a>
+                        </button>
+                    </div>
+                    <div class="bottom" id="bottom">
+                        <h3>Formation spécifique</h3>
+                        <button class="bouton_cube">
+                            <a href="">En savoir plus</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="conteneur_miseEnAvant">
+            <video src=""></video>
+            <div class="text_miseEnAvant">
+                <h1>3D</h1>
+                <h3>Sous titre</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="conteneur_logo_tim">
+            <img src="images/logo/tim.png" alt="Logo TIM" class="logo_tim">
+            <h2 class="TIM_entete">Techniques d'intégration multimédia</h2>
+        </div>
+        <div class="info_footer">
+            <div class="colonne_footer">
+                <h4>Section 1 Titre</h4>
+                <p class="info_colonne_footer">3D</p>
+                <p class="info_colonne_footer">Web</p>
+                <p class="info_colonne_footer">Film<p>
+                <p class="info_colonne_footer">Jeux vidéos</p>
+                <p class="info_colonne_footer">Design</p>
+                <p class="info_colonne_footer">Formation spécifique</p>
+            </div>
+            <div class="colonne_footer">
+                <h4>Section 2 Titre</h4>
+                <p class="info_colonne_footer">faerg steg</p>
+                <p class="info_colonne_footer">tg e rgtuyui</p>
+                <p class="info_colonne_footer">g srtg arffaer </p>
+                <p class="info_colonne_footer">sdfr fazf </p>
+                <p class="info_colonne_footer">WERFT GYferg</p>
+            </div>
+            <div class="colonne_footer">
+                <h4>Section 3 Titre</h4>
+                <p class="info_colonne_footer">frcdrg err</p>
+                <p class="info_colonne_footer">efer effsfdf</p>
+                <p class="info_colonne_footer">thyhudvf</p>
+                <p class="info_colonne_footer">sdf rfwwsdf</p>
+                <p class="info_colonne_footer">thujfhsre wffff</p>
+            </div>
+        </div>
+        <p></p>
+    </footer>
+    <!-- API fontawsome pour les icones -->
+    <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
+    <!-- Script pour les animations de scroll -->
+    <script src="themes/TIM/js/animations.js"></script>
+    <!-- Script qui gere le cube 3D -->
+    <script src="themes/TIM/js/cube.js"></script>
+    <script>
+        let cube = document.getElementById('cube');
+        let lesFaces = document.querySelectorAll('.face');
+        let scene = document.getElementById('sceneBurguer');
+        let isCubeSelected = false;
+        let touchStart = { x: 0, y: 0 };
+        let mouseStart = { x: 0, y: 0 };
+        let rotation = { x: 0, y: 0 };
+        let autoRotate = true;  
+        let rotateTimeout;  
+        const sensitivity = 1.2;  
+        let initialRotationSpeed = 10;
+        let finalRotationSpeed = 0.12;
+
+        for (let face of lesFaces) {
+                face.addEventListener('click', enleverClassShrink);
+        }
+
+        // Rotation automatique du cube
+        function rotateCubeAutomatically() {
+            if (autoRotate) {
+                if (initialRotationSpeed > finalRotationSpeed) {
+                    initialRotationSpeed *= 0.98;  
+                }
+                rotation.y -= initialRotationSpeed;  
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+            }
+            requestAnimationFrame(rotateCubeAutomatically);
+        }
+
+        rotateCubeAutomatically();
+
+        function updateCubeRotation() {
+            cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+        }
+
+        function onMouseMove(event) {
+            if (!scene.classList.contains('shrink')) {
+                autoRotate = false;  
+                const deltaX = event.clientX - mouseStart.x;
+                const deltaY = event.clientY - mouseStart.y;
+                rotation.y += deltaX * sensitivity;
+                rotation.x -= deltaY * sensitivity;
+                mouseStart = { x: event.clientX, y: event.clientY };
+                updateCubeRotation();
+            }
+        }
+
+        function onTouchMove(event) {
+            if (!scene.classList.contains('shrink') && event.touches.length > 0) {
+                autoRotate = false;  
+                const touch = event.touches[0];
+                const deltaX = touch.clientX - touchStart.x;
+                const deltaY = touch.clientY - touchStart.y;
+                rotation.y += deltaX * sensitivity;
+                rotation.x -= deltaY * sensitivity;
+                touchStart = { x: touch.clientX, y: touch.clientY };
+                updateCubeRotation();
+            }
+        }
+
+        function onMouseUp() {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+            cube.style.transition = 'transform 0.1s ease-out';  
+            rotateTimeout = setTimeout(() => {
+                autoRotate = true;
+            }, 0);  
+        }
+
+        function onTouchEnd() {
+            document.removeEventListener('touchmove', onTouchMove);
+            document.removeEventListener('touchend', onTouchEnd);
+            cube.style.transition = 'transform 0.1s ease-out';  
+            rotateTimeout = setTimeout(() => {
+                autoRotate = true;
+            }, 0);  
+        }
+
+        document.addEventListener('mousedown', function(event) {
+            mouseStart = { x: event.clientX, y: event.clientY };
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+
+        document.addEventListener('touchstart', function(event) {
+            const touch = event.touches[0];
+            touchStart = { x: touch.clientX, y: touch.clientY };
+            document.addEventListener('touchmove', onTouchMove);
+            document.addEventListener('touchend', onTouchEnd);
+        });
+
+        document.querySelectorAll('.cube div').forEach(face => {
+            face.addEventListener('click', function() {
+                if (scene.classList.contains('shrink')) {
+                    scene.classList.remove('shrink');
+                }
+                isCubeSelected = true;
+                autoRotate = false;  
+                clearTimeout(rotateTimeout);  
+                cube.style.transition = 'transform 1s';  
+                switch (this.id) {
+                    case 'front':
+                        rotation.x = 0;
+                        rotation.y = 0;
+                        break;
+                    case 'back':
+                        rotation.x = 0;
+                        rotation.y = 180;
+                        break;
+                    case 'right':
+                        rotation.x = 0;
+                        rotation.y = -90;
+                        break;
+                    case 'left':
+                        rotation.x = 0;
+                        rotation.y = 90;
+                        break;
+                    case 'top':
+                        rotation.x = -90;
+                        rotation.y = 0;
+                        break;
+                    case 'bottom':
+                        rotation.x = 90;
+                        rotation.y = 0;
+                        break;
+                }
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+
+                // Ajuster le zoom pour les appareils mobiles
+                if (window.innerWidth <= 768) {
+                    scene.style.perspective = '300px'; 
+                } else {
+                    scene.style.perspective = '160px'; 
+                }
+            });
+        });
+        
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.cube')) {
+                if (scene.classList.contains('shrink')) return;  // Ignore click if not in shrink state
+                // Return to normal state with zoom-out effect
+                scene.classList.remove('shrink');
+                isCubeSelected = false;
+                scene.style.perspective = '600px';
+                cube.style.transition = 'transform 0.1s ease-out';  
+                cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
+                setTimeout(() => {
+                    autoRotate = true;  
+                }, 0);  
+            }
+        });
+
+        let boutonChangement = document.querySelector('.bouton_cube');
+
+        boutonChangement.addEventListener('click', function() {
+            scene.classList.toggle('shrink');
+            if (scene.classList.contains('shrink')) {
+                // Disable user rotation and enable auto-rotation
+                disableUserRotation();
+                autoRotate = true;  
+            } else {
+                // Enable user rotation when returning to normal state
+                enableUserRotation();
+                autoRotate = false;  
+            }
+        });
+
+        // User Rotation Control
+        let userRotationAllowed = true;
+
+        // Function to enable user rotation
+        function enableUserRotation() {
+            userRotationAllowed = true;
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+            document.addEventListener('touchmove', onTouchMove);
+            document.addEventListener('touchend', onTouchEnd);
+        }
+
+        // Function to disable user rotation
+        function disableUserRotation() {
+            userRotationAllowed = false;
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+            document.removeEventListener('touchmove', onTouchMove);
+            document.removeEventListener('touchend', onTouchEnd);
+        }
+
+        function enleverClassShrink(event) {
+            console.log('enleverClassShrink');
+            if (scene.classList.contains('shrink')) {
+                scene.classList.remove('shrink');
+            }
+        }
+
+        // Ajout de la classe shrink lors du clic sur le bouton Explorer
+        let LesButtonsExplorer = document.querySelectorAll('.bouton_cube');
+        for(let explorerButton of LesButtonsExplorer) {
+        explorerButton.addEventListener('click', function(event) {
+            event.stopPropagation(); // Empêche la propagation de l'événement de clic
+            scene.classList.add('shrink');
+        });
+        }
+
+        // Enlever la classe shrink lors du clic sur une face
+        lesFaces.forEach(face => {
+            face.addEventListener('click', function(event) {
+                if (scene.classList.contains('shrink')) {
+                    scene.classList.remove('shrink');
+                }
+            });
+        });
+
+        // Ajout de la classe shrink par défaut
+        window.onload = function() {
+            scene.classList.add('shrink');
+        };
+
+        // Gestion du clic sur la scène pour enlever/ajouter la classe shrink
+        scene.addEventListener('click', function(event) {
+            if (scene.classList.contains('shrink')) {
+                scene.classList.remove('shrink');
+            } else {
+                scene.classList.add('shrink');
+            }
+        });
+    </script>
+</body>
+</html>

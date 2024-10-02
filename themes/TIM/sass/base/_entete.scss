@@ -5,8 +5,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 99%;
+    align-items: start;
+    width: 80%;
     margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);  
     @media screen and (min-width: 1280px){
        margin-top: 0;
@@ -21,11 +21,17 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: var(--margin-left-mobile);
-    width: 15vw;
-    //Style pour tabelette
+    position: fixed;
+    top: -7.5%;
+    right: 3%;
     @media screen and (min-width: 1280px){
-        width: 6vw;
+        top: -7%;
+        right: -3%;
+    }
+    @media screen and (min-width: 1920px){
+        top: -5%;
+        right: -1%;
+        
     }
 }
 
