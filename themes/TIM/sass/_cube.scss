@@ -16,8 +16,18 @@
     }
 }
 
-.shrink{
-    transform: scale(0.1) translate(50vh, -50vh);
+.sceneBurguer {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    transition: perspective 1s, transform 1s;
+    transform: scale(2) translate(-50vh, 25vh);
+    transform-origin: center center;
+}
+
+.shrink {
+    transform: scale(0.2) translate(0, 0);
+    transform-origin: center center;
 }
 
 .cube {
@@ -26,7 +36,7 @@
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(0deg); 
-    background-color: aqua;
+    transform-origin: center center;
 }
 
 .cube div {
@@ -41,6 +51,16 @@
     cursor: pointer;
 }
 
+//text sur le cube
+.cube div h3 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.cube div a{
+    font-size: 15px;
+}
+
 //face du cube
 .front  { transform: rotateY(  0deg) translateZ(100px); }
 .back   { transform: rotateY(180deg) translateZ(100px); }
@@ -49,7 +69,7 @@
 .top    { transform: rotateX( 90deg) translateZ(100px); }
 .bottom { transform: rotateX(-90deg) translateZ(100px); }
 
-.front, .back, .right, .left, .top, .bottom{
+.face{
     display: flex;
     flex-direction: column;
     justify-content: center;

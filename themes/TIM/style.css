@@ -86,31 +86,24 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   width: 99%;
-  background-color: orange;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
-}
-@media screen and (min-width: 1280px) {
-  header {
-    margin-top: 0;
-    margin-left: var(--margin-left-tablette);
-    margin-right: var(--margin-right-tablette);
-    width: 98%;
-  }
 }
 
 .conteneur_burger_recherche {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  gap: var(--margin-left-mobile);
-  width: 15vw;
+  position: relative;
+  left: 3vw;
+  height: 50px;
+  width: 25vw;
 }
 @media screen and (min-width: 1280px) {
   .conteneur_burger_recherche {
-    width: 6vw;
+    height: 94px;
   }
 }
 
@@ -343,17 +336,12 @@ button {
   }
 }
 
-.shrink {
-  transform: scale(0.1) translate(50vh, -50vh);
-}
-
 .cube {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
-  background-color: aqua;
 }
 
 .cube div {
@@ -366,6 +354,15 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.cube div h3 {
+  font-size: 35px;
+  margin: 0;
+}
+
+.cube div a {
+  font-size: 15px;
 }
 
 .front {
@@ -392,7 +389,7 @@ button {
   transform: rotateX(-90deg) translateZ(100px);
 }
 
-.front, .back, .right, .left, .top, .bottom {
+.face {
   display: flex;
   flex-direction: column;
   justify-content: center;

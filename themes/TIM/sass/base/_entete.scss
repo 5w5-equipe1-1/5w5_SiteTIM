@@ -5,30 +5,28 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     width: 99%;
+    position: fixed;
+    left: 0.5%;
     background-color: orange;
     margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);  
-    @media screen and (min-width: 1280px){
-       margin-top: 0;
-       margin-left: var(--margin-left-tablette);
-       margin-right: var(--margin-right-tablette);
-       width: 98%;
-    }
 }
 
 .conteneur_burger_recherche{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    gap: var(--margin-left-mobile);
-    width: 15vw;
-    //Style pour tabelette
+    position: relative;
+    left: 3vw;
+    height: 50px;
+    width: 25vw;//si plus petit, le cube ne tourne pas sur son centre
     @media screen and (min-width: 1280px){
-        width: 6vw;
+        height: 94px;
     }
 }
+
 
 header .conteneur_logo_tim .TIM_entete{
     text-align: left;
@@ -62,10 +60,4 @@ header .conteneur_logo_tim .TIM_entete{
 .fa-magnifying-glass{
     color: var(--couleur-secondaire);
     font-size: 30px;
-}
-
-
-//Style pour Ordinateur
-@media screen and (min-width: 1920px){
-    
 }
