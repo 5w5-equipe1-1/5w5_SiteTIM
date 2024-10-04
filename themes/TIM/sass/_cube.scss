@@ -1,69 +1,85 @@
 //style CSS pour le cube 3D - le menu burger quand il est ouvert et un élément de la page d'accueil
 #scene {
-    width: 200px;
-    height: 200px ;
-    perspective: 600px;
-    transition: perspective 1s;
-    top: 30vh;
-   // margin: 0 auto;
-    position: sticky;
-    z-index: 5;
-    background-color: aqua;
-    //Style pour tabelette
-    @media screen and (min-width: 1280px){
-        margin-bottom: 30vh;
-        margin-top: 180vh;
-    }
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  transition: perspective 1s;
+  top: 30vh;
+  //   margin: 0 auto;
+  position: sticky;
+  z-index: 5;
+  //background-color: aqua;
+  //Style pour tabelette
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 30vh;
+    margin-top: 180vh;
+  }
 }
 
-.shrink{
-    transform: scale(0.1) translate(50vh, -50vh);
+.shrink {
+  transform: scale(0.1) translate(50vh, -50vh);
 }
 
 .cube {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transform: rotateX(0deg) rotateY(0deg); 
-    background-color: aqua;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  background-color: aqua;
 }
 
 .cube div {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: var(--couleur-secondaire);
-    border: 0.5px solid var(--couleur-secondaire);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: var(--couleur-secondaire);
+  border: 0.5px solid var(--couleur-secondaire);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 //face du cube
-.front  { transform: rotateY(  0deg) translateZ(100px); }
-.back   { transform: rotateY(180deg) translateZ(100px); }
-.right  { transform: rotateY( 90deg) translateZ(100px); }
-.left   { transform: rotateY(-90deg) translateZ(100px); }
-.top    { transform: rotateX( 90deg) translateZ(100px); }
-.bottom { transform: rotateX(-90deg) translateZ(100px); }
+.front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
 
-.front, .back, .right, .left, .top, .bottom{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.front,
+.back,
+.right,
+.left,
+.top,
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .parallax {
-    display: flex;
-    //justify-content: center;
-    position: relative;
-    z-index: 1;
-     /* Grandeur du defilement du cube */
-    height: 400vh;
-    padding: 50px;
-    //background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  //justify-content: center;
+  position: relative;
+  z-index: 1;
+  /* Grandeur du defilement du cube */
+  height: 400vh;
+  padding: 50px;
+  //background-color: rgba(255, 255, 255, 0.8);
 }
-

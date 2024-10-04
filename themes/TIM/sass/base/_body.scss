@@ -20,10 +20,14 @@ div {
 
 //section ou on décrit quest ce que le multimédia
 .description_multimedia {
-  margin-top: var(--margin-top-mobile);
+  margin-top: 10vh;
   margin-bottom: 10vh;
   // background-color: red;
   text-align: left;
+
+  @media screen and (max-width: 680px) {
+    margin-top: var(--margin-top-mobile);
+  }
 }
 
 //section ou on montre les concours et les événements
@@ -42,8 +46,42 @@ div {
 }
 
 .bannieres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
+  height: 20vh;
+
   background-color: var(--couleur-secondaire);
+}
+
+.contenufunky {
+  margin-top: 20vh;
+}
+
+.contenufunky h3 {
+  font-size: 23pt;
+}
+
+.lespointsfunky {
+  margin-top: 10vh;
+}
+
+.lespointsfunky b {
+  width: 20px;
+  height: 20px;
+  margin-right: 3vw;
+
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
+}
+
+.lespointsfunky p {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
 }
 
 //Style pour tabelette

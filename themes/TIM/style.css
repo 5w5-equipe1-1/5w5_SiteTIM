@@ -176,9 +176,14 @@ div {
 }
 
 .description_multimedia {
-  margin-top: var(--margin-top-mobile);
+  margin-top: 10vh;
   margin-bottom: 10vh;
   text-align: left;
+}
+@media screen and (max-width: 680px) {
+  .description_multimedia {
+    margin-top: var(--margin-top-mobile);
+  }
 }
 
 .description_evenements {
@@ -194,8 +199,39 @@ div {
 }
 
 .bannieres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  height: 20vh;
   background-color: var(--couleur-secondaire);
+}
+
+.contenufunky {
+  margin-top: 20vh;
+}
+
+.contenufunky h3 {
+  font-size: 23pt;
+}
+
+.lespointsfunky {
+  margin-top: 10vh;
+}
+
+.lespointsfunky b {
+  width: 20px;
+  height: 20px;
+  margin-right: 3vw;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
+}
+
+.lespointsfunky p {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
 }
 
 footer {
@@ -208,7 +244,7 @@ footer .conteneur_logo_tim {
   justify-content: left;
   align-items: center;
   width: 100vw;
-  margin-top: 10vh;
+  margin-top: 20vh;
   margin-left: 10%;
   margin-bottom: 5vh;
 }
@@ -229,7 +265,7 @@ footer .conteneur_logo_tim .TIM_entete {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 80%;
+  height: 60%;
   width: 100vw;
   margin: 0 auto;
 }
@@ -348,7 +384,6 @@ button {
   top: 30vh;
   position: sticky;
   z-index: 5;
-  background-color: aqua;
 }
 @media screen and (min-width: 1280px) {
   #scene {
@@ -406,7 +441,12 @@ button {
   transform: rotateX(-90deg) translateZ(100px);
 }
 
-.front, .back, .right, .left, .top, .bottom {
+.front,
+.back,
+.right,
+.left,
+.top,
+.bottom {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -428,38 +468,78 @@ button {
 .testdegrade {
   position: absolute;
   height: 20vh;
-  width: 13vw;
+  width: 11vw;
   z-index: -1;
   box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 300px 30px;
   border-radius: 50%;
 }
+@media screen and (max-width: 1280px) {
+  .testdegrade {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .testdegrade {
+    width: 30vw;
+  }
+}
 
 .degrade1orange {
-  position: absolute;
+  position: fixed;
   height: 20vh;
-  width: 13vw;
+  width: 11vw;
   z-index: -1;
-  box-shadow: var(--couleur-orange) 50px -60px 200px 20px;
+  box-shadow: var(--couleur-orange) 50px -60px 100px 20px;
   filter: saturate(2);
   border-radius: 50%;
+}
+@media screen and (max-width: 1280px) {
+  .degrade1orange {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .degrade1orange {
+    width: 30vw;
+  }
 }
 
 .degrade1cyan {
   position: absolute;
   height: 20vh;
-  width: 13vw;
+  width: 11vw;
   z-index: -1;
   box-shadow: var(--couleur-cyan) -30px 0px 300px 30px;
   filter: saturate(3);
   border-radius: 50%;
 }
+@media screen and (max-width: 1280px) {
+  .degrade1cyan {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .degrade1cyan {
+    width: 30vw;
+  }
+}
 
 .degrade1magenta {
   position: absolute;
   height: 20vh;
-  width: 14vw;
+  width: 11vw;
   z-index: -1;
   box-shadow: var(--couleur-magenta) 25px 50px 300px 30px;
   filter: saturate(3);
   border-radius: 50%;
+}
+@media screen and (max-width: 1280px) {
+  .degrade1magenta {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .degrade1magenta {
+    width: 30vw;
+  }
 }/*# sourceMappingURL=style.css.map */
