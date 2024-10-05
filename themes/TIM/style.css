@@ -46,7 +46,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 }
 
 /* ----------------------------------------------------- */
-/*Composants*/
+/*Sections*/
 /* ----------------------------------------------------- */
 h1 {
   font-weight: bold;
@@ -263,6 +263,18 @@ li {
   margin: 10px;
 }
 
+.text_hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+/* ----------------------------------------------------- */
+/*Composants*/
+/* ----------------------------------------------------- */
 button {
   background-color: transparent;
   border: none;
