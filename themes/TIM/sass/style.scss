@@ -24,19 +24,25 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /* ----------------------------------------------------- */
 @import "variable";
 /* ----------------------------------------------------- */
-                    /*Composants*/
+                    /*Sections*/
 /* ----------------------------------------------------- */
 @import "base/titre";
 @import "base/entete";
 @import "base/body";
 @import "base/piedDePage";
 @import "base/paragraphe";
-@import "base/bouton";
+@import "base/sectionHero";
+
+/* ----------------------------------------------------- */
+                    /*Composants*/
+/* ----------------------------------------------------- */
+@import "componants/bouton";
+@import "componants/galerie";
 
 /* ----------------------------------------------------- */
                     /*Animations*/
 /* ----------------------------------------------------- */
-@import "base/animations";
+@import "animations/animations";
 
 /* ----------------------------------------------------- */
                     /*Le Cube*/

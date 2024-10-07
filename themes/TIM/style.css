@@ -26,10 +26,10 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --margin-right-mobile: 10px;
   --margin-top-mobile: 10px;
   --margin-bottom-mobile: 10px;
-  --padding-left-mobile: 10px;
-  --padding-right-mobile: 10px;
-  --padding-top-mobile: 10px;
-  --padding-bottom-mobile: 10px;
+  --padding-left-mobile: 8px;
+  --padding-right-mobile: 8px;
+  --padding-top-mobile: 8px;
+  --padding-bottom-mobile: 8px;
   --margin-left-tablette: 30px;
   --margin-right-tablette: 30px;
   --margin-top-tablette: 30px;
@@ -46,7 +46,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 }
 
 /* ----------------------------------------------------- */
-/*Composants*/
+/*Sections*/
 /* ----------------------------------------------------- */
 h1 {
   font-weight: bold;
@@ -99,7 +99,6 @@ header {
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  left: 3vw;
   height: 50px;
   width: 25vw;
 }
@@ -138,8 +137,26 @@ header .conteneur_logo_tim .TIM_entete {
   }
 }
 
+.conteneur_barre_recherche {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .text_recherche {
   display: none;
+}
+@media screen and (min-width: 1280px) {
+  .text_recherche {
+    display: block;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid var(--couleur-secondaire);
+    border-radius: 15px;
+    padding: var(--padding-top-mobile);
+    color: var(--couleur-secondaire);
+  }
 }
 
 .fa-magnifying-glass {
@@ -263,6 +280,18 @@ li {
   margin: 10px;
 }
 
+.text_hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+/* ----------------------------------------------------- */
+/*Composants*/
+/* ----------------------------------------------------- */
 button {
   background-color: transparent;
   border: none;
@@ -326,10 +355,11 @@ button {
   height: 200px;
   perspective: 600px;
   transition: perspective 1s;
-  top: 30vh;
-  position: sticky;
-  z-index: 5;
-  background-color: aqua;
+  margin: 0 auto;
+  margin-bottom: 30vh;
+  margin-top: 230vh;
+  position: relative;
+  z-index: 1000000000;
 }
 @media screen and (min-width: 1280px) {
   #scene {
