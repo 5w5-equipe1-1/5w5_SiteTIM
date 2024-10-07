@@ -41,6 +41,14 @@ div{
     background-color: var(--couleur-secondaire);
 }
 
+//cours
+.cours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
 .description_cours{
     color: var(--couleur-primaire);
     background-color: var(--couleur-secondaire);

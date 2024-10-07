@@ -37,8 +37,16 @@ summary{
     width: 70vw;
     margin: 0 auto;
     border-radius: var(--border-radius);
-    box-shadow: var(--couleur-primaire) 0px 5px 15px;
+    box-shadow: var(--couleur-orange) 0px 5px 15px;
     transform: translateY(2vh);
+}
+
+.summary_2{
+    box-shadow: var(--couleur-magenta) 0px 5px 15px;
+}
+
+.summary_3{
+    box-shadow: var(--couleur-cyan) 0px 5px 15px;
 }
 
 //Style pour tabelette
