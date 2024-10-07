@@ -40,7 +40,16 @@ div{
 .bannieres{
     text-align: center;
     background-color: var(--couleur-secondaire);
+}
 
+.description_cours{
+    color: var(--couleur-primaire);
+    background-color: var(--couleur-secondaire);
+    border-radius: var(--border-radius);
+    width: 70vw;
+    height: 30vh;
+    margin: 0 auto;
+    padding: var(--padding-top-mobile);
 }
 
 //Style pour tabelette
