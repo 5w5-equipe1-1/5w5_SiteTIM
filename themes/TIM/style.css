@@ -43,6 +43,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
   --couleur-primaire: #1a1a1a;
+  --border-radius: 15px;
 }
 
 /* ----------------------------------------------------- */
@@ -77,6 +78,16 @@ h3 {
 
 h4 {
   margin: 0;
+}
+
+summary {
+  color: var(--couleur-primaire);
+  background-color: var(--couleur-secondaire);
+  padding: var(--padding-top-mobile);
+  font-size: larger;
+  width: 70vw;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
 }
 
 header {
@@ -202,6 +213,16 @@ div {
 .bannieres {
   text-align: center;
   background-color: var(--couleur-secondaire);
+}
+
+.description_cours {
+  color: var(--couleur-primaire);
+  background-color: var(--couleur-secondaire);
+  border-radius: var(--border-radius);
+  width: 70vw;
+  height: 30vh;
+  margin: 0 auto;
+  padding: var(--padding-top-mobile);
 }
 
 footer {

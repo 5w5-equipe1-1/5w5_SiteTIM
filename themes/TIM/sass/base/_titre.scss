@@ -29,6 +29,16 @@ h4{
     margin: 0;
 }
 
+summary{
+    color: var(--couleur-primaire);
+    background-color: var(--couleur-secondaire);
+    padding: var(--padding-top-mobile);	
+    font-size: larger;
+    width: 70vw;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+}
+
 //Style pour tabelette
 @media screen and (min-width: 1280px){
     
