@@ -136,16 +136,9 @@ lesFaces.forEach(face => {
 
 document.addEventListener('click', function(event) {
     if (!event.target.closest('.cube')) {
-        if (scene.classList.contains('shrink')) return;  // Ignore click if not in shrink state
-        // Return to normal state with zoom-out effect
-        scene.classList.remove('shrink');
-        isCubeSelected = false;
-        scene.style.perspective = '600px';
-        cube.style.transition = 'transform 0.1s ease-out';  
-        cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
-        setTimeout(() => {
-            autoRotate = true;  
-        }, 0);  
+        if (!scene.classList.contains('shrink')) {
+            scene.classList.add('shrink');
+        }
     }
 });
 

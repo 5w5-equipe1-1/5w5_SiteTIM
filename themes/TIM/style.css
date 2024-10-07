@@ -43,6 +43,12 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
   --couleur-primaire: #1a1a1a;
+  --couleur-orange: #ffd472;
+  --couleur-magenta: #ffaab1;
+  --couleur-cyan: #96e7ff;
+  --couleur-test-orange: #efaa5b;
+  --couleur-test-magenta: #ed5360;
+  --couleur-test-cyan: #67d7f9;
   --border-radius: 15px;
 }
 
@@ -88,6 +94,16 @@ summary {
   width: 70vw;
   margin: 0 auto;
   border-radius: var(--border-radius);
+  box-shadow: var(--couleur-orange) 0px 5px 15px;
+  transform: translateY(2vh);
+}
+
+.summary_2 {
+  box-shadow: var(--couleur-magenta) 0px 5px 15px;
+}
+
+.summary_3 {
+  box-shadow: var(--couleur-cyan) 0px 5px 15px;
 }
 
 header {
@@ -101,6 +117,7 @@ header {
   width: 99%;
   position: fixed;
   left: 0.5%;
+  z-index: 100000000000;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
 }
 
@@ -215,14 +232,22 @@ div {
   background-color: var(--couleur-secondaire);
 }
 
+.cours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+
 .description_cours {
   color: var(--couleur-primaire);
   background-color: var(--couleur-secondaire);
-  border-radius: var(--border-radius);
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
   width: 70vw;
   height: 30vh;
   margin: 0 auto;
   padding: var(--padding-top-mobile);
+  padding-top: 5vh;
 }
 
 footer {
