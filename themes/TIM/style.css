@@ -88,6 +88,8 @@ summary {
   width: 70vw;
   margin: 0 auto;
   border-radius: var(--border-radius);
+  box-shadow: var(--couleur-primaire) 0px 5px 15px;
+  transform: translateY(2vh);
 }
 
 header {
@@ -218,11 +220,12 @@ div {
 .description_cours {
   color: var(--couleur-primaire);
   background-color: var(--couleur-secondaire);
-  border-radius: var(--border-radius);
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
   width: 70vw;
   height: 30vh;
   margin: 0 auto;
   padding: var(--padding-top-mobile);
+  padding-top: 5vh;
 }
 
 footer {

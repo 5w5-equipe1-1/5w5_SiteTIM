@@ -44,11 +44,12 @@ div{
 .description_cours{
     color: var(--couleur-primaire);
     background-color: var(--couleur-secondaire);
-    border-radius: var(--border-radius);
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
     width: 70vw;
     height: 30vh;
     margin: 0 auto;
     padding: var(--padding-top-mobile);
+    padding-top: 5vh;
 }
 
 //Style pour tabelette
