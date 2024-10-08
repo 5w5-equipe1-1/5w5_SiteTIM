@@ -1,89 +1,100 @@
 //style CSS pour le cube 3D - le menu burger quand il est ouvert et un élément de la page d'accueil
 #scene {
-    width: 200px;
-    height: 200px ;
-    perspective: 600px;
-    transition: perspective 1s;
-    margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  transition: perspective 1s;
+  margin: 0 auto;
+  margin-bottom: 30vh;
+  margin-top: 230vh;
+  position: relative;
+  z-index: 1000000000;
+  //Style pour tabelette
+  @media screen and (min-width: 1280px) {
     margin-bottom: 30vh;
-    margin-top: 230vh;
-    position: relative;
-    z-index: 1000000000;
-    //Style pour tabelette
-    @media screen and (min-width: 1280px){
-        margin-bottom: 30vh;
-        margin-top: 180vh;
-    }
+    margin-top: 180vh;
+  }
 }
 
 .sceneBurguer {
-    width: 200px;
-    height: 200px;
-    perspective: 600px;
-    transition: perspective 1s, transform 1s;
-    transform: scale(2) translate(-50vh, 25vh);
-    transform-origin: center center;
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  transition: perspective 1s, transform 1s;
+  transform: scale(2) translate(-50vh, 25vh);
+  transform-origin: center center;
 }
 
 .shrink {
-    transform: scale(0.2) translate(0, 0);
-    transform-origin: center center;
+  transform: scale(0.2) translate(0, 0);
+  transform-origin: center center;
 }
 
 .cube {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transform: rotateX(0deg) rotateY(0deg); 
-    transform-origin: center center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transform-origin: center center;
 }
 
 .cube div {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: var(--couleur-secondaire);
-    border: 0.5px solid var(--couleur-secondaire);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: var(--couleur-secondaire);
+  border: 0.5px solid var(--couleur-secondaire);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 //text sur le cube
 .cube div h3 {
-    font-size: 35px;
-    margin: 0;
+  font-size: 35px;
+  margin: 0;
 }
 
-.cube div a{
-    font-size: 15px;
+.cube div a {
+  font-size: 15px;
 }
 
 //face du cube
-.front  { transform: rotateY(  0deg) translateZ(100px); }
-.back   { transform: rotateY(180deg) translateZ(100px); }
-.right  { transform: rotateY( 90deg) translateZ(100px); }
-.left   { transform: rotateY(-90deg) translateZ(100px); }
-.top    { transform: rotateX( 90deg) translateZ(100px); }
-.bottom { transform: rotateX(-90deg) translateZ(100px); }
+.front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
 
-.face{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.face {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .parallax {
-    display: flex;
-    //justify-content: center;
-    position: relative;
-    z-index: 1;
-     /* Grandeur du defilement du cube */
-    height: 400vh;
-    padding: 50px;
-    //background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  //justify-content: center;
+  position: relative;
+  z-index: 1;
+  /* Grandeur du defilement du cube */
+  height: 400vh;
+  padding: 50px;
+  //background-color: rgba(255, 255, 255, 0.8);
 }
-
