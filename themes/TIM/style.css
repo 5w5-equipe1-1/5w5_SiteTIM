@@ -43,6 +43,13 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
   --couleur-primaire: #1a1a1a;
+  --couleur-orange: #ffd472;
+  --couleur-magenta: #ffaab1;
+  --couleur-cyan: #96e7ff;
+  --couleur-test-orange: #efaa5b;
+  --couleur-test-magenta: #ed5360;
+  --couleur-test-cyan: #67d7f9;
+  --border-radius: 15px;
 }
 
 /* ----------------------------------------------------- */
@@ -100,32 +107,39 @@ summary {
 }
 
 header {
-  z-index: 1;
+  z-index: 100000000000;
   position: fixed;
   top: 0%;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   width: 99%;
-  background-color: orange;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile)
-    var(--margin-bottom-mobile) var(--margin-left-mobile);
+  background-color: var(--couleur-primaire);
+  box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
+  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
+}
+@media screen and (min-width: 1280px) {
+  header {
+    margin-top: 0;
+    margin-left: var(--margin-left-tablette);
+    margin-right: var(--margin-right-tablette);
+    width: 98%;
+  }
 }
 
 .conteneur_burger_recherche {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
-  height: 50px;
-  width: 25vw;
+  gap: var(--margin-left-mobile);
+  width: 15vw;
 }
 @media screen and (min-width: 1280px) {
   .conteneur_burger_recherche {
-    height: 94px;
+    width: 6vw;
   }
 }
 
@@ -191,8 +205,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile)
-    var(--margin-bottom-mobile) var(--margin-left-mobile);
+  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -231,6 +244,51 @@ div {
   text-align: center;
   height: 20vh;
   background-color: var(--couleur-secondaire);
+}
+
+.cours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+
+.description_cours {
+  color: var(--couleur-primaire);
+  background-color: var(--couleur-secondaire);
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  width: 70vw;
+  height: 30vh;
+  margin: 0 auto;
+  padding: var(--padding-top-mobile);
+  padding-top: 5vh;
+}
+
+.contenufunky {
+  margin-top: 20vh;
+}
+
+.contenufunky h3 {
+  font-size: 23pt;
+}
+
+.lespointsfunky {
+  margin-top: 10vh;
+}
+
+.lespointsfunky b {
+  width: 20px;
+  height: 20px;
+  margin-right: 3vw;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
+}
+
+.lespointsfunky p {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
 }
 
 footer {
@@ -392,10 +450,11 @@ button {
   height: 200px;
   perspective: 600px;
   transition: perspective 1s;
-  top: 30vh;
-  position: sticky;
-  z-index: 5;
-  background-color: aqua;
+  margin: 0 auto;
+  margin-bottom: 30vh;
+  margin-top: 230vh;
+  position: relative;
+  z-index: 1000000000;
 }
 @media screen and (min-width: 1280px) {
   #scene {
@@ -472,12 +531,7 @@ button {
   transform: rotateX(-90deg) translateZ(100px);
 }
 
-.front,
-.back,
-.right,
-.left,
-.top,
-.bottom {
+.face {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -573,4 +627,4 @@ button {
   .degrade1magenta {
     width: 30vw;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
