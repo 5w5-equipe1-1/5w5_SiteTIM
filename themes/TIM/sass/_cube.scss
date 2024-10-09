@@ -1,39 +1,6 @@
 //style CSS pour le cube 3D - le menu burger quand il est ouvert et un élément de la page d'accueil
-.conteneur{
-
-#scene {
-  width: 200px;
-  height: 200px;
-  perspective: 600px;
-  transition: perspective 1s;
-  margin: 0 auto;
-  margin-bottom: 30vh;
-  margin-top: 230vh;
-  position: relative;
-  z-index: 9;
-  //Style pour tabelette
-  @media screen and (min-width: 1280px) {
-    //margin-bottom: 30vh;
-   // margin-top: 180vh;
-  }
-}
 
 
-}
-
-.scene_burguer {
-  width: 200px;
-  height: 200px;
-  perspective: 600px;
-  transition: perspective 1s, transform 1s;
-  transform: scale(2) translate(-50vh, 25vh);
-  transform-origin: center center;
-}
-
-.shrink {
-  transform: scale(0.2) translate(0, 0);
-  transform-origin: center center;
-}
 
 .cube {
   width: 100%;
