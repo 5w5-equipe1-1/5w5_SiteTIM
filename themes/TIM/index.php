@@ -1,3 +1,4 @@
+<!-- Entete personnaliser pour la page d'Accueil -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -28,7 +29,6 @@
     </header>
     <!-- la page avec les information -->
     <main class="conteneur">
-
             <!-- <img src="./themes/TIM/images/fence.png" alt="fence-gauche" class="fence-gauche">
             <img src="./themes/TIM/images/fence.png" alt="fence-droite" class="fence-droite"> -->
         <div class="scene" id="scene">
@@ -37,40 +37,42 @@
             <div class="degrade1orange"></div>
             <div class="degrade1cyan"></div>
             <div class="degrade1magenta"></div>
+
+            <!-- le cube en tant que tel -->
             <div class="cube" id="cube">
                 <div class="front" id="front">
                     <h3>3D</h3>
-                    <button class="bouton_cube">
-                        <a href="">En savoir plus</a>
+                    <button class="bouton_cube" id="3d">
+                        <a href="<?php echo get_template_directory_uri() . "/3d.php"?>">En savoir plus</a>
                     </button>
                 </div>
                 <div class="back" id="back">
                     <h3>Jeux vidéos</h3>
-                    <button class="bouton_cube">
+                    <button class="bouton_cube" id="jeux_video">
                         <a href="">En savoir plus</a>
                     </button>
                 </div>
                 <div class="right" id="right">
                     <h3>Films</h3>
-                    <button class="bouton_cube">
+                    <button class="bouton_cube" id="film">
                         <a href="">En savoir plus</a>
                     </button>
                 </div>
                 <div class="left" id="left">
                     <h3>Design</h3>
-                    <button class="bouton_cube">
+                    <button class="bouton_cube" id="design">
                         <a href="">En savoir plus</a>
                     </button>
                 </div>
                 <div class="top" id="top">
                     <h3>Web</h3>
-                    <button class="bouton_cube">
+                    <button class="bouton_cube" id="web">
                         <a href="">En savoir plus</a>
                     </button>
                 </div>
                 <div class="bottom" id="bottom">
                     <h3>Formation spécifique</h3>
-                    <button class="bouton_cube">
+                    <button class="bouton_cube" id="formation_specifique">
                         <a href="">En savoir plus</a>
                     </button>
                 </div>
@@ -118,41 +120,7 @@
             </ul>
         </div>
     </main>
-    <footer>
-        <div class="conteneur_logo_tim">
-            <img src="http://localhost/5w5_ELOI/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
-            <h2 class="TIM_entete">Techniques <br>d'intégration multimédia</h2>
-        </div>
-        <div class="info_footer">
-            <div class="colonne_footer">
-                <!-- afficher les categories du site et le lien vers la page (ne pas montrer la categorie cours et projets parce qu'il n'y a pas de page lier a eux) -->
-                <h3>Section 1 Titre</h3>
-                <?php foreach(get_categories() as $cat):?>
-                    <?php if($cat->name != "Cours" || $cat->name != "Projets"):?>
-                        <p class="info_colonne_footer"><a href="">
-                        <?php echo $cat->name;?></a></p>
-                    <?php endif;?>
-                <?php endforeach;?>
-            </div>
-            <div class="colonne_footer">
-                <h3>Section 2 Titre</h3>
-                <p class="info_colonne_footer">faerg steg</p>
-                <p class="info_colonne_footer">tg e rgtuyui</p>
-                <p class="info_colonne_footer">g srtg arffaer </p>
-                <p class="info_colonne_footer">sdfr fazf </p>
-                <p class="info_colonne_footer">WERFT GYferg</p>
-            </div>
-            <div class="colonne_footer">
-                <h3>Section 3 Titre</h3>
-                <p class="info_colonne_footer">frcdrg err</p>
-                <p class="info_colonne_footer">efer effsfdf</p>
-                <p class="info_colonne_footer">thyhudvf</p>
-                <p class="info_colonne_footer">sdf rfwwsdf</p>
-                <p class="info_colonne_footer">thujfhsre wffff</p>
-            </div>
-        </div>
-        <div class="droitsfooter"><p>2024-2025® Trucchosemachinchouette</p></div>
-    </footer>
+    <?php get_footer();?>
     <!-- API fontawsome pour les icones -->
     <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
     <!-- inclure le script qui gere les animations de scroll -->
