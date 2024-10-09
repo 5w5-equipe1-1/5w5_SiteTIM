@@ -128,21 +128,23 @@ header {
     width: 98%;
   }
 }
-
-.conteneur_burger_recherche {
+header .conteneur_logo_tim {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: var(--margin-left-mobile);
-  width: 15vw;
+}
+header .conteneur_logo_tim .logo_tim {
+  width: 50px;
+  height: 50px;
 }
 @media screen and (min-width: 1280px) {
-  .conteneur_burger_recherche {
-    width: 6vw;
+  header .conteneur_logo_tim .logo_tim {
+    width: 94px;
+    height: 94px;
   }
 }
-
 header .conteneur_logo_tim .TIM_entete {
   text-align: left;
   display: none;
@@ -152,38 +154,34 @@ header .conteneur_logo_tim .TIM_entete {
     display: block;
   }
 }
-
-.conteneur_logo_tim {
+header .conteneur_burger_recherche {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: var(--margin-left-mobile);
-}
-
-.logo_tim {
-  width: 50px;
-  height: 50px;
+  width: 15vw;
 }
 @media screen and (min-width: 1280px) {
-  .logo_tim {
-    width: 94px;
-    height: 94px;
+  header .conteneur_burger_recherche {
+    width: 6vw;
   }
 }
-
-.conteneur_barre_recherche {
+header .conteneur_burger_recherche .conteneur_barre_recherche {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
-.text_recherche {
+header .conteneur_burger_recherche .conteneur_barre_recherche .fa-magnifying-glass {
+  color: var(--couleur-secondaire);
+  font-size: 30px;
+}
+header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
   display: none;
 }
 @media screen and (min-width: 1280px) {
-  .text_recherche {
+  header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
     display: block;
     text-decoration: none;
     background-color: transparent;
@@ -192,11 +190,6 @@ header .conteneur_logo_tim .TIM_entete {
     padding: var(--padding-top-mobile);
     color: var(--couleur-secondaire);
   }
-}
-
-.fa-magnifying-glass {
-  color: var(--couleur-secondaire);
-  font-size: 30px;
 }
 
 body {
@@ -209,7 +202,17 @@ body {
   background-color: var(--couleur-primaire);
   font-family: Arial, Helvetica, sans-serif;
 }
-
+body #scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  transition: perspective 1s;
+  margin: 0 auto;
+  margin-bottom: 30vh;
+  margin-top: 230vh;
+  position: relative;
+  z-index: 9;
+}
 div {
   margin: 0;
 }
@@ -428,18 +431,7 @@ button {
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
-.conteneur #scene {
-  width: 200px;
-  height: 200px;
-  perspective: 600px;
-  transition: perspective 1s;
-  margin: 0 auto;
-  margin-bottom: 30vh;
-  margin-top: 230vh;
-  position: relative;
-  z-index: 9;
-}
-.scene_burguer {
+.sceneBurguer {
   width: 200px;
   height: 200px;
   perspective: 600px;
