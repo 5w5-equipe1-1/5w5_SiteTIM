@@ -1,3 +1,8 @@
+<?php
+//recuperer le fichier la categorie 3D
+    $cat = get_category("3D");          
+    $nom_cat = $cat->name;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <title>TIM - Accueil</title>
+    <title>TIM - <?php echo $nom_cat;?></title>
 </head>
 <body>
     <header>
@@ -64,25 +69,25 @@
         <div class="section_hero">
             <video src=""></video>
             <div class="text_hero">
-                <h1>3D</h1>
+                <h1><?php echo $nom_cat; ?></h1>
                 <h3>Sous titre</h3>
             </div>
         </div>
         <div class="galerie">
         </div>
         <div class="cours">
-            <details>
-                <summary class="summary_1">Cours 1</summary>
-                <p class="description_cours">Description du cours 1</p>
-            </details>
-            <details>
-                <summary class="summary_2">Cours 1</summary>
-                <p class="description_cours">Description du cours 1</p>
-            </details>
-            <details>
-                <summary class="summary_3">Cours 1</summary>
-                <p class="description_cours">Description du cours 1</p>
-            </details>
+            <?php
+            //recuperer les posts de la categorie 3D
+            if(have_posts()):
+                foreach(get_posts() as $post):
+            ?>
+                    <details>
+                        <summary class="summary_<?php echo $post->ID?>"><?php echo $post->titre?></summary>
+                        <p class="description_cours"><?php echo $post->description?></p>
+                    </details>
+                <?php endforeach;?>
+            <?php endif;?>
+            
         </div>
     </main>
     <footer>
