@@ -23,7 +23,7 @@
                 <input type="text" placeholder="Rechercher..." class="text_recherche">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <div class="sceneBurguer" id="sceneBurguer">
+            <div class="scene_burguer" id="scene_burguer">
                 <div class="cube" id="cube">
                     <div class="front face" id="front">
                         <h3>3D</h3>

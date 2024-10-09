@@ -107,32 +107,39 @@ summary {
 }
 
 header {
+  z-index: 10;
   position: fixed;
   top: 0%;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   width: 99%;
-  position: fixed;
-  left: 0.5%;
-  z-index: 100000000000;
+  background-color: var(--couleur-primaire);
+  box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
+}
+@media screen and (min-width: 1280px) {
+  header {
+    margin-top: 0;
+    margin-left: var(--margin-left-tablette);
+    margin-right: var(--margin-right-tablette);
+    width: 98%;
+  }
 }
 
 .conteneur_burger_recherche {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
-  height: 50px;
-  width: 25vw;
+  gap: var(--margin-left-mobile);
+  width: 15vw;
 }
 @media screen and (min-width: 1280px) {
   .conteneur_burger_recherche {
-    height: 94px;
+    width: 6vw;
   }
 }
 
@@ -208,9 +215,14 @@ div {
 }
 
 .description_multimedia {
-  margin-top: var(--margin-top-mobile);
-  background-color: red;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   text-align: left;
+}
+@media screen and (max-width: 680px) {
+  .description_multimedia {
+    margin-top: var(--margin-top-mobile);
+  }
 }
 
 .description_evenements {
@@ -218,17 +230,19 @@ div {
   flex-direction: row;
   align-items: top;
   justify-content: space-between;
-  background-color: blue;
   height: 40vh;
 }
 
 .description_evenements:nth-of-type(even) {
-  background-color: green;
   flex-direction: row-reverse;
 }
 
 .bannieres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  height: 20vh;
   background-color: var(--couleur-secondaire);
 }
 
@@ -250,8 +264,34 @@ div {
   padding-top: 5vh;
 }
 
+.contenufunky {
+  margin-top: 20vh;
+}
+
+.contenufunky h3 {
+  font-size: 23pt;
+}
+
+.lespointsfunky {
+  margin-top: 10vh;
+}
+
+.lespointsfunky b {
+  width: 20px;
+  height: 20px;
+  margin-right: 3vw;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
+}
+
+.lespointsfunky p {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
+}
+
 footer {
-  background-color: purple;
   width: 100vw;
 }
 
@@ -261,6 +301,9 @@ footer .conteneur_logo_tim {
   justify-content: left;
   align-items: center;
   width: 100vw;
+  margin-top: 20vh;
+  margin-left: 10%;
+  margin-bottom: 5vh;
 }
 
 footer .conteneur_logo_tim .logo_tim {
@@ -277,9 +320,9 @@ footer .conteneur_logo_tim .TIM_entete {
 .info_footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  height: 100%;
+  height: 60%;
   width: 100vw;
   margin: 0 auto;
 }
@@ -300,6 +343,12 @@ footer .conteneur_logo_tim .TIM_entete {
 .info_colonne_footer {
   margin: 0;
   width: fit-content;
+}
+
+.droitsfooter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 p {
@@ -368,10 +417,18 @@ button {
   transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 
+.showCube {
+  opacity: 1;
+}
+
+.hideCube {
+  opacity: 0;
+}
+
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
-#scene {
+.conteneur #scene {
   width: 200px;
   height: 200px;
   perspective: 600px;
@@ -380,16 +437,9 @@ button {
   margin-bottom: 30vh;
   margin-top: 230vh;
   position: relative;
-  z-index: 1000000000;
+  z-index: 9;
 }
-@media screen and (min-width: 1280px) {
-  #scene {
-    margin-bottom: 30vh;
-    margin-top: 180vh;
-  }
-}
-
-.sceneBurguer {
+.scene_burguer {
   width: 200px;
   height: 200px;
   perspective: 600px;
@@ -462,4 +512,95 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.parallax {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  /* Grandeur du defilement du cube */
+  height: 400vh;
+  padding: 50px;
+}
+
+/* ----------------------------------------------------- */
+/*Les Dégradés*/
+/* ----------------------------------------------------- */
+.testdegrade {
+  position: absolute;
+  height: 20vh;
+  width: 11vw;
+  z-index: -1;
+  box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 300px 30px;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1280px) {
+  .testdegrade {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .testdegrade {
+    width: 30vw;
+  }
+}
+
+.degrade1orange {
+  position: fixed;
+  height: 20vh;
+  width: 11vw;
+  z-index: -1;
+  box-shadow: var(--couleur-orange) 50px -60px 100px 20px;
+  filter: saturate(2);
+  border-radius: 50%;
+}
+@media screen and (max-width: 1280px) {
+  .degrade1orange {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .degrade1orange {
+    width: 30vw;
+  }
+}
+
+.degrade1cyan {
+  position: absolute;
+  height: 20vh;
+  width: 11vw;
+  z-index: -1;
+  box-shadow: var(--couleur-cyan) -30px 0px 300px 30px;
+  filter: saturate(3);
+  border-radius: 50%;
+}
+@media screen and (max-width: 1280px) {
+  .degrade1cyan {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .degrade1cyan {
+    width: 30vw;
+  }
+}
+
+.degrade1magenta {
+  position: absolute;
+  height: 20vh;
+  width: 11vw;
+  z-index: -1;
+  box-shadow: var(--couleur-magenta) 25px 50px 300px 30px;
+  filter: saturate(3);
+  border-radius: 50%;
+}
+@media screen and (max-width: 1280px) {
+  .degrade1magenta {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .degrade1magenta {
+    width: 30vw;
+  }
 }/*# sourceMappingURL=style.css.map */

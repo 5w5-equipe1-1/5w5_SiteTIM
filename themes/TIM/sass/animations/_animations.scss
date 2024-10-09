@@ -14,3 +14,26 @@
     transform: translateX(-100%); 
     transition: opacity 0.5s ease-in, transform 0.5s ease-in; 
 }
+
+.showCube{
+    opacity: 1;
+}
+
+.hideCube{
+    opacity: 0;
+}
+
+// .parallax img{
+//     position: sticky; /* Changer de absolute à fixed */
+//     width: 20%;
+//     height: 10%;
+//     /* Garde les marges pour le positionnement */
+//     top: 10%; /* Ajuste selon ton besoin */
+//     z-index: 6;
+// }
+// .fence-droite{
+//     translate: 70vh;
+// }
+// .fence-gauche{
+//     translate: -5vh;
+// }
