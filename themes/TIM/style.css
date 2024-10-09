@@ -191,6 +191,18 @@ header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
     color: var(--couleur-secondaire);
   }
 }
+header .conteneur_burger_recherche .sceneBurguer {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  transition: perspective 1s, transform 1s;
+  transform: scale(2) translate(-50vh, 25vh);
+  transform-origin: center center;
+}
+header .conteneur_burger_recherche .shrink {
+  transform: scale(0.2) translate(0, 0);
+  transform-origin: center center;
+}
 
 body {
   display: flex;
@@ -431,20 +443,6 @@ button {
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
-.sceneBurguer {
-  width: 200px;
-  height: 200px;
-  perspective: 600px;
-  transition: perspective 1s, transform 1s;
-  transform: scale(2) translate(-50vh, 25vh);
-  transform-origin: center center;
-}
-
-.shrink {
-  transform: scale(0.2) translate(0, 0);
-  transform-origin: center center;
-}
-
 .cube {
   width: 100%;
   height: 100%;

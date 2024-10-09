@@ -17,7 +17,6 @@ header {
       margin-left: var(--margin-left-tablette);
       margin-right: var(--margin-right-tablette);
       width: 98%;
-
     //Ajout test de Gabrielle
   }
 
@@ -85,6 +84,20 @@ header {
           color: var(--couleur-secondaire);
         }
       }
+    }
+
+    //style CSS pour le cube 3D - le menu burger quand il est ouvert et un élément de la page d'accueil
+    .sceneBurguer {
+      width: 200px;
+      height: 200px;
+      perspective: 600px;
+      transition: perspective 1s, transform 1s;
+      transform: scale(2) translate(-50vh, 25vh);
+      transform-origin: center center;
+    }
+    .shrink {
+      transform: scale(0.2) translate(0, 0);
+      transform-origin: center center;
     }
   }
 }
