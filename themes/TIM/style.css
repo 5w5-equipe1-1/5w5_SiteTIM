@@ -107,7 +107,7 @@ summary {
 }
 
 header {
-  z-index: 100000000000;
+  z-index: 10;
   position: fixed;
   top: 0%;
   text-align: center;
@@ -425,27 +425,10 @@ button {
   opacity: 0;
 }
 
-.parallax img {
-  position: sticky; /* Changer de absolute à fixed */
-  width: 20%;
-  height: 10%;
-  /* Garde les marges pour le positionnement */
-  top: 10%; /* Ajuste selon ton besoin */
-  z-index: 6;
-}
-
-.fence-droite {
-  translate: 70vh;
-}
-
-.fence-gauche {
-  translate: -5vh;
-}
-
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
-#scene {
+.conteneur #scene {
   width: 200px;
   height: 200px;
   perspective: 600px;
@@ -454,16 +437,9 @@ button {
   margin-bottom: 30vh;
   margin-top: 230vh;
   position: relative;
-  z-index: 1000000000;
+  z-index: 9;
 }
-@media screen and (min-width: 1280px) {
-  #scene {
-    margin-bottom: 30vh;
-    margin-top: 180vh;
-  }
-}
-
-.sceneBurguer {
+.scene_burguer {
   width: 200px;
   height: 200px;
   perspective: 600px;

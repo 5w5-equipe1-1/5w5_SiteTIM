@@ -1,6 +1,6 @@
 let cube = document.getElementById('cube');
 let lesFaces = document.querySelectorAll('.face');
-let scene = document.getElementById('sceneBurguer');
+let scene = document.getElementById('scene_Burguer');
 
 let isCubeSelected = false;
 let touchStart = { x: 0, y: 0 };
