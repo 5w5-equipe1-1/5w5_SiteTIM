@@ -124,8 +124,9 @@
     <!-- API fontawsome pour les icones -->
     <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
     <!-- inclure le script qui gere les animations de scroll -->
-    <script src="<?php echo get_template_directory_uri() ."/js/animations.js"?>"></script>
+    <script src="<?php echo get_template_directory_uri() . "/js/animations.js"?>"></script>
     <!-- inclure le script qui gere le cube 3D -->
-    <script src="<?php echo get_template_directory_uri() ."/js/cube.js"?>"></script>
+    <script src="<?php echo get_template_directory_uri() . "/js/cube.js"?>"></script>
+    <script src="<?php echo get_template_directory_uri() . "/js/slectionCat.js"?>"></script>
 </body>
 </html>

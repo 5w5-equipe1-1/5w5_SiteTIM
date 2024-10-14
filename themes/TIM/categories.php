@@ -1,8 +1,18 @@
 <?php 
     /* Template Name: categories Page */
     get_header(); //afficher le header
-    $category = get_queried_object(); //recuperer la categorie courante
-    if($category){ //verifier si la categorie existe
+
+    // Récupérer l'ID envoyé par la requête AJAX
+    if (isset($_POST['id'])) {
+        $category = $_POST['id'];
+    } elseif (isset($_GET['id'])) {
+        $category = $_GET['id'];
+    } else {
+        $category = null;
+    }
+    
+    //verifier si la categorie existe
+    if($category){ 
         $_nomCat = $category->name; //recuperer le nom de la categorie
     }
 ?>
