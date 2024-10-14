@@ -454,7 +454,24 @@ button {
   transform: rotateX(0deg) rotateY(0deg);
   transform-origin: center center;
 }
-
+.cube .front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.cube .back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.cube .right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.cube .left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.cube .top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.cube .bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
 .cube div {
   position: absolute;
   width: 200px;
@@ -466,54 +483,19 @@ button {
   align-items: center;
   cursor: pointer;
 }
-
 .cube div h3 {
   font-size: 35px;
   margin: 0;
 }
-
 .cube div a {
   font-size: 15px;
 }
 
-.front {
-  transform: rotateY(0deg) translateZ(100px);
-}
-
-.back {
-  transform: rotateY(180deg) translateZ(100px);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(100px);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(100px);
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(100px);
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(100px);
-}
-
-.face {
+.cube div .face {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.parallax {
-  display: flex;
-  position: relative;
-  z-index: 1;
-  /* Grandeur du defilement du cube */
-  height: 400vh;
-  padding: 50px;
 }
 
 /* ----------------------------------------------------- */

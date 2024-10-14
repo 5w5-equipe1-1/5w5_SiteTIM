@@ -1,7 +1,4 @@
 //style CSS pour le cube 3D - le menu burger quand il est ouvert et un élément de la page d'accueil
-
-
-
 .cube {
   width: 100%;
   height: 100%;
@@ -9,31 +6,8 @@
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
   transform-origin: center center;
-}
 
-.cube div {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: var(--couleur-secondaire);
-  border: 0.5px solid var(--couleur-secondaire);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-//text sur le cube
-.cube div h3 {
-  font-size: 35px;
-  margin: 0;
-}
-
-.cube div a {
-  font-size: 15px;
-}
-
-//face du cube
+  //face du cube
 .front {
   transform: rotateY(0deg) translateZ(100px);
 }
@@ -53,6 +27,34 @@
   transform: rotateX(-90deg) translateZ(100px);
 }
 
+  div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--couleur-secondaire);
+    border: 0.5px solid var(--couleur-secondaire);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    h3 {
+      font-size: 35px;
+      margin: 0;
+    }
+
+    a {
+      font-size: 15px;
+    }
+  }
+}
+
+
+
+.cube div
+
+
+
 .face {
   display: flex;
   flex-direction: column;
@@ -60,13 +62,4 @@
   align-items: center;
 }
 
-.parallax {
-  display: flex;
-  //justify-content: center;
-  position: relative;
-  z-index: 1;
-  /* Grandeur du defilement du cube */
-  height: 400vh;
-  padding: 50px;
-  //background-color: rgba(255, 255, 255, 0.8);
-}
+
