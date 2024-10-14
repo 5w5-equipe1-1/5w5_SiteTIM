@@ -1,120 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive 3D Cube</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #141414;
-        }
-        .scene {
-            width: 200px;
-            height: 200px;
-            perspective: 600px;
-            transition: perspective 1s;
-        }
-
-        .shrink{
-            transform: scale(0.1) translate(50vh, -50vh);
-        }
-
-        .cube {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transform: rotateX(0deg) rotateY(0deg);
-        }
-        .cube div {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 1);
-            border: 1px solid #ccc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .front  { transform: rotateY(  0deg) translateZ(100px); }
-        .back   { transform: rotateY(180deg) translateZ(100px); }
-        .right  { transform: rotateY( 90deg) translateZ(100px); }
-        .left   { transform: rotateY(-90deg) translateZ(100px); }
-        .top    { transform: rotateX( 90deg) translateZ(100px); }
-        .bottom { transform: rotateX(-90deg) translateZ(100px); }
- 
-        .button-27 {
-            appearance: none;
-            background-color: #000000;
-            border: 2px solid #1A1A1A;
-            border-radius: 15px;
-            box-sizing: border-box;
-            color: #FFFFFF;
-            cursor: pointer;
-            display: inline-block;
-            font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-            padding: 8px 12px;
-            text-align: center;
-            text-decoration: none;
-            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-            user-select: none;
-            width: 60%;
-            z-index: 1000000;
-        }
- 
-        .button-27:hover {
-            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-            transform: translateY(-2px);
-        }
- 
-        .button-27:active {
-            box-shadow: none;
-            transform: translateY(0);
-        }
- 
-        #front {
-            background-position: center;
-            background-size: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
- 
-        h3 {
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            margin: 0;
-            padding-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="scene" id="scene">
-        <div class="cube" id="cube">
-            <div class="front face" id="front">
-                <h3>3D</h3>
-                <button class="button-27" role="button" id="explorerButton">Explorer</button>
-            </div>
-            <div class="back face" id="back">2</div>
-            <div class="right face" id="right">3</div>
-            <div class="left face" id="left">4</div>
-            <div class="top face" id="top">5</div>
-            <div class="bottom face" id="bottom">6</div>
-        </div>
-    </div>
-    <script>
+//code JS pour le cube - le menu burger quand il est ouvert et un élément de la page d'accueil
         let cube = document.getElementById('cube');
         let lesFaces = document.querySelectorAll('.face');
         let scene = document.getElementById('scene');
@@ -267,9 +151,10 @@
             }
         });
 
-        let boutonChangement = document.querySelector('.button-27');
-
-        boutonChangement.addEventListener('click', function() {
+        //selectionner les boutons sur le cube pour le faire rapetisser
+        let boutonChangement = document.querySelectorAll('.bouton_cube');
+        for (let bouton of boutonChangement) {
+            bouton.addEventListener('click', function() {
             scene.classList.toggle('shrink');
             if (scene.classList.contains('shrink')) {
                 // Disable user rotation and enable auto-rotation
@@ -281,6 +166,7 @@
                 autoRotate = false;  
             }
         });
+        };
 
         // User Rotation Control
         let userRotationAllowed = true;
@@ -325,6 +211,3 @@
                 }
             });
         });
-    </script>
-</body>
-</html>

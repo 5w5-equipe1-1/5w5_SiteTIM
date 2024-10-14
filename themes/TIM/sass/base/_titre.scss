@@ -1,0 +1,60 @@
+h1{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--couleur-secondaire);
+    margin-left: var(--margin-left-mobile);
+}
+
+h2{
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--couleur-secondaire);
+}
+
+.bannieres h2{
+    color: var(--couleur-primaire);
+}
+
+h3{
+   font-weight: bold;
+   color: var(--couleur-secondaire);
+   margin-left: var(--margin-left-mobile);
+}
+
+.cube div h3{
+    color: var(--couleur-primaire);
+}
+
+h4{
+    margin: 0;
+}
+
+summary{
+    color: var(--couleur-primaire);
+    background-color: var(--couleur-secondaire);
+    padding: var(--padding-top-mobile);	
+    font-size: larger;
+    width: 70vw;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--couleur-orange) 0px 5px 15px;
+    transform: translateY(2vh);
+}
+
+.summary_2{
+    box-shadow: var(--couleur-magenta) 0px 5px 15px;
+}
+
+.summary_3{
+    box-shadow: var(--couleur-cyan) 0px 5px 15px;
+}
+
+//Style pour tabelette
+@media screen and (min-width: 1280px){
+    
+}
+
+//Style pour Ordinateur
+@media screen and (min-width: 1920px){
+    
+}

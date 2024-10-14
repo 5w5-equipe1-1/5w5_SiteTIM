@@ -1,0 +1,137 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: var(--margin-top-mobile) var(--margin-right-mobile)
+    var(--margin-bottom-mobile) var(--margin-left-mobile);
+  background-color: var(--couleur-primaire);
+  font-family: Arial, Helvetica, sans-serif;
+  // background-color: fuchsia;
+  #scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    transition: perspective 1s;
+    margin: 0 auto;
+    margin-bottom: 30vh;
+    margin-top: 230vh;
+    position: relative;
+    z-index: 9;
+    //Style pour tabelette
+    @media screen and (min-width: 1280px) {
+      //margin-bottom: 30vh;
+     // margin-top: 180vh;
+    }
+  }
+}
+
+div {
+  margin: 0;
+}
+
+//section ou on décrit quest ce que le multimédia
+.description_multimedia {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  // background-color: red;
+  text-align: left;
+
+  @media screen and (max-width: 680px) {
+    margin-top: var(--margin-top-mobile);
+  }
+}
+
+//section ou on montre les concours et les événements
+.description_evenements {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+  //   background-color: blue;
+  height: 40vh;
+}
+
+.description_evenements:nth-of-type(even) {
+  //   background-color: green;
+  flex-direction: row-reverse;
+}
+
+.bannieres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  height: 20vh;
+
+  background-color: var(--couleur-secondaire);
+}
+
+//cours
+.cours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+
+.description_cours {
+  color: var(--couleur-primaire);
+  background-color: var(--couleur-secondaire);
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  width: 70vw;
+  height: 30vh;
+  margin: 0 auto;
+  padding: var(--padding-top-mobile);
+  padding-top: 5vh;
+}
+
+.contenufunky {
+  margin-top: 20vh;
+}
+
+.contenufunky h3 {
+  font-size: 23pt;
+}
+
+.lespointsfunky {
+  margin-top: 10vh;
+}
+
+.lespointsfunky b {
+  width: 20px;
+  height: 20px;
+  margin-right: 3vw;
+
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
+}
+
+.lespointsfunky p {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
+}
+
+//Style pour tabelette
+@media screen and (min-width: 1280px) {
+}
+
+//Style pour Ordinateur
+@media screen and (min-width: 1920px) {
+}
+
+
+.parallax {
+  display: flex;
+  //justify-content: center;
+  position: relative;
+  z-index: 1;
+  /* Grandeur du defilement du cube */
+  height: 400vh;
+  padding: 50px;
+  //background-color: rgba(255, 255, 255, 0.8);
+}
