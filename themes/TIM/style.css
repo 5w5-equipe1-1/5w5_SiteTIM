@@ -160,12 +160,6 @@ header .conteneur_burger_recherche {
   justify-content: space-between;
   align-items: center;
   gap: var(--margin-left-mobile);
-  width: 15vw;
-}
-@media screen and (min-width: 1280px) {
-  header .conteneur_burger_recherche {
-    width: 6vw;
-  }
 }
 header .conteneur_burger_recherche .conteneur_barre_recherche {
   display: flex;
