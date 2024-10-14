@@ -306,10 +306,18 @@ div {
   margin: 0px 0px 50px 0px;
 }
 
-footer {
-  width: 100vw;
+.parallax {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  /* Grandeur du defilement du cube */
+  height: 400vh;
+  padding: 50px;
 }
 
+footer {
+  width: 100%;
+}
 footer .conteneur_logo_tim {
   display: flex;
   flex-direction: row;
@@ -320,19 +328,16 @@ footer .conteneur_logo_tim {
   margin-left: 10%;
   margin-bottom: 5vh;
 }
-
 footer .conteneur_logo_tim .logo_tim {
   width: 90px;
   height: 90px;
 }
-
 footer .conteneur_logo_tim .TIM_entete {
   text-align: left;
   display: block;
   font-size: 23px;
 }
-
-.info_footer {
+footer .info_footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -341,23 +346,21 @@ footer .conteneur_logo_tim .TIM_entete {
   width: 100vw;
   margin: 0 auto;
 }
-
-.colonne_footer {
+footer .info_footer .colonne_footer {
   display: flex;
   flex-direction: column;
   justify-content: top;
   align-items: left;
   height: 100%;
 }
+footer .info_footer .colonne_footer .info_colonne_footer {
+  margin: 0;
+  width: fit-content;
+}
 
 .titre_footer {
   color: var(--couleur-secondaire);
   width: 30vh;
-}
-
-.info_colonne_footer {
-  margin: 0;
-  width: fit-content;
 }
 
 .droitsfooter {

@@ -123,3 +123,15 @@ div {
 //Style pour Ordinateur
 @media screen and (min-width: 1920px) {
 }
+
+
+.parallax {
+  display: flex;
+  //justify-content: center;
+  position: relative;
+  z-index: 1;
+  /* Grandeur du defilement du cube */
+  height: 400vh;
+  padding: 50px;
+  //background-color: rgba(255, 255, 255, 0.8);
+}

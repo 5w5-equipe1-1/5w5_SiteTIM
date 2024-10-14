@@ -1,34 +1,31 @@
 //feuille de style du pied de page
 footer {
   // background-color: purple;
-  width: 100vw;
-}
+  width: 100%;
 
-//titre et logo
-footer .conteneur_logo_tim {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  width: 100vw;
+  //titre et logo
+  .conteneur_logo_tim {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100vw;
+  
+    margin-top: 20vh;
+    margin-left: 10%;
+    margin-bottom: 5vh;
 
-  margin-top: 20vh;
-  margin-left: 10%;
-  margin-bottom: 5vh;
-}
-
-footer .conteneur_logo_tim .logo_tim {
-  width: 90px;
-  height: 90px;
-}
-
-footer .conteneur_logo_tim .TIM_entete {
-  text-align: left;
-  display: block;
-  font-size: 23px;
-}
-
-//info dans le footer
+    .logo_tim {
+      width: 90px;
+      height: 90px;
+    }
+    .TIM_entete {
+      text-align: left;
+      display: block;
+      font-size: 23px;
+    }
+  }
+  //info dans le footer
 .info_footer {
   display: flex;
   flex-direction: row;
@@ -37,15 +34,23 @@ footer .conteneur_logo_tim .TIM_entete {
   height: 60%;
   width: 100vw;
   margin: 0 auto;
+
+  .colonne_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    height: 100%;
+
+    .info_colonne_footer {
+      margin: 0;
+      width: fit-content;
+    }
+  }
 }
 
-.colonne_footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: left;
-  height: 100%;
 }
+
 
 .titre_footer {
   color: var(--couleur-secondaire);
@@ -53,10 +58,7 @@ footer .conteneur_logo_tim .TIM_entete {
 }
 
 //texte dams les colonnes
-.info_colonne_footer {
-  margin: 0;
-  width: fit-content;
-}
+
 
 .droitsfooter {
   display: flex;
