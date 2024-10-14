@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.bouton_cube');
-
+    // Sélectionne tous les éléments avec la classe .bouton_cube - DONC MARCHE SEULEMENT SUR LE CUBE
+    const buttons = document.querySelectorAll('.bouton_cube'); 
     buttons.forEach(button => {
         button.addEventListener('click', function(event) {
             event.preventDefault();
