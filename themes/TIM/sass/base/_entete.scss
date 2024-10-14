@@ -54,11 +54,10 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: var(--margin-left-mobile);
-    width: 15vw;
+
     //width: 25vw;//si plus petit, le cube ne tourne pas sur son centre
     //Style pour tabelette
     @media screen and (min-width: 1280px) {
-      width: 6vw;
     }
 
     .conteneur_barre_recherche {
