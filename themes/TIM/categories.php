@@ -1,4 +1,5 @@
 <?php 
+    /* Template Name: categories Page */
     get_header(); //afficher le header
     $category = get_queried_object(); //recuperer la categorie courante
     if($category){ //verifier si la categorie existe

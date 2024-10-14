@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="conteneur_logo_tim">
-            <img href="" src="http://localhost/5w5_ELOI/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
+            <img href="<?php get_home_url(); ?>" src="http://localhost/5w5_ELOI/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
             <?php echo get_custom_logo();?>
             <h2 class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
         </div>
@@ -43,37 +43,37 @@
                 <div class="front" id="front">
                     <h3>3D</h3>
                     <button class="bouton_cube" id="3d">
-                        <a href="<?php echo get_template_directory_uri() . "/3d.php"?>">En savoir plus</a>
+                        <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                     </button>
                 </div>
                 <div class="back" id="back">
                     <h3>Jeux vidéos</h3>
                     <button class="bouton_cube" id="jeux_video">
-                        <a href="">En savoir plus</a>
+                        <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                     </button>
                 </div>
                 <div class="right" id="right">
                     <h3>Films</h3>
                     <button class="bouton_cube" id="film">
-                        <a href="">En savoir plus</a>
+                        <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                     </button>
                 </div>
                 <div class="left" id="left">
                     <h3>Design</h3>
                     <button class="bouton_cube" id="design">
-                        <a href="">En savoir plus</a>
+                        <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                     </button>
                 </div>
                 <div class="top" id="top">
                     <h3>Web</h3>
                     <button class="bouton_cube" id="web">
-                        <a href="">En savoir plus</a>
+                        <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                     </button>
                 </div>
                 <div class="bottom" id="bottom">
                     <h3>Formation spécifique</h3>
                     <button class="bouton_cube" id="formation_specifique">
-                        <a href="">En savoir plus</a>
+                        <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                     </button>
                 </div>
             </div>
