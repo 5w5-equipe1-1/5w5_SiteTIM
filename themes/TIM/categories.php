@@ -2,9 +2,15 @@
     /* Template Name: categories Page */
     get_header(); //afficher le header
 
+    //recuperer la categorie selectionner
+    include 'functions.php';
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $category = $_POST['category'];
+        $result = processCategory($category);
+        echo $result;
     }
+
     
     //verifier si la categorie existe
     if($category){ 
@@ -43,5 +49,7 @@
     <script src="<?php echo get_template_directory_uri() ."/js/animations.js"?>"></script>
     <!-- Script pour le menu burger -->
     <script src="<?php echo get_template_directory_uri() ."/js/cubeBergur.js"?>"></script>
+     <!-- inclure le script qui gere le changement de page -->
+     <script src="<?php echo get_template_directory_uri() . "/js/selectionCat.js"?>"></script>
 </body>
 </html>
