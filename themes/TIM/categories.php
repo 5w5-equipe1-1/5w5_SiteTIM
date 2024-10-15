@@ -2,13 +2,8 @@
     /* Template Name: categories Page */
     get_header(); //afficher le header
 
-    // Récupérer l'ID envoyé par la requête AJAX
-    if (isset($_POST['id'])) {
-        $category = $_POST['id'];
-    } elseif (isset($_GET['id'])) {
-        $category = $_GET['id'];
-    } else {
-        $category = null;
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $category = $_POST['category'];
     }
     
     //verifier si la categorie existe

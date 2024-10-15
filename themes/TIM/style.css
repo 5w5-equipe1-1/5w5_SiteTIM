@@ -215,7 +215,7 @@ body #scene {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 230vh;
+  margin-top: 330vh;
   position: relative;
   z-index: 9;
 }
@@ -473,6 +473,7 @@ button {
   background: var(--couleur-secondaire);
   border: 0.5px solid var(--couleur-secondaire);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -480,12 +481,13 @@ button {
 .cube div h3 {
   font-size: 35px;
   margin: 0;
+  text-align: center;
 }
 .cube div a {
   font-size: 15px;
 }
 
-.cube div .face {
+.face {
   display: flex;
   flex-direction: column;
   justify-content: center;

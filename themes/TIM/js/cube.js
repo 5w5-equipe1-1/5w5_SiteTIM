@@ -197,8 +197,9 @@
         }
 
         // Ajout de la classe shrink lors du clic sur le bouton Explorer
+        //creer une erreur mais fonctionne - pour une autre page que la page d'accueil
         let explorerButton = document.getElementById('explorerButton');
-        explorerButton.addEventListener('click', function(event) {
+        explorerButton.addEventListener('click', function(event) { 
             event.stopPropagation(); // Empêche la propagation de l'événement de clic
             scene.classList.add('shrink');
         });

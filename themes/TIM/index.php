@@ -127,6 +127,5 @@
     <script src="<?php echo get_template_directory_uri() . "/js/animations.js"?>"></script>
     <!-- inclure le script qui gere le cube 3D -->
     <script src="<?php echo get_template_directory_uri() . "/js/cube.js"?>"></script>
-    <script src="<?php echo get_template_directory_uri() . "/js/slectionCat.js"?>"></script>
 </body>
 </html>
