@@ -482,9 +482,11 @@ button {
   font-size: 35px;
   margin: 0;
   text-align: center;
+  user-select: none;
 }
 .cube div a {
   font-size: 15px;
+  user-select: none;
 }
 
 .face {
