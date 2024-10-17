@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <div class="conteneur_logo_tim">
-            <img href="<?php get_home_url(); ?>" src="http://localhost/5w5_ELOI/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
+        <div class="conteneur_logo_tim" href="<?php get_home_url(); ?>">
+            <img  src="http://localhost/5w5_ELOI/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
             <h2 class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
         </div>
         <div class="conteneur_burger_recherche">
