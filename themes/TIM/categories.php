@@ -1,20 +1,25 @@
 <?php 
+    // Assurez-vous que WordPress est chargé
+    if (!function_exists('get_header')) {
+        require_once(dirname(__FILE__) . '/../../../wp-load.php');
+    }
+
     /* Template Name: categories Page */
     get_header(); //afficher le header
 
     //recuperer la categorie selectionner
-    include 'functions.php';
+    require_once 'functions.php';
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $category = $_POST['category'];
+    $category = null;
+    if (isset($_GET['category'])) {
+        $category = $_GET['category'];
         $result = processCategory($category);
         echo $result;
     }
 
-    
     //verifier si la categorie existe
     if($category){ 
-        $_nomCat = $category->name; //recuperer le nom de la categorie
+        $_nomCat = htmlspecialchars($category); //recuperer le nom de la categorie
     }
 ?>
     <main>
