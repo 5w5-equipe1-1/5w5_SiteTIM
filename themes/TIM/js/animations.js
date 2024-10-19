@@ -34,3 +34,14 @@ window.addEventListener('scroll', () => {
     fenceGauche.style.transform = `translateX(${value * 0.4}px)`; 
     fencedroite.style.transform = `translateX(${value * -0.4}px)`;
 });
+
+
+//scroll in view
+let scrollElement = document.querySelector('.text_cercle');
+
+scrollElement.addEventListener('click', () => {
+    window.scrollTo({
+        top: 800,
+        behavior: 'smooth'
+    });
+});
