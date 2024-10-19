@@ -25,7 +25,24 @@ body {
      // margin-top: 180vh;
     }
   }
+  .text_cercle{
+    .text{
+      fill: orange;
+      font-size: 1.33em;
+     
+      
+    }
+    svg{ 
+      animation: rotateText 10s linear infinite;
+      transform-origin: center;
+      width: 30vw;
+      height: 30vh;
+    }
+
+  }
+  
 }
+
 
 div {
   margin: 0;

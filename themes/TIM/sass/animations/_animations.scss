@@ -23,6 +23,18 @@
     opacity: 0;
 }
 
+
+//animation de rotation du texte
+@keyframes rotateText {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+    
+}
+
 // .parallax img{
 //     position: sticky; /* Changer de absolute à fixed */
 //     width: 20%;

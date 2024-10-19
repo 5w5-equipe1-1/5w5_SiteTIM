@@ -219,6 +219,17 @@ body #scene {
   position: relative;
   z-index: 9;
 }
+body .text_cercle .text {
+  fill: orange;
+  font-size: 1.33em;
+}
+body .text_cercle svg {
+  animation: rotateText 10s linear infinite;
+  transform-origin: center;
+  width: 30vw;
+  height: 30vh;
+}
+
 div {
   margin: 0;
 }
@@ -437,6 +448,14 @@ button {
   opacity: 0;
 }
 
+@keyframes rotateText {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
