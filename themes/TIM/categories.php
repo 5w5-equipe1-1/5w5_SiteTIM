@@ -9,33 +9,46 @@
 
     get_header(); // Afficher le header
 
-    //recupere la categorie selectionner
+    // Récupérer la catégorie sélectionnée
     if (isset($_GET['category'])) {
-        $cat = $_GET['category'];
+        $cat = get_category_by_slug($_GET['category']);
     }
 ?>
         <main>
             <div class="section_hero">
                 <video src=""></video>
                 <div class="text_hero">
-                    <h1><?php echo $cat; ?></h1>
-                    <h3>Sous titre</h3>
+                    <h1><?php echo esc_html($cat->name); ?></h1>
+                    <h3><?php echo esc_html($cat->description); ?></h3>
                 </div>
             </div>
             <div class="galerie">
             </div>
             <div class="cours">
                 <?php
-                // Récupérer les posts de la catégorie
-                if (have_posts()):
-                    while (have_posts()): the_post();
+                // Vérifiez si la catégorie est valide
+                if ($cat):
+                    // Créez une nouvelle requête WP_Query pour récupérer les posts de la catégorie
+                    $query = new WP_Query(array(
+                        'cat' => $cat->term_id,
+                        'posts_per_page' => -1 // -1 pour récupérer tous les posts
+                    ));
+
+                    // Vérifiez si la requête a des posts
+                    if ($query->have_posts()):
+                        while ($query->have_posts()): $query->the_post();
                 ?>
-                        <details>
-                            <summary class="summary_1"><?php the_title(); ?></summary>
-                            <p class="description_cours"><?php the_content(); ?></p>
-                        </details>
-                    <?php endwhile;?>
-                <?php endif;?>
+                            <details>
+                                <summary class="summary_1"><?php the_title(); ?></summary>
+                                <p class="description_cours"><?php echo apply_filters('the_content', get_the_content()); ?></p>
+                            </details>
+                        <?php 
+                        endwhile; 
+                    endif; 
+                    // Réinitialisez les données de post
+                    wp_reset_postdata();
+                endif; 
+                ?>
             </div>
         </main>
         <?php get_footer(); ?>
