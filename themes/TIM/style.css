@@ -229,20 +229,50 @@ body .text_cercle svg {
   width: 30vw;
   height: 30vh;
 }
-
-div {
-  margin: 0;
-}
-
-.description_multimedia {
+body .description_multimedia {
   margin-top: 10vh;
   margin-bottom: 10vh;
   text-align: left;
 }
 @media screen and (max-width: 680px) {
-  .description_multimedia {
+  body .description_multimedia {
     margin-top: var(--margin-top-mobile);
   }
+}
+body .bannieres {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 20vh;
+  width: 200%;
+  background-color: red;
+}
+body .bannieres .photo {
+  width: 10%;
+  height: 80%;
+}
+body .bannieres .p1 {
+  background-color: green;
+}
+body .bannieres .p2 {
+  background-color: purple;
+}
+body .bannieres .p3 {
+  background-color: peru;
+}
+body .bannieres .p4 {
+  background-color: lightcoral;
+}
+body .bannieres .p5 {
+  background-color: lightblue;
+}
+body .bannieres .p6 {
+  background-color: lightgreen;
+}
+
+div {
+  margin: 0;
 }
 
 .description_evenements {
@@ -255,15 +285,6 @@ div {
 
 .description_evenements:nth-of-type(even) {
   flex-direction: row-reverse;
-}
-
-.bannieres {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 20vh;
-  background-color: var(--couleur-secondaire);
 }
 
 .cours {
