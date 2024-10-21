@@ -8,24 +8,24 @@
   transform-origin: center center;
 
   //face du cube
-.front {
-  transform: rotateY(0deg) translateZ(100px);
-}
-.back {
-  transform: rotateY(180deg) translateZ(100px);
-}
-.right {
-  transform: rotateY(90deg) translateZ(100px);
-}
-.left {
-  transform: rotateY(-90deg) translateZ(100px);
-}
-.top {
-  transform: rotateX(90deg) translateZ(100px);
-}
-.bottom {
-  transform: rotateX(-90deg) translateZ(100px);
-}
+  .front {
+    transform: rotateY(0deg) translateZ(100px);
+  }
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
 
   div {
     position: absolute;
@@ -34,6 +34,7 @@
     background: var(--couleur-secondaire);
     border: 0.5px solid var(--couleur-secondaire);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -41,19 +42,16 @@
     h3 {
       font-size: 35px;
       margin: 0;
+      text-align: center;
+      user-select: none;
     }
 
     a {
       font-size: 15px;
+      user-select: none;
     }
   }
 }
-
-
-
-.cube div
-
-
 
 .face {
   display: flex;
