@@ -28,9 +28,13 @@
                 <?php
                 // Vérifiez si la catégorie est valide
                 if ($cat):
-                    // Créez une nouvelle requête WP_Query pour récupérer les posts de la catégorie
+                    // Obtenez l'ID de la catégorie "cours"
+                    $cours_cat = get_category_by_slug('cours');
+                    $cours_cat_id = $cours_cat ? $cours_cat->term_id : 0;
+
+                    // Créez une nouvelle requête WP_Query pour récupérer les posts de la catégorie et de la classe "cours"
                     $query = new WP_Query(array(
-                        'cat' => $cat->term_id,
+                        'category__and' => array($cat->term_id, $cours_cat_id),
                         'posts_per_page' => -1 // -1 pour récupérer tous les posts
                     ));
 
@@ -40,7 +44,7 @@
                 ?>
                             <details>
                                 <summary class="summary_1"><?php the_title(); ?></summary>
-                                <p class="description_cours"><?php echo apply_filters('the_content', get_the_content()); ?></p>
+                                <p class="description_cours"><?php echo wpautop(apply_filters('the_content', get_the_content()), false); ?></p>
                             </details>
                         <?php 
                         endwhile; 
