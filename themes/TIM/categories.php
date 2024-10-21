@@ -11,14 +11,14 @@
 
     //recupere la categorie selectionner
     if (isset($_GET['category'])) {
-        $_cat = $_GET['category'];
+        $cat = $_GET['category'];
     }
 ?>
         <main>
             <div class="section_hero">
                 <video src=""></video>
                 <div class="text_hero">
-                    <h1><?php echo $_cat; ?></h1>
+                    <h1><?php echo $cat; ?></h1>
                     <h3>Sous titre</h3>
                 </div>
             </div>
