@@ -419,6 +419,10 @@ li {
   margin: 10px;
 }
 
+.texte_hero h1, .texte_hero h3 {
+  color: var(--couleur-secondaire);
+}
+
 .text_hero {
   display: flex;
   flex-direction: column;
