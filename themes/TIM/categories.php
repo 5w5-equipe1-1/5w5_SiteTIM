@@ -44,7 +44,9 @@
                 ?>
                             <details>
                                 <summary class="summary_1"><?php the_title(); ?></summary>
-                                <p class="description_cours"><?php echo wpautop(apply_filters('the_content', get_the_content()), false); ?></p>
+                                <div class="description_cours">
+                                    <?php echo wp_kses_post(apply_filters('the_content', get_the_content())); ?>
+                                </div>
                             </details>
                         <?php 
                         endwhile; 

@@ -1,5 +1,5 @@
 (function () {
-    console.log("rest API");
+    //console.log("rest API");
     let boutons_cube = document.querySelectorAll(".bouton_cube");
 
     boutons_cube.forEach(elm => {

@@ -22,37 +22,37 @@
                 <div class="cube" id="cube">
                     <div class="front face" id="front">
                         <h3>3D</h3>
-                        <button class="bouton_cube">
+                        <button class="bouton_cube" id="3d">
                             <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                         </button>
                     </div>
                     <div class="back face" id="back">
                         <h3>Jeux vidéos</h3>
-                        <button class="bouton_cube">
+                        <button class="bouton_cube" id="jeux_video">
                             <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                         </button>
                     </div>
                     <div class="right face" id="right">
                         <h3>Films</h3>
-                        <button class="bouton_cube">
+                        <button class="bouton_cube" id="film">
                             <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                         </button>
                     </div>
                     <div class="left face" id="left">
                         <h3>Design</h3>
-                        <button class="bouton_cube">
+                        <button class="bouton_cube" id="design">
                             <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                         </button>
                     </div>
                     <div class="top face" id="top">
                         <h3>Web</h3>
-                        <button class="bouton_cube">
+                        <button class="bouton_cube" id="web">
                             <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                         </button>
                     </div>
                     <div class="bottom face" id="bottom">
                         <h3>Formation spécifique</h3>
-                        <button class="bouton_cube">
+                        <button class="bouton_cube" id="formation_specifique">
                             <a href="<?php echo get_template_directory_uri() . "/categories.php"?>">En savoir plus</a>
                         </button>
                     </div>

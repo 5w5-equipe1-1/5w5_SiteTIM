@@ -136,10 +136,15 @@ div {
   background-color: var(--couleur-secondaire);
   border-radius: 0px 0px var(--border-radius) var(--border-radius);
   width: 70vw;
-  height: 30vh;
+  height: fit-content;
   margin: 0 auto;
   padding: var(--padding-top-mobile);
   padding-top: 5vh;
+  p{
+    width: 70vw;
+    color: var(--couleur-primaire);
+    margin: 0 auto;
+  }
 }
 
 .contenufunky {
