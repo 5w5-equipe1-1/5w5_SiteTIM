@@ -613,7 +613,8 @@ button {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: var(--couleur-secondaire);
+  background: black;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px, rgba(255, 255, 255, 0.4) 0px 2px 25px 0px inset;
   border: 0.5px solid var(--couleur-secondaire);
   display: flex;
   flex-direction: column;
@@ -623,11 +624,13 @@ button {
 }
 .cube div h3 {
   font-size: 35px;
+  color: var(--couleur-secondaire);
   margin: 0;
   text-align: center;
   user-select: none;
 }
 .cube div a {
+  color: var(--couleur-secondaire);
   font-size: 15px;
   user-select: none;
 }
