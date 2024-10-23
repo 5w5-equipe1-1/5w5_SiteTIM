@@ -1,3 +1,28 @@
+//scroll bar
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: var(--couleur-secondaire);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--couleur-primaire);
+  border-radius: 15px;
+  border: 1px solid var(--couleur-secondaire);
+  :hover{
+    background-color: var(--couleur-primaire-hover);
+  }
+}
+
+::-webkit-scrollbar-button{
+  display: none;
+}
+
+::-webkit-scrollbar-corner{
+  display: none;
+}
+
+//body
 body {
   display: flex;
   flex-direction: column;

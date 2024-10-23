@@ -1,12 +1,16 @@
 .section_hero{
+    width: 100vw;
+    height: fit-content;
+    .video_hero {
+        width: 100vw;
+    }
 
-}
-
-.text_hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: translateY(-100%);
+    .text_hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translateY(-100%);
+    }
 }

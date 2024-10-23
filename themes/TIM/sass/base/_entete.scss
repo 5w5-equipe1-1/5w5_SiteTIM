@@ -12,17 +12,8 @@ header {
   background-color: var(--couleur-primaire);
   box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
   padding-left: 4%;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
-    @media screen and (min-width: 1280px) {
-      margin-top: 0;
-      margin-left: var(--margin-left-tablette);
-      margin-right: var(--margin-right-tablette);
-      width: 100%;
-    //Ajout test de Gabrielle
-  }
 
   .conteneur_logo_tim{ 
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
