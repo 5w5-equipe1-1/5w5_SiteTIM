@@ -1,24 +1,24 @@
 //scroll bar
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
   background-color: var(--couleur-secondaire);
   border-radius: 15px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: var(--couleur-primaire);
   border-radius: 15px;
   border: 1px solid var(--couleur-secondaire);
-  :hover{
+  :hover {
     background-color: var(--couleur-primaire-hover);
   }
 }
 
-::-webkit-scrollbar-button{
+::-webkit-scrollbar-button {
   display: none;
 }
 
-::-webkit-scrollbar-corner{
+::-webkit-scrollbar-corner {
   display: none;
 }
 
@@ -44,7 +44,7 @@ body {
     transition: perspective 1s;
     margin: 0 auto;
     margin-bottom: 30vh;
-    margin-top: 330vh;
+    margin-top: 350vh;
     position: relative;
     z-index: 9;
     //Style pour tabelette

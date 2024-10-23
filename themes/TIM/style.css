@@ -226,7 +226,7 @@ body #scene {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 330vh;
+  margin-top: 350vh;
   position: relative;
   z-index: 9;
 }
@@ -382,6 +382,7 @@ footer .conteneur_logo_tim {
   margin-top: 20vh;
   margin-left: 10%;
   margin-bottom: 5vh;
+  gap: var(--margin-left-mobile);
 }
 footer .conteneur_logo_tim .logo_tim {
   width: 90px;
@@ -400,6 +401,7 @@ footer .info_footer {
   height: 60%;
   width: 100vw;
   margin: 0 auto;
+  line-height: 3vh;
 }
 footer .info_footer .colonne_footer {
   display: flex;
@@ -411,6 +413,10 @@ footer .info_footer .colonne_footer {
 footer .info_footer .colonne_footer .info_colonne_footer {
   margin: 0;
   width: fit-content;
+}
+footer .info_footer .colonne_footer .lesmedias {
+  display: flex;
+  gap: var(--margin-left-mobile);
 }
 
 .titre_footer {
@@ -435,10 +441,11 @@ p {
 }
 
 .info_action {
+  font-size: large;
   color: var(--couleur-secondaire);
   opacity: 0.6;
   text-align: center;
-  transform: translateY(-20vh);
+  transform: translateY(-15vh);
   width: fit-content;
   margin: 0 auto;
   user-select: none;

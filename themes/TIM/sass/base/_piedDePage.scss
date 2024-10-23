@@ -10,10 +10,11 @@ footer {
     justify-content: left;
     align-items: center;
     width: 100vw;
-  
+
     margin-top: 20vh;
     margin-left: 10%;
     margin-bottom: 5vh;
+    gap: var(--margin-left-mobile);
 
     .logo_tim {
       width: 90px;
@@ -26,31 +27,35 @@ footer {
     }
   }
   //info dans le footer
-.info_footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 60%;
-  width: 100vw;
-  margin: 0 auto;
-
-  .colonne_footer {
+  .info_footer {
     display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: left;
-    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%;
+    width: 100vw;
+    margin: 0 auto;
+    line-height: 3vh;
 
-    .info_colonne_footer {
-      margin: 0;
-      width: fit-content;
+    .colonne_footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      align-items: left;
+      height: 100%;
+
+      .info_colonne_footer {
+        margin: 0;
+        width: fit-content;
+      }
+
+      .lesmedias {
+        display: flex;
+        gap: var(--margin-left-mobile);
+      }
     }
   }
 }
-
-}
-
 
 .titre_footer {
   color: var(--couleur-secondaire);
@@ -58,7 +63,6 @@ footer {
 }
 
 //texte dams les colonnes
-
 
 .droitsfooter {
   display: flex;
