@@ -77,12 +77,15 @@
     </div>
     <!-- Ajout du cercle de scroll down en test -->
     <div class="text_cercle">
-        <svg viewBox="0 0 150 150">
-            <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
-            <text class="text">
-                <textPath class="text-path" href="#curve">Scroll down - Descendre - </textPath>
-            </text>
-        </svg>
+        <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="">
+        <div class="effetbulle">
+            <svg viewBox="0 0 150 150">
+                <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
+                <text class="text">
+                    <textPath class="text-path" href="#curve">Scroll down - Descendre - </textPath>
+                </text>
+            </svg>
+        </div>
     </div>
         <!-- inclure le script qui gere le cube 3D -->
         <script src="themes/TIM/js/cube.js"></script>
@@ -172,8 +175,17 @@
         </div>
         <div class="droitsfooter"><p>2024-2025® | Collège de Maisonneuve | Programme TIM. tous droits réservés.</p></div>
     </footer>
+
+    <!-- Pas touche! C'est un curseur qui est sous la souris  
+    lorsque l'utilisateur est dessus le cube! -->
+    <div class="hovercurseur">
+        <div class="minipoint"></div>
+        <img class="lesflechescurseur" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/flecheHoverCube.png" alt="">
+    </div>
+
     <!-- API fontawsome pour les icones -->
     <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
     <script src="themes/TIM/js/animations.js"></script>
+    <script src="themes/TIM/js/curseur.js"></script>
 </body>
 </html>

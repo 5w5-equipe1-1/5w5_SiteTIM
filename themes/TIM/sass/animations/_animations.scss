@@ -1,38 +1,47 @@
 .hidden {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 1s, transform 1s;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s, transform 1s;
 }
 
 .show {
-    opacity: 1;
-    transform: translateX(0%);
+  opacity: 1;
+  transform: translateX(0%);
 }
 
 .reverse {
-    opacity: 0;  
-    transform: translateX(-100%); 
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in; 
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 
-.showCube{
-    opacity: 1;
+.showCube {
+  opacity: 1;
 }
 
-.hideCube{
-    opacity: 0;
+.hideCube {
+  opacity: 0;
 }
 
-
-//animation de rotation du texte
+// animation de rotation du texte
 @keyframes rotateText {
-    0% {
-        transform: rotateZ(0deg);
-    }
-    100% {
-        transform: rotateZ(360deg);
-    }
-    
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+// animation de rotation des flèches hover
+// sur le cube
+@keyframes rotatefleche {
+  0% {
+    transform: translate(-1.7rem, -3.1rem) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-1.7rem, -3.1rem) rotateZ(360deg);
+  }
 }
 
 // .parallax img{

@@ -32,9 +32,9 @@
             <img src="./themes/TIM/images/fence.png" alt="fence-droite" class="fence-droite"> -->
         <div class="scene" id="scene">
             <!-- Les degradés derrière le cube -->
-            <div class="degrade1orange"></div>
-            <div class="degrade1cyan"></div>
-            <div class="degrade1magenta"></div>
+            <div class="commundegrade degrade1orange"></div>
+            <div class="commundegrade degrade1cyan"></div>
+            <div class="commundegrade degrade1magenta"></div>
 
             <!-- le cube en tant que tel -->
             <div class="cube" id="cube">
@@ -86,7 +86,7 @@
             </text>
         </svg>
     </div>
-        <p class="info_action">Interactif</p>
+    <p class="info_action">Pssst! Hey! Tournez-moi!</p>
         <div class="description_multimedia">
             <h1>Qu'est ce que le multimédia?</h1>
             <p>Tout le long de ta formation, tu réaliseras de nombreux projets amusants, diversifiés et stimulants qui te permettront d’explorer les multiples facettes de l’intégration multimédia.  Tu créeras notamment des jeux vidéos, sites Web, animations, modélisation 3D, vidéos, applications mobiles, environnements immersifs, applications de réalité virtuelle et augmentée, etc.</p>

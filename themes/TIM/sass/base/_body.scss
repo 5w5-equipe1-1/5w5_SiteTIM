@@ -59,18 +59,21 @@ body {
     position: absolute;
     top: 65%;
     left: 5%;
+    transition: 1s;
 
-    // Ajout d'un glow (?)
-    box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
-      rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
-      rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-    border-radius: 50%;
+    .effetbulle {
+      // Ajout d'un glow (?)
+      box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
+        rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
+        rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+      border-radius: 50%;
 
-    // l'animation est sur tout le cercle, pas seulement sur le SVG, attention!
-    animation: rotateText 25s linear infinite;
+      // l'animation est sur tout le cercle, pas seulement sur le SVG, attention!
+      animation: rotateText 25s linear infinite;
+    }
 
     .text {
-      fill: white;
+      fill: rgba(255, 255, 255, 0.836);
       font-size: 1.33em;
       user-select: none;
     }
@@ -86,10 +89,25 @@ body {
     }
   }
 
+  .text_cercle:hover {
+    filter: brightness(2);
+  }
+
+  // Un petit quelque chose pour que les utilisateurs
+  // descende plus rapidement en bas!
+  .versbas {
+    position: absolute;
+    width: 3.5rem;
+    height: 3rem;
+    // opacity: 0.5;
+
+    transform: translate(5.4rem, 5.4rem);
+    z-index: -1;
+  }
+
   .description_multimedia {
     margin-top: 10vh;
     margin-bottom: 10vh;
-    background-color: red;
     text-align: left;
 
     //garder en commentaire je fais des tests
