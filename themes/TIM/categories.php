@@ -16,7 +16,7 @@
 ?>
         <main>
             <div class="section_hero">
-                <video src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/trailerTIM_V1.mp4"></video>
+                <video src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/trailerTIM_V1.mp4" autoplay loop></video>
                 <div class="text_hero">
                     <h1><?php echo esc_html($cat->name); ?></h1>
                     <h3><?php echo esc_html($cat->description); ?></h3>
