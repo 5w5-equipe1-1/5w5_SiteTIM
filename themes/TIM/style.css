@@ -221,15 +221,27 @@ body #scene {
   position: relative;
   z-index: 9;
 }
+body .text_cercle {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 50%;
+  animation: rotateText 25s linear infinite;
+}
 body .text_cercle .text {
-  fill: orange;
+  fill: white;
   font-size: 1.33em;
+  user-select: none;
 }
 body .text_cercle svg {
-  animation: rotateText 10s linear infinite;
   transform-origin: center;
-  width: 30vw;
-  height: 30vh;
+  height: 25vh;
+}
+@media screen and (max-width: 680px) {
+  body .text_cercle {
+    display: none;
+  }
 }
 body .description_multimedia {
   margin-top: 10vh;
@@ -414,11 +426,12 @@ p {
 
 .info_action {
   color: var(--couleur-secondaire);
-  opacity: 0.5;
+  opacity: 0.6;
   text-align: center;
   transform: translateY(-20vh);
   width: fit-content;
   margin: 0 auto;
+  user-select: none;
 }
 
 li {
@@ -426,7 +439,8 @@ li {
   margin: 10px;
 }
 
-.texte_hero h1, .texte_hero h3 {
+.texte_hero h1,
+.texte_hero h3 {
   color: var(--couleur-secondaire);
 }
 
