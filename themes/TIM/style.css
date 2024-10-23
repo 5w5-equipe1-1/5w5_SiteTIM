@@ -234,6 +234,7 @@ body .text_cercle svg {
 body .description_multimedia {
   margin-top: 10vh;
   margin-bottom: 10vh;
+  background-color: red;
   text-align: left;
 }
 @media screen and (max-width: 680px) {
