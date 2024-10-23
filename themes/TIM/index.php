@@ -32,7 +32,6 @@
             <img src="./themes/TIM/images/fence.png" alt="fence-droite" class="fence-droite"> -->
         <div class="scene" id="scene">
             <!-- Les degradés derrière le cube -->
-            <div class="testdegrade"></div>
             <div class="degrade1orange"></div>
             <div class="degrade1cyan"></div>
             <div class="degrade1magenta"></div>
@@ -77,6 +76,15 @@
                 </div>
             </div>
 
+    </div>
+        <!-- Ajout du cercle de scroll down en test -->
+        <div class="text_cercle">
+        <svg viewBox="0 0 150 150">
+            <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
+            <text class="text">
+                <textPath class="text-path" href="#curve">Scroll down - Descendre - </textPath>
+            </text>
+        </svg>
     </div>
         <p class="info_action">Interactif</p>
         <div class="description_multimedia">
