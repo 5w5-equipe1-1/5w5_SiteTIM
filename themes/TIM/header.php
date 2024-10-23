@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="conteneur_logo_tim" href="<?php echo get_home_url();?>">
-            <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.pngg" alt="Logo TIM" class="logo_tim">
+            <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
             <h2 class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
         </div>
         <div class="conteneur_burger_recherche">

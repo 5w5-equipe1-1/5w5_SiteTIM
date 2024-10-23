@@ -14,9 +14,10 @@
         $cat = get_category_by_slug($_GET['category']);
     }
 ?>
-        <main>
+
+            <div class="container">
             <div class="section_hero">
-                <video src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/trailerTIM_V1.mp4"></video>
+                <video class="video_hero" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/trailerTIM_V1.mp4" autoplay loop></video>
                 <div class="text_hero">
                     <h1><?php echo esc_html($cat->name); ?></h1>
                     <h3><?php echo esc_html($cat->description); ?></h3>
@@ -56,7 +57,7 @@
                 endif; 
                 ?>
             </div>
-        </main>
+            </div>
         <?php get_footer(); ?>
         <!-- API fontawsome pour les icones -->
         <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
