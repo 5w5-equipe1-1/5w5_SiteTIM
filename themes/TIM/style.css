@@ -645,81 +645,39 @@ button {
 /* ----------------------------------------------------- */
 /*Les Dégradés*/
 /* ----------------------------------------------------- */
-.testdegrade {
+.commundegrade {
   position: absolute;
   height: 20vh;
   width: 11vw;
   z-index: -1;
-  box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 300px 30px;
   border-radius: 50%;
 }
 @media screen and (max-width: 1280px) {
-  .testdegrade {
+  .commundegrade {
     width: 16vw;
   }
 }
 @media screen and (max-width: 680px) {
-  .testdegrade {
+  .commundegrade {
     width: 30vw;
   }
+}
+
+.testdegrade {
+  box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 200px 30px;
 }
 
 .degrade1orange {
-  position: fixed;
-  height: 20vh;
-  width: 11vw;
-  z-index: -1;
-  box-shadow: var(--couleur-orange) 50px -60px 100px 20px;
+  box-shadow: var(--couleur-test-orange) 50px -60px 200px 40px;
   filter: saturate(2);
-  border-radius: 50%;
-}
-@media screen and (max-width: 1280px) {
-  .degrade1orange {
-    width: 16vw;
-  }
-}
-@media screen and (max-width: 680px) {
-  .degrade1orange {
-    width: 30vw;
-  }
 }
 
 .degrade1cyan {
-  position: absolute;
-  height: 20vh;
-  width: 11vw;
-  z-index: -1;
-  box-shadow: var(--couleur-cyan) -30px 0px 300px 30px;
+  box-shadow: var(--couleur-test-cyan) -30px 0px 300px 40px;
   filter: saturate(3);
-  border-radius: 50%;
-}
-@media screen and (max-width: 1280px) {
-  .degrade1cyan {
-    width: 16vw;
-  }
-}
-@media screen and (max-width: 680px) {
-  .degrade1cyan {
-    width: 30vw;
-  }
 }
 
 .degrade1magenta {
-  position: absolute;
-  height: 20vh;
-  width: 11vw;
-  z-index: -1;
-  box-shadow: var(--couleur-magenta) 25px 50px 300px 30px;
+  box-shadow: var(--couleur-test-magenta) 25px 50px 300px 40px;
   filter: saturate(3);
-  border-radius: 50%;
-}
-@media screen and (max-width: 1280px) {
-  .degrade1magenta {
-    width: 16vw;
-  }
-}
-@media screen and (max-width: 680px) {
-  .degrade1magenta {
-    width: 30vw;
-  }
 }/*# sourceMappingURL=style.css.map */
