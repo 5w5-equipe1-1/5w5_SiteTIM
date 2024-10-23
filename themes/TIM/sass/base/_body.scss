@@ -25,23 +25,40 @@ body {
     //Style pour tabelette
     @media screen and (min-width: 1280px) {
       //margin-bottom: 30vh;
-     // margin-top: 180vh;
+      // margin-top: 180vh;
     }
   }
-  .text_cercle{
-    .text{
-      fill: orange;
+
+  // Il y a eu quelques changement de design par test pour l'animation du scroll down
+  .text_cercle {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+
+    // Ajout d'un glow (?)
+    box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
+      rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
+      rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+    border-radius: 50%;
+
+    // l'animation est sur tout le cercle, pas seulement sur le SVG, attention!
+    animation: rotateText 25s linear infinite;
+
+    .text {
+      fill: white;
       font-size: 1.33em;
-     
-      
+      user-select: none;
     }
-    svg{ 
-      animation: rotateText 10s linear infinite;
+    svg {
+      // animation: rotateText 10s linear infinite;
       transform-origin: center;
-      width: 30vw;
-      height: 30vh;
+      // width: 30vw;
+      height: 25vh;
     }
 
+    @media screen and (max-width: 680px) {
+      display: none;
+    }
   }
 
   .description_multimedia {
@@ -53,17 +70,17 @@ body {
     //garder en commentaire je fais des tests
     // transform: translateX(50%);
     // transition: transform 0.5s ease-out;
-  
+
     @media screen and (max-width: 680px) {
       margin-top: var(--margin-top-mobile);
     }
   }
-  
+
   .bannieres {
     display: flex;
     justify-content: space-around;
     align-items: center;
-  
+
     text-align: center;
     height: 20vh;
     width: 200%;
@@ -71,40 +88,36 @@ body {
     // background-color: var(--couleur-secondaire);
     background-color: red;
 
-    .photo{
+    .photo {
       width: 10%;
       height: 80%;
     }
-    .p1{
+    .p1 {
       background-color: green;
     }
-    .p2{
+    .p2 {
       background-color: purple;
     }
-    .p3{
+    .p3 {
       background-color: peru;
     }
-    .p4{
+    .p4 {
       background-color: lightcoral;
     }
-    .p5{
+    .p5 {
       background-color: lightblue;
     }
-    .p6{
+    .p6 {
       background-color: lightgreen;
     }
-
-    
   }
 }
-
 
 div {
   margin: 0;
 }
 
 //section ou on décrit quest ce que le multimédia
-
 
 //section ou on montre les concours et les événements
 .description_evenements {
@@ -120,8 +133,6 @@ div {
   //   background-color: green;
   flex-direction: row-reverse;
 }
-
-
 
 //cours
 .cours {
@@ -140,7 +151,7 @@ div {
   margin: 0 auto;
   padding: var(--padding-top-mobile);
   padding-top: 5vh;
-  p{
+  p {
     width: 70vw;
     color: var(--couleur-primaire);
     margin: 0 auto;
@@ -182,7 +193,6 @@ div {
 //Style pour Ordinateur
 @media screen and (min-width: 1920px) {
 }
-
 
 .parallax {
   display: flex;

@@ -31,7 +31,7 @@
                 <p class="info_colonne_footer">thujfhsre wffff</p>
             </div>
         </div>
-        <div class="droitsfooter"><p>2024-2025® Trucchosemachinchouette</p></div>
+        <div class="droitsfooter"><p>2024-2025® Collège de Maisonneuve | Programme TIM, tous droits réservés.</p></div>
     </footer>
 
     
