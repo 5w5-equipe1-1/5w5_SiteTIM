@@ -441,6 +441,7 @@ li {
 .section_hero {
   width: 100vw;
   height: fit-content;
+  margin-top: 100vh;
 }
 .section_hero .video_hero {
   width: 100vw;
@@ -451,7 +452,13 @@ li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  transform: translateY(-100%);
+  transform: translateY(-200%);
+}
+.section_hero .text_hero h1 {
+  font-size: 30px;
+}
+.section_hero .text_hero h3 {
+  font-size: 20px;
 }
 
 /* ----------------------------------------------------- */
