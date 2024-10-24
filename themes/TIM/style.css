@@ -42,6 +42,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --font-family-titre: ;
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
+  --couleur-secondaire-hover: #c0c0c0;
   --couleur-primaire: #1a1a1a;
   --couleur-primaire-hover: #2a2a2a;
   --couleur-orange: #ffd472;
@@ -436,6 +437,18 @@ footer .info_footer .colonne_footer .info_colonne_footer {
 footer .info_footer .colonne_footer .lesmedias {
   display: flex;
   gap: var(--margin-left-mobile);
+}
+footer .info_footer .colonne_footer a {
+  color: var(--couleur-test-orange);
+  text-decoration: none;
+}
+footer .info_footer .colonne_footer a:hover {
+  color: var(--couleur-secondaire);
+  text-decoration: underline;
+}
+footer .info_footer .colonne_footer p:hover {
+  color: var(--couleur-secondaire-hover);
+  text-decoration: underline;
 }
 
 .titre_footer {

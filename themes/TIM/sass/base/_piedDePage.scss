@@ -53,6 +53,21 @@ footer {
         display: flex;
         gap: var(--margin-left-mobile);
       }
+
+      a {
+        color: var(--couleur-test-orange);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--couleur-secondaire);
+        text-decoration: underline;
+      }
+
+      p:hover {
+        color: var(--couleur-secondaire-hover);
+        text-decoration: underline;
+      }
     }
   }
 }
