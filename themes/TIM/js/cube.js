@@ -18,6 +18,10 @@ for (let face of lesFaces) {
 
 // Rotation automatique du cube
 function rotateCubeAutomatically() {
+  // if(Number.isInteger(rotation.y / 360)){
+  //   rotation.y = 0;
+  //   console.log("rotation.y = 0");
+  // }
   if (autoRotate) {
     if (initialRotationSpeed > finalRotationSpeed) {
       initialRotationSpeed *= 0.98;

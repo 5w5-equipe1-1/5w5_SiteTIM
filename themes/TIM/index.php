@@ -19,11 +19,6 @@
                 <input type="text" placeholder="Rechercher..." class="text_recherche">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <div class="conteneur_menu_gurger">
-                <input type="checkbox" id="menu_gurger">
-                <label for="menu_gurger">
-                <div class="cube_burger"></div>
-            </div>
         </div>
     </header>
     <!-- la page avec les information -->
