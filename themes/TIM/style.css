@@ -42,6 +42,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --font-family-titre: ;
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
+  --couleur-secondaire-hover: #c0c0c0;
   --couleur-primaire: #1a1a1a;
   --couleur-primaire-hover: #2a2a2a;
   --couleur-orange: #ffd472;
@@ -51,6 +52,8 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
   --border-radius: 15px;
+  --mouse-x: 0px;
+  --mouse-y: 0px;
 }
 
 /* ----------------------------------------------------- */
@@ -125,6 +128,7 @@ header .conteneur_logo_tim {
 header .conteneur_logo_tim .logo_tim {
   width: 50px;
   height: 50px;
+  transition: 0.5s;
 }
 @media screen and (min-width: 1280px) {
   header .conteneur_logo_tim .logo_tim {
@@ -132,9 +136,13 @@ header .conteneur_logo_tim .logo_tim {
     height: 94px;
   }
 }
+header .conteneur_logo_tim .logo_tim:hover {
+  opacity: 0.5;
+}
 header .conteneur_logo_tim .TIM_entete {
   text-align: left;
   display: none;
+  user-select: none;
 }
 @media screen and (min-width: 1280px) {
   header .conteneur_logo_tim .TIM_entete {
@@ -226,19 +234,45 @@ body #scene {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 330vh;
+  margin-top: 350vh;
   position: relative;
   z-index: 9;
 }
+body .text_cercle {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  transition: 1s;
+}
+body .text_cercle .effetbulle {
+  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 50%;
+  animation: rotateText 25s linear infinite;
+}
 body .text_cercle .text {
-  fill: orange;
+  fill: rgba(255, 255, 255, 0.836);
   font-size: 1.33em;
+  user-select: none;
 }
 body .text_cercle svg {
-  animation: rotateText 10s linear infinite;
   transform-origin: center;
-  width: 30vw;
-  height: 30vh;
+  height: 25vh;
+}
+@media screen and (max-width: 680px) {
+  body .text_cercle {
+    display: none;
+  }
+}
+body .text_cercle:hover {
+  filter: brightness(2);
+}
+body .versbas {
+  position: absolute;
+  width: 3.5rem;
+  height: 3rem;
+  user-select: none;
+  transform: translate(5.4rem, 5.4rem);
+  z-index: -1;
 }
 body .description_multimedia {
   margin-top: 10vh;
@@ -369,6 +403,7 @@ footer .conteneur_logo_tim {
   margin-top: 20vh;
   margin-left: 10%;
   margin-bottom: 5vh;
+  gap: var(--margin-left-mobile);
 }
 footer .conteneur_logo_tim .logo_tim {
   width: 90px;
@@ -387,6 +422,7 @@ footer .info_footer {
   height: 60%;
   width: 100vw;
   margin: 0 auto;
+  line-height: 3vh;
 }
 footer .info_footer .colonne_footer {
   display: flex;
@@ -398,6 +434,22 @@ footer .info_footer .colonne_footer {
 footer .info_footer .colonne_footer .info_colonne_footer {
   margin: 0;
   width: fit-content;
+}
+footer .info_footer .colonne_footer .lesmedias {
+  display: flex;
+  gap: var(--margin-left-mobile);
+}
+footer .info_footer .colonne_footer a {
+  color: var(--couleur-test-orange);
+  text-decoration: none;
+}
+footer .info_footer .colonne_footer a:hover {
+  color: var(--couleur-secondaire);
+  text-decoration: underline;
+}
+footer .info_footer .colonne_footer p:hover {
+  color: var(--couleur-secondaire-hover);
+  text-decoration: underline;
 }
 
 .titre_footer {
@@ -422,12 +474,15 @@ p {
 }
 
 .info_action {
+  font-size: 12pt;
   color: var(--couleur-secondaire);
-  opacity: 0.5;
+  opacity: 0.3;
   text-align: center;
-  transform: translateY(-20vh);
+  transform: translateY(-15vh);
   width: fit-content;
   margin: 0 auto;
+  user-select: none;
+  transition: 1s;
 }
 
 li {
@@ -435,7 +490,8 @@ li {
   margin: 10px;
 }
 
-.texte_hero h1, .texte_hero h3 {
+.texte_hero h1,
+.texte_hero h3 {
   color: var(--couleur-secondaire);
 }
 
@@ -458,6 +514,45 @@ li {
 }
 .section_hero .text_hero h3 {
   font-size: 20px;
+}
+
+.hovercurseur {
+  height: 2.4rem;
+  width: 2.4rem;
+  position: fixed;
+  top: -1.2rem;
+  left: -1.2rem;
+  z-index: 500;
+  transform: translate(var(--mouse-x), var(--mouse-y));
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.9s cubic-bezier(0.15, 0.9, 0.35, 0.95);
+}
+.hovercurseur .lesflechescurseur {
+  visibility: hidden;
+  opacity: 0.8;
+  height: 8rem;
+  width: 8rem;
+  animation: rotatefleche 5s linear infinite;
+}
+
+.hovercurseur::before {
+  content: "";
+  position: absolute;
+  height: 0.6rem;
+  width: 0.6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.minipoint {
+  border: 1px solid white;
+  box-shadow: rgba(255, 255, 255, 0.375) 0px 0px 3px 1px inset;
+  height: 0.5rem;
+  width: 0.5rem;
+  z-index: 500;
+  transform: translate(0.8rem, 0.6rem);
 }
 
 /* ----------------------------------------------------- */
@@ -601,6 +696,14 @@ button {
     transform: rotateZ(360deg);
   }
 }
+@keyframes rotatefleche {
+  0% {
+    transform: translate(-2.7rem, -3.1rem) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-2.7rem, -3.1rem) rotateZ(360deg);
+  }
+}
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
@@ -634,7 +737,8 @@ button {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: var(--couleur-secondaire);
+  background: black;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px, rgba(255, 255, 255, 0.4) 0px 2px 25px 0px inset;
   border: 0.5px solid var(--couleur-secondaire);
   display: flex;
   flex-direction: column;
@@ -644,13 +748,19 @@ button {
 }
 .cube div h3 {
   font-size: 35px;
+  color: var(--couleur-secondaire);
   margin: 0;
   text-align: center;
   user-select: none;
 }
 .cube div a {
+  color: var(--couleur-secondaire);
   font-size: 15px;
   user-select: none;
+}
+
+.cube:hover {
+  cursor: grab;
 }
 
 .face {
@@ -663,81 +773,50 @@ button {
 /* ----------------------------------------------------- */
 /*Les Dégradés*/
 /* ----------------------------------------------------- */
-.testdegrade {
+.commundegrade {
   position: absolute;
   height: 20vh;
   width: 11vw;
   z-index: -1;
-  box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 300px 30px;
   border-radius: 50%;
 }
 @media screen and (max-width: 1280px) {
-  .testdegrade {
+  .commundegrade {
     width: 16vw;
   }
 }
 @media screen and (max-width: 680px) {
-  .testdegrade {
+  .commundegrade {
     width: 30vw;
   }
+}
+
+.testdegrade {
+  box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 200px 30px;
 }
 
 .degrade1orange {
-  position: fixed;
-  height: 20vh;
-  width: 11vw;
-  z-index: -1;
-  box-shadow: var(--couleur-orange) 50px -60px 100px 20px;
+  box-shadow: var(--couleur-test-orange) 50px -60px 200px 40px;
   filter: saturate(2);
-  border-radius: 50%;
-}
-@media screen and (max-width: 1280px) {
-  .degrade1orange {
-    width: 16vw;
-  }
-}
-@media screen and (max-width: 680px) {
-  .degrade1orange {
-    width: 30vw;
-  }
 }
 
 .degrade1cyan {
-  position: absolute;
-  height: 20vh;
-  width: 11vw;
-  z-index: -1;
-  box-shadow: var(--couleur-cyan) -30px 0px 300px 30px;
+  box-shadow: var(--couleur-test-cyan) -30px 0px 300px 40px;
   filter: saturate(3);
-  border-radius: 50%;
-}
-@media screen and (max-width: 1280px) {
-  .degrade1cyan {
-    width: 16vw;
-  }
-}
-@media screen and (max-width: 680px) {
-  .degrade1cyan {
-    width: 30vw;
-  }
 }
 
 .degrade1magenta {
-  position: absolute;
-  height: 20vh;
-  width: 11vw;
-  z-index: -1;
-  box-shadow: var(--couleur-magenta) 25px 50px 300px 30px;
+  box-shadow: var(--couleur-test-magenta) 25px 50px 300px 40px;
   filter: saturate(3);
+}
+
+.degrade1noir {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 10%;
+  left: 25%;
+  z-index: -100;
   border-radius: 50%;
-}
-@media screen and (max-width: 1280px) {
-  .degrade1magenta {
-    width: 16vw;
-  }
-}
-@media screen and (max-width: 680px) {
-  .degrade1magenta {
-    width: 30vw;
-  }
+  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px, rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
 }/*# sourceMappingURL=style.css.map */
