@@ -7,6 +7,7 @@ document.addEventListener("mousemove", deplacerCurseur);
 //L'élément HTML qui agira comme curseur personnalisé
 let leCurseur = document.querySelector(".lesflechescurseur");
 let miniPoint = document.querySelector(".minipoint");
+let infoAction = document.querySelector(".info_action");
 
 //L'image pour les tests de changement d'aspect de curseur
 let leCube = document.querySelector(".cube");
@@ -41,8 +42,14 @@ function changerCurseur(event) {
   if (event.type == "mouseover") {
     leCurseur.style.visibility = "visible";
     miniPoint.style.visibility = "hidden";
+
+    infoAction.style.fontSize = "16pt";
+    infoAction.style.opacity = "1";
   } else {
     leCurseur.style.visibility = "hidden";
     miniPoint.style.visibility = "visible";
+
+    infoAction.style.fontSize = "12pt";
+    infoAction.style.opacity = "0.3";
   }
 }

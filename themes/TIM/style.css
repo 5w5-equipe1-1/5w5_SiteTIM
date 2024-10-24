@@ -270,6 +270,7 @@ body .versbas {
   position: absolute;
   width: 3.5rem;
   height: 3rem;
+  user-select: none;
   transform: translate(5.4rem, 5.4rem);
   z-index: -1;
 }
@@ -473,14 +474,15 @@ p {
 }
 
 .info_action {
-  font-size: large;
+  font-size: 12pt;
   color: var(--couleur-secondaire);
-  opacity: 0.6;
+  opacity: 0.3;
   text-align: center;
   transform: translateY(-15vh);
   width: fit-content;
   margin: 0 auto;
   user-select: none;
+  transition: 1s;
 }
 
 li {
@@ -547,7 +549,6 @@ li {
 .minipoint {
   border: 1px solid white;
   box-shadow: rgba(255, 255, 255, 0.375) 0px 0px 3px 1px inset;
-  border-radius: 50%;
   height: 0.5rem;
   width: 0.5rem;
   z-index: 500;
@@ -697,10 +698,10 @@ button {
 }
 @keyframes rotatefleche {
   0% {
-    transform: translate(-1.7rem, -3.1rem) rotateZ(0deg);
+    transform: translate(-2.7rem, -3.1rem) rotateZ(0deg);
   }
   100% {
-    transform: translate(-1.7rem, -3.1rem) rotateZ(360deg);
+    transform: translate(-2.7rem, -3.1rem) rotateZ(360deg);
   }
 }
 /* ----------------------------------------------------- */
@@ -807,4 +808,15 @@ button {
 .degrade1magenta {
   box-shadow: var(--couleur-test-magenta) 25px 50px 300px 40px;
   filter: saturate(3);
+}
+
+.degrade1noir {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 10%;
+  left: 25%;
+  z-index: -100;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px, rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
 }/*# sourceMappingURL=style.css.map */

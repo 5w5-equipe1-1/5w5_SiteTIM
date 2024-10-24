@@ -36,3 +36,26 @@
   box-shadow: var(--couleur-test-magenta) 25px 50px 300px 40px;
   filter: saturate(3);
 }
+
+.degrade1noir {
+  position: absolute;
+  // border: 1px solid red;
+  width: 700px;
+  height: 700px;
+  // height: 50%;
+  // width: 50%;
+  top: 10%;
+  left: 25%;
+  z-index: -100;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px,
+    rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
+
+  @media screen and (max-width: 1280px) {
+    // width: 16vw;
+  }
+
+  @media screen and (max-width: 680px) {
+    // width: 30vw=-098//123456789
+  }
+}

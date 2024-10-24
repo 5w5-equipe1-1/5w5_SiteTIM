@@ -28,6 +28,9 @@
     </header>
     <!-- la page avec les information -->
     <main class="conteneur">
+
+    <!-- <div class="degrade1noir"></div> -->
+
             <!-- <img src="./themes/TIM/images/fence.png" alt="fence-gauche" class="fence-gauche">
             <img src="./themes/TIM/images/fence.png" alt="fence-droite" class="fence-droite"> -->
         <div class="scene" id="scene">

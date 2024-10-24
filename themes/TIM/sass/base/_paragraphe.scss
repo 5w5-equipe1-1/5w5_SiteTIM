@@ -9,14 +9,17 @@ p {
 
 //texte disant interaction pour le cube
 .info_action {
-  font-size: large;
+  // font-size: large;
+  font-size: 12pt;
   color: var(--couleur-secondaire);
-  opacity: 0.6;
+  opacity: 0.3;
   text-align: center;
   transform: translateY(-15vh);
   width: fit-content;
   margin: 0 auto;
   user-select: none;
+
+  transition: 1s;
 }
 
 li {
