@@ -77,14 +77,17 @@
             </div>
 
     </div>
-        <!-- Ajout du cercle de scroll down en test -->
-        <div class="text_cercle">
-        <svg viewBox="0 0 150 150">
-            <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
-            <text class="text">
-                <textPath class="text-path" href="#curve">Scroll down - Descendre - </textPath>
-            </text>
-        </svg>
+    <!-- Ajout du cercle de scroll down en test -->
+    <div class="text_cercle">
+        <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="">
+        <div class="effetbulle">
+            <svg viewBox="0 0 150 150">
+                <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
+                <text class="text">
+                    <textPath class="text-path" href="#curve">Scroll down - Descendre - </textPath>
+                </text>
+            </svg>
+        </div>
     </div>
     <p class="info_action">Pssst! Hey! Tournez-moi!</p>
         <div class="description_multimedia">
@@ -128,6 +131,14 @@
         </div>
     </main>
     <?php get_footer();?>
+
+        <!-- Pas touche! C'est un curseur qui est sous la souris  
+    lorsque l'utilisateur est dessus le cube! -->
+    <div class="hovercurseur">
+        <div class="minipoint"></div>
+        <img class="lesflechescurseur" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/flecheHoverCube.png" alt="">
+    </div>
+
     <!-- API fontawsome pour les icones -->
     <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
     <!-- inclure le script qui gere les animations de scroll -->
@@ -136,5 +147,7 @@
     <script src="<?php echo get_template_directory_uri() . "/js/cube.js"?>"></script>
     <!-- inclure le script qui gere le changement de page -->
     <script src="<?php echo get_template_directory_uri() . "/js/selectionCat.js"?>"></script>
+    <!-- inclure le script qui gere le curseur -->
+    <script src="<?php echo get_template_directory_uri() . "/js/curseur.js"?>"></script>
 </body>
 </html>
