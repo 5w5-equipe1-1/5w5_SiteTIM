@@ -24,6 +24,7 @@
                 </div>
             </div>
             <div class="galerie">
+            <?php echo do_shortcode('[carrousel]'); ?>
             </div>
             <div class="cours">
                 <?php
