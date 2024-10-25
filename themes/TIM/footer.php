@@ -9,7 +9,7 @@
                 <h3>Cours</h3>
                 <?php foreach(get_categories() as $cat):?>
                     <?php if($cat->name != "Cours" || $cat->name != "Projets"):?> <!--Marche pas (ne dois pas afficher dans le footer le mot projet et cours--> <!-- Marche pour Gaby-->
-                    <p class="info_colonne_footer"><a class="bouton_cube" id="<?php echo $cat->slug; ?>" href="<?php echo get_template_directory_uri() . "/categories.php"?>">
+                    <p class="info_colonne_footer"><a id="<?php echo $cat->slug; ?>" href="<?php echo get_template_directory_uri() . "/categories.php"?>">
                         <?php echo $cat->name;?></a></p>
                     <?php endif;?>
                 <?php endforeach;?>

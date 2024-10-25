@@ -52,6 +52,18 @@ footer {
       .lesmedias {
         display: flex;
         gap: var(--margin-left-mobile);
+
+        @media screen and (max-width: 680px) {
+          flex-direction: column;
+        }
+
+        svg {
+          //Style pour tabelette
+          @media screen and (max-width: 1280px) {
+            width: 30px;
+            height: 30px;
+          }
+        }
       }
 
       a {
@@ -68,6 +80,15 @@ footer {
         color: var(--couleur-secondaire-hover);
         text-decoration: underline;
       }
+    }
+
+    @media screen and (max-width: 680px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      margin-left: 10%;
+      margin-bottom: 25%;
+      gap: var(--margin-bottom-mobile);
     }
   }
 }

@@ -239,6 +239,11 @@ body #scene {
   position: relative;
   z-index: 9;
 }
+@media screen and (max-width: 680px) {
+  body #scene {
+    margin-top: 430vh;
+  }
+}
 body .text_cercle {
   position: absolute;
   top: 65%;
@@ -284,6 +289,9 @@ body .description_multimedia {
   body .description_multimedia {
     margin-top: var(--margin-top-mobile);
   }
+}
+body .description_multimedia .espace_gauche_descmulti {
+  margin-left: 2%;
 }
 body .bannieres {
   display: flex;
@@ -440,6 +448,17 @@ footer .info_footer .colonne_footer .lesmedias {
   display: flex;
   gap: var(--margin-left-mobile);
 }
+@media screen and (max-width: 680px) {
+  footer .info_footer .colonne_footer .lesmedias {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1280px) {
+  footer .info_footer .colonne_footer .lesmedias svg {
+    width: 30px;
+    height: 30px;
+  }
+}
 footer .info_footer .colonne_footer a {
   color: var(--couleur-test-orange);
   text-decoration: none;
@@ -451,6 +470,16 @@ footer .info_footer .colonne_footer a:hover {
 footer .info_footer .colonne_footer p:hover {
   color: var(--couleur-secondaire-hover);
   text-decoration: underline;
+}
+@media screen and (max-width: 680px) {
+  footer .info_footer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    margin-bottom: 25%;
+    gap: var(--margin-bottom-mobile);
+  }
 }
 
 .titre_footer {
@@ -500,7 +529,13 @@ li {
   width: 100%;
 }
 .section_hero .video_hero {
+  margin-top: 50vh;
   width: 100%;
+}
+@media screen and (max-width: 680px) {
+  .section_hero .video_hero {
+    margin-top: 0;
+  }
 }
 .section_hero .text_hero {
   display: flex;
@@ -515,6 +550,11 @@ li {
 }
 .section_hero .text_hero h3 {
   font-size: 20px;
+}
+@media screen and (max-width: 680px) {
+  .section_hero {
+    margin-top: 150vh;
+  }
 }
 
 .hovercurseur {
@@ -562,6 +602,14 @@ li {
 button {
   background-color: transparent;
   border: none;
+}
+
+.bouton_cube {
+  padding: 5%;
+  background-color: rgba(120, 120, 120, 0.2);
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 3px 15px 0px inset;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .bouton_cube a {

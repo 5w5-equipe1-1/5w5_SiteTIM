@@ -47,10 +47,16 @@ body {
     margin-top: 350vh;
     position: relative;
     z-index: 9;
+
     //Style pour tabelette
     @media screen and (min-width: 1280px) {
       //margin-bottom: 30vh;
       // margin-top: 180vh;
+    }
+    //Style pour mobile
+    @media screen and (max-width: 680px) {
+      margin-top: 430vh;
+      // margin-bottom: 25%;
     }
   }
 
@@ -122,6 +128,14 @@ body {
 
     @media screen and (max-width: 680px) {
       margin-top: var(--margin-top-mobile);
+    }
+
+    .espace_gauche_descmulti {
+      margin-left: 2%;
+
+      @media screen and (max-width: 680px) {
+        // margin-left: 5%;
+      }
     }
   }
 

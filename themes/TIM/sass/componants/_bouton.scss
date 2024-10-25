@@ -1,19 +1,25 @@
-button{
-    background-color: transparent;
-    border: none;
+button {
+  background-color: transparent;
+  border: none;
 }
 
-.bouton_cube a{
-    text-decoration: none;
-    color: var(--couleur-primaire);
+.bouton_cube {
+  padding: 5%;
+  background-color: rgba(120, 120, 120, 0.2);
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 3px 15px 0px inset;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.bouton_cube a {
+  text-decoration: none;
+  color: var(--couleur-primaire);
 }
 
 //Style pour tabelette
-@media screen and (min-width: 1280px){
-    
+@media screen and (min-width: 1280px) {
 }
 
 //Style pour Ordinateur
-@media screen and (min-width: 1920px){
-    
+@media screen and (min-width: 1920px) {
 }
