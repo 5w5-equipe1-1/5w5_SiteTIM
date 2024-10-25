@@ -1,33 +1,39 @@
-p{
-     color: var(--couleur-secondaire);
-     width: 90vw;
-     //Style pour tabelette
-     @media screen and (min-width: 1280px){
-           width: 57vw;
-     }
+p {
+  color: var(--couleur-secondaire);
+  width: 90vw;
+  //Style pour tabelette
+  @media screen and (min-width: 1280px) {
+    width: 57vw;
+  }
 }
 
 //texte disant interaction pour le cube
-.info_action{
-     color: var(--couleur-secondaire);
-     opacity: 0.5;
-     text-align: center;
-     transform: translateY(-20vh);
-     width: fit-content;
-     margin: 0 auto;
+.info_action {
+  color: var(--couleur-secondaire);
+  opacity: 0.6;
+  text-align: center;
+  transform: translateY(-20vh);
+  width: fit-content;
+  margin: 0 auto;
+  user-select: none;
 }
 
-li{
-     color: var(--couleur-secondaire);
-     margin: 10px;
+li {
+  color: var(--couleur-secondaire);
+  margin: 10px;
+}
+
+.texte_hero {
+  h1,
+  h3 {
+    color: var(--couleur-secondaire);
+  }
 }
 
 //Style pour tabelette
-@media screen and (min-width: 1280px){
-    
+@media screen and (min-width: 1280px) {
 }
 
 //Style pour Ordinateur
-@media screen and (min-width: 1920px){
-    
+@media screen and (min-width: 1920px) {
 }

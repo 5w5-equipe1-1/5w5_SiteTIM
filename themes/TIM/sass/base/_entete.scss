@@ -1,27 +1,19 @@
 header {
   z-index: 10;
-  position: fixed;
+  position: absolute;
   top: 0%;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 99%;
+  width: 100%;
+  height: 10vh;
   background-color: var(--couleur-primaire);
   box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
-
-  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
-    @media screen and (min-width: 1280px) {
-      margin-top: 0;
-      margin-left: var(--margin-left-tablette);
-      margin-right: var(--margin-right-tablette);
-      width: 98%;
-    //Ajout test de Gabrielle
-  }
+  padding-left: 4%;
 
   .conteneur_logo_tim{ 
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;

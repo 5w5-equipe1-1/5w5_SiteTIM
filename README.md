@@ -17,9 +17,12 @@ Durant cette phase, il est possible que notre équipe commence un début de la m
 Lors du sprint 2, notre équipe cherchera à commencer et à compléter un visuel (soit un début ou une continuation de HTML, CSS et SASS) de notre site web et de la maquette à compléter. Nous allons rassembler nos informations du sprint 0 et 1 afin de concevoir le site web suivant les éléments choisis par l’équipe. Les sections les plus importantes sont dans l’ordre suivant: Page d’accueil, Page des projets, Page des cours, Page des stages, Page des professeurs, Page des emplois, Page des concours et la Page des évènements. Lorsque les pages seront en majorité avancées, nous pourrons nous concentrer sur le côté de la programmation de la page web. Par exemple, nous pourrons travailler sur les filtres des différents cours.Nous allons aussi procéder à des tests d’utilisateurs. Nous allons aussi débuter l’intégration du thème dans le site WordPress pour utiliser une base de données. 
 
 ### Sprint 3 - Avancement principal de la programmation, mise en page complète
+Pour le sprint 3, notre équipe devra participer à des tests d’utilisabilité (c'est-à-dire évaluer les sites webs des autres équipes et fournir une rétroaction sur leur travail). Notre équipe devra s’occuper aussi de l’intégration de design sur le site WordPress avec l’aspect intéractif inclus (animation entre autres, nos pages doivent s’adapter selon l’écran de l’utilisateur). Ce sprint comprend une évaluation importante des éléments sur notre site web, il faudra que l’équipe ait deux extensions fournies sur le site WHC, l’intégration et la programmation sont évaluées, la majorité de nos médias doivent être inclus et doit apparaître sur le site. Ce sprint n’utilise plus XD, ni l’utilisation des wireframes, ni des maquettes ou même des tests utilisateurs, il s’agit d’un sprint complet pour l’avancement du site en programmation sur Github (principalement). 
 
 ### Sprint 4 - Finalisation et corrections de la page (?)
 
 Product Backlog : https://docs.google.com/document/d/1GmRpSM_1ixGRoPOJdg5YbIgPsLTa3AGfoIOd8E4jWiI/edit?usp=sharing
 
 GitHub page : https://5w5-equipe1-1.github.io/5w5_SiteTIM/
+
+Site WHC : https://gftnth00.mywhc.ca/tim23/

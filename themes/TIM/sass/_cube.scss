@@ -8,52 +8,57 @@
   transform-origin: center center;
 
   //face du cube
-.front {
-  transform: rotateY(0deg) translateZ(100px);
-}
-.back {
-  transform: rotateY(180deg) translateZ(100px);
-}
-.right {
-  transform: rotateY(90deg) translateZ(100px);
-}
-.left {
-  transform: rotateY(-90deg) translateZ(100px);
-}
-.top {
-  transform: rotateX(90deg) translateZ(100px);
-}
-.bottom {
-  transform: rotateX(-90deg) translateZ(100px);
-}
+  .front {
+    transform: rotateY(0deg) translateZ(100px);
+  }
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+
+  // Changement de la couleur primaire du cube - noir
 
   div {
     position: absolute;
     width: 200px;
     height: 200px;
-    background: var(--couleur-secondaire);
+    //background: var(--couleur-primaire);
+    background: black;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px,
+      rgba(255, 255, 255, 0.4) 0px 2px 25px 0px inset;
     border: 0.5px solid var(--couleur-secondaire);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 
     h3 {
       font-size: 35px;
+      color: var(--couleur-secondaire);
       margin: 0;
+      text-align: center;
+      user-select: none;
     }
 
     a {
+      color: var(--couleur-secondaire);
       font-size: 15px;
+      user-select: none;
     }
   }
 }
-
-
-
-.cube div
-
-
 
 .face {
   display: flex;
@@ -61,5 +66,3 @@
   justify-content: center;
   align-items: center;
 }
-
-

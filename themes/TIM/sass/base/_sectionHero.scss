@@ -1,12 +1,22 @@
 .section_hero{
+    width: 100%;
+    
+    .video_hero {
+        width: 100%;
+    }
 
-}
-
-.text_hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: translateY(-100%);
+    .text_hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translateY(-200%);
+        h1{
+            font-size: 30px;
+        }
+        h3{
+            font-size: 20px;
+        }
+    }
 }

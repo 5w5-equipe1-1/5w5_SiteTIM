@@ -14,7 +14,7 @@
         $cat = get_category_by_slug($_GET['category']);
     }
 ?>
-        <main>
+
             <div class="container">
             <div class="section_hero">
                 <video class="video_hero" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/trailerTIM_V1.mp4" autoplay loop></video>
@@ -24,10 +24,6 @@
                 </div>
             </div>
             <div class="galerie">
-            <img src="images/imageweb/1.png" alt="Image 1">
-                    <img src="images/imageweb/2.png" alt="Image 2">
-                    <img src="images/imageweb/3.png" alt="Image 3">
-            <?php echo do_shortcode('[carrousel]'); ?>
             </div>
             <div class="cours">
                 <?php
@@ -62,7 +58,6 @@
                 ?>
             </div>
             </div>
-        </main>
         <?php get_footer(); ?>
         <!-- API fontawsome pour les icones -->
         <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
