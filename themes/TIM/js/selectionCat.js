@@ -15,9 +15,11 @@
                 console.error("Erreur: L'ID de la catégorie n'a pas été récupéré.");
                 return;
             }
+             // Construire l'URL avec l'ID de la catégorie de yannick
+             let url = `http://localhost/5w5/wp-content/themes/TIM/categories.php?category=${cat}`;
 
             // Construire l'URL avec l'ID de la catégorie
-            let url = `http://localhost/5w5_ELOI_v2/wp-content/themes/TIM/categories.php?category=${cat}`;
+            //let url = `http://localhost/5w5_ELOI_v2/wp-content/themes/TIM/categories.php?category=${cat}`;
             //let url = `https://gftnth00.mywhc.ca/tim23/wp-content/themes/TIM/categories.php?category=${cat}`;
             console.log("URL construite: ", url);
 

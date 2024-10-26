@@ -12,44 +12,38 @@ function carrousel_enqueue() {
 }
 add_action('wp_enqueue_scripts', 'carrousel_enqueue');
 
-//creation du carrousel
-function afficher_carrousel() {
-    // Récupérer les images de la bibliothèque multimédia
-    $args = array(
-        'post_type' => 'attachment',
-        'post_mime_type' => 'image',
-        'post_status' => 'inherit',
-        'posts_per_page' => -1, // Récupérer toutes les images
-    );
+// Création du carrousel
+function afficher_carrousel($atts) {
+    // Définir les attributs par défaut et récupérer les attributs passés au shortcode
+    $atts = shortcode_atts(array(
+        'images' => '', // Liste des URLs des images séparées par des virgules
+    ), $atts, 'carrousel');
 
-    $images = get_posts($args);
-    
+    // Convertir la liste des URLs en tableau
+    $images = explode(',', $atts['images']);
+
     ob_start();
     ?>
     <div class="carrousel">
-        <button class="carrousel_x">X</button>
-        
-        
-        <figure class="carrousel_img">
-            <?php if ($images) : ?>
-                <?php foreach ($images as $image) : ?>
-                    <img src="<?php echo wp_get_attachment_url($image->ID); ?>" alt="<?php echo esc_attr($image->post_title); ?>" class="slide">
-                <?php endforeach; ?>
-            <?php else : ?>
-                <p>Aucune image disponible.</p>
-            <?php endif; ?>
-        </figure>
+    <div class="carrousel_images">
+        <?php foreach ($images as $index => $image_url): ?>
+            <div class="image" data-index="<?php echo $index; ?>">
+                <img src="<?php echo esc_url(trim($image_url)); ?>" alt="Carrousel Image">
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <div class="boutton_gallerie">
         <button class="carrousel_prev">←</button>
         <button class="carrousel_next">→</button>
-        <form class="carrousel_form"></form>
     </div>
+</div>
     <?php
     return ob_get_clean();
 }
 
-// creation du shortcode
-function carrousel_shortcode() {
-    return afficher_carrousel();
+// Création du shortcode
+function carrousel_shortcode($atts) {
+    return afficher_carrousel($atts);
 }
 add_shortcode('carrousel', 'carrousel_shortcode');
 ?>

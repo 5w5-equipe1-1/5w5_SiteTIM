@@ -17,14 +17,15 @@
 
             <div class="container">
             <div class="section_hero">
-                <video class="video_hero" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/trailerTIM_V1.mp4" autoplay loop></video>
+                <!-- <video class="video_hero" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/trailerTIM_V1.mp4" autoplay loop></video> -->
                 <div class="text_hero">
                     <h1><?php echo esc_html($cat->name); ?></h1>
                     <h3><?php echo esc_html($cat->description); ?></h3>
                 </div>
             </div>
             <div class="galerie">
-            <?php echo do_shortcode('[carrousel]'); ?>
+            <?php echo do_shortcode('[carrousel images="http://localhost/5w5/wp-content/uploads/2024/10/3.png,
+                                                        http://localhost/5w5/wp-content/uploads/2024/10/2.png"]'); ?>
             </div>
             <div class="cours">
                 <?php
@@ -68,5 +69,7 @@
         <script src="<?php echo get_template_directory_uri() ."/js/cubeBergur.js"?>"></script>
          <!-- inclure le script qui gere le changement de page -->
          <script src="<?php echo get_template_directory_uri() . "/js/selectionCat.js"?>"></script>
+          <!-- inclure le script pour le carrousel -->
+          <script src="<?php echo get_template_directory_uri() . "/js/carrousel.js"?>"></script>
         </body>
         </html>
