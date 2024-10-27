@@ -680,6 +680,7 @@ button {
   padding: 10px;
   cursor: pointer;
   z-index: 10;
+  transition: none;
 }
 
 .carrousel_prev {
@@ -706,4 +707,21 @@ button {
   border: none;
   cursor: pointer;
   text-align: center;
+}
+
+.galerie_initiale {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.image_miniature img {
+  max-width: 100px;
+  max-height: 100px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.carrousel.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

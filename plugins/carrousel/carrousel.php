@@ -12,7 +12,6 @@ function carrousel_enqueue() {
 }
 add_action('wp_enqueue_scripts', 'carrousel_enqueue');
 
-// Création du carrousel
 function afficher_carrousel($atts) {
     // Définir les attributs par défaut et récupérer les attributs passés au shortcode
     $atts = shortcode_atts(array(
@@ -24,8 +23,15 @@ function afficher_carrousel($atts) {
 
     ob_start();
     ?>
-    <div class="carrousel">
-        <button class="toggle_galerie">Afficher/Masquer Galerie</button>
+    <div class="galerie_initiale">
+        <?php foreach ($images as $index => $image_url): ?>
+            <div class="image_miniature" data-index="<?php echo $index; ?>">
+                <img src="<?php echo esc_url(trim($image_url)); ?>" alt="Image Miniature">
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <div class="carrousel hidden">
         <div class="carrousel_images">
             <?php foreach ($images as $index => $image_url): ?>
                 <div class="image carrousel_img <?php echo $index === 0 ? 'active' : ''; ?>" data-index="<?php echo $index; ?>">
@@ -42,9 +48,10 @@ function afficher_carrousel($atts) {
     return ob_get_clean();
 }
 
+
 // Création du shortcode
 function carrousel_shortcode($atts) {
     return afficher_carrousel($atts);
 }
 add_shortcode('carrousel', 'carrousel_shortcode');
-?>
+?> 
