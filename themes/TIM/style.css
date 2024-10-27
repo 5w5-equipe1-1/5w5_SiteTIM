@@ -370,6 +370,10 @@ div {
   padding: 50px;
 }
 
+.container {
+  width: 100%;
+}
+
 footer {
   width: 100%;
 }
@@ -629,68 +633,77 @@ button {
 /* ----------------------------------------------------- */
 /*Plugins*/
 /* ----------------------------------------------------- */
-.galerie {
-  display: flex;
-  width: 100%;
-  height: 30vh;
-  background-color: red;
-  justify-content: center;
-  align-items: center;
-}
-.galerie .carrousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-.galerie .carrousel .carrousel_images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.carrousel_images {
   position: relative;
-}
-.galerie .carrousel .carrousel_images .carrousel.single-view .image:not(.active) {
-  display: none;
-}
-.galerie .carrousel .carrousel_images .image {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: auto;
-  cursor: pointer;
-  margin: auto;
-  background-color: blue;
-}
-.galerie .carrousel .carrousel_images .image.active {
-  width: auto;
-  height: auto;
-  max-width: 80%;
-  max-height: 80%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-}
-.galerie .carrousel .carrousel_images .image img {
-  max-width: 100%;
-  max-height: 100%;
+  flex-wrap: wrap;
+  transform: scale(0.06);
+  transform-origin: center;
   object-fit: contain;
 }
-.galerie .carrousel .boutton_gallerie {
+
+.image {
+  max-width: 150px;
+  max-height: 100px;
+  object-fit: contain;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  object-fit: contain;
 }
-.galerie .carrousel .boutton_gallerie button {
-  background: rgba(0, 0, 0, 0.5);
+
+.carrousel_img {
+  display: none;
+}
+
+.carrousel_img.active {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hidden {
+  display: none;
+}
+
+.carrousel_prev,
+.carrousel_next {
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
+  z-index: 10;
+}
+
+.carrousel_prev {
+  left: 10px;
+}
+
+.carrousel_next {
+  right: 10px;
+}
+
+.boutton_gallerie {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.toggle_galerie {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

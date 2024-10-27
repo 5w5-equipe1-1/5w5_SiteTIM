@@ -25,18 +25,19 @@ function afficher_carrousel($atts) {
     ob_start();
     ?>
     <div class="carrousel">
-    <div class="carrousel_images">
-        <?php foreach ($images as $index => $image_url): ?>
-            <div class="image" data-index="<?php echo $index; ?>">
-                <img src="<?php echo esc_url(trim($image_url)); ?>" alt="Carrousel Image">
-            </div>
-        <?php endforeach; ?>
+        <button class="toggle_galerie">Afficher/Masquer Galerie</button>
+        <div class="carrousel_images">
+            <?php foreach ($images as $index => $image_url): ?>
+                <div class="image carrousel_img <?php echo $index === 0 ? 'active' : ''; ?>" data-index="<?php echo $index; ?>">
+                    <img src="<?php echo esc_url(trim($image_url)); ?>" alt="Carrousel Image">
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="boutton_gallerie">
+            <button class="carrousel_prev">←</button>
+            <button class="carrousel_next">→</button>
+        </div>
     </div>
-    <div class="boutton_gallerie">
-        <button class="carrousel_prev">←</button>
-        <button class="carrousel_next">→</button>
-    </div>
-</div>
     <?php
     return ob_get_clean();
 }
