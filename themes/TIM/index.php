@@ -10,8 +10,8 @@
 </head>
 <body>
     <header>
-        <div class="conteneur_logo_tim" href="<?php echo get_home_url(); ?>">
-            <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
+        <div class="conteneur_logo_tim">
+        <a href="<?php echo get_home_url();?>"><img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim"></a>
             <h2 class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
         </div>
         <div class="conteneur_burger_recherche">
@@ -19,23 +19,20 @@
                 <input type="text" placeholder="Rechercher..." class="text_recherche">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <div class="conteneur_menu_gurger">
-                <input type="checkbox" id="menu_gurger">
-                <label for="menu_gurger">
-                <div class="cube_burger"></div>
-            </div>
         </div>
     </header>
     <!-- la page avec les information -->
     <main class="conteneur">
+
+    <!-- <div class="degrade1noir"></div> -->
+
             <!-- <img src="./themes/TIM/images/fence.png" alt="fence-gauche" class="fence-gauche">
             <img src="./themes/TIM/images/fence.png" alt="fence-droite" class="fence-droite"> -->
         <div class="scene" id="scene">
             <!-- Les degradés derrière le cube -->
-            <div class="testdegrade"></div>
-            <div class="degrade1orange"></div>
-            <div class="degrade1cyan"></div>
-            <div class="degrade1magenta"></div>
+            <div class="commundegrade degrade1orange"></div>
+            <div class="commundegrade degrade1cyan"></div>
+            <div class="commundegrade degrade1magenta"></div>
 
             <!-- le cube en tant que tel -->
             <div class="cube" id="cube">
@@ -78,20 +75,34 @@
             </div>
 
     </div>
-        <p class="info_action">Interactif</p>
+    <!-- Ajout du cercle de scroll down en test -->
+    <div class="text_cercle">
+        <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="">
+        <div class="effetbulle">
+            <svg viewBox="0 0 150 150">
+                <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
+                <text class="text">
+                    <textPath class="text-path" href="#curve">Scroll down - Descendre - </textPath>
+                </text>
+            </svg>
+        </div>
+    </div>
+    <p class="info_action">Pssst! Hey! Tournez-moi!</p>
         <div class="description_multimedia">
             <h1>Qu'est ce que le multimédia?</h1>
-            <p>Tout le long de ta formation, tu réaliseras de nombreux projets amusants, diversifiés et stimulants qui te permettront d’explorer les multiples facettes de l’intégration multimédia.  Tu créeras notamment des jeux vidéos, sites Web, animations, modélisation 3D, vidéos, applications mobiles, environnements immersifs, applications de réalité virtuelle et augmentée, etc.</p>
-            <p>Tu apprendras à concevoir et réaliser des projets numériques et interactifs tels que des jeux vidéos, sites web, modélisations 3D, animations, vidéos, application de réalité virtuelle, etc. En particulier, tu apprendras à :
-            </p>
-            <br>
-            <p>> Créer des médias (images, vidéos, sons, animations);</p>
-            <p>> Concevoir le design et l’interactivité;</p>
-            <p>> Intégrer les composantes du projet dans un tout cohérent;</p>
-            <p>> Planifier la réalisation d’un projet et en effectuer le suivi;</p>
-            <p>> Travailler en équipe;</p>
-            <p>> Préparer ton insertion professionnelle dans le milieu du travail ou à l’université.</p>
-            <br>
+            <div class="espace_gauche_descmulti">
+                <p>Tout le long de ta formation, tu réaliseras de nombreux projets amusants, diversifiés et stimulants qui te permettront d’explorer les multiples facettes de l’intégration multimédia.  Tu créeras notamment des jeux vidéos, sites Web, animations, modélisation 3D, vidéos, applications mobiles, environnements immersifs, applications de réalité virtuelle et augmentée, etc.</p>
+                <p>Tu apprendras à concevoir et réaliser des projets numériques et interactifs tels que des jeux vidéos, sites web, modélisations 3D, animations, vidéos, application de réalité virtuelle, etc. En particulier, tu apprendras à :
+                </p>
+                <br>
+                <p>> Créer des médias (images, vidéos, sons, animations);</p>
+                <p>> Concevoir le design et l’interactivité;</p>
+                <p>> Intégrer les composantes du projet dans un tout cohérent;</p>
+                <p>> Planifier la réalisation d’un projet et en effectuer le suivi;</p>
+                <p>> Travailler en équipe;</p>
+                <p>> Préparer ton insertion professionnelle dans le milieu du travail ou à l’université.</p>
+                <br>
+            </div>
         </div>
         <div class="evenements">
             <h2>Événements</h2>
@@ -120,6 +131,14 @@
         </div>
     </main>
     <?php get_footer();?>
+
+        <!-- Pas touche! C'est un curseur qui est sous la souris  
+    lorsque l'utilisateur est dessus le cube! -->
+    <div class="hovercurseur">
+        <div class="minipoint"></div>
+        <img class="lesflechescurseur" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/flecheHoverCube.png" alt="">
+    </div>
+
     <!-- API fontawsome pour les icones -->
     <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
     <!-- inclure le script qui gere les animations de scroll -->
@@ -128,5 +147,7 @@
     <script src="<?php echo get_template_directory_uri() . "/js/cube.js"?>"></script>
     <!-- inclure le script qui gere le changement de page -->
     <script src="<?php echo get_template_directory_uri() . "/js/selectionCat.js"?>"></script>
+    <!-- inclure le script qui gere le curseur -->
+    <script src="<?php echo get_template_directory_uri() . "/js/curseur.js"?>"></script>
 </body>
 </html>

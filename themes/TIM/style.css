@@ -42,6 +42,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --font-family-titre: ;
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
+  --couleur-secondaire-hover: #c0c0c0;
   --couleur-primaire: #1a1a1a;
   --couleur-primaire-hover: #2a2a2a;
   --couleur-orange: #ffd472;
@@ -51,6 +52,8 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
   --border-radius: 15px;
+  --mouse-x: 0px;
+  --mouse-y: 0px;
 }
 
 /* ----------------------------------------------------- */
@@ -113,7 +116,8 @@ header {
   height: 10vh;
   background-color: var(--couleur-primaire);
   box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
-  padding-left: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 header .conteneur_logo_tim {
   display: flex;
@@ -125,6 +129,7 @@ header .conteneur_logo_tim {
 header .conteneur_logo_tim .logo_tim {
   width: 50px;
   height: 50px;
+  transition: 0.5s;
 }
 @media screen and (min-width: 1280px) {
   header .conteneur_logo_tim .logo_tim {
@@ -132,9 +137,13 @@ header .conteneur_logo_tim .logo_tim {
     height: 94px;
   }
 }
+header .conteneur_logo_tim .logo_tim:hover {
+  opacity: 0.5;
+}
 header .conteneur_logo_tim .TIM_entete {
   text-align: left;
   display: none;
+  user-select: none;
 }
 @media screen and (min-width: 1280px) {
   header .conteneur_logo_tim .TIM_entete {
@@ -146,7 +155,7 @@ header .conteneur_burger_recherche {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: var(--margin-left-mobile);
+  gap: 0;
 }
 header .conteneur_burger_recherche .conteneur_barre_recherche {
   display: flex;
@@ -177,7 +186,7 @@ header .conteneur_burger_recherche .sceneBurguer {
   height: 200px;
   perspective: 600px;
   transition: perspective 1s, transform 1s;
-  transform: scale(2) translate(-50vh, 25vh);
+  transform: scale(1.3) translate(-75vh, 35vh);
   transform-origin: center center;
 }
 header .conteneur_burger_recherche .shrink {
@@ -226,20 +235,28 @@ body #scene {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 330vh;
+  margin-top: 350vh;
   position: relative;
   z-index: 9;
+}
+@media screen and (max-width: 680px) {
+  body #scene {
+    margin-top: 430vh;
+  }
 }
 body .text_cercle {
   position: absolute;
   top: 65%;
   left: 5%;
+  transition: 1s;
+}
+body .text_cercle .effetbulle {
   box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 50%;
   animation: rotateText 25s linear infinite;
 }
 body .text_cercle .text {
-  fill: white;
+  fill: rgba(255, 255, 255, 0.836);
   font-size: 1.33em;
   user-select: none;
 }
@@ -252,16 +269,29 @@ body .text_cercle svg {
     display: none;
   }
 }
+body .text_cercle:hover {
+  filter: brightness(2);
+}
+body .versbas {
+  position: absolute;
+  width: 3.5rem;
+  height: 3rem;
+  user-select: none;
+  transform: translate(5.4rem, 5.4rem);
+  z-index: -1;
+}
 body .description_multimedia {
   margin-top: 10vh;
   margin-bottom: 10vh;
-  background-color: red;
   text-align: left;
 }
 @media screen and (max-width: 680px) {
   body .description_multimedia {
     margin-top: var(--margin-top-mobile);
   }
+}
+body .description_multimedia .espace_gauche_descmulti {
+  margin-left: 2%;
 }
 body .bannieres {
   display: flex;
@@ -386,6 +416,7 @@ footer .conteneur_logo_tim {
   margin-top: 20vh;
   margin-left: 10%;
   margin-bottom: 5vh;
+  gap: var(--margin-left-mobile);
 }
 footer .conteneur_logo_tim .logo_tim {
   width: 90px;
@@ -404,6 +435,7 @@ footer .info_footer {
   height: 60%;
   width: 100vw;
   margin: 0 auto;
+  line-height: 3vh;
 }
 footer .info_footer .colonne_footer {
   display: flex;
@@ -415,6 +447,43 @@ footer .info_footer .colonne_footer {
 footer .info_footer .colonne_footer .info_colonne_footer {
   margin: 0;
   width: fit-content;
+}
+footer .info_footer .colonne_footer .lesmedias {
+  display: flex;
+  gap: var(--margin-left-mobile);
+}
+@media screen and (max-width: 680px) {
+  footer .info_footer .colonne_footer .lesmedias {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1280px) {
+  footer .info_footer .colonne_footer .lesmedias svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+footer .info_footer .colonne_footer a {
+  color: var(--couleur-test-orange);
+  text-decoration: none;
+}
+footer .info_footer .colonne_footer a:hover {
+  color: var(--couleur-secondaire);
+  text-decoration: underline;
+}
+footer .info_footer .colonne_footer p:hover {
+  color: var(--couleur-secondaire-hover);
+  text-decoration: underline;
+}
+@media screen and (max-width: 680px) {
+  footer .info_footer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    margin-bottom: 25%;
+    gap: var(--margin-bottom-mobile);
+  }
 }
 
 .titre_footer {
@@ -439,13 +508,15 @@ p {
 }
 
 .info_action {
+  font-size: 12pt;
   color: var(--couleur-secondaire);
-  opacity: 0.6;
+  opacity: 0.3;
   text-align: center;
-  transform: translateY(-20vh);
+  transform: translateY(-15vh);
   width: fit-content;
   margin: 0 auto;
   user-select: none;
+  transition: 1s;
 }
 
 li {
@@ -462,7 +533,13 @@ li {
   width: 100%;
 }
 .section_hero .video_hero {
+  margin-top: 50vh;
   width: 100%;
+}
+@media screen and (max-width: 680px) {
+  .section_hero .video_hero {
+    margin-top: 0;
+  }
 }
 .section_hero .text_hero {
   display: flex;
@@ -478,6 +555,50 @@ li {
 .section_hero .text_hero h3 {
   font-size: 20px;
 }
+@media screen and (max-width: 680px) {
+  .section_hero {
+    margin-top: 150vh;
+  }
+}
+
+.hovercurseur {
+  height: 2.4rem;
+  width: 2.4rem;
+  position: fixed;
+  top: -1.2rem;
+  left: -1.2rem;
+  z-index: 500;
+  transform: translate(var(--mouse-x), var(--mouse-y));
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.9s cubic-bezier(0.15, 0.9, 0.35, 0.95);
+}
+.hovercurseur .lesflechescurseur {
+  visibility: hidden;
+  opacity: 0.8;
+  height: 8rem;
+  width: 8rem;
+  animation: rotatefleche 5s linear infinite;
+}
+
+.hovercurseur::before {
+  content: "";
+  position: absolute;
+  height: 0.6rem;
+  width: 0.6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.minipoint {
+  border: 1px solid white;
+  box-shadow: rgba(255, 255, 255, 0.375) 0px 0px 3px 1px inset;
+  height: 0.5rem;
+  width: 0.5rem;
+  z-index: 500;
+  transform: translate(0.8rem, 0.6rem);
+}
 
 /* ----------------------------------------------------- */
 /*Composants*/
@@ -485,6 +606,14 @@ li {
 button {
   background-color: transparent;
   border: none;
+}
+
+.cube .bouton_cube {
+  padding: 5%;
+  background-color: rgba(120, 120, 120, 0.2);
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 3px 15px 0px inset;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .bouton_cube a {
@@ -526,6 +655,14 @@ button {
   }
   100% {
     transform: rotateZ(360deg);
+  }
+}
+@keyframes rotatefleche {
+  0% {
+    transform: translate(-2.7rem, -3.1rem) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-2.7rem, -3.1rem) rotateZ(360deg);
   }
 }
 /* ----------------------------------------------------- */
@@ -583,6 +720,10 @@ button {
   user-select: none;
 }
 
+.cube:hover {
+  cursor: grab;
+}
+
 .face {
   display: flex;
   flex-direction: column;
@@ -630,6 +771,16 @@ button {
   filter: saturate(3);
 }
 
+.degrade1noir {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 10%;
+  left: 25%;
+  z-index: -100;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px, rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
+}
 /* ----------------------------------------------------- */
 /*Plugins*/
 /* ----------------------------------------------------- */
@@ -650,6 +801,11 @@ button {
   object-fit: contain;
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.galerie .carrousel .carrousel_images {
+  display: flex;
   justify-content: center;
   background-color: #f0f0f0;
   border: 1px solid #ddd;
@@ -730,17 +886,4 @@ button {
   max-width: 100px;
   max-height: 100px;
   cursor: pointer;
-  object-fit: contain;
-}
-
-@keyframes slideX {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-.carrousel.hidden {
-  display: none;
 }/*# sourceMappingURL=style.css.map */

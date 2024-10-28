@@ -1,24 +1,24 @@
 //scroll bar
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
   background-color: var(--couleur-secondaire);
   border-radius: 15px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: var(--couleur-primaire);
   border-radius: 15px;
   border: 1px solid var(--couleur-secondaire);
-  :hover{
+  :hover {
     background-color: var(--couleur-primaire-hover);
   }
 }
 
-::-webkit-scrollbar-button{
+::-webkit-scrollbar-button {
   display: none;
 }
 
-::-webkit-scrollbar-corner{
+::-webkit-scrollbar-corner {
   display: none;
 }
 
@@ -44,13 +44,19 @@ body {
     transition: perspective 1s;
     margin: 0 auto;
     margin-bottom: 30vh;
-    margin-top: 330vh;
+    margin-top: 270vh;
     position: relative;
     z-index: 9;
+
     //Style pour tabelette
     @media screen and (min-width: 1280px) {
       //margin-bottom: 30vh;
       // margin-top: 180vh;
+    }
+    //Style pour mobile
+    @media screen and (max-width: 680px) {
+      margin-top: 430vh;
+      // margin-bottom: 25%;
     }
   }
 
@@ -59,18 +65,21 @@ body {
     position: absolute;
     top: 65%;
     left: 5%;
+    transition: 1s;
 
-    // Ajout d'un glow (?)
-    box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
-      rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
-      rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-    border-radius: 50%;
+    .effetbulle {
+      // Ajout d'un glow (?)
+      box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
+        rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
+        rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+      border-radius: 50%;
 
-    // l'animation est sur tout le cercle, pas seulement sur le SVG, attention!
-    animation: rotateText 25s linear infinite;
+      // l'animation est sur tout le cercle, pas seulement sur le SVG, attention!
+      animation: rotateText 25s linear infinite;
+    }
 
     .text {
-      fill: white;
+      fill: rgba(255, 255, 255, 0.836);
       font-size: 1.33em;
       user-select: none;
     }
@@ -81,15 +90,36 @@ body {
       height: 25vh;
     }
 
+    // A voir si besoin?***
+    @media screen and (max-width: 1280px) {
+      // width: 16vw;
+    }
+
     @media screen and (max-width: 680px) {
       display: none;
     }
   }
 
+  .text_cercle:hover {
+    filter: brightness(2);
+  }
+
+  // Un petit quelque chose pour que les utilisateurs
+  // descende plus rapidement en bas!
+  .versbas {
+    position: absolute;
+    width: 3.5rem;
+    height: 3rem;
+    // opacity: 0.5;
+    user-select: none;
+
+    transform: translate(5.4rem, 5.4rem);
+    z-index: -1;
+  }
+
   .description_multimedia {
     margin-top: 10vh;
     margin-bottom: 10vh;
-    background-color: red;
     text-align: left;
 
     //garder en commentaire je fais des tests
@@ -98,6 +128,14 @@ body {
 
     @media screen and (max-width: 680px) {
       margin-top: var(--margin-top-mobile);
+    }
+
+    .espace_gauche_descmulti {
+      margin-left: 2%;
+
+      @media screen and (max-width: 680px) {
+        // margin-left: 5%;
+      }
     }
   }
 

@@ -60,6 +60,10 @@
   }
 }
 
+.cube:hover {
+  cursor: grab;
+}
+
 .face {
   display: flex;
   flex-direction: column;
