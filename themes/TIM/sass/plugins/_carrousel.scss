@@ -22,9 +22,10 @@
     object-fit: contain;
 }
 
-.carrousel_img{
+.carrousel_img {
     display: none;
 }
+
 .carrousel_img.active {
     display: block;
     width: 100%;
@@ -34,18 +35,20 @@
 
 .hidden {
     display: none; // Masque l'élément
-    
 }
 
 .carrousel_prev,
 .carrousel_next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 10;
-    transition: none;
+    transition: none; // Désactive les transitions pour éviter les animations
 }
 
 .carrousel_prev {
@@ -58,7 +61,7 @@
 
 .boutton_gallerie {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 10px;
 }
@@ -73,10 +76,19 @@
     cursor: pointer;
     text-align: center;
 }
+
 .galerie_initiale {
     display: flex;
+    flex-wrap: nowrap; // Permet plusieurs lignes si nécessaire
     gap: 10px;
-    justify-content: center;
+    animation: slideX 120s linear infinite; // Ajoute l'animation
+}
+
+.image_miniature {
+    max-width: 100px;
+    max-height: 100px;
+    cursor: pointer;
+    object-fit: contain;
 }
 
 .image_miniature img {
@@ -84,6 +96,16 @@
     max-height: 100px;
     cursor: pointer;
     object-fit: contain;
+}
+
+
+@keyframes slideX {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .carrousel.hidden {

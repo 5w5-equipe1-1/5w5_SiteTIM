@@ -674,6 +674,9 @@ button {
 
 .carrousel_prev,
 .carrousel_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -693,7 +696,7 @@ button {
 
 .boutton_gallerie {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
@@ -711,8 +714,16 @@ button {
 
 .galerie_initiale {
   display: flex;
+  flex-wrap: nowrap;
   gap: 10px;
-  justify-content: center;
+  animation: slideX 120s linear infinite;
+}
+
+.image_miniature {
+  max-width: 100px;
+  max-height: 100px;
+  cursor: pointer;
+  object-fit: contain;
 }
 
 .image_miniature img {
@@ -722,6 +733,14 @@ button {
   object-fit: contain;
 }
 
+@keyframes slideX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .carrousel.hidden {
   display: none;
 }/*# sourceMappingURL=style.css.map */
