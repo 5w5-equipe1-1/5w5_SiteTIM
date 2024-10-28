@@ -21,12 +21,8 @@
 
       // Construire l'URL avec l'ID de la catégorie
       //let url = `http://localhost/5w5gabrielle/wp-content/themes/TIM/categories.php?category=${cat}`;
-
-      //console.log("URL construite: ", url);
-      // Construire l'URL avec l'ID de la catégorie
       //let url = `http://localhost/5w5_ELOI_v2/wp-content/themes/TIM/categories.php?category=${cat}`;
       let url = `https://gftnth00.mywhc.ca/tim23/wp-content/themes/TIM/categories.php?category=${cat}`;
-
       // Rediriger l'utilisateur vers la nouvelle page
       window.location.href = url;
     });
