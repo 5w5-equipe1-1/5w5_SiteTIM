@@ -19,11 +19,13 @@ footer {
     .logo_tim {
       width: 90px;
       height: 90px;
+      user-select: none;
     }
     .TIM_entete {
       text-align: left;
       display: block;
       font-size: 23px;
+      user-select: none;
     }
   }
   //info dans le footer
@@ -69,6 +71,7 @@ footer {
       a {
         color: var(--couleur-secondaire);
         text-decoration: none;
+        user-select: none;
       }
 
       a:hover {
@@ -89,6 +92,14 @@ footer {
       margin-bottom: 25%;
       gap: var(--margin-bottom-mobile);
     }
+  }
+
+  p {
+    user-select: none;
+  }
+
+  h3 {
+    user-select: none;
   }
 }
 
