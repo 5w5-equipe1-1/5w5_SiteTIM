@@ -119,6 +119,9 @@ header {
   padding-left: 5%;
   padding-right: 5%;
 }
+header a {
+  text-decoration: none;
+}
 header .conteneur_logo_tim {
   display: flex;
   flex-direction: row;
@@ -424,11 +427,13 @@ footer .conteneur_logo_tim {
 footer .conteneur_logo_tim .logo_tim {
   width: 90px;
   height: 90px;
+  user-select: none;
 }
 footer .conteneur_logo_tim .TIM_entete {
   text-align: left;
   display: block;
   font-size: 23px;
+  user-select: none;
 }
 footer .info_footer {
   display: flex;
@@ -469,6 +474,7 @@ footer .info_footer .colonne_footer .lesmedias {
 footer .info_footer .colonne_footer a {
   color: var(--couleur-secondaire);
   text-decoration: none;
+  user-select: none;
 }
 footer .info_footer .colonne_footer a:hover {
   text-decoration: underline;
@@ -486,6 +492,12 @@ footer .info_footer .colonne_footer p:hover {
     margin-bottom: 25%;
     gap: var(--margin-bottom-mobile);
   }
+}
+footer p {
+  user-select: none;
+}
+footer h3 {
+  user-select: none;
 }
 
 .titre_footer {

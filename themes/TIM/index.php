@@ -11,8 +11,12 @@
 <body>
     <header>
         <div class="conteneur_logo_tim">
-        <a href="<?php echo get_home_url();?>"><img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim"></a>
+        <a href="<?php echo get_home_url();?>">
+            <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
+        </a>
+        <a href="<?php echo get_home_url();?>">
             <h2 class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
+        </a>
         </div>
         <div class="conteneur_burger_recherche">
             <div class="conteneur_barre_recherche">

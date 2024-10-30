@@ -10,8 +10,10 @@
 <body>
     <header>
         <div class="conteneur_logo_tim" href="<?php echo get_home_url();?>">
-            <a href="<?php echo get_home_url();?>"><img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim"></a>
-            <h2 class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
+            <a href="<?php echo get_home_url();?>">
+                <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
+            </a>
+            <h2 href="<?php echo get_home_url();?>" class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
         </div>
         <div class="conteneur_burger_recherche">
             <div class="conteneur_barre_recherche">
