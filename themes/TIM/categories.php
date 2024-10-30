@@ -24,9 +24,8 @@
                 </div>
             </div>
             <div class="galerie">
-            <?php echo do_shortcode('[carrousel images="http://localhost/5w5/wp-content/uploads/2024/10/3.png,
-                                                        http://localhost/5w5/wp-content/uploads/2024/10/2.png"]'); ?>
-            </div>
+    <?php echo do_shortcode('[afficher_article_slug slug="gallery"]'); // Exécution du shortcode ?>
+</div>
             <div class="cours">
                 <?php
                 // Vérifiez si la catégorie est valide

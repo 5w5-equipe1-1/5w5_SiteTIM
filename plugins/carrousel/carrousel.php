@@ -53,4 +53,7 @@ function carrousel_shortcode($atts) {
     return afficher_carrousel($atts);
 }
 add_shortcode('carrousel', 'carrousel_shortcode');
+
+//quoi ecrire pour utiliser le plugin
+// [afficher_article_slug slug="le slug de l'article"]
 ?>
