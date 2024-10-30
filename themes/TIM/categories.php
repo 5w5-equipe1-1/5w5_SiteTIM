@@ -10,8 +10,10 @@
     get_header(); // Afficher le header
 
     // Récupérer la catégorie sélectionnée
-    if (isset($_GET['category'])) {
+    if (isset($_GET['category']) && term_exists($_GET['category'])) {
         $cat = get_category_by_slug($_GET['category']);
+    }else{
+        //amener a la page 404
     }
 ?>
         <main>
