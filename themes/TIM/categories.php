@@ -22,6 +22,8 @@
         require_once '404.php';
         exit;
     }
+
+    
 ?>
         <main>
             <div class="container">
