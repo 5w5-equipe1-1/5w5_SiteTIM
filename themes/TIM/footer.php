@@ -15,20 +15,20 @@
                 <?php endforeach;?>
             </div>
             <div class="colonne_footer">
-                <h3>Section 1 Titre</h3>
-                <p class="info_colonne_footer">À propos</p>
-                <p class="info_colonne_footer">Plus d'infos</p>
-                <p class="info_colonne_footer">Foire aux questions</p>
+                <h3>Contenu</h3>
+                <p class="info_colonne_footer"><a href="">À propos</a></p>
+                <p class="info_colonne_footer"><a href="">Plus d'infos</a></p>
+                <p class="info_colonne_footer"><a href="">Foire aux questions</a></p>
                 <p class="info_colonne_footer"><a href="https://www.cmaisonneuve.qc.ca/">Collège de Maisonneuve</a></p>
-                <p class="info_colonne_footer">Nous rejoindre</p>
+                <p class="info_colonne_footer"><a href="">Nous rejoindre</a></p>
             </div>
             <div class="colonne_footer">
-                <h3>Section 2 Titre</h3>
-                <p class="info_colonne_footer">Accessibilité</p>
-                <p class="info_colonne_footer">Support</p>
-                <p class="info_colonne_footer">Personnaliser les témoins</p>
-                <p class="info_colonne_footer">Confidentialité</p>
-                <p class="info_colonne_footer">Conditions d'utilisation</p>
+                <h3>Utilisateurs</h3>
+                <p class="info_colonne_footer"><a href="">Accessibilité</a></p>
+                <p class="info_colonne_footer"><a href="">Support</a></p>
+                <p class="info_colonne_footer"><a href="">Personnaliser les témoins</a></p>
+                <p class="info_colonne_footer"><a href="">Confidentialité</a></p>
+                <p class="info_colonne_footer"><a href="">Conditions d'utilisation</a></p>
             </div>
             <div class="colonne_footer">
                 <h3>Suivez-nous</h3>

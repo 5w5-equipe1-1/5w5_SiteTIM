@@ -227,6 +227,9 @@ div {
 
 .contenufunky h3 {
   font-size: 23pt;
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px inset;
+  border-radius: 20px;
 }
 
 .lespointsfunky {
@@ -268,6 +271,6 @@ div {
   //background-color: rgba(255, 255, 255, 0.8);
 }
 
-.container{
+.container {
   width: 100%;
 }
