@@ -15,7 +15,7 @@
         </div>
         <div class="conteneur_burger_recherche">
             <div class="conteneur_barre_recherche">
-                <input type="text" placeholder="Rechercher..." class="text_recherche">
+                <input type="text" placeholder="Rechercher..." class="text_recherche" value name="s" id="s">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="sceneBurguer" id="sceneBurguer">
