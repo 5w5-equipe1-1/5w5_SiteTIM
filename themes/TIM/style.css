@@ -621,6 +621,13 @@ button {
   color: var(--couleur-primaire);
 }
 
+.wp-element-caption {
+  position: fixed;
+  width: 20px;
+  height: 50px;
+  color: white;
+}
+
 /* ----------------------------------------------------- */
 /*Animations*/
 /* ----------------------------------------------------- */
