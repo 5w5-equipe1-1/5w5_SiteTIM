@@ -95,13 +95,15 @@
                 <p>Tu apprendras à concevoir et réaliser des projets numériques et interactifs tels que des jeux vidéos, sites web, modélisations 3D, animations, vidéos, application de réalité virtuelle, etc. En particulier, tu apprendras à :
                 </p>
                 <br>
-                <p>> Créer des médias (images, vidéos, sons, animations);</p>
-                <p>> Concevoir le design et l’interactivité;</p>
-                <p>> Intégrer les composantes du projet dans un tout cohérent;</p>
-                <p>> Planifier la réalisation d’un projet et en effectuer le suivi;</p>
-                <p>> Travailler en équipe;</p>
-                <p>> Préparer ton insertion professionnelle dans le milieu du travail ou à l’université.</p>
-                <br>
+                <div class="bulles_contenu">
+                    <p>> Créer des médias (images, vidéos, sons, animations);</p>
+                    <p>> Concevoir le design et l’interactivité;</p>
+                    <p>> Intégrer les composantes du projet dans un tout cohérent;</p>
+                    <p>> Planifier la réalisation d’un projet et en effectuer le suivi;</p>
+                    <p>> Travailler en équipe;</p>
+                    <p>> Préparer ton insertion professionnelle dans le milieu du travail ou à l’université.</p>
+                    <br>
+                </div>
             </div>
         </div>
         <div class="evenements">
@@ -120,13 +122,14 @@
             <h2>Mots intéressants</h2>
         </div>
         <div class="contenufunky">
-            <h3>TITRE FUNKY</h3>
+            <h3>85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>
             <ul class="lespointsfunky">
-                <p><b></b>&nbsp;LOREM IPSUM DOLOR</p>
-                <p><b></b>&nbsp;LOREM IPSUM DOLOR</p>
-                <p><b></b>&nbsp;LOREM IPSUM DOLOR</p>
-                <p><b></b>&nbsp;LOREM IPSUM DOLOR</p>
-                <p><b></b>&nbsp;LOREM IPSUM DOLOR</p>
+                <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo;</p>
+                <p><b></b>&nbsp;Développeur Web (front end et back end);</p>
+                <p><b></b>&nbsp;Développeur d’applications mobiles;</p>
+                <p><b></b>&nbsp;Designer / infographiste;</p>
+                <p><b></b>&nbsp;Animateurs 2D / 3D;</p>
+                <p><b></b>&nbsp;...et bien plus encore!</p>
             </ul>
         </div>
     </main>

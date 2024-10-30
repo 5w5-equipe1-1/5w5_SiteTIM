@@ -125,20 +125,17 @@ header .conteneur_logo_tim {
   justify-content: space-between;
   align-items: center;
   gap: var(--margin-left-mobile);
+  transition: 0.5s;
 }
 header .conteneur_logo_tim .logo_tim {
   width: 50px;
   height: 50px;
-  transition: 0.5s;
 }
 @media screen and (min-width: 1280px) {
   header .conteneur_logo_tim .logo_tim {
     width: 94px;
     height: 94px;
   }
-}
-header .conteneur_logo_tim .logo_tim:hover {
-  opacity: 0.5;
 }
 header .conteneur_logo_tim .TIM_entete {
   text-align: left;
@@ -149,6 +146,9 @@ header .conteneur_logo_tim .TIM_entete {
   header .conteneur_logo_tim .TIM_entete {
     display: block;
   }
+}
+header .conteneur_logo_tim:hover {
+  opacity: 0.5;
 }
 header .conteneur_burger_recherche {
   display: flex;
@@ -370,6 +370,9 @@ div {
 
 .contenufunky h3 {
   font-size: 23pt;
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px inset;
+  border-radius: 20px;
 }
 
 .lespointsfunky {
@@ -464,11 +467,10 @@ footer .info_footer .colonne_footer .lesmedias {
   }
 }
 footer .info_footer .colonne_footer a {
-  color: var(--couleur-test-orange);
+  color: var(--couleur-secondaire);
   text-decoration: none;
 }
 footer .info_footer .colonne_footer a:hover {
-  color: var(--couleur-secondaire);
   text-decoration: underline;
 }
 footer .info_footer .colonne_footer p:hover {
@@ -699,8 +701,8 @@ button {
   width: 200px;
   height: 200px;
   background: black;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px, rgba(255, 255, 255, 0.4) 0px 2px 25px 0px inset;
-  border: 0.5px solid var(--couleur-secondaire);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px, rgba(255, 255, 255, 0.6) 0px 0px 25px 0px inset;
+  border: 1.5px solid var(--couleur-secondaire);
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -20,20 +20,16 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: var(--margin-left-mobile);
+    transition: 0.5s;
 
     .logo_tim {
       width: 50px;
       height: 50px;
-      transition: 0.5s;
 
       @media screen and (min-width: 1280px) {
         width: 94px;
         height: 94px;
       }
-    }
-
-    .logo_tim:hover {
-      opacity: 0.5;
     }
 
     .TIM_entete {
@@ -45,6 +41,10 @@ header {
         display: block;
       }
     }
+  }
+
+  .conteneur_logo_tim:hover {
+    opacity: 0.5;
   }
 
   .conteneur_burger_recherche {
@@ -82,8 +82,6 @@ header {
       }
     }
 
-    
-
     //style CSS pour le cube 3D - le menu burger quand il est ouvert et un élément de la page d'accueil
     .sceneBurguer {
       width: 200px;
@@ -93,7 +91,7 @@ header {
       transform: scale(1.3) translate(-75vh, 35vh);
       transform-origin: center center;
     }
-    
+
     .shrink {
       transform: scale(0.2) translate(0, 0);
       transform-origin: center center;
