@@ -12,8 +12,15 @@
     // Récupérer la catégorie sélectionnée
     if (isset($_GET['category']) && term_exists($_GET['category'])) {
         $cat = get_category_by_slug($_GET['category']);
+        if (!$cat) {
+            // Rediriger vers la page 404 si la catégorie n'est pas trouvée
+            require_once '404.php';
+            exit;
+        }
     }else{
         //amener a la page 404
+        require_once '404.php';
+        exit;
     }
 ?>
         <main>
@@ -31,7 +38,7 @@
             <div class="cours">
                 <?php
                 // Vérifiez si la catégorie est valide
-                if ($cat):
+                if (isset($cat)):
                     // Obtenez l'ID de la catégorie "cours"
                     $cours_cat = get_category_by_slug('cours');
                     $cours_cat_id = $cours_cat ? $cours_cat->term_id : 0;

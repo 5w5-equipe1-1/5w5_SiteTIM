@@ -6,4 +6,6 @@ function processCategory($category) {
     }
     return "Selected category: " . htmlspecialchars($category);
 }
+
+
 ?>
