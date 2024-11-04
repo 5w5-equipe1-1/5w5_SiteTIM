@@ -635,6 +635,13 @@ button {
   color: var(--couleur-primaire);
 }
 
+.wp-element-caption {
+  position: fixed;
+  width: 20px;
+  height: 50px;
+  color: white;
+}
+
 /* ----------------------------------------------------- */
 /*Animations*/
 /* ----------------------------------------------------- */
@@ -798,48 +805,27 @@ button {
 /* ----------------------------------------------------- */
 /*Plugins*/
 /* ----------------------------------------------------- */
-.carrousel_images {
-  position: relative;
+.galerie {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  transform: scale(0.06);
-  transform-origin: center;
-  object-fit: contain;
+  height: 20rem;
 }
-
-.image {
-  max-width: 150px;
-  max-height: 100px;
-  object-fit: contain;
+.galerie .wp-block-gallery {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  object-fit: contain;
+  margin: 0;
 }
-
-.carrousel_img {
-  display: none;
+.galerie .wp-block-gallery .wp-block-image {
+  margin: 0;
+  width: 50%;
 }
-
-.carrousel_img.active {
-  display: block;
+.galerie .wp-block-gallery .wp-block-image img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.hidden {
-  display: none;
+  height: 50%;
 }
 
 .carrousel_prev,
 .carrousel_next {
-  position: absolute;
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
@@ -849,63 +835,4 @@ button {
   cursor: pointer;
   z-index: 10;
   transition: none;
-}
-
-.carrousel_prev {
-  left: 10px;
-}
-
-.carrousel_next {
-  right: 10px;
-}
-
-.boutton_gallerie {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.toggle_galerie {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-}
-
-.galerie_initiale {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  animation: slideX 120s linear infinite;
-}
-
-.image_miniature {
-  max-width: 100px;
-  max-height: 100px;
-  cursor: pointer;
-  object-fit: contain;
-}
-
-.image_miniature img {
-  max-width: 100px;
-  max-height: 100px;
-  cursor: pointer;
-  object-fit: contain;
-}
-
-@keyframes slideX {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-.carrousel.hidden {
-  display: none;
 }/*# sourceMappingURL=style.css.map */
