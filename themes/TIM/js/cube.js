@@ -112,6 +112,8 @@ document.querySelectorAll(".cube div").forEach((face) => {
       scene.classList.remove("shrink");
     }
     isCubeSelected = true;
+    // Empêche le défilement de la page lors de la sélection d'une face du cube
+    document.body.style.overflowY = 'hidden';
     autoRotate = false;
     clearTimeout(rotateTimeout);
     cube.style.transition = "transform 1s";
@@ -164,6 +166,7 @@ document.addEventListener("click", function (event) {
     setTimeout(() => {
       autoRotate = true;
     }, 0);
+    document.body.style.overflowY = 'auto';
   }
 });
 

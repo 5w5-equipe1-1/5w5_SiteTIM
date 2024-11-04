@@ -100,7 +100,10 @@ lesFaces.forEach(face => {
     face.addEventListener('click', function(event) {
         if (scene.classList.contains('shrink')) {
             scene.classList.remove('shrink');
-            event.stopPropagation(); // Empêche la propagation de l'événement de click
+            // Empêche le défilement de la page lors de la sélection d'une face du cube
+            document.body.style.overflowY = 'hidden';
+            // Empêche la propagation de l'événement de click
+            event.stopPropagation(); 
         } else {
             isCubeSelected = true;
             autoRotate = false;  
@@ -148,7 +151,10 @@ document.addEventListener('click', function(event) {
     if (!event.target.closest('.cube')) {
         if (!scene.classList.contains('shrink')) {
             scene.classList.add('shrink');
-            scene.style.perspective = '600px';//remettre la perspective par défaut
+            //remettre la perspective par défaut
+            scene.style.perspective = '600px';
+            //remettre le scroll par défaut
+            document.body.style.overflowY = 'auto';
         }
     }
 });
@@ -162,14 +168,10 @@ boutonChangement.addEventListener('click', function() {
         // Disable user rotation and enable auto-rotation
         disableUserRotation();
         autoRotate = true;  
-        //scroll de la page
-        disableScrolling();
     } else {
         // Enable user rotation when returning to normal state
         enableUserRotation();
         autoRotate = false;  
-        //scroll de la page
-        enableScrolling();
     }
 });
 
@@ -192,18 +194,6 @@ function disableUserRotation() {
     document.removeEventListener('mouseup', onMouseUp);
     document.removeEventListener('touchmove', onTouchMove);
     document.removeEventListener('touchend', onTouchEnd);
-}
-
-//arreter le scroll de la page
-function disableScrolling(){
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
-}
-
-//activer le scroll de la page
-function enableScrolling(){
-    window.onscroll=function(){};
 }
 
 // Ajout de la classe shrink lors du clic sur le bouton Explorer
