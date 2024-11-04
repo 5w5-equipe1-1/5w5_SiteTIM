@@ -43,7 +43,7 @@
         <main>
             <div class="container">
             <div class="section_hero">
-                <video class="video_hero" src="<?php echo $srcVideo; ?>" autoplay loop></video>
+                <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
                 <div class="text_hero">
                     <h1><?php echo esc_html($cat->name); ?></h1>
                     <h3><?php echo esc_html($cat->description); ?></h3>
