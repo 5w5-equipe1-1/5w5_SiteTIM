@@ -14,34 +14,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Fonction pour cloner les images de la galerie initiale
-    function cloneImages() {
-        const initialImages = Array.from(galerieInitiale.querySelectorAll('.image_miniature'));
-        const galerieWidth = galerieInitiale.offsetWidth;
-        const totalImagesWidth = initialImages.reduce((total, image) => total + image.offsetWidth, 0);
-        const timesToClone = Math.ceil(galerieWidth / totalImagesWidth);
+    // // Fonction pour cloner les images de la galerie initiale
+    // function cloneImages() {
+    //     const initialImages = Array.from(galerieInitiale.querySelectorAll('.image_miniature'));
+    //     const galerieWidth = galerieInitiale.offsetWidth;
+    //     const totalImagesWidth = initialImages.reduce((total, image) => total + image.offsetWidth, 0);
+    //     const timesToClone = Math.ceil(galerieWidth / totalImagesWidth);
 
-        // Supprime les clones existants
-        const clones = galerieInitiale.querySelectorAll('.image_miniature.clone');
-        clones.forEach(clone => clone.remove());
+    //     // Supprime les clones existants
+    //     const clones = galerieInitiale.querySelectorAll('.image_miniature.clone');
+    //     clones.forEach(clone => clone.remove());
 
-        // Clone les images pour remplir la largeur de l'écran
-        for (let i = 0; i < timesToClone; i++) {
-            initialImages.forEach((image, index) => {
-                const clone = image.cloneNode(true);
-                clone.classList.add('clone');
-                galerieInitiale.appendChild(clone);
+    //     // Clone les images pour remplir la largeur de l'écran
+    //     for (let i = 0; i < timesToClone; i++) {
+    //         initialImages.forEach((image, index) => {
+    //             const clone = image.cloneNode(true);
+    //             clone.classList.add('clone');
+    //             galerieInitiale.appendChild(clone);
 
-                // Ajoute un écouteur d'événement pour les images clonées
-                clone.addEventListener("click", () => {
-                    indexActuelle = index % initialImages.length;
-                    afficherImage(indexActuelle);
-                    carrousel.classList.remove("hidden");
-                    galerieInitiale.classList.add("hidden");
-                });
-            });
-        }
-    }
+    //             // Ajoute un écouteur d'événement pour les images clonées
+    //             clone.addEventListener("click", () => {
+    //                 indexActuelle = index % initialImages.length;
+    //                 afficherImage(indexActuelle);
+    //                 carrousel.classList.remove("hidden");
+    //                 galerieInitiale.classList.add("hidden");
+    //             });
+    //         });
+    //     }
+    // }
 
     // Clone les images pour créer un effet de boucle infini
     cloneImages();
