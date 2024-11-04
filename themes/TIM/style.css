@@ -195,6 +195,7 @@ header .conteneur_burger_recherche .sceneBurguer {
 header .conteneur_burger_recherche .shrink {
   transform: scale(0.2) translate(0, 0);
   transform-origin: center center;
+  perspective: 600px;
 }
 
 ::-webkit-scrollbar {

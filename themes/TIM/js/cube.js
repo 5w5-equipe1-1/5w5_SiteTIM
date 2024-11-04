@@ -34,35 +34,43 @@ function rotateCubeAutomatically() {
 
 rotateCubeAutomatically();
 
+// Mise à jour de la rotation du cube
 function updateCubeRotation() {
   cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
 }
 
+//interactions de la souris sur le cube
 function onMouseMove(event) {
-  if (!scene.classList.contains("shrink")) {
-    autoRotate = false;
-    const deltaX = event.clientX - mouseStart.x;
-    const deltaY = event.clientY - mouseStart.y;
-    rotation.y += deltaX * sensitivity;
-    rotation.x -= deltaY * sensitivity;
-    mouseStart = { x: event.clientX, y: event.clientY };
-    updateCubeRotation();
+  if (!isCubeSelected) {
+    if (!scene.classList.contains("shrink")) {
+      autoRotate = false;
+      const deltaX = event.clientX - mouseStart.x;
+      const deltaY = event.clientY - mouseStart.y;
+      rotation.y += deltaX * sensitivity;
+      rotation.x -= deltaY * sensitivity;
+      mouseStart = { x: event.clientX, y: event.clientY };
+      updateCubeRotation();
+    }
   }
 }
 
+//interactions du toucher sur le cube
 function onTouchMove(event) {
-  if (!scene.classList.contains("shrink") && event.touches.length > 0) {
-    autoRotate = false;
-    const touch = event.touches[0];
-    const deltaX = touch.clientX - touchStart.x;
-    const deltaY = touch.clientY - touchStart.y;
-    rotation.y += deltaX * sensitivity;
-    rotation.x -= deltaY * sensitivity;
-    touchStart = { x: touch.clientX, y: touch.clientY };
-    updateCubeRotation();
+  if(!isCubeSelected){
+    if (!scene.classList.contains("shrink") && event.touches.length > 0) {
+      autoRotate = false;
+      const touch = event.touches[0];
+      const deltaX = touch.clientX - touchStart.x;
+      const deltaY = touch.clientY - touchStart.y;
+      rotation.y += deltaX * sensitivity;
+      rotation.x -= deltaY * sensitivity;
+      touchStart = { x: touch.clientX, y: touch.clientY };
+      updateCubeRotation();
+    }
   }
 }
 
+//quand la souris est relachée
 function onMouseUp() {
   document.removeEventListener("mousemove", onMouseMove);
   document.removeEventListener("mouseup", onMouseUp);
@@ -70,8 +78,10 @@ function onMouseUp() {
   rotateTimeout = setTimeout(() => {
     autoRotate = true;
   }, 0);
+  isCubeSelected = false;
 }
 
+//quand le toucher est relaché
 function onTouchEnd() {
   document.removeEventListener("touchmove", onTouchMove);
   document.removeEventListener("touchend", onTouchEnd);
@@ -79,6 +89,7 @@ function onTouchEnd() {
   rotateTimeout = setTimeout(() => {
     autoRotate = true;
   }, 0);
+  isCubeSelected = false;
 }
 
 document.addEventListener("mousedown", function (event) {
@@ -94,6 +105,7 @@ document.addEventListener("touchstart", function (event) {
   document.addEventListener("touchend", onTouchEnd);
 });
 
+// Selection des faces du cube pour focusser sur une face
 document.querySelectorAll(".cube div").forEach((face) => {
   face.addEventListener("click", function () {
     if (scene.classList.contains("shrink")) {
