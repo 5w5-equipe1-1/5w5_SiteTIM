@@ -23,12 +23,27 @@
         exit;
     }
 
-    
+    //Choisir la video en fonction de la catégorie
+    $srcVideo = "";
+
+    if($cat->slug == 'jeux_video'){
+        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/video-mise-en-avant-jeux.mp4";
+    }else if($cat->slug == 'film'){
+        $srcVideo = "";
+    }else if($cat->slug == 'web'){
+        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/vid_web.mp4";
+    }else if($cat->slug == 'design'){
+        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/rendu_design_trailer2.mp4";
+    }else if($cat->slug == '3d'){
+        $srcVideo = "";
+    }else if($cat->slug == 'formation_specifique'){
+        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/vid_formaspec.mp4";
+    }
 ?>
         <main>
             <div class="container">
             <div class="section_hero">
-                <!-- <video class="video_hero" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/trailerTIM_V1.mp4" autoplay loop></video> -->
+                <video class="video_hero" src="<?php echo $srcVideo; ?>" autoplay loop></video>
                 <div class="text_hero">
                     <h1><?php echo esc_html($cat->name); ?></h1>
                     <h3><?php echo esc_html($cat->description); ?></h3>
