@@ -101,6 +101,7 @@ summary {
   box-shadow: var(--couleur-orange) 0px 5px 15px;
   transform: translateY(2vh);
   font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
 }
 
 header {
@@ -133,6 +134,7 @@ header .conteneur_logo_tim {
 header .conteneur_logo_tim .logo_tim {
   width: 50px;
   height: 50px;
+  user-select: none;
 }
 @media screen and (min-width: 1280px) {
   header .conteneur_logo_tim .logo_tim {
@@ -238,13 +240,23 @@ body #scene {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 270vh;
+  margin-top: 360vh;
   position: relative;
   z-index: 9;
 }
+@media screen and (max-width: 1280px) {
+  body #scene {
+    margin-top: 480vh;
+  }
+}
+@media screen and (max-width: 890px) {
+  body #scene {
+    margin-top: 440vh;
+  }
+}
 @media screen and (max-width: 680px) {
   body #scene {
-    margin-top: 430vh;
+    margin-top: 500vh;
   }
 }
 body .text_cercle {
@@ -303,7 +315,7 @@ body .bannieres {
   text-align: center;
   height: 20vh;
   width: 200%;
-  background-color: red;
+  background-color: black;
 }
 body .bannieres .photo {
   width: 10%;
@@ -327,21 +339,83 @@ body .bannieres .p5 {
 body .bannieres .p6 {
   background-color: lightgreen;
 }
+body .bannieres h2 {
+  font-family: "ivyora-display", sans-serif;
+  font-size: 50pt;
+  font-style: italic;
+  color: white;
+}
+@media screen and (max-width: 1280px) {
+  body .bannieres h2 {
+    font-size: 30pt;
+  }
+}
+@media screen and (max-width: 680px) {
+  body .bannieres h2 {
+    font-size: 20pt;
+  }
+}
 
 div {
   margin: 0;
 }
 
-.description_evenements {
+.evenements {
+  width: 80vw;
+  margin-bottom: 5vh;
+}
+@media screen and (max-width: 680px) {
+  .evenements {
+    margin-left: var(--margin-left-mobile);
+  }
+}
+.evenements .description_evenements {
   display: flex;
   flex-direction: row;
-  align-items: top;
   justify-content: space-between;
-  height: 40vh;
 }
-
-.description_evenements:nth-of-type(even) {
+@media screen and (max-width: 1280px) {
+  .evenements .description_evenements {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .evenements .description_evenements {
+    height: 40vh;
+  }
+}
+.evenements .description_evenements p {
+  margin-left: var(--margin-left-mobile);
+  margin-right: var(--margin-right-mobile);
+}
+@media screen and (max-width: 680px) {
+  .evenements .description_evenements .contenu_img {
+    margin-bottom: 5vh;
+  }
+}
+.evenements .description_evenements:nth-of-type(even) {
   flex-direction: row-reverse;
+}
+.evenements .lessections_infosaccueil {
+  margin-bottom: 5vh;
+  filter: saturate(0);
+  transition: 0.5s;
+}
+@media screen and (max-width: 680px) {
+  .evenements .lessections_infosaccueil {
+    margin-bottom: 5vh;
+  }
+}
+.evenements .lessections_infosaccueil a {
+  color: var(--couleur-orange);
+  text-decoration: none;
+}
+.evenements .lessections_infosaccueil a:hover {
+  color: var(--couleur-test-orange);
+  text-decoration: underline;
+}
+.evenements .lessections_infosaccueil:hover {
+  filter: saturate(1);
 }
 
 .cours {
