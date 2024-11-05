@@ -296,9 +296,11 @@ body .versbas {
   z-index: -1;
 }
 body .description_multimedia {
-  margin-top: 10vh;
+  margin-top: 20vh;
   margin-bottom: 10vh;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 680px) {
   body .description_multimedia {
@@ -308,6 +310,24 @@ body .description_multimedia {
 body .description_multimedia .espace_gauche_descmulti {
   margin-left: 2%;
 }
+body .description_multimedia .bulles_contenu {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+}
+@media screen and (max-width: 1280px) {
+  body .description_multimedia .bulles_contenu {
+    flex-direction: column;
+    width: 40vw;
+  }
+}
+body .description_multimedia .bulles_contenu p {
+  border: 1px solid white;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 20px;
+  padding: 3%;
+  margin: 2%;
+}
 body .bannieres {
   display: flex;
   justify-content: space-around;
@@ -315,7 +335,6 @@ body .bannieres {
   text-align: center;
   height: 20vh;
   width: 200%;
-  background-color: black;
 }
 body .bannieres .photo {
   width: 10%;
@@ -354,6 +373,15 @@ body .bannieres h2 {
   body .bannieres h2 {
     font-size: 20pt;
   }
+}
+body .bannieres::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1000;
+  background: rgb(239, 170, 91);
+  background: linear-gradient(90deg, rgb(239, 170, 91) 0%, rgb(237, 83, 96) 50%, rgb(103, 215, 249) 100%);
 }
 
 div {

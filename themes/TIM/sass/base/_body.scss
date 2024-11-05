@@ -124,9 +124,12 @@ body {
   }
 
   .description_multimedia {
-    margin-top: 10vh;
+    margin-top: 20vh;
     margin-bottom: 10vh;
     text-align: left;
+
+    display: flex;
+    flex-direction: column;
 
     //garder en commentaire je fais des tests
     // transform: translateX(50%);
@@ -143,6 +146,28 @@ body {
         // margin-left: 5%;
       }
     }
+
+    .bulles_contenu {
+      display: flex;
+      flex-direction: row;
+      width: 80vw;
+
+      @media screen and (max-width: 1280px) {
+        flex-direction: column;
+        width: 40vw;
+      }
+
+      p {
+        border: 1px solid white;
+        box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+          rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+          rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+        border-radius: 20px;
+
+        padding: 3%;
+        margin: 2%;
+      }
+    }
   }
 
   .bannieres {
@@ -155,7 +180,7 @@ body {
     width: 200%;
 
     // background-color: var(--couleur-secondaire);
-    background-color: black;
+    // background-color: black;
 
     .photo {
       width: 10%;
@@ -193,6 +218,23 @@ body {
         font-size: 20pt;
       }
     }
+  }
+
+  .bannieres::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    z-index: -1000;
+
+    background: rgb(239, 170, 91);
+    background: linear-gradient(
+      90deg,
+      rgba(239, 170, 91, 1) 0%,
+      rgba(237, 83, 96, 1) 50%,
+      rgba(103, 215, 249, 1) 100%
+    );
   }
 }
 
