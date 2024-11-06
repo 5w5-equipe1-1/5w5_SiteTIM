@@ -59,6 +59,12 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /* ----------------------------------------------------- */
 /*Sections*/
 /* ----------------------------------------------------- */
+.conteneur {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
 h1 {
   font-weight: bold;
   font-size: 30px;
@@ -228,8 +234,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -240,25 +244,8 @@ body #scene {
   perspective: 600px;
   transition: perspective 1s;
   margin: 0 auto;
-  margin-bottom: 30vh;
-  margin-top: 380vh;
   position: relative;
   z-index: 9;
-}
-@media screen and (max-width: 1280px) {
-  body #scene {
-    margin-top: 560vh;
-  }
-}
-@media screen and (max-width: 890px) {
-  body #scene {
-    margin-top: 430vh;
-  }
-}
-@media screen and (max-width: 680px) {
-  body #scene {
-    margin-top: 610vh;
-  }
 }
 body .text_cercle {
   position: absolute;
@@ -297,16 +284,9 @@ body .versbas {
   z-index: -1;
 }
 body .description_multimedia {
-  margin-top: 20vh;
-  margin-bottom: 10vh;
   text-align: left;
   display: flex;
   flex-direction: column;
-}
-@media screen and (max-width: 680px) {
-  body .description_multimedia {
-    margin-top: var(--margin-top-mobile);
-  }
 }
 body .description_multimedia .espace_gauche_descmulti {
   margin-left: 2%;
@@ -485,19 +465,11 @@ div {
   margin: 0 auto;
 }
 
-.contenufunky {
-  margin-top: 20vh;
-}
-
 .contenufunky h3 {
   font-size: 23pt;
   padding: 2%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px inset;
   border-radius: 20px;
-}
-
-.lespointsfunky {
-  margin-top: 10vh;
 }
 
 .lespointsfunky b {
@@ -657,20 +629,9 @@ li {
 
 .section_hero {
   width: 100%;
-  margin-top: 200vh;
-}
-@media screen and (max-width: 680px) {
-  .section_hero {
-    margin-top: 225vh;
-  }
 }
 .section_hero .video_hero {
   width: 100%;
-}
-@media screen and (max-width: 680px) {
-  .section_hero .video_hero {
-    margin-top: 15vh;
-  }
 }
 .section_hero .text_hero {
   display: flex;
@@ -681,11 +642,9 @@ li {
   transform: translateY(-200%);
   width: 50vw;
   margin: 0 auto;
-  margin-top: 8vh;
 }
 @media screen and (max-width: 680px) {
   .section_hero .text_hero {
-    margin-top: 14vh;
     width: 50vw;
   }
 }
