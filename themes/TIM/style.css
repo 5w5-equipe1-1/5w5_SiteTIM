@@ -349,8 +349,8 @@ body .bannieres {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 20vh;
-  width: 200%;
+  height: 7rem;
+  width: 250%;
 }
 body .bannieres .photo {
   width: 10%;

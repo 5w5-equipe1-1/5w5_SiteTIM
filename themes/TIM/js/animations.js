@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollPercentage = Math.min(Math.max(scrollPercentage, 0), 100);
 
             // Calculer la nouvelle position en pourcentage
-            let newPosition = 50 - (scrollPercentage * 0.5);
+            let newPosition = 60 - (scrollPercentage * 0.5);
 
             // Appliquer la nouvelle position
             scrollAnim.style.transform = `translateX(${-newPosition}%)`;
