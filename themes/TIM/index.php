@@ -181,6 +181,8 @@
     <script src="<?php echo get_template_directory_uri() . "/js/animations.js"?>"></script>
     <!-- inclure le script qui gere le cube 3D -->
     <script src="<?php echo get_template_directory_uri() . "/js/cube.js"?>"></script>
+    <!-- inclure le script qui gere le minicube -->
+    <script src="<?php echo get_template_directory_uri() . "/js/miniCube.js"?>"></script>
     <!-- inclure le script qui gere le changement de page -->
     <script src="<?php echo get_template_directory_uri() . "/js/selectionCat.js"?>"></script>
     <!-- inclure le script qui gere le curseur -->

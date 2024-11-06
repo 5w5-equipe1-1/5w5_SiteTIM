@@ -38,6 +38,19 @@
   filter: saturate(3);
 }
 
+.degrade_blanc {
+  margin: 0 auto;
+  position: relative;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 60px 100px 200px,
+    rgba(255, 255, 255, 0.3) 0px 0px 100px 10px inset;
+  border-radius: 50%;
+
+  width: 20vw;
+  height: 30vh;
+  z-index: -130;
+  transform: translateY(-440px) translateX(0px);
+}
+
 .degrade1noir {
   position: absolute;
   // border: 1px solid red;

@@ -1,0 +1,98 @@
+// Les mini cubes décoratifs
+
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//   }
+
+//   body,
+//   html {
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #f0f0f0;
+//     perspective: 1000px;
+//     overflow: hidden;
+//   }
+
+.cube_container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(30deg);
+  transition: transform 0.1s ease-out;
+  margin: 0 auto;
+  transform: translateY(-400px) translateX(300px);
+  z-index: -128;
+}
+
+.minicube {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 0.1s ease-out;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+
+  //   border: 2px solid var(--couleur-secondaire);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.05);
+
+  //   Test des backgrounds
+  background: linear-gradient(
+    90deg,
+    rgba(255, 167, 66, 0.1) 0%,
+    rgba(255, 46, 64, 0.1) 50%,
+    rgba(35, 243, 255, 0.1) 100%
+  );
+
+  //   background: radial-gradient(
+  //     circle,
+  //     rgba(242, 25, 59, 1) 0%,
+  //     rgba(255, 132, 38, 1) 50%,
+  //     rgba(34, 246, 255, 1) 100%
+  //   );
+
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px,
+    rgba(255, 255, 255, 0.3) 0px 7px 29px 0px inset;
+}
+
+.devant_cube {
+  transform: translateZ(100px);
+  //   border: 2px solid var(--couleur-test-orange);
+  //   background-color: rgba(255, 0, 0, 0.7);
+}
+.derriere_cube {
+  transform: rotateY(180deg) translateZ(100px);
+  //   border: 2px solid var(--couleur-test-cyan);
+  //   background-color: rgba(0, 255, 0, 0.7);
+}
+.gauche_cube {
+  transform: rotateY(-90deg) translateZ(100px);
+  //   border: 2px solid var(--couleur-test-magenta);
+  //   background-color: rgba(0, 0, 255, 0.7);
+}
+.droite_cube {
+  transform: rotateY(90deg) translateZ(100px);
+  //   border: 2px solid var(--couleur-test-orange);
+  //   background-color: rgba(255, 255, 0, 0.7);
+}
+.haut_cube {
+  transform: rotateX(90deg) translateZ(100px);
+  //   border: 2px solid var(--couleur-test-cyan);
+  //   background-color: rgba(255, 0, 255, 0.7);
+}
+.bas_cube {
+  transform: rotateX(-90deg) translateZ(100px);
+  //   border: 2px solid var(--couleur-test-magenta);
+  //   background-color: rgba(0, 255, 255, 0.7);
+}

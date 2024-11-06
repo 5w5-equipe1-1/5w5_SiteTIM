@@ -244,21 +244,6 @@ body #scene {
   position: relative;
   z-index: 9;
 }
-@media screen and (max-width: 1280px) {
-  body #scene {
-    margin-top: 610vh;
-  }
-}
-@media screen and (max-width: 890px) {
-  body #scene {
-    margin-top: 560vh;
-  }
-}
-@media screen and (max-width: 680px) {
-  body #scene {
-    margin-top: 610vh;
-  }
-}
 body .description_multimedia {
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -463,7 +448,6 @@ footer .conteneur_logo_tim {
   justify-content: left;
   align-items: center;
   width: 100vw;
-  margin-top: 20vh;
   margin-left: 10%;
   margin-bottom: 5vh;
   gap: var(--margin-left-mobile);
@@ -901,6 +885,61 @@ button {
   align-items: center;
 }
 
+.cube_container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(30deg);
+  transition: transform 0.1s ease-out;
+  margin: 0 auto;
+  transform: translateY(-400px) translateX(300px);
+  z-index: -128;
+}
+
+.minicube {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 0.1s ease-out;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(90deg, rgba(255, 167, 66, 0.1) 0%, rgba(255, 46, 64, 0.1) 50%, rgba(35, 243, 255, 0.1) 100%);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px, rgba(255, 255, 255, 0.3) 0px 7px 29px 0px inset;
+}
+
+.devant_cube {
+  transform: translateZ(100px);
+}
+
+.derriere_cube {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.gauche_cube {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.droite_cube {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.haut_cube {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bas_cube {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
 /* ----------------------------------------------------- */
 /*Les Dégradés*/
 /* ----------------------------------------------------- */
@@ -940,6 +979,17 @@ button {
 .degrade1magenta {
   box-shadow: var(--couleur-test-magenta) 25px 50px 300px 40px;
   filter: saturate(3);
+}
+
+.degrade_blanc {
+  margin: 0 auto;
+  position: relative;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 60px 100px 200px, rgba(255, 255, 255, 0.3) 0px 0px 100px 10px inset;
+  border-radius: 50%;
+  width: 20vw;
+  height: 30vh;
+  z-index: -130;
+  transform: translateY(-440px) translateX(0px);
 }
 
 .degrade1noir {
