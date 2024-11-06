@@ -241,18 +241,18 @@ body #scene {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 380vh;
+  margin-top: 440vh;
   position: relative;
   z-index: 9;
 }
 @media screen and (max-width: 1280px) {
   body #scene {
-    margin-top: 560vh;
+    margin-top: 610vh;
   }
 }
 @media screen and (max-width: 890px) {
   body #scene {
-    margin-top: 510vh;
+    margin-top: 560vh;
   }
 }
 @media screen and (max-width: 680px) {
@@ -527,8 +527,25 @@ div {
   width: 100%;
 }
 
+.section_montagne img {
+  position: absolute;
+  width: 120%;
+  left: -5%;
+}
+
 footer {
   width: 100%;
+  margin-top: 60vh;
+}
+@media screen and (max-width: 1280px) {
+  footer {
+    margin-top: 40vh;
+  }
+}
+@media screen and (max-width: 680px) {
+  footer {
+    margin-top: 20vh;
+  }
 }
 footer .conteneur_logo_tim {
   display: flex;
