@@ -685,13 +685,11 @@ li {
   font-size: 6rem;
   z-index: 100;
   font-family: "ivyora-display", sans-serif;
-  box-shadow: rgb(239, 170, 91) 10px 15px 20px, rgb(237, 83, 96) -5px 10px 20px, rgb(103, 215, 249) 0px -10px 20px;
 }
 .section_hero .text_hero h3 {
   font-size: 4rem;
   z-index: 100;
   font-family: "ivyora-display", sans-serif;
-  box-shadow: rgb(239, 170, 91) 10px 15px 20px, rgb(237, 83, 96) -5px 10px 20px, rgb(103, 215, 249) 0px -10px 20px;
 }
 
 .hovercurseur {
