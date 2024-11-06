@@ -51,18 +51,24 @@ body {
     transition: perspective 1s;
     margin: 0 auto;
     margin-bottom: 30vh;
-    margin-top: 270vh;
+    margin-top: 360vh;
     position: relative;
     z-index: 9;
 
     //Style pour tabelette
-    @media screen and (min-width: 1280px) {
+    @media screen and (max-width: 1280px) {
       //margin-bottom: 30vh;
-      // margin-top: 180vh;
+      margin-top: 480vh;
+    }
+
+    //Deuxième Style pour tabelette - Voir avec Gaby svp
+    @media screen and (max-width: 890px) {
+      //margin-bottom: 30vh;
+      margin-top: 440vh;
     }
     //Style pour mobile
     @media screen and (max-width: 680px) {
-      margin-top: 430vh;
+      margin-top: 500vh;
       // margin-bottom: 25%;
     }
   }
@@ -125,9 +131,12 @@ body {
   }
 
   .description_multimedia {
-    margin-top: 10vh;
+    margin-top: 20vh;
     margin-bottom: 10vh;
     text-align: left;
+
+    display: flex;
+    flex-direction: column;
 
     //garder en commentaire je fais des tests
     // transform: translateX(50%);
@@ -144,6 +153,28 @@ body {
         // margin-left: 5%;
       }
     }
+
+    .bulles_contenu {
+      display: flex;
+      flex-direction: row;
+      width: 80vw;
+
+      @media screen and (max-width: 1280px) {
+        flex-direction: column;
+        width: 40vw;
+      }
+
+      p {
+        border: 1px solid white;
+        box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+          rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+          rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+        border-radius: 20px;
+
+        padding: 3%;
+        margin: 2%;
+      }
+    }
   }
 
   .bannieres {
@@ -156,7 +187,7 @@ body {
     width: 200%;
 
     // background-color: var(--couleur-secondaire);
-    background-color: red;
+    // background-color: black;
 
     .photo {
       width: 10%;
@@ -180,6 +211,37 @@ body {
     .p6 {
       background-color: lightgreen;
     }
+    h2 {
+      font-family: "ivyora-display", sans-serif;
+      font-size: 50pt;
+      font-style: italic;
+      color: white;
+
+      @media screen and (max-width: 1280px) {
+        font-size: 30pt;
+      }
+
+      @media screen and (max-width: 680px) {
+        font-size: 20pt;
+      }
+    }
+  }
+
+  .bannieres::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    z-index: -1000;
+
+    background: rgb(239, 170, 91);
+    background: linear-gradient(
+      90deg,
+      rgba(239, 170, 91, 1) 0%,
+      rgba(237, 83, 96, 1) 50%,
+      rgba(103, 215, 249, 1) 100%
+    );
   }
 }
 
@@ -190,18 +252,70 @@ div {
 //section ou on décrit quest ce que le multimédia
 
 //section ou on montre les concours et les événements
-.description_evenements {
-  display: flex;
-  flex-direction: row;
-  align-items: top;
-  justify-content: space-between;
-  //   background-color: blue;
-  height: 40vh;
-}
 
-.description_evenements:nth-of-type(even) {
-  //   background-color: green;
-  flex-direction: row-reverse;
+.evenements {
+  width: 80vw;
+  margin-bottom: 5vh;
+
+  @media screen and (max-width: 680px) {
+    margin-left: var(--margin-left-mobile);
+  }
+
+  .description_evenements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //   background-color: blue;
+
+    @media screen and (max-width: 1280px) {
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: 40vh;
+    }
+
+    p {
+      margin-left: var(--margin-left-mobile);
+      margin-right: var(--margin-right-mobile);
+    }
+
+    .contenu_img {
+      // border: 1px solid red;
+      @media screen and (max-width: 680px) {
+        margin-bottom: 5vh;
+      }
+    }
+  }
+
+  .description_evenements:nth-of-type(even) {
+    //   background-color: green;
+    flex-direction: row-reverse;
+  }
+
+  .lessections_infosaccueil {
+    margin-bottom: 5vh;
+    filter: saturate(0);
+    transition: 0.5s;
+
+    @media screen and (max-width: 680px) {
+      margin-bottom: 5vh;
+    }
+
+    a {
+      color: var(--couleur-orange);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--couleur-test-orange);
+      text-decoration: underline;
+    }
+  }
+
+  .lessections_infosaccueil:hover {
+    filter: saturate(1);
+  }
 }
 
 //cours

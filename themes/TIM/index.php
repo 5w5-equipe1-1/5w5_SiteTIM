@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>">
+    <link rel="stylesheet" href="https://use.typekit.net/law8uer.css">
     <title>TIM - Accueil</title>
 </head>
 <body>
@@ -100,30 +101,58 @@
                 </p>
                 <br>
                 <div class="bulles_contenu">
-                    <p>> Créer des médias (images, vidéos, sons, animations);</p>
-                    <p>> Concevoir le design et l’interactivité;</p>
-                    <p>> Intégrer les composantes du projet dans un tout cohérent;</p>
-                    <p>> Planifier la réalisation d’un projet et en effectuer le suivi;</p>
-                    <p>> Travailler en équipe;</p>
-                    <p>> Préparer ton insertion professionnelle dans le milieu du travail ou à l’université.</p>
+                <p>Créer des médias (images, vidéos, sons, animations);</p>
+                    <p>Concevoir le design et l’interactivité;</p>
+                    <p>Planifier la réalisation d’un projet et en effectuer le suivi;</p>
+                    <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université.</p>
+                    <p>Travailler en équipe;</p>
                     <br>
                 </div>
             </div>
         </div>
         <div class="evenements">
-            <h2>Événements</h2>
-            <div class="description_evenements hidden">
-                <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque distinctio expedita sequi minus similique rem magni iste voluptatibus culpa magnam officia totam natus tenetur, doloremque quidem. Sapiente ullam excepturi dolores.</p>
+            <div class="lessections_infosaccueil">
+                <h2>Événements</h2>
+                <div class="description_evenements">
+                    <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/export_arcade.png" alt="">
+                    <div class="contenu_img">
+                        <h3>L'arcade</h3>
+                        <p>L'arcade est un évènement prévu pour les étudiants du programme dans le but d'afficher les jeux
+                            réalisés dans le cadre du cours de jeu en équipe (582-4J4) et de permettre à tout les élèves
+                            de jouer aux créations étudiantes.
+                        </p>
+                        <p>
+                            Cet évènement permet aussi à tout les élèves des autres programmes de venir voter pour le meilleur
+                            jeu en plus de tester les différents jeux proposés. L'équipe qui avait le plus de votes avait droit 
+                            à un prix de récompense de 200$! Il y a donc de la compétition... 
+                        </p>
+                    </div>
+                </div>
             </div>
-            <h2>Concours</h2>
-            <div class="description_evenements hidden">
-                <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse dolorum tempore repudiandae voluptate accusamus obcaecati cumque enim nam ipsam, nihil perferendis? Molestiae impedit autem, cum ipsum quia id pariatur.</p>
+            <div class="lessections_infosaccueil">
+                <h2>Concours</h2>
+                <div class="description_evenements">
+                    <div class="contenu_img">
+                        <h3>Game Jams</h3>
+                        <p>Entre les étudiants du programme ainsi que des concours officiels entre les écoles, les élèves 
+                            peuvent participer à des journées ou des semaines de création de mini jeux vidéos. Ces concours
+                            permettent aux étudiants de développer leurs talents et leurs connaissances dans le domaine
+                            du jeu. 
+                        </p>
+                        <p>De plus, selon le Game Jam du Cégep de Valleyfield, des prix sont remis aux participant(e)s. 
+                            Il y a trois prix valant 1 500 $, 1 000 $ et 750 $ sont remis aux équipes remportant les trois 
+                            premières places!
+                        </p>
+                        <a href="https://www.cegepvalleyfield.ca/vie-etudiante/activites-socioculturelles/intercollegial-de-creation-de-jeux-video/">Plus d'infos sur le site du Cégep de Valleyfield</a>
+                    </div>
+                    <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/edit_concours.png" alt="">
+                </div>
             </div>
         </div>
         <div class="bannieres">
-            <h2>Mots intéressants</h2>
+            <h2>Collaboration</h2>
+            <h2>Création</h2>
+            <h2>Compétences Techniques</h2>
         </div>
         <div class="contenufunky">
             <h3>85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>

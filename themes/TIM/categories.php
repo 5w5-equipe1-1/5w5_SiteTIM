@@ -50,8 +50,8 @@
                 </div>
             </div>
             <div class="galerie">
-                <?php echo do_shortcode('[afficher_article_slug slug="le-contrat"]'); // Exécution du shortcode ?>
-            </div>
+    <?php echo do_shortcode('[afficher_article_slug slug="3d"]'); // Exécution du shortcode ?>
+</div>
             <div class="cours">
                 <?php
                 // Vérifiez si la catégorie est valide

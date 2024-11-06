@@ -14,16 +14,14 @@ add_action('wp_enqueue_scripts', 'carrousel_enqueue');
 
 function genere_html() {
     $contenu = '
-       <div class="carrousel hidden">
-        <div class="carrousel_images"> </div>
-          <div class="image carrousel_img"> </div>
-        <div class="boutton_gallerie">
+       <div class="carrousel">
             <button class="carrousel_prev">←</button>
+            <figure class="carrousel_figure"></figure>
             <button class="carrousel_next">→</button>
-        </div>
        </div>';
     return $contenu;
 }
+
 
 // Recuperer et afficher un article spécifique par son slug
 function afficher_article_par_slug($atts){
@@ -39,15 +37,9 @@ function afficher_article_par_slug($atts){
     $article = get_page_by_path($atts['slug'], OBJECT, 'post');
 
     if ($article) {
-        // Construction du HTML pour les images de la galerie
-        $output = '<div class="carrousel_images">';
-        $output .= apply_filters('the_content', $article->post_content);
-        $output .= '</div>';
-        $output.= '<div class="boutton_gallerie">';
-        $output.= '<button class="carrousel_prev">←</button>';
-        $output.= '<button class="carrousel_next">→</button>';
-        $output.= '</div>';
-        // Génère le HTML du carrousel
+        //construction du html pour les images de la gallery
+        $output = '<div>' . apply_filters('the_content', $article->post_content) . '</div>';
+        //genere le html du carrousel
         $output .= genere_html();
     } else {
         //si l'article n'est pas trouvé
@@ -58,4 +50,4 @@ function afficher_article_par_slug($atts){
 
 //enregistrement du shortcode
 add_shortcode('afficher_article_slug', 'afficher_article_par_slug');
-?>
+?>    
