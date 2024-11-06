@@ -1,21 +1,17 @@
 <?php
 /**
- * Advanced Custom Fields
+ * Secure Custom Fields
  *
- * @package       ACF
- * @author        WP Engine
- *
- * @wordpress-plugin
- * Plugin Name:       Advanced Custom Fields
- * Plugin URI:        https://www.advancedcustomfields.com
- * Description:       Customize WordPress with powerful, professional and intuitive fields.
- * Version:           6.2.9
- * Author:            WP Engine
- * Author URI:        https://wpengine.com/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=plugin_directory&utm_content=advanced_custom_fields
+ * Plugin Name:       Secure Custom Fields
+ * Plugin URI:        http://wordpress.org/plugins/advanced-custom-fields/
+ * Description:       Secure Custom Fields is a fork of the Advanced Custom Fields plugin, which will be maintained by WordPress.org, for security and functionality updates.
+ * Version:           6.3.10.2
+ * Author:            WordPress.org
+ * Author URI:        https://wordpress.org/
  * Text Domain:       acf
  * Domain Path:       /lang
- * Requires PHP:      7.0
- * Requires at least: 5.8
+ * Requires PHP:      7.4
+ * Requires at least: 6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -35,7 +31,7 @@ if ( ! class_exists( 'ACF' ) ) {
 		 *
 		 * @var string
 		 */
-		public $version = '6.2.9';
+		public $version = '6.3.10.2';
 
 		/**
 		 * The plugin settings array.
@@ -129,6 +125,7 @@ if ( ! class_exists( 'ACF' ) ) {
 				'enable_shortcode'        => true,
 				'enable_bidirection'      => true,
 				'enable_block_bindings'   => true,
+				'enable_meta_box_cb_edit' => true,
 			);
 
 			// Include utility functions.
@@ -142,6 +139,7 @@ if ( ! class_exists( 'ACF' ) ) {
 			// Include classes.
 			acf_include( 'includes/class-acf-data.php' );
 			acf_include( 'includes/class-acf-internal-post-type.php' );
+			acf_include( 'includes/class-acf-site-health.php' );
 			acf_include( 'includes/fields/class-acf-field.php' );
 			acf_include( 'includes/locations/abstract-acf-legacy-location.php' );
 			acf_include( 'includes/locations/abstract-acf-location.php' );
@@ -162,6 +160,14 @@ if ( ! class_exists( 'ACF' ) ) {
 			acf_include( 'includes/acf-value-functions.php' );
 			acf_include( 'includes/acf-input-functions.php' );
 			acf_include( 'includes/acf-wp-functions.php' );
+
+			// Override the shortcode default value based on the version when installed.
+			$first_activated_version = acf_get_version_when_first_activated();
+
+			// Only enable shortcode by default for versions prior to 6.3
+			if ( $first_activated_version && version_compare( $first_activated_version, '6.3', '>=' ) ) {
+				$this->settings['enable_shortcode'] = false;
+			}
 
 			// Include core.
 			acf_include( 'includes/fields.php' );
@@ -219,10 +225,6 @@ if ( ! class_exists( 'ACF' ) ) {
 
 			// Include PRO.
 			acf_include( 'pro/acf-pro.php' );
-
-			if ( is_admin() && function_exists( 'acf_is_pro' ) && ! acf_is_pro() ) {
-				acf_include( 'includes/admin/admin-options-pages-preview.php' );
-			}
 
 			// Add actions.
 			add_action( 'init', array( $this, 'register_post_status' ), 4 );
@@ -304,6 +306,7 @@ if ( ! class_exists( 'ACF' ) ) {
 			acf_include( 'includes/fields/class-acf-field-date_time_picker.php' );
 			acf_include( 'includes/fields/class-acf-field-time_picker.php' );
 			acf_include( 'includes/fields/class-acf-field-color_picker.php' );
+			acf_include( 'includes/fields/class-acf-field-icon_picker.php' );
 			acf_include( 'includes/fields/class-acf-field-message.php' );
 			acf_include( 'includes/fields/class-acf-field-accordion.php' );
 			acf_include( 'includes/fields/class-acf-field-tab.php' );
@@ -761,6 +764,8 @@ if ( ! class_exists( 'ACF' ) ) {
 				// If acf_version is set, this isn't the first activated version, so leave it unset so it's legacy.
 				if ( null === get_option( 'acf_version', null ) ) {
 					update_option( 'acf_first_activated_version', ACF_VERSION, true );
+
+					do_action( 'acf/first_activated' );
 				}
 			}
 		}

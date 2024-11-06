@@ -510,7 +510,7 @@ function acf_add_url_utm_tags( $url, $campaign, $content, $anchor = false, $sour
 	$medium     = ! empty( $medium ) ? $medium : 'insideplugin';
 
 	if ( empty( $source ) ) {
-		$source = acf_is_pro() ? 'ACF PRO' : 'ACF Free';
+		$source = 'ACF Free';
 	}
 
 	$query = http_build_query(
@@ -665,5 +665,47 @@ function acf_maybe_unserialize( $data ) {
  * @return boolean True if the current install is ACF PRO
  */
 function acf_is_pro() {
-	return defined( 'ACF_PRO' ) && ACF_PRO;
+	return false;
+}
+
+/**
+ * Check if ACF is a beta-like release.
+ *
+ * @since 6.3
+ *
+ * @return boolean True if the current install version contains a dash, indicating a alpha, beta or RC release.
+ */
+function acf_is_beta() {
+	return defined( 'ACF_VERSION' ) && strpos( ACF_VERSION, '-' ) !== false;
+}
+
+/**
+ * Returns the version of ACF when it was first activated.
+ * However, if ACF was first activated prior to the introduction of the acf_first_activated_version option,
+ * this function returns false (boolean) to indicate that the version could not be determined.
+ *
+ * @since 6.3
+ *
+ * @return string|boolean The (string) version of ACF when it was first activated, or false (boolean) if the version could not be determined.
+ */
+function acf_get_version_when_first_activated() {
+	// Check if ACF is network-activated on a multisite.
+	if ( is_multisite() ) {
+		$acf_dir_and_filename = basename( ACF_PATH ) . '/acf.php';
+		$plugins              = get_site_option( 'active_sitewide_plugins' );
+
+		if ( isset( $plugins[ $acf_dir_and_filename ] ) ) {
+			$main_site_id = get_main_site_id();
+
+			if ( empty( $main_site_id ) ) {
+				return false;
+			}
+
+			// ACF is network activated, so get the version from main site's options.
+			return get_blog_option( $main_site_id, 'acf_first_activated_version', false );
+		}
+	}
+
+	// Check if ACF is activated on this single site.
+	return get_option( 'acf_first_activated_version', false );
 }

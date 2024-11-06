@@ -19,7 +19,8 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 			add_action( 'admin_body_class', array( $this, 'admin_body_class' ) );
 			add_action( 'current_screen', array( $this, 'current_screen' ) );
 			add_action( 'admin_notices', array( $this, 'maybe_show_escaped_html_notice' ) );
-			add_action( 'wp_ajax_acf/dismiss_escaped_html_notice', array( $this, 'dismiss_escaped_html_notice' ) );
+			add_action( 'admin_init', array( $this, 'dismiss_escaped_html_notice' ) );
+			add_action( 'admin_init', array( $this, 'clear_escaped_html_log' ) );
 			add_filter( 'parent_file', array( $this, 'ensure_menu_selection' ) );
 			add_filter( 'submenu_file', array( $this, 'ensure_submenu_selection' ) );
 		}
@@ -32,7 +33,7 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 		 */
 		public function admin_menu() {
 
-			// Bail early if ACF is hidden.
+			// Bail early if SCF is hidden.
 			if ( ! acf_get_setting( 'show_admin' ) ) {
 				return;
 			}
@@ -42,7 +43,7 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 			$parent_slug = 'edit.php?post_type=acf-field-group';
 
 			// Add menu items.
-			add_menu_page( __( 'ACF', 'acf' ), __( 'ACF', 'acf' ), $cap, $parent_slug, false, 'dashicons-welcome-widgets-menus', 80 );
+			add_menu_page( __( 'SCF', 'acf' ), __( 'SCF', 'acf' ), $cap, $parent_slug, false, 'dashicons-welcome-widgets-menus', 80 );
 		}
 
 		/**
@@ -58,7 +59,6 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 				'acf-escaped-html-notice',
 				'acf_escaped_html_notice',
 				array(
-					'nonce'        => wp_create_nonce( 'acf/dismiss_escaped_html_notice' ),
 					'show_details' => __( 'Show&nbsp;details', 'acf' ),
 					'hide_details' => __( 'Hide&nbsp;details', 'acf' ),
 				)
@@ -107,73 +107,8 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 				add_action( 'in_admin_header', array( $this, 'in_admin_header' ) );
 				add_filter( 'admin_footer_text', array( $this, 'admin_footer_text' ) );
 				add_filter( 'update_footer', array( $this, 'admin_footer_version_text' ) );
-				$this->setup_help_tab();
 				$this->maybe_show_import_from_cptui_notice();
 			}
-		}
-
-		/**
-		 * Sets up the admin help tab.
-		 *
-		 * @date    20/4/20
-		 * @since   5.9.0
-		 *
-		 * @param   void
-		 * @return  void
-		 */
-		public function setup_help_tab() {
-			$screen = get_current_screen();
-
-			// Overview tab.
-			$screen->add_help_tab(
-				array(
-					'id'      => 'overview',
-					'title'   => __( 'Overview', 'acf' ),
-					'content' =>
-						'<p><strong>' . __( 'Overview', 'acf' ) . '</strong></p>' .
-						'<p>' . __( 'The Advanced Custom Fields plugin provides a visual form builder to customize WordPress edit screens with extra fields, and an intuitive API to display custom field values in any theme template file.', 'acf' ) . '</p>' .
-						'<p>' . sprintf(
-							__( 'Before creating your first Field Group, we recommend first reading our <a href="%s" target="_blank">Getting started</a> guide to familiarize yourself with the plugin\'s philosophy and best practises.', 'acf' ),
-							acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/getting-started-with-acf/', 'docs', 'help-tab' )
-						) . '</p>' .
-						'<p>' . __( 'Please use the Help & Support tab to get in touch should you find yourself requiring assistance.', 'acf' ) . '</p>' .
-						'',
-				)
-			);
-
-			// Help tab.
-			$screen->add_help_tab(
-				array(
-					'id'      => 'help',
-					'title'   => __( 'Help & Support', 'acf' ),
-					'content' =>
-						'<p><strong>' . __( 'Help & Support', 'acf' ) . '</strong></p>' .
-						'<p>' . __( 'We are fanatical about support, and want you to get the best out of your website with ACF. If you run into any difficulties, there are several places you can find help:', 'acf' ) . '</p>' .
-						'<ul>' .
-							'<li>' . sprintf(
-								__( '<a href="%s" target="_blank">Documentation</a>. Our extensive documentation contains references and guides for most situations you may encounter.', 'acf' ),
-								acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/', 'docs', 'help-tab' )
-							) . '</li>' .
-							'<li>' . sprintf(
-								__( '<a href="%s" target="_blank">Discussions</a>. We have an active and friendly community on our Community Forums who may be able to help you figure out the \'how-tos\' of the ACF world.', 'acf' ),
-								acf_add_url_utm_tags( 'https://support.advancedcustomfields.com/', 'docs', 'help-tab' )
-							) . '</li>' .
-							'<li>' . sprintf(
-								__( '<a href="%s" target="_blank">Help Desk</a>. The support professionals on our Help Desk will assist with your more in depth, technical challenges.', 'acf' ),
-								acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/support/', 'docs', 'help-tab' )
-							) . '</li>' .
-						'</ul>',
-				)
-			);
-
-			// Sidebar.
-			$screen->set_help_sidebar(
-				'<p><strong>' . __( 'Information', 'acf' ) . '</strong></p>' .
-				'<p><span class="dashicons dashicons-admin-plugins"></span> ' . sprintf( __( 'Version %s', 'acf' ), ACF_VERSION ) . '</p>' .
-				'<p><span class="dashicons dashicons-wordpress"></span> <a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank">' . __( 'View details', 'acf' ) . '</a></p>' .
-				'<p><span class="dashicons dashicons-admin-home"></span> <a href="' . acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/', 'docs', 'help-tab' ) . '" target="_blank" target="_blank">' . __( 'Visit website', 'acf' ) . '</a></p>' .
-				''
-			);
 		}
 
 		/**
@@ -220,6 +155,10 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 				return;
 			}
 
+			if ( get_option( 'acf_escaped_html_notice_dismissed' ) ) {
+				return;
+			}
+
 			$escaped = _acf_get_escaped_html_log();
 
 			// Notice for when HTML has already been escaped.
@@ -229,18 +168,55 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 		}
 
 		/**
-		 * Dismisses the escaped unsafe HTML notice by clearing the stored log.
+		 * Dismisses the escaped unsafe HTML notice.
 		 *
 		 * @since 6.2.5
 		 */
 		public function dismiss_escaped_html_notice() {
+			if ( empty( $_GET['acf-dismiss-esc-html-notice'] ) ) {
+				return;
+			}
+
+			$nonce = sanitize_text_field( wp_unslash( $_GET['acf-dismiss-esc-html-notice'] ) );
+
 			if (
-				! check_admin_referer( 'acf/dismiss_escaped_html_notice', 'nonce' ) ||
-				! current_user_can( acf_get_setting( 'capability' ) ) ) {
+				! wp_verify_nonce( $nonce, 'acf/dismiss_escaped_html_notice' ) ||
+				! current_user_can( acf_get_setting( 'capability' ) )
+			) {
+				return;
+			}
+
+			update_option( 'acf_escaped_html_notice_dismissed', true );
+
+			_acf_delete_escaped_html_log();
+
+			wp_safe_redirect( remove_query_arg( 'acf-dismiss-esc-html-notice' ) );
+			exit;
+		}
+
+		/**
+		 * Clear the escaped unsafe HTML log.
+		 *
+		 * @since 6.2.5
+		 */
+		public function clear_escaped_html_log() {
+			if ( empty( $_GET['acf-clear-esc-html-log'] ) ) {
+				return;
+			}
+
+			$nonce = sanitize_text_field( wp_unslash( $_GET['acf-clear-esc-html-log'] ) );
+
+			if (
+				! wp_verify_nonce( $nonce, 'acf/clear_escaped_html_log' ) ||
+				! current_user_can( acf_get_setting( 'capability' ) )
+			) {
 				return;
 			}
 
 			_acf_delete_escaped_html_log();
+
+			wp_safe_redirect( remove_query_arg( 'acf-clear-esc-html-log' ) );
+			exit;
 		}
 
 		/**
@@ -274,15 +250,7 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 		 * @return  string
 		 */
 		public function admin_footer_text( $text ) {
-			$wp_engine_link = acf_add_url_utm_tags( 'https://wpengine.com/', 'bx_prod_referral', acf_is_pro() ? 'acf_pro_plugin_footer_text' : 'acf_free_plugin_footer_text', false, 'acf_plugin', 'referral' );
-			$acf_link       = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/', 'footer', 'footer' );
-
-			return sprintf(
-				/* translators: This text is prepended by a link to ACF's website, and appended by a link to WP Engine's website. */
-				'<a href="%1$s" target="_blank">' . ( acf_is_pro() ? 'ACF PRO' : 'ACF' ) . '</a> ' . __( 'is developed and maintained by', 'acf' ) . ' <a href="%2$s" target="_blank">WP Engine</a>.',
-				$acf_link,
-				$wp_engine_link
-			);
+			return '';
 		}
 
 		/**
@@ -294,23 +262,7 @@ if ( ! class_exists( 'ACF_Admin' ) ) :
 		 * @return  string
 		 */
 		public function admin_footer_version_text( $text ) {
-			$documentation_link = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/', 'footer', 'footer' );
-			$support_link       = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/support/', 'footer', 'footer' );
-			$feedback_link      = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/feedback/', 'footer', 'footer' );
-			$version_link       = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/changelog/', 'footer', 'footer' );
-
-			return sprintf(
-				'<a href="%s" target="_blank">%s</a> &#8729; <a href="%s" target="_blank">%s</a> &#8729; <a href="%s" target="_blank">%s</a> &#8729; <a href="%s" target="_blank">%s %s</a>',
-				$documentation_link,
-				__( 'Documentation', 'acf' ),
-				$support_link,
-				__( 'Support', 'acf' ),
-				$feedback_link,
-				__( 'Feedback', 'acf' ),
-				$version_link,
-				acf_is_pro() ? __( 'ACF PRO', 'acf' ) : __( 'ACF', 'acf' ),
-				ACF_VERSION
-			);
+			return '';
 		}
 
 		/**

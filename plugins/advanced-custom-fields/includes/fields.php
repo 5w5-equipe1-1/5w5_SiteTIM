@@ -22,36 +22,31 @@ if ( ! class_exists( 'acf_fields' ) ) :
 		 * @param   n/a
 		 * @return  n/a
 		 */
-
 		function __construct() {
 			/* do nothing */
 		}
 
-
 		/**
-		 * This function will register a field type instance
+		 * This function will register a field type instance based on a class name or instance.
+		 * It will return the instance for further use.
 		 *
-		 * @type    function
-		 * @date    6/07/2016
-		 * @since   5.4.0
+		 * @since 5.4.0
 		 *
-		 * @param   $class (string)
-		 * @return  n/a
+		 * @param   mixed $field_class Either a class name (string) or instance of acf_field.
+		 * @return  acf_field The instance of acf_field.
 		 */
-
-		function register_field_type( $class ) {
-
-			// allow instance
-			if ( $class instanceof acf_field ) {
-				$this->types[ $class->name ] = $class;
-
-				// allow class name
-			} else {
-				$instance                       = new $class();
-				$this->types[ $instance->name ] = $instance;
+		public function register_field_type( $field_class ) {
+			// Allow registering an instance.
+			if ( $field_class instanceof acf_field ) {
+				$this->types[ $field_class->name ] = $field_class;
+				return $field_class;
 			}
-		}
 
+			// Allow registering a loaded class name.
+			$instance                       = new $field_class();
+			$this->types[ $instance->name ] = $instance;
+			return $instance;
+		}
 
 		/**
 		 * This function will return a field type instance
@@ -63,7 +58,6 @@ if ( ! class_exists( 'acf_fields' ) ) :
 		 * @param   $name (string)
 		 * @return  (mixed)
 		 */
-
 		function get_field_type( $name ) {
 			return isset( $this->types[ $name ] ) ? $this->types[ $name ] : null;
 		}
@@ -79,7 +73,6 @@ if ( ! class_exists( 'acf_fields' ) ) :
 		 * @param   $name (string)
 		 * @return  (mixed)
 		 */
-
 		function is_field_type( $name ) {
 			return isset( $this->types[ $name ] );
 		}
@@ -335,7 +328,6 @@ function acf_get_field_categories_i18n() {
 		'relational' => __( 'Relational', 'acf' ),
 		'advanced'   => __( 'Advanced', 'acf' ),
 		'layout'     => __( 'Layout', 'acf' ),
-		'pro'        => __( 'PRO', 'acf' ),
 	);
 
 	return apply_filters( 'acf/localized_field_categories', $categories_i18n );
@@ -417,46 +409,5 @@ function acf_get_combined_field_type_settings_tabs() {
  * @return array An array of all the pro field types and their field type selection required meta data.
  */
 function acf_get_pro_field_types() {
-	return array(
-		'clone'            => array(
-			'name'          => 'clone',
-			'label'         => _x( 'Clone', 'noun', 'acf' ),
-			'doc_url'       => acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/clone/', 'docs', 'field-type-selection' ),
-			'preview_image' => acf_get_url() . '/assets/images/field-type-previews/field-preview-clone.png',
-			'description'   => __( 'This allows you to select and display existing fields. It does not duplicate any fields in the database, but loads and displays the selected fields at run-time. The Clone field can either replace itself with the selected fields or display the selected fields as a group of subfields.', 'acf' ),
-			'tutorial_url'  => acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/how-to-use-the-clone-field/', 'docs', 'field-type-selection' ),
-			'category'      => 'layout',
-			'pro'           => true,
-		),
-		'flexible_content' => array(
-			'name'          => 'flexible_content',
-			'label'         => __( 'Flexible Content', 'acf' ),
-			'doc_url'       => acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/flexible-content/', 'docs', 'field-type-selection' ),
-			'preview_image' => acf_get_url() . '/assets/images/field-type-previews/field-preview-flexible-content.png',
-			'description'   => __( 'This provides a simple, structured, layout-based editor. The Flexible Content field allows you to define, create and manage content with total control by using layouts and subfields to design the available blocks.', 'acf' ),
-			'tutorial_url'  => acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/building-layouts-with-the-flexible-content-field-in-a-theme/', 'docs', 'field-type-selection' ),
-			'category'      => 'layout',
-			'pro'           => true,
-		),
-		'gallery'          => array(
-			'name'          => 'gallery',
-			'label'         => __( 'Gallery', 'acf' ),
-			'doc_url'       => acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/gallery/', 'docs', 'field-type-selection' ),
-			'preview_image' => acf_get_url() . '/assets/images/field-type-previews/field-preview-gallery.png',
-			'description'   => __( 'This provides an interactive interface for managing a collection of attachments. Most settings are similar to the Image field type. Additional settings allow you to specify where new attachments are added in the gallery and the minimum/maximum number of attachments allowed.', 'acf' ),
-			'tutorial_url'  => acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/how-to-use-the-gallery-field/', 'docs', 'field-type-selection' ),
-			'category'      => 'content',
-			'pro'           => true,
-		),
-		'repeater'         => array(
-			'name'          => 'repeater',
-			'label'         => __( 'Repeater', 'acf' ),
-			'doc_url'       => acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/repeater/', 'docs', 'field-type-selection' ),
-			'preview_image' => acf_get_url() . '/assets/images/field-type-previews/field-preview-repeater.png',
-			'description'   => __( 'This provides a solution for repeating content such as slides, team members, and call-to-action tiles, by acting as a parent to a set of subfields which can be repeated again and again.', 'acf' ),
-			'tutorial_url'  => acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/repeater/how-to-use-the-repeater-field/', 'docs', 'field-type-selection' ),
-			'category'      => 'layout',
-			'pro'           => true,
-		),
-	);
+	return array();
 }
