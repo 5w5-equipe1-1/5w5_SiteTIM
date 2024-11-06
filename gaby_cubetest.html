@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Cube Rotating</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        perspective: 1000px;
+        overflow: hidden;
+      }
+
+      .cube-container {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg) rotateY(30deg);
+        transition: transform 0.1s ease-out;
+      }
+
+      .cube {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform: rotateX(0deg) rotateY(0deg);
+        transition: transform 0.1s ease-out;
+      }
+
+      .face {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 255, 255, 0.5);
+        border: 1px solid #ccc;
+      }
+
+      .front {
+        transform: translateZ(100px);
+        background-color: rgba(255, 0, 0, 0.7);
+      }
+      .back {
+        transform: rotateY(180deg) translateZ(100px);
+        background-color: rgba(0, 255, 0, 0.7);
+      }
+      .left {
+        transform: rotateY(-90deg) translateZ(100px);
+        background-color: rgba(0, 0, 255, 0.7);
+      }
+      .right {
+        transform: rotateY(90deg) translateZ(100px);
+        background-color: rgba(255, 255, 0, 0.7);
+      }
+      .top {
+        transform: rotateX(90deg) translateZ(100px);
+        background-color: rgba(255, 0, 255, 0.7);
+      }
+      .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+        background-color: rgba(0, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cube-container">
+      <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+      </div>
+    </div>
+
+    <script>
+      const cube = document.querySelector(".cube");
+      const container = document.querySelector(".cube-container");
+
+      // Function to calculate the mouse position
+      function rotateCube(event) {
+        const rect = container.getBoundingClientRect();
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const deltaX = mouseX - centerX;
+        const deltaY = mouseY - centerY;
+
+        const rotationX = (deltaY / centerY) * 30; // Rotate on X-axis
+        const rotationY = -(deltaX / centerX) * 30; // Rotate on Y-axis
+
+        cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+      }
+
+      // Add event listener to track mouse movement
+      container.addEventListener("mousemove", rotateCube);
+    </script>
+  </body>
+</html>
