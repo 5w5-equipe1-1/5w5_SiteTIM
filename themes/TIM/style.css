@@ -228,7 +228,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
   font-family: Arial, Helvetica, sans-serif;
@@ -240,8 +239,8 @@ body #scene {
   perspective: 600px;
   transition: perspective 1s;
   margin: 0 auto;
-  margin-bottom: 30vh;
-  margin-top: 440vh;
+  margin-bottom: 35vh;
+  margin-top: 30vh;
   position: relative;
   z-index: 9;
 }
@@ -260,45 +259,8 @@ body #scene {
     margin-top: 610vh;
   }
 }
-body .text_cercle {
-  position: absolute;
-  top: 65%;
-  left: 5%;
-  transition: 1s;
-}
-body .text_cercle .effetbulle {
-  background-color: var(--couleur-primaire);
-  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-  border-radius: 50%;
-  animation: rotateText 25s linear infinite;
-}
-body .text_cercle .text {
-  fill: rgba(255, 255, 255, 0.836);
-  font-size: 1.33em;
-  user-select: none;
-}
-body .text_cercle svg {
-  transform-origin: center;
-  height: 25vh;
-}
-@media screen and (max-width: 680px) {
-  body .text_cercle {
-    display: none;
-  }
-}
-body .text_cercle:hover {
-  filter: brightness(2);
-}
-body .versbas {
-  position: absolute;
-  width: 3.5rem;
-  height: 3rem;
-  user-select: none;
-  transform: translate(5.6rem, 5.6rem);
-  z-index: 100;
-}
 body .description_multimedia {
-  margin-top: 20vh;
+  margin-top: 10vh;
   margin-bottom: 10vh;
   text-align: left;
   display: flex;
@@ -343,61 +305,6 @@ body .description_multimedia .bulles_contenu p {
     padding: 10%;
     width: 50%;
   }
-}
-body .bannieres {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  height: 20vh;
-  width: 200%;
-}
-body .bannieres .photo {
-  width: 10%;
-  height: 80%;
-}
-body .bannieres .p1 {
-  background-color: green;
-}
-body .bannieres .p2 {
-  background-color: purple;
-}
-body .bannieres .p3 {
-  background-color: peru;
-}
-body .bannieres .p4 {
-  background-color: lightcoral;
-}
-body .bannieres .p5 {
-  background-color: lightblue;
-}
-body .bannieres .p6 {
-  background-color: lightgreen;
-}
-body .bannieres h2 {
-  font-family: "ivyora-display", sans-serif;
-  font-size: 50pt;
-  font-style: italic;
-  color: white;
-}
-@media screen and (max-width: 1280px) {
-  body .bannieres h2 {
-    font-size: 30pt;
-  }
-}
-@media screen and (max-width: 680px) {
-  body .bannieres h2 {
-    font-size: 20pt;
-  }
-}
-body .bannieres::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1000;
-  background: rgb(239, 170, 91);
-  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
 }
 
 div {
@@ -676,7 +583,6 @@ li {
 
 .section_hero {
   width: 100%;
-  margin-top: 230vh;
 }
 @media screen and (max-width: 680px) {
   .section_hero {
@@ -786,6 +692,103 @@ button {
   width: 20px;
   height: 50px;
   color: white;
+}
+
+.text_cercle {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  transition: 1s;
+}
+.text_cercle .effetbulle {
+  background-color: var(--couleur-primaire);
+  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 50%;
+  animation: rotateText 25s linear infinite;
+}
+.text_cercle .text {
+  fill: rgba(255, 255, 255, 0.836);
+  font-size: 1.33em;
+  user-select: none;
+}
+.text_cercle svg {
+  transform-origin: center;
+  height: 25vh;
+}
+@media screen and (max-width: 680px) {
+  .text_cercle {
+    display: none;
+  }
+}
+
+.text_cercle:hover {
+  filter: brightness(2);
+}
+
+.versbas {
+  position: absolute;
+  width: 3.5rem;
+  height: 3rem;
+  user-select: none;
+  transform: translate(5.6rem, 5.6rem);
+  z-index: 100;
+}
+
+.bannieres {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 20vh;
+  width: 200%;
+}
+.bannieres .photo {
+  width: 10%;
+  height: 80%;
+}
+.bannieres .p1 {
+  background-color: green;
+}
+.bannieres .p2 {
+  background-color: purple;
+}
+.bannieres .p3 {
+  background-color: peru;
+}
+.bannieres .p4 {
+  background-color: lightcoral;
+}
+.bannieres .p5 {
+  background-color: lightblue;
+}
+.bannieres .p6 {
+  background-color: lightgreen;
+}
+.bannieres h2 {
+  font-family: "ivyora-display", sans-serif;
+  font-size: 50pt;
+  font-style: italic;
+  color: white;
+}
+@media screen and (max-width: 1280px) {
+  .bannieres h2 {
+    font-size: 30pt;
+  }
+}
+@media screen and (max-width: 680px) {
+  .bannieres h2 {
+    font-size: 20pt;
+  }
+}
+
+.bannieres::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1000;
+  background: rgb(239, 170, 91);
+  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
 }
 
 /* ----------------------------------------------------- */

@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  // height: 100vh;
   margin: var(--margin-top-mobile) var(--margin-right-mobile)
     var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
@@ -50,8 +50,8 @@ body {
     perspective: 600px;
     transition: perspective 1s;
     margin: 0 auto;
-    margin-bottom: 30vh;
-    margin-top: 440vh;
+    margin-bottom: 35vh;
+    margin-top: 30vh;
     position: relative;
     z-index: 9;
 
@@ -74,7 +74,7 @@ body {
   }
 
   .description_multimedia {
-    margin-top: 20vh;
+    margin-top: 10vh;
     margin-bottom: 10vh;
     text-align: left;
 
