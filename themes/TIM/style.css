@@ -381,7 +381,7 @@ body .bannieres::before {
   position: absolute;
   z-index: -1000;
   background: rgb(239, 170, 91);
-  background: linear-gradient(90deg, rgb(239, 170, 91) 0%, rgb(237, 83, 96) 50%, rgb(103, 215, 249) 100%);
+  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
 }
 
 div {
