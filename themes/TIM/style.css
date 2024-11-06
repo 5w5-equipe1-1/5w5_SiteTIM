@@ -168,10 +168,7 @@ header .conteneur_burger_recherche .conteneur_barre_recherche {
   justify-content: center;
   align-items: center;
 }
-header
-  .conteneur_burger_recherche
-  .conteneur_barre_recherche
-  .fa-magnifying-glass {
+header .conteneur_burger_recherche .conteneur_barre_recherche .fa-magnifying-glass {
   color: var(--couleur-secondaire);
   font-size: 30px;
 }
@@ -179,10 +176,7 @@ header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
   display: none;
 }
 @media screen and (min-width: 1280px) {
-  header
-    .conteneur_burger_recherche
-    .conteneur_barre_recherche
-    .text_recherche {
+  header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
     display: block;
     text-decoration: none;
     background-color: transparent;
@@ -235,8 +229,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile)
-    var(--margin-bottom-mobile) var(--margin-left-mobile);
+  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -274,9 +267,8 @@ body .text_cercle {
   transition: 1s;
 }
 body .text_cercle .effetbulle {
-  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
-    rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
-    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  background-color: var(--couleur-primaire);
+  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 50%;
   animation: rotateText 25s linear infinite;
 }
@@ -303,7 +295,7 @@ body .versbas {
   height: 3rem;
   user-select: none;
   transform: translate(5.6rem, 5.6rem);
-  z-index: -1;
+  z-index: 100;
 }
 body .description_multimedia {
   margin-top: 20vh;
@@ -335,9 +327,7 @@ body .description_multimedia .bulles_contenu {
 }
 body .description_multimedia .bulles_contenu p {
   border: 1px solid white;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
-    rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
-    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 20px;
   padding: 3% 1% 3% 1%;
   margin: 2%;
@@ -407,12 +397,7 @@ body .bannieres::before {
   position: absolute;
   z-index: -1000;
   background: rgb(239, 170, 91);
-  background: linear-gradient(
-    90deg,
-    rgb(236, 141, 32) 0%,
-    rgb(230, 61, 94) 50%,
-    rgb(44, 246, 253) 100%
-  );
+  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
 }
 
 div {
@@ -544,12 +529,6 @@ div {
   width: 100%;
 }
 
-.section_montagne img {
-  position: absolute;
-  width: 120%;
-  left: -5%;
-}
-
 footer {
   width: 100%;
   margin-top: 60vh;
@@ -563,6 +542,13 @@ footer {
   footer {
     margin-top: 20vh;
   }
+}
+footer .section_montagne img {
+  position: absolute;
+  width: 120%;
+  left: -5%;
+  transform: translateY(-65%);
+  user-select: none;
 }
 footer .conteneur_logo_tim {
   display: flex;
@@ -690,7 +676,7 @@ li {
 
 .section_hero {
   width: 100%;
-  margin-top: 200vh;
+  margin-top: 230vh;
 }
 @media screen and (max-width: 680px) {
   .section_hero {
@@ -699,6 +685,7 @@ li {
 }
 .section_hero .video_hero {
   width: 100%;
+  opacity: 0.4;
 }
 @media screen and (max-width: 680px) {
   .section_hero .video_hero {
@@ -706,15 +693,15 @@ li {
   }
 }
 .section_hero .text_hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  transform: translateY(-200%);
+  transform: translateY(-110%);
   width: 50vw;
   margin: 0 auto;
-  margin-top: 8vh;
+  padding: 2%;
+  user-select: none;
+  border-radius: 100%;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 55%);
 }
 @media screen and (max-width: 680px) {
   .section_hero .text_hero {
@@ -724,17 +711,14 @@ li {
 }
 .section_hero .text_hero h1 {
   font-size: 6rem;
-  z-index: 100;
+  padding: 1%;
   font-family: "ivyora-display", sans-serif;
-  box-shadow: rgb(239, 170, 91) 10px 15px 20px, rgb(237, 83, 96) -5px 10px 20px,
-    rgb(103, 215, 249) 0px -10px 20px;
+  border-radius: 5px;
 }
 .section_hero .text_hero h3 {
   font-size: 4rem;
-  z-index: 100;
+  padding: 3%;
   font-family: "ivyora-display", sans-serif;
-  box-shadow: rgb(239, 170, 91) 10px 15px 20px, rgb(237, 83, 96) -5px 10px 20px,
-    rgb(103, 215, 249) 0px -10px 20px;
 }
 
 .hovercurseur {
@@ -882,8 +866,7 @@ button {
   width: 200px;
   height: 200px;
   background: black;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.6) 0px 0px 25px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px, rgba(255, 255, 255, 0.6) 0px 0px 25px 0px inset;
   border: 1.5px solid var(--couleur-secondaire);
   display: flex;
   flex-direction: column;
@@ -964,8 +947,7 @@ button {
   left: 25%;
   z-index: -100;
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px,
-    rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px, rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
 }
 /* ----------------------------------------------------- */
 /*Plugins*/
@@ -1026,4 +1008,4 @@ button {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

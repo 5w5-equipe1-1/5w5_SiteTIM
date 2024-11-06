@@ -12,6 +12,16 @@ footer {
     margin-top: 20vh;
   }
 
+  .section_montagne img {
+    position: absolute;
+    width: 120%;
+    left: -5%;
+    transform: translateY(-65%);
+    user-select: none;
+    // top: 1000vh;
+    // border: 1px solid red;
+  }
+
   //titre et logo
   .conteneur_logo_tim {
     display: flex;

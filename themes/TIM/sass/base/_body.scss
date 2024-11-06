@@ -81,6 +81,9 @@ body {
     transition: 1s;
 
     .effetbulle {
+      //Test Background vidéo
+      background-color: var(--couleur-primaire);
+
       // Ajout d'un glow (?)
       box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
         rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
@@ -127,7 +130,7 @@ body {
     user-select: none;
 
     transform: translate(5.6rem, 5.6rem);
-    z-index: -1;
+    z-index: 100;
   }
 
   .description_multimedia {
@@ -407,12 +410,4 @@ div {
 
 .container {
   width: 100%;
-}
-
-.section_montagne img {
-  position: absolute;
-  width: 120%;
-  left: -5%;
-  // top: 1000vh;
-  // border: 1px solid red;
 }

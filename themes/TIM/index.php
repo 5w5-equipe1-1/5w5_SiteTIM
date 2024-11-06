@@ -166,9 +166,6 @@
             </ul>
         </div>
     </main>
-    <div class="section_montagne">
-        <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/test_separation.png" alt="fond_montagne">
-    </div>
     <?php get_footer();?>
 
         <!-- Pas touche! C'est un curseur qui est sous la souris  
