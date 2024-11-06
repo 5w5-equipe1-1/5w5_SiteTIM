@@ -39,6 +39,8 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /* ----------------------------------------------------- */
 @import "componants/bouton";
 @import "componants/galerie";
+@import "componants/scrollBouton";
+@import "componants/banniere";
 
 /* ----------------------------------------------------- */
 /*Animations*/
@@ -49,6 +51,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /*Le Cube*/
 /* ----------------------------------------------------- */
 @import "cube";
+@import "minicube";
 
 /* ----------------------------------------------------- */
 /*Les Dégradés*/
