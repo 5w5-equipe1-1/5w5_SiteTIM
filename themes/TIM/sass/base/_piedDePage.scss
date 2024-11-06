@@ -2,6 +2,25 @@
 footer {
   // background-color: purple;
   width: 100%;
+  margin-top: 60vh;
+
+  @media screen and (max-width: 1280px) {
+    margin-top: 40vh;
+  }
+
+  @media screen and (max-width: 680px) {
+    margin-top: 20vh;
+  }
+
+  .section_montagne img {
+    position: absolute;
+    width: 120%;
+    left: -5%;
+    transform: translateY(-65%);
+    user-select: none;
+    // top: 1000vh;
+    // border: 1px solid red;
+  }
 
   //titre et logo
   .conteneur_logo_tim {
