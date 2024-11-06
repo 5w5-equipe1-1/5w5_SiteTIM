@@ -51,7 +51,7 @@ body {
     transition: perspective 1s;
     margin: 0 auto;
     margin-bottom: 30vh;
-    margin-top: 360vh;
+    margin-top: 380vh;
     position: relative;
     z-index: 9;
 
@@ -64,7 +64,7 @@ body {
     //Deuxième Style pour tabelette - Voir avec Gaby svp
     @media screen and (max-width: 890px) {
       //margin-bottom: 30vh;
-      margin-top: 440vh;
+      margin-top: 430vh;
     }
     //Style pour mobile
     @media screen and (max-width: 680px) {
@@ -126,7 +126,7 @@ body {
     // opacity: 0.5;
     user-select: none;
 
-    transform: translate(5.4rem, 5.4rem);
+    transform: translate(5.6rem, 5.6rem);
     z-index: -1;
   }
 
@@ -278,6 +278,7 @@ div {
     p {
       margin-left: var(--margin-left-mobile);
       margin-right: var(--margin-right-mobile);
+      width: 98%; //pour que les paragraphe aille la meme largeur que l'image
     }
 
     .contenu_img {

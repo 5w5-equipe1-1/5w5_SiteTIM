@@ -82,7 +82,7 @@
     </div>
     <!-- Ajout du cercle de scroll down en test -->
     <div class="text_cercle">
-        <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="">
+        <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="fleche">
         <div class="effetbulle">
             <svg viewBox="0 0 150 150">
                 <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>

@@ -241,7 +241,7 @@ body #scene {
   transition: perspective 1s;
   margin: 0 auto;
   margin-bottom: 30vh;
-  margin-top: 360vh;
+  margin-top: 380vh;
   position: relative;
   z-index: 9;
 }
@@ -252,7 +252,7 @@ body #scene {
 }
 @media screen and (max-width: 890px) {
   body #scene {
-    margin-top: 440vh;
+    margin-top: 430vh;
   }
 }
 @media screen and (max-width: 680px) {
@@ -293,7 +293,7 @@ body .versbas {
   width: 3.5rem;
   height: 3rem;
   user-select: none;
-  transform: translate(5.4rem, 5.4rem);
+  transform: translate(5.6rem, 5.6rem);
   z-index: -1;
 }
 body .description_multimedia {
@@ -416,6 +416,7 @@ div {
 .evenements .description_evenements p {
   margin-left: var(--margin-left-mobile);
   margin-right: var(--margin-right-mobile);
+  width: 98%;
 }
 @media screen and (max-width: 680px) {
   .evenements .description_evenements .contenu_img {
@@ -648,14 +649,19 @@ li {
 
 .section_hero {
   width: 100%;
+  margin-top: 200vh;
+}
+@media screen and (max-width: 680px) {
+  .section_hero {
+    margin-top: 225vh;
+  }
 }
 .section_hero .video_hero {
-  margin-top: 50vh;
   width: 100%;
 }
 @media screen and (max-width: 680px) {
   .section_hero .video_hero {
-    margin-top: 0;
+    margin-top: 15vh;
   }
 }
 .section_hero .text_hero {
@@ -665,17 +671,27 @@ li {
   align-items: center;
   text-align: center;
   transform: translateY(-200%);
-}
-.section_hero .text_hero h1 {
-  font-size: 30px;
-}
-.section_hero .text_hero h3 {
-  font-size: 20px;
+  width: 50vw;
+  margin: 0 auto;
+  margin-top: 8vh;
 }
 @media screen and (max-width: 680px) {
-  .section_hero {
-    margin-top: 150vh;
+  .section_hero .text_hero {
+    margin-top: 14vh;
+    width: 50vw;
   }
+}
+.section_hero .text_hero h1 {
+  font-size: 6rem;
+  z-index: 100;
+  font-family: "ivyora-display", sans-serif;
+  box-shadow: rgb(239, 170, 91) 10px 15px 20px, rgb(237, 83, 96) -5px 10px 20px, rgb(103, 215, 249) 0px -10px 20px;
+}
+.section_hero .text_hero h3 {
+  font-size: 4rem;
+  z-index: 100;
+  font-family: "ivyora-display", sans-serif;
+  box-shadow: rgb(239, 170, 91) 10px 15px 20px, rgb(237, 83, 96) -5px 10px 20px, rgb(103, 215, 249) 0px -10px 20px;
 }
 
 .hovercurseur {
@@ -861,9 +877,10 @@ button {
 .commundegrade {
   position: absolute;
   height: 20vh;
-  width: 11vw;
+  width: 10vw;
   z-index: -1;
   border-radius: 50%;
+  transform: scale(1.03);
 }
 @media screen and (max-width: 1280px) {
   .commundegrade {
