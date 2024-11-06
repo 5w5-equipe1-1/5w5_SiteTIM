@@ -51,24 +51,24 @@ body {
     transition: perspective 1s;
     margin: 0 auto;
     margin-bottom: 30vh;
-    margin-top: 360vh;
+    margin-top: 380vh;
     position: relative;
     z-index: 9;
 
     //Style pour tabelette
     @media screen and (max-width: 1280px) {
       //margin-bottom: 30vh;
-      margin-top: 480vh;
+      margin-top: 560vh;
     }
 
     //Deuxième Style pour tabelette - Voir avec Gaby svp
     @media screen and (max-width: 890px) {
       //margin-bottom: 30vh;
-      margin-top: 440vh;
+      margin-top: 510vh;
     }
     //Style pour mobile
     @media screen and (max-width: 680px) {
-      margin-top: 500vh;
+      margin-top: 610vh;
       // margin-bottom: 25%;
     }
   }
@@ -161,7 +161,9 @@ body {
 
       @media screen and (max-width: 1280px) {
         flex-direction: column;
-        width: 40vw;
+        align-items: center;
+        width: 100vw;
+        text-align: center;
       }
 
       p {
@@ -171,8 +173,18 @@ body {
           rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
         border-radius: 20px;
 
-        padding: 3%;
+        padding: 3% 1% 3% 1%;
         margin: 2%;
+
+        @media screen and (max-width: 1280px) {
+          padding: 5%;
+          width: 50%;
+        }
+
+        @media screen and (max-width: 680px) {
+          padding: 10%;
+          width: 50%;
+        }
       }
     }
   }
