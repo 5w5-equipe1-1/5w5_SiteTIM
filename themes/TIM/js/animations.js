@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //     fencedroite.style.transform = `translateX(${value * -0.4}px)`;
 // });
 
-
+//quand tu clique sur le cercle, tu scroll
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll in view
     let scrollElement = document.querySelector('.text_cercle');
@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 800,
                 behavior: 'smooth'
             });
+            //l'element s’envole vers le hau
+            scrollElement.style.transform = 'translatey(-1000px)';
+            scrollElement.style.transition = "transform 0.5s ease";
         });
     }
 
