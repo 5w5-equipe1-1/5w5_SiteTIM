@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 800,
                 behavior: 'smooth'
             });
-            //l'element s’envole vers le hau
+            //l'element s’envole vers le haut
             scrollElement.style.transform = 'translatey(-1000px)';
             scrollElement.style.transition = "transform 0.5s ease";
         });
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollPourcentage = Math.min(Math.max(scrollPourcentage, 0), 100);
 
             // Calculer la nouvelle position en pourcentage
-            let nouvPosition = 55 - (scrollPourcentage * 0.5);
+            let nouvPosition = 40 - (scrollPourcentage * 0.3);
 
             // Appliquer la nouvelle position
             scrollAnim.style.transform = `translateX(${-nouvPosition}%)`;
