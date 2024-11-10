@@ -683,7 +683,7 @@ button {
 
 .text_cercle {
   position: absolute;
-  top: 65%;
+  top: 15%;
   left: 5%;
   transition: 1s;
 }
