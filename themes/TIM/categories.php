@@ -121,17 +121,19 @@
             <img class="lesflechescurseur" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/flecheHoverCube.png" alt="">
         </div>
 
-        <!-- API fontawsome pour les icones -->
-        <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
-        <!-- Script pour les animations de scroll -->
-        <script src="<?php echo get_template_directory_uri() ."/js/animations.js"?>"></script>
-        <!-- Script pour le menu burger -->
-        <script src="<?php echo get_template_directory_uri() ."/js/cubeBergur.js"?>"></script>
-         <!-- inclure le script qui gere le changement de page -->
-         <script src="<?php echo get_template_directory_uri() . "/js/selectionCat.js"?>"></script>
-          <!-- inclure le script pour le carrousel -->
-          <script src="<?php echo get_template_directory_uri() . "/js/carrousel.js"?>"></script>
-          <!-- inclure le script du curseur -->
-          <script src="<?php echo get_template_directory_uri() . "/js/curseur.js"?>"></script>
+            <!-- API fontawsome pour les icones -->
+            <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
+            <!-- Script pour les animations de scroll -->
+            <script src="<?php echo get_template_directory_uri() ."/js/animations.js"?>"></script>
+            <!-- Script pour le menu burger -->
+            <script src="<?php echo get_template_directory_uri() ."/js/cubeBergur.js"?>"></script>
+            <!-- inclure le script qui gere le changement de page -->
+            <script src="<?php echo get_template_directory_uri() . "/js/selectionCat.js"?>"></script>
+            <!-- inclure le script pour le carrousel -->
+            <script src="<?php echo get_template_directory_uri() . "/js/carrousel.js"?>"></script>
+            <!-- inclure le script du curseur -->
+            <script src="<?php echo get_template_directory_uri() . "/js/curseur.js"?>"></script>
+            <!-- inclure le script qui gere le minicube -->
+            <script src="<?php echo get_template_directory_uri() . "/js/miniCube.js"?>"></script>
         </body>
         </html>
