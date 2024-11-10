@@ -18,6 +18,7 @@ footer {
     left: -5%;
     transform: translateY(-65%);
     user-select: none;
+    pointer-events: none;
     // top: 1000vh;
     // border: 1px solid red;
   }
@@ -133,12 +134,4 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-}
-
-//Style pour tabelette
-@media screen and (min-width: 1280px) {
-}
-
-//Style pour Ordinateur
-@media screen and (min-width: 1920px) {
 }

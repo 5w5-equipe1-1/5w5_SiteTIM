@@ -441,6 +441,7 @@ footer .section_montagne img {
   left: -5%;
   transform: translateY(-65%);
   user-select: none;
+  pointer-events: none;
 }
 footer .conteneur_logo_tim {
   display: flex;
