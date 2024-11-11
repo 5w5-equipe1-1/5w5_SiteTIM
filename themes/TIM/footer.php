@@ -5,7 +5,7 @@
     </div>
 
 <!-- Ajout du cube décoratif -->
-    <div class="cube_container">
+    <!-- <div class="cube_container">
       <div class="minicube">
         <div class="face devant_cube"></div>
         <div class="face derriere_cube"></div>
@@ -14,7 +14,7 @@
         <div class="face haut_cube"></div>
         <div class="face bas_cube"></div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Un autre dégradé, ben oui! -->
     <div class="degrade_blanc"></div>

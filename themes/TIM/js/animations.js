@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //     fencedroite.style.transform = `translateX(${value * -0.4}px)`;
 // });
 
-
+//quand tu clique sur le cercle, tu scroll
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll in view
     let scrollElement = document.querySelector('.text_cercle');
@@ -46,10 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 800,
                 behavior: 'smooth'
             });
+            //l'element s’envole vers le haut
+            scrollElement.style.transform = 'translatey(-1000px)';
+            scrollElement.style.transition = "transform 0.5s ease";
         });
     }
 
-    // Scroll animation
+    // Scroll animation 
     let scrollAnim = document.querySelector('.bannieres');
 
     if (scrollAnim) {
@@ -59,19 +62,55 @@ document.addEventListener('DOMContentLoaded', () => {
             let windowHeight = window.innerHeight;
 
             // Calculer le pourcentage de défilement par rapport à la hauteur de la fenêtre
-            let scrollPercentage = ((value + windowHeight - elementTop) / windowHeight) * 100;
+            let scrollPourcentage = ((value + windowHeight - elementTop) / windowHeight) * 100;
 
             // Limiter le pourcentage de défilement entre 0 et 100
-            scrollPercentage = Math.min(Math.max(scrollPercentage, 0), 100);
+            scrollPourcentage = Math.min(Math.max(scrollPourcentage, 0), 100);
 
             // Calculer la nouvelle position en pourcentage
-            let newPosition = 60 - (scrollPercentage * 0.5);
+            let nouvPosition = 40 - (scrollPourcentage * 0.3);
 
             // Appliquer la nouvelle position
-            scrollAnim.style.transform = `translateX(${-newPosition}%)`;
+            scrollAnim.style.transform = `translateX(${-nouvPosition}%)`;
         });
     }
 });
 
+// Sélectionne l'élément à animer
+const elementAnime = document.querySelector(".conteneur");
 
+// Variables pour suivre la vitesse de scroll, position précédente et position courante
+let avantVitesseScroll = window.scrollY;
+let VitesseScroll = 0;
+let translateY = 0;
+let cibleTranslateY = 0;
 
+function animer() {
+    // Interpole la position actuelle vers la cible pour un effet de lissage
+    translateY += (cibleTranslateY - translateY) * 0.1;
+
+    // Applique la transformation et l'opacité
+    elementAnime.style.transform = `translateY(${translateY}px)`;
+    
+    // Continue à appeler animer pour des mises à jour fluides
+    requestAnimationFrame(animer);
+}
+
+// Écoute l'événement de scroll pour mettre à jour la cible de translation
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    VitesseScroll = Math.abs(scrollY - avantVitesseScroll);
+
+    // Détecte la direction du scroll et calcule la cible de translation
+    const direction = scrollY > avantVitesseScroll ? 1 : -1;
+    cibleTranslateY = VitesseScroll * 8 * direction;
+
+    // Ajuste l'opacité en fonction de la vitesse
+    elementAnime.style.opacity = Math.max(1 - VitesseScroll / 50, 0); // Opacité minimum à 0
+
+    // Met à jour la position précédente
+    avantVitesseScroll = scrollY;
+});
+
+// Démarre l'animation
+requestAnimationFrame(animer);

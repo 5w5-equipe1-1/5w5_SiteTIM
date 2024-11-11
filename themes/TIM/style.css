@@ -826,7 +826,7 @@ button {
 
 .text_cercle {
   position: absolute;
-  top: 65%;
+  top: 15%;
   left: 5%;
   transition: 1s;
 }
@@ -866,11 +866,12 @@ button {
 
 .bannieres {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   height: 20vh;
   width: 200%;
+  transition: transform 0.3s ease-out;
 }
 .bannieres .photo {
   width: 10%;

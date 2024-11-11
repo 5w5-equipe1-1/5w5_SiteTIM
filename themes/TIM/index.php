@@ -93,6 +93,7 @@
         </div>
     </div>
     <p class="info_action">Pssst! Hey! Tournez-moi!</p>
+    <div class="conteneur_info">
         <div class="description_multimedia">
             <h1>Qu'est ce que le multimédia?</h1>
             <div class="espace_gauche_descmulti">
@@ -148,6 +149,7 @@
                     <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/edit_concours.png" alt="">
                 </div>
             </div>
+        </div>
         </div>
         <div class="bannieres">
             <h2>Collaboration</h2>
