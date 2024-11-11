@@ -142,12 +142,9 @@ div {
 //section ou on montre les concours et les événements
 
 .evenements {
-  width: 80vw;
+  width: 70vw;
+  margin: 0 auto;
   margin-bottom: 5vh;
-
-  @media screen and (max-width: 680px) {
-    margin-left: var(--margin-left-mobile);
-  }
 
   .description_evenements {
     display: flex;
@@ -183,7 +180,7 @@ div {
   }
 
   .lessections_infosaccueil {
-    margin-bottom: 5vh;
+    margin-bottom: 25vh;
     filter: saturate(0);
     transition: 0.5s;
 
