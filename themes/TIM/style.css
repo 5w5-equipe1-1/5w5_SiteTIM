@@ -629,6 +629,11 @@ li {
   width: 8rem;
   animation: rotatefleche 5s linear infinite;
 }
+@media screen and (max-width: 1280px) {
+  .hovercurseur {
+    display: none;
+  }
+}
 
 .hovercurseur::before {
   content: "";
