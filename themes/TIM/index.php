@@ -1,4 +1,4 @@
-<!-- Entete personnaliser pour la page d'Accueil -->
+<!-- Entete personnaliser pour la page d'Accueil et 404 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
