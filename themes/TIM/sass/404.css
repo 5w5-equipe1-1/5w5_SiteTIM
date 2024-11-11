@@ -105,4 +105,19 @@ body {
     clip-path: inset(100% 0 0 0);
     transform: translateY(-5px);
   }
+}
+.retour {
+  border: 2px solid white;
+  text-align: center;
+  color: #fff;
+  border-radius: 20px;
+  padding: 1.5%;
+  margin-top: 5%;
+  transition: box-shadow 0.4s ease, color 0.4s ease;
+  text-decoration: none;
+}
+
+.retour:hover {
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  color: #fff;
 }/*# sourceMappingURL=404.css.map */
