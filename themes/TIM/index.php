@@ -112,6 +112,7 @@
             </div>
         </div>
         <div class="evenements">
+            <div class="commundegrade degrade1event"></div>
             <div class="lessections_infosaccueil">
                 <h2>Événements</h2>
                 <div class="description_evenements">
@@ -130,6 +131,8 @@
                     </div>
                 </div>
             </div>
+            <div class="commundegrade degrade2event"></div>
+            <div class="commundegrade degrade3event"></div>
             <div class="lessections_infosaccueil">
                 <h2>Concours</h2>
                 <div class="description_evenements">
