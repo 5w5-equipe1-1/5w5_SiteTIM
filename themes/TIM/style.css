@@ -305,8 +305,8 @@ div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: rgb(35, 243, 255);
-  background: linear-gradient(90deg, rgba(236, 141, 32, 0.3) 0%, rgba(230, 61, 94, 0.3) 50%, rgba(44, 246, 253, 0.3) 100%);
+  padding: 2%;
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.5) 100%);
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
