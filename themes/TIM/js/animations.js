@@ -101,12 +101,12 @@ window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     VitesseScroll = Math.abs(scrollY - avantVitesseScroll);
 
+    // Calculer un facteur inverse basé sur la vitesse
+    const facteurInversion = Math.max(1 / (VitesseScroll + 1), 0.1); // Limite minimale de 0.1 pour éviter zéro
+
     // Détecte la direction du scroll et calcule la cible de translation
     const direction = scrollY > avantVitesseScroll ? 1 : -1;
-    cibleTranslateY = VitesseScroll * 8 * direction;
-
-    // Ajuste l'opacité en fonction de la vitesse
-    elementAnime.style.opacity = Math.max(1 - VitesseScroll / 50, 0); // Opacité minimum à 0
+    cibleTranslateY = (20 * facteurInversion) * direction; // Ajuster '20' selon l'intensité souhaitée
 
     // Met à jour la position précédente
     avantVitesseScroll = scrollY;

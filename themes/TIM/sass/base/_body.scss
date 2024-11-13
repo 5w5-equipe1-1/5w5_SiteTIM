@@ -43,6 +43,7 @@ body {
 
   //cacher le scroll horizontal
   overflow-x: hidden;
+  
 
   #scene {
     width: 200px;
@@ -283,4 +284,12 @@ div {
 
 .container {
   width: 100%;
+}
+.dot{
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999999999;
 }
