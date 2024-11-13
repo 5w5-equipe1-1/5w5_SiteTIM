@@ -168,7 +168,10 @@ header .conteneur_burger_recherche .conteneur_barre_recherche {
   justify-content: center;
   align-items: center;
 }
-header .conteneur_burger_recherche .conteneur_barre_recherche .fa-magnifying-glass {
+header
+  .conteneur_burger_recherche
+  .conteneur_barre_recherche
+  .fa-magnifying-glass {
   color: var(--couleur-secondaire);
   font-size: 30px;
 }
@@ -176,7 +179,10 @@ header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
   display: none;
 }
 @media screen and (min-width: 1280px) {
-  header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
+  header
+    .conteneur_burger_recherche
+    .conteneur_barre_recherche
+    .text_recherche {
     display: block;
     text-decoration: none;
     background-color: transparent;
@@ -228,7 +234,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
+  margin: var(--margin-top-mobile) var(--margin-right-mobile)
+    var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -273,11 +280,16 @@ body .description_multimedia .bulles_contenu {
   }
 }
 body .description_multimedia .bulles_contenu p {
+  display: flex;
+  align-items: center;
   border: 1px solid white;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-  border-radius: 20px;
-  padding: 3% 1% 3% 1%;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+    rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 5px;
+  padding: 50px 10px 50px 10px;
   margin: 2%;
+  text-align: center;
 }
 @media screen and (max-width: 1280px) {
   body .description_multimedia .bulles_contenu p {
@@ -306,7 +318,15 @@ div {
   flex-direction: row;
   justify-content: space-between;
   padding: 2%;
-  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.5) 100%);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(236, 141, 32, 0.7) 0%,
+    rgba(230, 61, 94, 0.7) 50%,
+    rgba(44, 246, 253, 0.3) 100%
+  );
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
@@ -316,6 +336,16 @@ div {
 @media screen and (min-width: 1280px) {
   .evenements .description_evenements {
     height: 40vh;
+  }
+}
+@media screen and (max-width: 680px) {
+  .evenements .description_evenements {
+    background: linear-gradient(
+      90deg,
+      rgba(236, 141, 32, 0.4) 0%,
+      rgba(230, 61, 94, 0.4) 50%,
+      rgba(44, 246, 253, 0.2) 100%
+    );
   }
 }
 .evenements .description_evenements p {
@@ -339,6 +369,7 @@ div {
 @media screen and (max-width: 680px) {
   .evenements .lessections_infosaccueil {
     margin-bottom: 5vh;
+    filter: saturate(1);
   }
 }
 .evenements .lessections_infosaccueil a {
@@ -450,13 +481,19 @@ footer .section_montagne img {
   user-select: none;
   pointer-events: none;
 }
+@media screen and (max-width: 680px) {
+  footer .section_montagne img {
+    width: 200%;
+    left: -60%;
+  }
+}
 footer .conteneur_logo_tim {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   width: 100vw;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-bottom: 5vh;
   gap: var(--margin-left-mobile);
 }
@@ -575,20 +612,11 @@ li {
 
 .section_hero {
   width: 100%;
-}
-@media screen and (max-width: 680px) {
-  .section_hero {
-    margin-top: 225vh;
-  }
+  height: 100vh;
 }
 .section_hero .video_hero {
   width: 100%;
   opacity: 0.4;
-}
-@media screen and (max-width: 680px) {
-  .section_hero .video_hero {
-    margin-top: 15vh;
-  }
 }
 .section_hero .text_hero {
   text-align: center;
@@ -599,11 +627,14 @@ li {
   user-select: none;
   border-radius: 100%;
   background: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 55%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.7) 20%,
+    rgba(0, 0, 0, 0) 55%
+  );
 }
 @media screen and (max-width: 680px) {
   .section_hero .text_hero {
-    margin-top: 14vh;
     width: 50vw;
   }
 }
@@ -767,7 +798,9 @@ li {
 .retour {
   border: 2px solid white;
   text-align: center;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+    rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   color: #fff;
   border-radius: 20px;
   padding: 8% 8%; /* Augmente la taille du bouton avec plus de padding */
@@ -778,7 +811,9 @@ li {
 }
 
 .retour:hover {
-  box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset,
+    rgba(65, 65, 65, 0.25) -5px 10px 20px inset,
+    rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
   color: #fff;
 }
 
@@ -818,7 +853,9 @@ button {
 }
 .text_cercle .effetbulle {
   background-color: var(--couleur-primaire);
-  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
+    rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
+    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 50%;
   animation: rotateText 25s linear infinite;
 }
@@ -905,7 +942,12 @@ button {
   position: absolute;
   z-index: -1000;
   background: rgb(239, 170, 91);
-  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(236, 141, 32) 0%,
+    rgb(230, 61, 94) 50%,
+    rgb(44, 246, 253) 100%
+  );
 }
 
 .search-container {
@@ -1040,7 +1082,8 @@ button {
   width: 200px;
   height: 200px;
   background: black;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px, rgba(255, 255, 255, 0.6) 0px 0px 25px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.6) 0px 0px 25px 0px inset;
   border: 1.5px solid var(--couleur-secondaire);
   display: flex;
   flex-direction: column;
@@ -1083,6 +1126,11 @@ button {
   transform: translateY(-400px) translateX(300px);
   z-index: -128;
 }
+@media screen and (max-width: 680px) {
+  .cube_container {
+    transform: translateY(-300px) translateX(200px);
+  }
+}
 
 .minicube {
   position: absolute;
@@ -1099,8 +1147,14 @@ button {
   height: 200px;
   border: 2px solid rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.05);
-  background: linear-gradient(90deg, rgba(255, 167, 66, 0.1) 0%, rgba(255, 46, 64, 0.1) 50%, rgba(35, 243, 255, 0.1) 100%);
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px, rgba(255, 255, 255, 0.3) 0px 7px 29px 0px inset;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 167, 66, 0.1) 0%,
+    rgba(255, 46, 64, 0.1) 50%,
+    rgba(35, 243, 255, 0.1) 100%
+  );
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px,
+    rgba(255, 255, 255, 0.3) 0px 7px 29px 0px inset;
 }
 
 .devant_cube {
@@ -1161,7 +1215,8 @@ button {
 .degrade_blanc {
   margin: 0 auto;
   position: relative;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 60px 100px 200px, rgba(255, 255, 255, 0.3) 0px 0px 100px 10px inset;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 60px 100px 200px,
+    rgba(255, 255, 255, 0.3) 0px 0px 100px 10px inset;
   border-radius: 50%;
   width: 20vw;
   height: 30vh;
@@ -1198,14 +1253,16 @@ button {
   left: 25%;
   z-index: -100;
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px, rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px,
+    rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
 }
 /* ----------------------------------------------------- */
 /*Plugins*/
 /* ----------------------------------------------------- */
 .galerie {
   display: flex;
-  height: 20rem;
+  height: 30rem;
+  align-items: center;
 }
 .galerie .wp-block-gallery {
   display: flex;
@@ -1261,4 +1318,4 @@ button {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
