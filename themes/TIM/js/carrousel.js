@@ -39,3 +39,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+//pour faire scroll la galerie
+let images = document.querySelectorAll('.wp-block-image');
+let indexTranslate = 0;
+
+setInterval(() => {
+    indexTranslate --;
+    scrollGallery();
+    indexReset();
+}, 100);
+
+function scrollGallery() {
+    for(img of images) {
+        img.style.transform = 'translateX('+ indexTranslate +'%)';
+    }
+}
+
+function indexReset() {
+    for(img of images) {
+        //si la position de limage est inferieur a 0px
+        if(img.getBoundingClientRect().left < -300) {
+            // mettre l'image a la fin de la galerie
+            
+            console.log("remise a 0");
+        }
+    }
+}
