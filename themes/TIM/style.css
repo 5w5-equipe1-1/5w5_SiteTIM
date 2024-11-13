@@ -699,15 +699,32 @@ body {
   max-width: 600px;
 }
 
+@keyframes colorfulShadow {
+  0% {
+    text-shadow: 5px 5px 10px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(65, 236, 183, 0.8);
+  }
+  25% {
+    text-shadow: -10px 5px 15px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(194, 83, 9, 0.8), 5px 5px 10px rgba(65, 236, 183, 0.8);
+  }
+  50% {
+    text-shadow: 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(11, 152, 170, 0.8), 5px 5px 10px rgba(176, 7, 61, 0.8), -5px -5px 10px rgba(65, 236, 183, 0.8);
+  }
+  75% {
+    text-shadow: -5px -5px 10px rgba(65, 236, 183, 0.8), 5px 5px 10px rgba(11, 152, 170, 0.8), -10px 10px 15px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8);
+  }
+  100% {
+    text-shadow: 5px 5px 10px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(65, 236, 183, 0.8);
+  }
+}
 .error-code {
   font-size: 14rem;
   letter-spacing: 10px;
   color: #ffffff;
-  text-shadow: 0 0 5px #fff;
   position: relative;
   display: inline-block;
   cursor: pointer;
   overflow: hidden;
+  animation: colorfulShadow 3s infinite linear; /* Applique l'animation en boucle */
 }
 
 .error-code::before,
