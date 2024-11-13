@@ -665,6 +665,123 @@ li {
   margin-top: 1vh;
 }
 
+.conteneur_404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Garde la pleine hauteur pour un centrage vertical */
+  gap: 300px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.erreur {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le texte horizontalement */
+  justify-content: center;
+  max-width: 600px;
+}
+
+.scene {
+  max-width: 600px;
+}
+
+.error-code {
+  font-size: 14rem;
+  letter-spacing: 10px;
+  color: rgba(186, 186, 186, 0.3176470588);
+  text-shadow: 0 0 5px #ffffff;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.error-code::before,
+.error-code::after {
+  content: "404";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  color: #c0c0c0;
+  opacity: 0.8;
+}
+
+.error-text {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #fff;
+  text-align: center; /* Centre le texte dans le conteneur */
+  width: 100%; /* Assure que le texte occupe toute la largeur de son parent */
+}
+
+/* Glitch animations */
+@keyframes glitch-horizontal {
+  0% {
+    clip-path: inset(0% 0 25% 0);
+    transform: translate(-5px);
+  }
+  25% {
+    clip-path: inset(25% 0 50% 0);
+    transform: translate(5px);
+  }
+  50% {
+    clip-path: inset(50% 0 75% 0);
+    transform: translate(-5px);
+  }
+  75% {
+    clip-path: inset(75% 0 100% 0);
+    transform: translate(5px);
+  }
+  100% {
+    clip-path: inset(100% 0 0% 0);
+    transform: translate(-5px);
+  }
+}
+@keyframes glitch-vertical {
+  0% {
+    clip-path: inset(0 25% 0 0);
+    transform: translateY(-5px);
+  }
+  25% {
+    clip-path: inset(25% 0 0 0);
+    transform: translateY(5px);
+  }
+  50% {
+    clip-path: inset(50% 0 0 0);
+    transform: translateY(-5px);
+  }
+  75% {
+    clip-path: inset(75% 0 0 0);
+    transform: translateY(5px);
+  }
+  100% {
+    clip-path: inset(100% 0 0 0);
+    transform: translateY(-5px);
+  }
+}
+.retour {
+  border: 2px solid white;
+  text-align: center;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8% 8%; /* Augmente la taille du bouton avec plus de padding */
+  font-size: 1.5rem; /* Augmente la taille du texte */
+  margin-top: 5%;
+  transition: box-shadow 0.4s ease, color 0.4s ease;
+  text-decoration: none;
+}
+
+.retour:hover {
+  box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
+  color: #fff;
+}
+
 /* ----------------------------------------------------- */
 /*Composants*/
 /* ----------------------------------------------------- */
