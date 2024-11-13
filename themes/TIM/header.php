@@ -23,7 +23,7 @@
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div> -->
               <?php get_search_form(); ?>
-            <div class="sceneBurguer" id="sceneBurguer">
+            <div class="sceneBurguer shrink" id="sceneBurguer">
                 <div class="cube" id="cube">
                     <div class="front face" id="front">
                         <h3>3D</h3>
