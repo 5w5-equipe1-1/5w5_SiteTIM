@@ -4,7 +4,7 @@
         <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/test_separation.png" alt="fond_montagne">
     </div>
 
-Ajout du cube décoratif
+<!-- Ajout du cube décoratif -->
     <div class="cube_container">
       <div class="minicube">
         <div class="face devant_cube"></div>

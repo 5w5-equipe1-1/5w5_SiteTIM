@@ -27,6 +27,10 @@
   margin: 0 auto;
   transform: translateY(-400px) translateX(300px);
   z-index: -128;
+
+  @media screen and (max-width: 680px) {
+    transform: translateY(-300px) translateX(200px);
+  }
 }
 
 .minicube {

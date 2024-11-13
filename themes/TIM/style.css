@@ -273,11 +273,14 @@ body .description_multimedia .bulles_contenu {
   }
 }
 body .description_multimedia .bulles_contenu p {
+  display: flex;
+  align-items: center;
   border: 1px solid white;
   box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-  border-radius: 20px;
-  padding: 3% 1% 3% 1%;
+  border-radius: 5px;
+  padding: 50px 10px 50px 10px;
   margin: 2%;
+  text-align: center;
 }
 @media screen and (max-width: 1280px) {
   body .description_multimedia .bulles_contenu p {
@@ -306,7 +309,10 @@ div {
   flex-direction: row;
   justify-content: space-between;
   padding: 2%;
-  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.5) 100%);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
@@ -316,6 +322,11 @@ div {
 @media screen and (min-width: 1280px) {
   .evenements .description_evenements {
     height: 40vh;
+  }
+}
+@media screen and (max-width: 680px) {
+  .evenements .description_evenements {
+    background: linear-gradient(90deg, rgba(236, 141, 32, 0.4) 0%, rgba(230, 61, 94, 0.4) 50%, rgba(44, 246, 253, 0.2) 100%);
   }
 }
 .evenements .description_evenements p {
@@ -339,6 +350,7 @@ div {
 @media screen and (max-width: 680px) {
   .evenements .lessections_infosaccueil {
     margin-bottom: 5vh;
+    filter: saturate(1);
   }
 }
 .evenements .lessections_infosaccueil a {
@@ -419,6 +431,15 @@ div {
   width: 100%;
 }
 
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999999999;
+}
+
 footer {
   width: 100%;
   margin-top: 60vh;
@@ -441,13 +462,19 @@ footer .section_montagne img {
   user-select: none;
   pointer-events: none;
 }
+@media screen and (max-width: 680px) {
+  footer .section_montagne img {
+    width: 200%;
+    left: -60%;
+  }
+}
 footer .conteneur_logo_tim {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   width: 100vw;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-bottom: 5vh;
   gap: var(--margin-left-mobile);
 }
@@ -821,6 +848,15 @@ button {
     transform: translate(-2.7rem, -3.1rem) rotateZ(360deg);
   }
 }
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999999999;
+}
+
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
@@ -897,6 +933,11 @@ button {
   margin: 0 auto;
   transform: translateY(-400px) translateX(300px);
   z-index: -128;
+}
+@media screen and (max-width: 680px) {
+  .cube_container {
+    transform: translateY(-300px) translateX(200px);
+  }
 }
 
 .minicube {
