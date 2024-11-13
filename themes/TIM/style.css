@@ -297,18 +297,16 @@ div {
 }
 
 .evenements {
-  width: 80vw;
+  width: 70vw;
+  margin: 0 auto;
   margin-bottom: 5vh;
-}
-@media screen and (max-width: 680px) {
-  .evenements {
-    margin-left: var(--margin-left-mobile);
-  }
 }
 .evenements .description_evenements {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 2%;
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.5) 100%);
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
@@ -334,7 +332,7 @@ div {
   flex-direction: row-reverse;
 }
 .evenements .lessections_infosaccueil {
-  margin-bottom: 5vh;
+  margin-bottom: 25vh;
   filter: saturate(0);
   transition: 0.5s;
 }
@@ -1037,7 +1035,7 @@ button {
   height: 200px;
   position: relative;
   transform-style: preserve-3d;
-  transform: rotateX(-30deg) rotateY(30deg);
+  transform: rotateX(-20.93774deg) rotateY(-19.7173deg);
   transition: transform 0.1s ease-out;
   margin: 0 auto;
   transform: translateY(-400px) translateX(300px);
@@ -1099,17 +1097,6 @@ button {
   border-radius: 50%;
   transform: scale(1.2) translateX(80px) translateY(80px);
 }
-@media screen and (max-width: 1280px) {
-  .commundegrade {
-    width: 16vw;
-  }
-}
-@media screen and (max-width: 680px) {
-  .commundegrade {
-    width: 30vw;
-  }
-}
-
 .testdegrade {
   box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 200px 40px;
 }
@@ -1138,6 +1125,27 @@ button {
   height: 30vh;
   z-index: -130;
   transform: translateY(-440px) translateX(0px);
+}
+
+.degrade1event {
+  box-shadow: #ef925b 0px 0px 500px 130px;
+  filter: saturate(3);
+  opacity: 0.5;
+  transform: translateX(50px) translateY(370px);
+}
+
+.degrade2event {
+  box-shadow: var(--couleur-test-magenta) 25px 50px 500px 100px;
+  filter: saturate(3);
+  opacity: 0.7;
+  transform: translateX(900px) translateY(60px);
+}
+
+.degrade3event {
+  box-shadow: var(--couleur-test-cyan) 25px 50px 500px 100px;
+  filter: saturate(3);
+  opacity: 0.4;
+  transform: translateX(600px) translateY(350px);
 }
 
 .degrade1noir {

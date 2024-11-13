@@ -1,3 +1,5 @@
+// Section qui s'applique à tout les dégradés
+
 .commundegrade {
   position: absolute;
   height: 1vh;
@@ -8,13 +10,16 @@
   transform: scale(1.2) translateX(80px) translateY(80px);
 
   @media screen and (max-width: 1280px) {
-    width: 16vw;
+    // width: 16vw;
   }
 
   @media screen and (max-width: 680px) {
-    width: 30vw;
+    // width: 30vw;
   }
 }
+
+// Les dégradés individuels
+/////////////////////////////////////////////////
 
 .testdegrade {
   //border: 10px solid blueviolet;
@@ -51,6 +56,31 @@
   z-index: -130;
   transform: translateY(-440px) translateX(0px);
 }
+
+// Partie dédié pour la section évènement
+
+.degrade1event {
+  box-shadow: #ef925b 0px 0px 500px 130px;
+  filter: saturate(3);
+  opacity: 0.5;
+  transform: translateX(50px) translateY(370px);
+}
+
+.degrade2event {
+  box-shadow: var(--couleur-test-magenta) 25px 50px 500px 100px;
+  filter: saturate(3);
+  opacity: 0.7;
+  transform: translateX(900px) translateY(60px);
+}
+
+.degrade3event {
+  box-shadow: var(--couleur-test-cyan) 25px 50px 500px 100px;
+  filter: saturate(3);
+  opacity: 0.4;
+  transform: translateX(600px) translateY(350px);
+}
+
+// Partie de test qui n'est pas utilisé
 
 .degrade1noir {
   position: absolute;

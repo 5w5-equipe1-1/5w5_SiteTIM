@@ -4,8 +4,8 @@
         <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/test_separation.png" alt="fond_montagne">
     </div>
 
-<!-- Ajout du cube décoratif -->
-    <!-- <div class="cube_container">
+Ajout du cube décoratif
+    <div class="cube_container">
       <div class="minicube">
         <div class="face devant_cube"></div>
         <div class="face derriere_cube"></div>
@@ -14,7 +14,7 @@
         <div class="face haut_cube"></div>
         <div class="face bas_cube"></div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Un autre dégradé, ben oui! -->
     <div class="degrade_blanc"></div>

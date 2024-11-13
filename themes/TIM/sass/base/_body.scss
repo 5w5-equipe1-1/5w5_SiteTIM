@@ -43,6 +43,7 @@ body {
 
   //cacher le scroll horizontal
   overflow-x: hidden;
+  
 
   #scene {
     width: 200px;
@@ -142,18 +143,39 @@ div {
 //section ou on montre les concours et les événements
 
 .evenements {
-  width: 80vw;
+  width: 70vw;
+  margin: 0 auto;
   margin-bottom: 5vh;
-
-  @media screen and (max-width: 680px) {
-    margin-left: var(--margin-left-mobile);
-  }
 
   .description_evenements {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    //   background-color: blue;
+    padding: 2%;
+    // border-radius: 20px;
+
+    // background: blue;
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(35, 243, 255, 0.3) 0%,
+    //   rgba(255, 167, 66, 0.3) 23%,
+    //   rgba(255, 46, 64, 0.3) 50%,
+    //   rgba(255, 167, 66, 0.3) 76%,
+    //   rgba(35, 243, 255, 0.3) 100%
+    // );
+
+    // background: linear-gradient(
+    //   90deg,
+    //   rgb(236, 141, 32, 0.7) 0%,
+    //   rgb(230, 61, 94, 0.7) 100%
+    // );
+
+    background: linear-gradient(
+      90deg,
+      rgb(236, 141, 32, 0.7) 0%,
+      rgb(230, 61, 94, 0.7) 50%,
+      rgb(44, 246, 253, 0.5) 100%
+    );
 
     @media screen and (max-width: 1280px) {
       flex-direction: column;
@@ -183,7 +205,7 @@ div {
   }
 
   .lessections_infosaccueil {
-    margin-bottom: 5vh;
+    margin-bottom: 25vh;
     filter: saturate(0);
     transition: 0.5s;
 
@@ -283,4 +305,12 @@ div {
 
 .container {
   width: 100%;
+}
+.dot{
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999999999;
 }
