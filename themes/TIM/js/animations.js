@@ -99,16 +99,16 @@ function animer() {
 }
 
 // Écoute l'événement de scroll pour mettre à jour la cible de translation
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    VitesseScroll = Math.abs(scrollY - avantVitesseScroll);
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  VitesseScroll = Math.abs(scrollY - avantVitesseScroll);
 
-    // Calculer un facteur inverse basé sur la vitesse
-    const facteurInversion = Math.max(1 / (VitesseScroll + 1), 0.1); // Limite minimale de 0.1 pour éviter zéro
+  // Calculer un facteur inverse basé sur la vitesse
+  const facteurInversion = Math.max(1 / (VitesseScroll + 1), 0.1); // Limite minimale de 0.1 pour éviter zéro
 
-    // Détecte la direction du scroll et calcule la cible de translation
-    const direction = scrollY > avantVitesseScroll ? 1 : -1;
-    cibleTranslateY = (20 * facteurInversion) * direction; // Ajuster '20' selon l'intensité souhaitée
+  // Détecte la direction du scroll et calcule la cible de translation
+  const direction = scrollY > avantVitesseScroll ? 1 : -1;
+  cibleTranslateY = 20 * facteurInversion * direction; // Ajuster '20' selon l'intensité souhaitée
 
   // Met à jour la position précédente
   avantVitesseScroll = scrollY;
