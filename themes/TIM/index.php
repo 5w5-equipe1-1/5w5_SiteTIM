@@ -10,7 +10,7 @@
     <title>TIM - Accueil</title>
 </head>
 <body>
-    <header>
+    <<header>
         <div class="conteneur_logo_tim">
         <a href="<?php echo get_home_url();?>">
             <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
@@ -20,10 +20,11 @@
         </a>
         </div>
         <div class="conteneur_burger_recherche">
-            <div class="conteneur_barre_recherche">
+            <!-- <div class="conteneur_barre_recherche">
                 <input type="text" placeholder="Rechercher..." class="text_recherche" value name="s" id="s">
                 <button type="submit" id="searchsubmit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            </div> -->
+            <?php get_search_form(); ?>
         </div>
     </header>
     <!-- la page avec les information -->

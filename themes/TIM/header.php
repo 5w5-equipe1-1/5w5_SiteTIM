@@ -15,12 +15,14 @@
                 <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
             </a>
             <h2 href="<?php echo get_home_url();?>" class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
+   
         </div>
-        <div class="conteneur_burger_recherche">
-            <div class="conteneur_barre_recherche">
+       <div class="conteneur_burger_recherche">
+            <!-- <div class="conteneur_barre_recherche">
                 <input type="text" placeholder="Rechercher..." class="text_recherche" value name="s" id="s">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            </div> -->
+              <?php get_search_form(); ?>
             <div class="sceneBurguer" id="sceneBurguer">
                 <div class="cube" id="cube">
                     <div class="front face" id="front">
@@ -63,3 +65,4 @@
             </div>
         </div>
     </header>
+ 
