@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const galerie = document.querySelector('.wp-block-gallery');
 let images = document.querySelectorAll('.wp-block-image');
 let indexTranslate = 0;
+let indexImage = images.length;
 
 setInterval(() => {
     indexTranslate --;
@@ -54,9 +55,8 @@ setInterval(() => {
 
 function scrollGallery() {
     for(img of images) {
-        img.style.transform = `translateX(${indexTranslate}px)`;
+        img.style.transform = 'translateX('+ indexTranslate +'%)';
     }
-
 }
 
 function indexReset() {
@@ -64,7 +64,10 @@ function indexReset() {
         //si la position de limage est inferieur a 0px
         if(img.getBoundingClientRect().left < -300) {
             // mettre l'image a la fin de la galerie
-            galerie.append(img);
+            indexImage ++;
+            img.style.order = indexImage;
+            console.log(indexImage);
         }
     }
 }
+
