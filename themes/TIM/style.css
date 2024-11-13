@@ -665,24 +665,7 @@ li {
   margin-top: 1vh;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #222;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
-}
-
-.conteneur {
+.conteneur_404 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -704,32 +687,15 @@ body {
   max-width: 600px;
 }
 
-@keyframes colorfulShadow {
-  0% {
-    text-shadow: 5px 5px 10px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(65, 236, 183, 0.8);
-  }
-  25% {
-    text-shadow: -10px 5px 15px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(194, 83, 9, 0.8), 5px 5px 10px rgba(65, 236, 183, 0.8);
-  }
-  50% {
-    text-shadow: 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(11, 152, 170, 0.8), 5px 5px 10px rgba(176, 7, 61, 0.8), -5px -5px 10px rgba(65, 236, 183, 0.8);
-  }
-  75% {
-    text-shadow: -5px -5px 10px rgba(65, 236, 183, 0.8), 5px 5px 10px rgba(11, 152, 170, 0.8), -10px 10px 15px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8);
-  }
-  100% {
-    text-shadow: 5px 5px 10px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(65, 236, 183, 0.8);
-  }
-}
 .error-code {
   font-size: 14rem;
   letter-spacing: 10px;
-  color: #ffffff;
+  color: rgba(186, 186, 186, 0.3176470588);
+  text-shadow: 0 0 5px #ffffff;
   position: relative;
   display: inline-block;
   cursor: pointer;
   overflow: hidden;
-  animation: colorfulShadow 3s infinite linear; /* Applique l'animation en boucle */
 }
 
 .error-code::before,
@@ -743,18 +709,6 @@ body {
   z-index: -1;
   color: #c0c0c0;
   opacity: 0.8;
-}
-
-.error-code:hover::before {
-  animation: glitch-horizontal 0.2s infinite linear alternate-reverse;
-  color: rgb(121, 170, 170);
-  transform: translate(-2px, -2px);
-}
-
-.error-code:hover::after {
-  animation: glitch-vertical 0.2s infinite linear alternate-reverse;
-  color: rgb(238, 99, 129);
-  transform: translate(2px, 2px);
 }
 
 .error-text {

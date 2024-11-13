@@ -1,20 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #222;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-.conteneur {
+.conteneur_404 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +7,7 @@ body {
     padding: 20px;
     flex-wrap: wrap;
 }
+
 .erreur {
     display: flex;
     flex-direction: column;
@@ -30,41 +15,23 @@ body {
     justify-content: center;
     max-width: 600px;
 }
-.scene { 
-    max-width: 600px; 
+.scene {
+    max-width: 600px;
    
 }
-
-
-@keyframes colorfulShadow {
-    0% {
-        text-shadow: 5px 5px 10px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(65, 236, 183, 0.8);
-    }
-    25% {
-        text-shadow: -10px 5px 15px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(194, 83, 9, 0.8), 5px 5px 10px rgba(65, 236, 183, 0.8);
-    }
-    50% {
-        text-shadow: 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(11, 152, 170, 0.8), 5px 5px 10px rgba(176, 7, 61, 0.8), -5px -5px 10px rgba(65, 236, 183, 0.8);
-    }
-    75% {
-        text-shadow: -5px -5px 10px rgba(65, 236, 183, 0.8), 5px 5px 10px rgba(11, 152, 170, 0.8), -10px 10px 15px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8);
-    }
-    100% {
-        text-shadow: 5px 5px 10px rgba(11, 152, 170, 0.8), -5px -5px 10px rgba(176, 7, 61, 0.8), 10px -10px 15px rgba(194, 83, 9, 0.8), -10px 10px 15px rgba(65, 236, 183, 0.8);
-    }
-}
-
+ 
+ 
 .error-code {
     font-size: 14rem;
     letter-spacing: 10px;
-    color: #ffffff;
+    color: #bababa51;
+    text-shadow: 0 0 5px #ffffff;
     position: relative;
     display: inline-block;
     cursor: pointer;
     overflow: hidden;
-    animation: colorfulShadow 3s infinite linear; /* Applique l'animation en boucle */
 }
-
+ 
 .error-code::before,
 .error-code::after {
     content: '404';
@@ -77,19 +44,7 @@ body {
     color: #c0c0c0;
     opacity: 0.8;
 }
-
-.error-code:hover::before {
-    animation: glitch-horizontal 0.2s infinite linear alternate-reverse;
-    color: rgb(121, 170, 170);
-    transform: translate(-2px, -2px);
-}
-
-.error-code:hover::after {
-    animation: glitch-vertical 0.2s infinite linear alternate-reverse;
-    color: rgb(238, 99, 129);
-    transform: translate(2px, 2px);
-}
-
+ 
 .error-text {
     font-size: 2rem;
     margin-top: 10px;
@@ -120,7 +75,7 @@ body {
         transform: translate(-5px);
     }
 }
-
+ 
 @keyframes glitch-vertical {
     0% {
         clip-path: inset(0 25% 0 0);
@@ -155,8 +110,8 @@ body {
     transition: box-shadow 0.4s ease, color 0.4s ease;
     text-decoration: none;
 }
-
-
+ 
+ 
 .retour:hover {
    box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
    color: #fff;
