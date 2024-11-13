@@ -419,6 +419,15 @@ div {
   width: 100%;
 }
 
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999999999;
+}
+
 footer {
   width: 100%;
   margin-top: 60vh;
@@ -670,18 +679,18 @@ body {
 
 .conteneur {
   display: flex;
-  justify-content: center; /* Centre les deux éléments horizontalement */
-  align-items: center; /* Centre les éléments verticalement */
-  gap: 300px; /* Ajuste l'espace entre les deux conteneurs */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Garde la pleine hauteur pour un centrage vertical */
+  gap: 300px;
   padding: 20px;
-  flex-wrap: wrap; /* Permet l’adaptation sur petits écrans */
-  height: 100vh; /* Occupe toute la hauteur de l’écran */
+  flex-wrap: wrap;
 }
 
 .erreur {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* Centre le texte horizontalement */
   justify-content: center;
   max-width: 600px;
 }
@@ -691,7 +700,7 @@ body {
 }
 
 .error-code {
-  font-size: 10rem;
+  font-size: 14rem;
   letter-spacing: 10px;
   color: #ffffff;
   text-shadow: 0 0 5px #fff;
@@ -730,6 +739,8 @@ body {
   font-size: 2rem;
   margin-top: 10px;
   color: #fff;
+  text-align: center; /* Centre le texte dans le conteneur */
+  width: 100%; /* Assure que le texte occupe toute la largeur de son parent */
 }
 
 /* Glitch animations */
@@ -783,7 +794,8 @@ body {
   box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   color: #fff;
   border-radius: 20px;
-  padding: 2%;
+  padding: 8% 8%; /* Augmente la taille du bouton avec plus de padding */
+  font-size: 1.5rem; /* Augmente la taille du texte */
   margin-top: 5%;
   transition: box-shadow 0.4s ease, color 0.4s ease;
   text-decoration: none;
@@ -964,6 +976,15 @@ button {
     transform: translate(-2.7rem, -3.1rem) rotateZ(360deg);
   }
 }
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999999999;
+}
+
 /* ----------------------------------------------------- */
 /*Le Cube*/
 /* ----------------------------------------------------- */
