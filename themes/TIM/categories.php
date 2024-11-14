@@ -61,9 +61,8 @@
                     </svg>
                     </div>
             </div>
-
             <div class="galerie">
-    <?php
+                <?php
         if($cat->slug == 'jeux_video'){
             echo do_shortcode('[afficher_article_slug slug="jeux_video"]'); // Exécution du shortcode
         }else if($cat->slug == 'film'){
@@ -79,6 +78,8 @@
         }
         ?>
 </div>
+<div class="commundegrade degrade2event"></div>
+<div class="commundegrade degrade3event"></div>
             <div class="cours">
                 <?php
                 // Vérifiez si la catégorie est valide

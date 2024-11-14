@@ -1,9 +1,12 @@
 .section_hero {
   width: 100%;
+
+  // ATTENTION J'AI MIS UN HEIGHT POUR TESTER ICI
+  height: 100vh;
   // margin-top: 230vh;
 
   @media screen and (max-width: 680px) {
-    margin-top: 225vh;
+    // margin-top: 225vh;
   }
 
   .video_hero {
@@ -11,7 +14,7 @@
     opacity: 0.4;
 
     @media screen and (max-width: 680px) {
-      margin-top: 15vh;
+      // margin-top: 15vh;
     }
   }
 
@@ -37,7 +40,7 @@
     );
 
     @media screen and (max-width: 680px) {
-      margin-top: 14vh;
+      // margin-top: 14vh;
       width: 50vw;
     }
 

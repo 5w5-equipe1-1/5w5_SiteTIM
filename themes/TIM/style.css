@@ -91,16 +91,16 @@ h4 {
 }
 
 summary {
-  color: var(--couleur-primaire);
-  background-color: var(--couleur-secondaire);
-  padding: var(--padding-top-mobile);
-  font-size: larger;
-  width: 70vw;
   margin: 0 auto;
-  border-radius: var(--border-radius);
-  box-shadow: var(--couleur-orange) 0px 5px 15px;
-  transform: translateY(2vh);
+  width: 70vw;
+  padding: var(--padding-top-mobile);
+  color: var(--couleur-secondaire);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.335);
+  border-radius: 5px;
+  font-size: larger;
   font-family: Arial, Helvetica, sans-serif;
+  transform: translateY(0vh);
   user-select: none;
 }
 
@@ -273,11 +273,14 @@ body .description_multimedia .bulles_contenu {
   }
 }
 body .description_multimedia .bulles_contenu p {
+  display: flex;
+  align-items: center;
   border: 1px solid white;
   box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-  border-radius: 20px;
-  padding: 3% 1% 3% 1%;
+  border-radius: 5px;
+  padding: 50px 10px 50px 10px;
   margin: 2%;
+  text-align: center;
 }
 @media screen and (max-width: 1280px) {
   body .description_multimedia .bulles_contenu p {
@@ -306,7 +309,10 @@ div {
   flex-direction: row;
   justify-content: space-between;
   padding: 2%;
-  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.5) 100%);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
@@ -316,6 +322,11 @@ div {
 @media screen and (min-width: 1280px) {
   .evenements .description_evenements {
     height: 40vh;
+  }
+}
+@media screen and (max-width: 680px) {
+  .evenements .description_evenements {
+    background: linear-gradient(90deg, rgba(236, 141, 32, 0.4) 0%, rgba(230, 61, 94, 0.4) 50%, rgba(44, 246, 253, 0.2) 100%);
   }
 }
 .evenements .description_evenements p {
@@ -339,6 +350,7 @@ div {
 @media screen and (max-width: 680px) {
   .evenements .lessections_infosaccueil {
     margin-bottom: 5vh;
+    filter: saturate(1);
   }
 }
 .evenements .lessections_infosaccueil a {
@@ -361,18 +373,19 @@ div {
 }
 
 .description_cours {
-  color: var(--couleur-primaire);
-  background-color: var(--couleur-secondaire);
-  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
   width: 70vw;
   height: fit-content;
   margin: 0 auto;
   padding: var(--padding-top-mobile);
-  padding-top: 5vh;
+  padding-top: 3vh;
 }
 .description_cours p {
   width: 70vw;
-  color: var(--couleur-primaire);
+  color: var(--couleur-secondaire);
+  opacity: 0.8;
   margin: 0 auto;
 }
 
@@ -450,13 +463,19 @@ footer .section_montagne img {
   user-select: none;
   pointer-events: none;
 }
+@media screen and (max-width: 680px) {
+  footer .section_montagne img {
+    width: 200%;
+    left: -60%;
+  }
+}
 footer .conteneur_logo_tim {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   width: 100vw;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-bottom: 5vh;
   gap: var(--margin-left-mobile);
 }
@@ -575,20 +594,11 @@ li {
 
 .section_hero {
   width: 100%;
-}
-@media screen and (max-width: 680px) {
-  .section_hero {
-    margin-top: 225vh;
-  }
+  height: 100vh;
 }
 .section_hero .video_hero {
   width: 100%;
   opacity: 0.4;
-}
-@media screen and (max-width: 680px) {
-  .section_hero .video_hero {
-    margin-top: 15vh;
-  }
 }
 .section_hero .text_hero {
   text-align: center;
@@ -603,7 +613,6 @@ li {
 }
 @media screen and (max-width: 680px) {
   .section_hero .text_hero {
-    margin-top: 14vh;
     width: 50vw;
   }
 }
@@ -675,6 +684,13 @@ li {
   flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .conteneur_404 {
+    display: block;
+    gap: 0; /* Retire l'espacement inutile en mode block */
+    height: auto; /* Adapte la hauteur au contenu */
+  }
+}
 .erreur {
   display: flex;
   flex-direction: column;
@@ -690,27 +706,65 @@ li {
 .error-code {
   font-size: 14rem;
   letter-spacing: 10px;
-  color: rgba(186, 186, 186, 0.3176470588);
-  text-shadow: 0 0 5px #ffffff;
+  color: transparent;
   position: relative;
   display: inline-block;
   cursor: pointer;
   overflow: hidden;
+  background-clip: text;
+  text-shadow: 0 0px rgba(255, 255, 255, 0.1);
 }
 
-.error-code::before,
-.error-code::after {
+.error-code::before {
   content: "404";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  color: #c0c0c0;
-  opacity: 0.8;
+  background: radial-gradient(circle at 20% 30%, rgba(11, 152, 170, 0.4), transparent 10%), radial-gradient(circle at 80% 70%, rgba(176, 7, 61, 0.4), transparent 10%), radial-gradient(circle at 40% 80%, rgba(194, 83, 9, 0.4), transparent 10%), radial-gradient(circle at 60% 40%, rgba(65, 236, 183, 0.4), transparent 10%), radial-gradient(circle at 30% 60%, rgba(238, 99, 129, 0.3), transparent 8%);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: randomBubbles 15s infinite steps(30); /* Applique une animation aléatoire */
 }
 
+@keyframes randomBubbles {
+  0% {
+    background-position: 20% 30%;
+  }
+  10% {
+    background-position: 80% 70%;
+  }
+  20% {
+    background-position: 40% 80%;
+  }
+  30% {
+    background-position: 60% 40%;
+  }
+  40% {
+    background-position: 70% 20%;
+  }
+  50% {
+    background-position: 30% 60%;
+  }
+  60% {
+    background-position: 80% 30%;
+  }
+  70% {
+    background-position: 20% 80%;
+  }
+  80% {
+    background-position: 50% 50%;
+  }
+  90% {
+    background-position: 10% 10%;
+  }
+  100% {
+    background-position: 60% 90%;
+  }
+}
 .error-text {
   font-size: 2rem;
   margin-top: 10px;
@@ -1083,6 +1137,11 @@ button {
   transform: translateY(-400px) translateX(300px);
   z-index: -128;
 }
+@media screen and (max-width: 680px) {
+  .cube_container {
+    transform: translateY(-300px) translateX(200px);
+  }
+}
 
 .minicube {
   position: absolute;
@@ -1205,7 +1264,8 @@ button {
 /* ----------------------------------------------------- */
 .galerie {
   display: flex;
-  height: 20rem;
+  height: 30rem;
+  align-items: center;
 }
 .galerie .wp-block-gallery {
   display: flex;

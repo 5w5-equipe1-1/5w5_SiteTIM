@@ -30,16 +30,33 @@ h4 {
 }
 
 summary {
-  color: var(--couleur-primaire);
-  background-color: var(--couleur-secondaire);
-  padding: var(--padding-top-mobile);
-  font-size: larger;
-  width: 70vw;
   margin: 0 auto;
-  border-radius: var(--border-radius);
-  box-shadow: var(--couleur-orange) 0px 5px 15px;
-  transform: translateY(2vh);
+  width: 70vw;
+  padding: var(--padding-top-mobile);
+
+  color: var(--couleur-secondaire);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.335);
+
+  // box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 5px inset,
+  //   rgba(11, 152, 170, 0.5) 10px 10px 10px,
+  //   rgba(176, 7, 61, 0.5) -10px 10px 10px, rgba(194, 83, 9, 0.8) 0px -5px 10px;
+  // box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
+
+  border-radius: 5px;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgb(93, 51, 3) 0%,
+  //   rgb(57, 3, 12) 50%,
+  //   rgb(3, 45, 47) 100%
+  // );
+
+  // box-shadow: rgba(11, 152, 170, 0.5) 10px 10px 10px,
+  //   rgba(176, 7, 61, 0.5) -10px 10px 10px, rgba(194, 83, 9, 0.8) 0px -5px 10px;
+
+  font-size: larger;
   font-family: Arial, Helvetica, sans-serif;
+  transform: translateY(0vh);
   user-select: none;
 }
 
