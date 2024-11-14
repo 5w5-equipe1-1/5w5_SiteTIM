@@ -253,17 +253,20 @@ div {
 }
 
 .description_cours {
-  color: var(--couleur-primaire);
-  background-color: var(--couleur-secondaire);
-  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  border-radius: 5px;
+
   width: 70vw;
   height: fit-content;
   margin: 0 auto;
   padding: var(--padding-top-mobile);
-  padding-top: 5vh;
+  padding-top: 3vh;
+
   p {
     width: 70vw;
-    color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    opacity: 0.8;
     margin: 0 auto;
   }
 }
