@@ -684,6 +684,13 @@ li {
   flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .conteneur_404 {
+    display: block;
+    gap: 0; /* Retire l'espacement inutile en mode block */
+    height: auto; /* Adapte la hauteur au contenu */
+  }
+}
 .erreur {
   display: flex;
   flex-direction: column;
@@ -699,27 +706,65 @@ li {
 .error-code {
   font-size: 14rem;
   letter-spacing: 10px;
-  color: rgba(186, 186, 186, 0.3176470588);
-  text-shadow: 0 0 5px #ffffff;
+  color: transparent;
   position: relative;
   display: inline-block;
   cursor: pointer;
   overflow: hidden;
+  background-clip: text;
+  text-shadow: 0 0px rgba(255, 255, 255, 0.1);
 }
 
-.error-code::before,
-.error-code::after {
+.error-code::before {
   content: "404";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  color: #c0c0c0;
-  opacity: 0.8;
+  background: radial-gradient(circle at 20% 30%, rgba(11, 152, 170, 0.4), transparent 10%), radial-gradient(circle at 80% 70%, rgba(176, 7, 61, 0.4), transparent 10%), radial-gradient(circle at 40% 80%, rgba(194, 83, 9, 0.4), transparent 10%), radial-gradient(circle at 60% 40%, rgba(65, 236, 183, 0.4), transparent 10%), radial-gradient(circle at 30% 60%, rgba(238, 99, 129, 0.3), transparent 8%);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: randomBubbles 15s infinite steps(30); /* Applique une animation aléatoire */
 }
 
+@keyframes randomBubbles {
+  0% {
+    background-position: 20% 30%;
+  }
+  10% {
+    background-position: 80% 70%;
+  }
+  20% {
+    background-position: 40% 80%;
+  }
+  30% {
+    background-position: 60% 40%;
+  }
+  40% {
+    background-position: 70% 20%;
+  }
+  50% {
+    background-position: 30% 60%;
+  }
+  60% {
+    background-position: 80% 30%;
+  }
+  70% {
+    background-position: 20% 80%;
+  }
+  80% {
+    background-position: 50% 50%;
+  }
+  90% {
+    background-position: 10% 10%;
+  }
+  100% {
+    background-position: 60% 90%;
+  }
+}
 .error-text {
   font-size: 2rem;
   margin-top: 10px;
