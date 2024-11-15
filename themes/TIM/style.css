@@ -662,7 +662,7 @@ li {
 }
 
 .cours {
-  margin-top: 5vh;
+  margin-top: 25vh;
 }
 .cours .description_cours p {
   margin-top: 1vh;
@@ -851,15 +851,20 @@ button {
   color: var(--couleur-primaire);
 }
 
+.galerie {
+  margin-top: 30vh;
+}
+@media screen and (max-width: 1280px) {
+  .galerie {
+    margin-top: -20vh;
+  }
+}
+
 .wp-element-caption {
   position: fixed;
   width: 20px;
   height: 50px;
   color: white;
-}
-
-.galerie {
-  margin-top: 10vh;
 }
 
 .text_cercle {
@@ -1294,6 +1299,7 @@ button {
 @media screen and (max-width: 1280px) {
   .galerie .wp-block-gallery .wp-block-image {
     width: 50vw;
+    height: 70vh;
   }
 }
 .galerie .wp-block-gallery .wp-block-image img {
