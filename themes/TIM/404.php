@@ -33,7 +33,7 @@
         <h1 class="error-code">404</h1>
         <h1 class="error-text">Oups! Page introuvable</h1>
         <br /><br /><br /><br />
-        <a href="" class="retour">Retourner à la page d'accueil</a>
+        <a href="<?php echo get_home_url();?>" class="retour">Retourner à la page d'accueil</a>
       </div>
 
       <div class="scene" id="scene">

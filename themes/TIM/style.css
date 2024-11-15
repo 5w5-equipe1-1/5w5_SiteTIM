@@ -1061,6 +1061,7 @@ button {
   position: absolute;
   border-radius: 50%;
   z-index: -9999999999;
+  opacity: 0.5;
 }
 
 /* ----------------------------------------------------- */
@@ -1318,7 +1319,7 @@ button {
 
 @keyframes scrollLeft {
   to {
-    left: -200px;
+    left: -300px;
   }
 }
 .carrousel {
