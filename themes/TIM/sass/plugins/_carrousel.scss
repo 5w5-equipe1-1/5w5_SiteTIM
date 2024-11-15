@@ -19,11 +19,11 @@
       transform: scale(1);
       margin: 0;
       position: absolute;
-      //border: 2px solid var(--couleur-secondaire);
+      border: 2px solid var(--couleur-secondaire);
       border-radius: 5px;
-      box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px ,
-        rgba(176, 7, 61, 0.2) -5px 10px 20px ,
-        rgba(194, 83, 9, 0.3) 0px -10px 20px ;
+      // box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px ,
+      //   rgba(176, 7, 61, 0.2) -5px 10px 20px ,
+      //   rgba(194, 83, 9, 0.3) 0px -10px 20px ;
       // left: max(calc(200px * 8), 100%); - fait en JS
       //animation-delay: calc(30s / 8 * (8 - 1) * -1); - fait en JS
       animation-name: scrollLeft;
