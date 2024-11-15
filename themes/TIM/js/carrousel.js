@@ -43,29 +43,62 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//pour faire scroll la galerie
+// // //pour faire scroll la galerie
 // let images = document.querySelectorAll('.wp-block-image');
-// let indexTranslate = 0;
+// let indexOrder = images.length;
 
-// setInterval(() => {
-//     indexTranslate --;
-//     scrollGallery();
-//     indexReset();
-// }, 100);
+// for(img of images) {
+//   let indexTranslate = 0; 
+//   setInterval(() => {
+//     //pour faire scroll la galerie
+//     indexTranslate ++;
+//     translationGalerie();
+//   }, 20);
 
-// function scrollGallery() {
+//   function translationGalerie() {
 //     for(img of images) {
-//         img.style.transform = 'translateX('+ indexTranslate +'%)';
+//       img.style.transform = `translateX(-${indexTranslate}%)`;
 //     }
+//   }
 // }
 
-// function indexReset() {
-//     for(img of images) {
-//         //si la position de limage est inferieur a 0px
-//         if(img.getBoundingClientRect().left < -300) {
-//             // mettre l'image a la fin de la galerie
-
-//             console.log("remise a 0");
+// //API IntersectionObserver
+// // Crée un nouvel observateur pour détecter l'intersection de l'image avec le viewport
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+    
+//     let remiseA0 = false; 
+//       if (!entry.isIntersecting) {
+//         if(remiseA0 == false) {
+//           remiseA0 = true;
+//           //incrementer le indexorder pour que les images soit a la fin du
+//           indexOrder ++;
+//           //quand limage est en dehors du viewport
+//           entry.target.style.order = indexOrder;
+//           // entry.target.style.transform = 'translateX(0)';  
+//           observer.unobserve(entry.target);
+          
 //         }
-//     }
+//       } else {
+//         //quand limage est dans le viewport
+//         observer.observe(entry.target);
+//       }
+//   });
+// }, {
+//   root: null, // Utilise le viewport comme zone d'observation
+//   threshold: 0 // Détecte quand l'image est complètement sortie
+// });
+
+
+
+// // Observer chaque image et les envoayer à l'observateur
+// for(img of images) {
+//     observer.observe(img);
 // }
+
+// Avec le CSS caroussel 
+let images = document.querySelectorAll('.wp-block-image');
+for (let index = 0; index < images.length; index++) {
+  images[index].style.animationDelay = "calc(30s / 8 * (8 - " + index + ") * -1)";
+  images[index].style.left =  "max(calc(200px * " + images.length + "), 100%)";
+}

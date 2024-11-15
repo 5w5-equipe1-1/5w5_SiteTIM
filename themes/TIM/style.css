@@ -1266,16 +1266,31 @@ button {
   display: flex;
   height: 30rem;
   align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 .galerie .wp-block-gallery {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
   margin: 0;
 }
 .galerie .wp-block-gallery .wp-block-image {
-  margin: 10px;
-  width: 100%;
-  flex: 0 0 20%;
+  width: 13vw;
+  height: 40vh;
+  position: absolute;
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border: 2px solid var(--couleur-secondaire);
+  border-radius: 5px;
+}
+@media screen and (max-width: 1280px) {
+  .galerie .wp-block-gallery .wp-block-image {
+    width: 50vw;
+  }
 }
 .galerie .wp-block-gallery .wp-block-image img {
   width: 100%;
@@ -1285,6 +1300,11 @@ button {
   border-radius: 5px;
 }
 
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
 .carrousel {
   display: none;
   position: fixed;
