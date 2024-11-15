@@ -16,24 +16,41 @@
       // Animation infinie de défilement horizontal - source https://codepen.io/ramzibach-the-styleful/pen/LYoYejb
       width: 13vw;
       height: 40vh;
+      transform: scale(1);
+      margin: 0;
       position: absolute;
+      //border: 2px solid var(--couleur-secondaire);
+      border-radius: 5px;
+      box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px ,
+        rgba(176, 7, 61, 0.2) -5px 10px 20px ,
+        rgba(194, 83, 9, 0.3) 0px -10px 20px ;
       // left: max(calc(200px * 8), 100%); - fait en JS
       //animation-delay: calc(30s / 8 * (8 - 1) * -1); - fait en JS
       animation-name: scrollLeft;
       animation-duration: 30s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      border: 2px solid var(--couleur-secondaire);
-      border-radius: 5px;
+      :hover{
+        transform: scale(1.3);
+        filter: brightness(1.1);
+      }
+
       @media screen and (max-width: 1280px) {
         width: 50vw;
       }
+
       img {
         width: 100%;
         height: 100%;
         cursor: pointer;
         object-fit: cover;
         border-radius: 5px;
+        filter: saturate(0);
+        transition: 1s;
+        :hover{
+          transform: scale(1.3);
+          filter: saturate(1);
+        }
       }
     }
   }
