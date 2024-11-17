@@ -67,3 +67,15 @@
   z-index: -9999999999;
   opacity: 0.5;
 }
+
+//animation de scroll sur les evenements
+.lessections_infosaccueil {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.lessections_infosaccueil.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

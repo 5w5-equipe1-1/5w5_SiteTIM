@@ -114,5 +114,37 @@ window.addEventListener("scroll", () => {
   avantVitesseScroll = scrollY;
 });
 
-// Démarre l'animation
+// appeler l'animation
 requestAnimationFrame(animer);
+
+
+
+
+
+
+
+
+//animation de scoll 
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.lessections_infosaccueil');
+
+  const observerOptions = {
+   
+   
+    threshold: [0.1, 0.9] 
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0.1) {
+        entry.target.classList.add('visible');
+      } else if (entry.intersectionRatio < 0.9) {
+        entry.target.classList.remove('visible');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+});

@@ -60,8 +60,8 @@ function changerCurseur(event) {
 
 window.onload = function () {
   const body = document.body;
-  const nombreMaxDot = 500; // Nombre initial de points à générer
-  const maxDistance = 60; // Rayon de 60px pour détecter le curseur
+  const nombreMaxDot = 250; // Nombre initial de points à générer
+  const maxDistance = 100; // Rayon de 60px pour détecter le curseur
 
   // Tableau pour stocker les points
   const dots = [];
@@ -92,15 +92,19 @@ window.onload = function () {
     dots.push({ dot, x: randomX, y: randomY, timeout: null });
     compteurDot++;
 
-    // Supprimer le point le plus ancien si le nombre maximal est dépassé
-    if (compteurDot > nombreMaxDot) {
-      const oldestDot = dots.shift(); // Retirer le point le plus ancien du tableau
-      if (body.contains(oldestDot.dot)) {
-        body.removeChild(oldestDot.dot);
-        compteurDot--;
+       // Supprimer un point toutes les 5 secondes si le nombre de points dépasse la limite
+       if (compteurDot >= nombreMaxDot) {
+        setTimeout(() => {
+          // Retirer le point le plus ancien du tableau et le supprimer du DOM
+          const oldestDot = dots.shift(); // Retirer le point le plus ancien du tableau
+          if (body.contains(oldestDot.dot)) {
+            body.removeChild(oldestDot.dot); 
+            compteurDot--; // Réduire le compteur de points
+          }
+        }, 5000); // Supprimer le point après 5 secondes
       }
     }
-  }
+  
 
   // Détecter la position du curseur
   body.addEventListener("mousemove", (event) => {
@@ -134,7 +138,6 @@ window.onload = function () {
             // Vérifier si le point est toujours un enfant du body avant de le supprimer
             if (body.contains(point.dot)) {
               body.removeChild(point.dot); // Supprimer le point du DOM
-
               //diminue de 1 le compteur
               compteurDot--;
             }
@@ -145,5 +148,6 @@ window.onload = function () {
   });
 
   // Ajouter un nouveau point toutes les 0.2 secondes
-  setInterval(positionDot, 2000); // 200 ms = 0.2 sec
+  setInterval(positionDot, 200); // 200 ms = 0.2 sec
 };
+
