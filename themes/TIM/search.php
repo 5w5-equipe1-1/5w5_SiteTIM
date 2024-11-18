@@ -18,15 +18,17 @@
 
 ?>
         <maim>
-        <h2>Votre recherche : <?php echo $recherche;?></h2>
-                <div>
+          <div class="conteneur_search">
+              <div class="resultat_recherche"><h2>Votre recherche : </h2> <h2 class="recherche_text"><?php echo $recherche;?></h2></div>
+                    <div>
                         <?php if(have_posts()):
                                 while(have_posts()): the_post();      
                                 ?>
-
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+      
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
+          </div>  
         </maim>
         <?php get_footer(); ?>
         <!-- API fontawsome pour les icones -->
