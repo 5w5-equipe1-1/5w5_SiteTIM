@@ -10,7 +10,7 @@
     <title>TIM - Accueil</title>
 </head>
 <body>
-    <<header>
+    <header>
         <div class="conteneur_logo_tim">
         <a href="<?php echo get_home_url();?>">
             <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
