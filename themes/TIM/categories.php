@@ -62,25 +62,29 @@
                     </div>
             </div>
             <div class="galerie">
-                <?php
-        if($cat->slug == 'jeux_video'){
-            echo do_shortcode('[afficher_article_slug slug="jeux_video"]'); // Exécution du shortcode
-        }else if($cat->slug == 'film'){
-            echo do_shortcode('[afficher_article_slug slug="film"]'); // Exécution du shortcode
-        }else if($cat->slug == 'web'){
-            echo do_shortcode('[afficher_article_slug slug="web"]'); // Exécution du shortcode
-        }else if($cat->slug == 'design'){
-            echo do_shortcode('[afficher_article_slug slug="design"]'); // Exécution du shortcode
-        }else if($cat->slug == '3d'){
-            echo do_shortcode('[afficher_article_slug slug="3d"]'); // Exécution du shortcode 
-        }else if($cat->slug == 'formation_specifique'){
-            echo do_shortcode('[afficher_article_slug slug="formation_specifique"]'); // Exécution du shortcode
-        }
-        ?>
-</div>
+                <h2>Galerie</h2>
+                <div class="iamge_galerie">
+                    <?php
+                        if($cat->slug == 'jeux_video'){
+                            echo do_shortcode('[afficher_article_slug slug="jeux_video"]'); // Exécution du shortcode
+                        }else if($cat->slug == 'film'){
+                            echo do_shortcode('[afficher_article_slug slug="film"]'); // Exécution du shortcode
+                        }else if($cat->slug == 'web'){
+                            echo do_shortcode('[afficher_article_slug slug="web"]'); // Exécution du shortcode
+                        }else if($cat->slug == 'design'){
+                            echo do_shortcode('[afficher_article_slug slug="design"]'); // Exécution du shortcode
+                        }else if($cat->slug == '3d'){
+                            echo do_shortcode('[afficher_article_slug slug="3d"]'); // Exécution du shortcode 
+                        }else if($cat->slug == 'formation_specifique'){
+                            echo do_shortcode('[afficher_article_slug slug="formation_specifique"]'); // Exécution du shortcode
+                        }
+                    ?>
+                </div>
+            </div>
 <div class="commundegrade degrade2event"></div>
 <div class="commundegrade degrade3event"></div>
             <div class="cours">
+                <h2>Cours</h2>
                 <?php
                 // Vérifiez si la catégorie est valide
                 if (isset($cat)):

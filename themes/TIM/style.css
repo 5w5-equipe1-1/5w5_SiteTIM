@@ -61,15 +61,32 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /* ----------------------------------------------------- */
 h1 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 60px;
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
+  font-family: "ivyora-display", sans-serif;
+  font-style: italic;
+}
+
+.text_hero h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+}
+
+.conteneur_logo_tim a h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-style: normal;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 40px;
   color: var(--couleur-secondaire);
+  font-family: "ivyora-display", sans-serif;
+  font-style: italic;
+  text-align: left;
 }
 
 .bannieres h2 {
@@ -263,6 +280,10 @@ body .description_multimedia .bulles_contenu {
   display: flex;
   flex-direction: row;
   width: 80vw;
+  transition: 1s;
+}
+body .description_multimedia .bulles_contenu :hover {
+  filter: brightness(2);
 }
 @media screen and (max-width: 1280px) {
   body .description_multimedia .bulles_contenu {
@@ -270,28 +291,6 @@ body .description_multimedia .bulles_contenu {
     align-items: center;
     width: 100vw;
     text-align: center;
-  }
-}
-body .description_multimedia .bulles_contenu p {
-  display: flex;
-  align-items: center;
-  border: 1px solid white;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-  border-radius: 5px;
-  padding: 50px 10px 50px 10px;
-  margin: 2%;
-  text-align: center;
-}
-@media screen and (max-width: 1280px) {
-  body .description_multimedia .bulles_contenu p {
-    padding: 5%;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 680px) {
-  body .description_multimedia .bulles_contenu p {
-    padding: 10%;
-    width: 50%;
   }
 }
 
@@ -368,8 +367,11 @@ div {
 .cours {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 3vh;
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 10vh;
 }
 
 .description_cours {
@@ -438,12 +440,12 @@ footer {
 }
 @media screen and (max-width: 1280px) {
   footer {
-    margin-top: 40vh;
+    margin-top: 70vh;
   }
 }
 @media screen and (max-width: 680px) {
   footer {
-    margin-top: 20vh;
+    margin-top: 50vh;
   }
 }
 footer .section_montagne img {
@@ -480,6 +482,8 @@ footer .conteneur_logo_tim .TIM_entete {
   display: block;
   font-size: 23px;
   user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
 footer .info_footer {
   display: flex;
@@ -561,6 +565,36 @@ p {
   color: var(--couleur-secondaire);
   width: 90vw;
 }
+@media screen and (min-width: 1280px) {
+  .espace_gauche_descmulti p {
+    font-size: 20px;
+  }
+}
+
+.bulles_contenu p {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 5px;
+  padding: 50px 10px 50px 10px;
+  margin: 2%;
+  text-align: center;
+}
+@media screen and (max-width: 1280px) {
+  .bulles_contenu p {
+    padding: 5%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .bulles_contenu p {
+    padding: 10%;
+    width: 50%;
+  }
+}
+
 .info_action {
   font-size: 12pt;
   color: var(--couleur-secondaire);
@@ -585,11 +619,21 @@ li {
 
 .section_hero {
   width: 100%;
-  height: 100vh;
+  height: 130vh;
+}
+@media screen and (max-width: 680px) {
+  .section_hero {
+    height: 60vh;
+  }
 }
 .section_hero .video_hero {
   width: 100%;
   opacity: 0.4;
+}
+@media screen and (max-width: 680px) {
+  .section_hero .video_hero {
+    margin-top: 15vh;
+  }
 }
 .section_hero .text_hero {
   text-align: center;
@@ -612,9 +656,19 @@ li {
   padding: 1%;
   border-radius: 5px;
 }
+@media screen and (max-width: 680px) {
+  .section_hero .text_hero h1 {
+    font-size: 60px;
+  }
+}
 .section_hero .text_hero h3 {
   font-size: 4rem;
   padding: 3%;
+}
+@media screen and (max-width: 680px) {
+  .section_hero .text_hero h3 {
+    font-size: 20px;
+  }
 }
 
 .hovercurseur {
@@ -1279,19 +1333,29 @@ button {
 /* ----------------------------------------------------- */
 .galerie {
   display: flex;
-  height: 30rem;
-  align-items: center;
+  width: 70vw;
+  margin: 0 auto;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
   overflow-x: auto;
 }
-.galerie .wp-block-gallery {
+.galerie h2 {
+  margin-bottom: 10vh;
+}
+.galerie .iamge_galerie {
+  margin-top: 30vh;
+  margin-bottom: 20vh;
+}
+.galerie .iamge_galerie .wp-block-gallery {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   overflow: hidden;
   margin: 0;
 }
-.galerie .wp-block-gallery .wp-block-image {
+.galerie .iamge_galerie .wp-block-gallery .wp-block-image {
   width: 13vw;
   height: 40vh;
   transform: scale(1);
@@ -1304,17 +1368,17 @@ button {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-.galerie .wp-block-gallery .wp-block-image :hover {
+.galerie .iamge_galerie .wp-block-gallery .wp-block-image :hover {
   transform: scale(1.3);
   filter: brightness(1.1);
 }
 @media screen and (max-width: 1280px) {
-  .galerie .wp-block-gallery .wp-block-image {
+  .galerie .iamge_galerie .wp-block-gallery .wp-block-image {
     width: 50vw;
     height: 70vh;
   }
 }
-.galerie .wp-block-gallery .wp-block-image img {
+.galerie .iamge_galerie .wp-block-gallery .wp-block-image img {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1323,7 +1387,7 @@ button {
   filter: saturate(0);
   transition: 1s;
 }
-.galerie .wp-block-gallery .wp-block-image img :hover {
+.galerie .iamge_galerie .wp-block-gallery .wp-block-image img :hover {
   transform: scale(1.3);
   filter: saturate(1);
 }
