@@ -103,11 +103,11 @@
                 </p>
                 <br>
                 <div class="bulles_contenu">
-                <p>Créer des médias (images, vidéos, sons, animations);</p>
-                    <p>Concevoir le design et l’interactivité;</p>
-                    <p>Planifier la réalisation d’un projet et en effectuer le suivi;</p>
-                    <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université.</p>
-                    <p>Travailler en équipe;</p>
+                <p>Créer des médias (images, vidéos, sons, animations)</p>
+                    <p>Concevoir le design et l’interactivité</p>
+                    <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
+                    <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
+                    <p>Travailler en équipe</p>
                     <br>
                 </div>
             </div>

@@ -1,12 +1,11 @@
 .section_hero {
   width: 100%;
-
+  height: 130vh;
   // ATTENTION J'AI MIS UN HEIGHT POUR TESTER ICI
-  height: 100vh;
   // margin-top: 230vh;
 
   @media screen and (max-width: 680px) {
-    // margin-top: 225vh;
+    height: 60vh;
   }
 
   .video_hero {
@@ -14,7 +13,7 @@
     opacity: 0.4;
 
     @media screen and (max-width: 680px) {
-      // margin-top: 15vh;
+      margin-top: 15vh;
     }
   }
 
@@ -30,7 +29,6 @@
     padding: 2%;
     // margin-top: 8vh;
     user-select: none;
-
     border-radius: 100%;
     background: rgb(0, 0, 0);
     background: radial-gradient(
@@ -45,6 +43,9 @@
     }
 
     h1 {
+      @media screen and (max-width: 680px){
+        font-size: 60px;
+      }
       font-size: 6rem;
       padding: 1%;
       border-radius: 5px;
@@ -64,6 +65,9 @@
       //   rgba(103, 215, 249, 0.53) 10px 10px 10px inset;
     }
     h3 {
+      @media screen and (max-width: 680px){
+        font-size: 20px;
+      }
       font-size: 4rem;
       padding: 3%;
 
