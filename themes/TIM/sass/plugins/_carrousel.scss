@@ -69,6 +69,14 @@
   }
 }
 
+.wp-element-caption {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  color: white;
+  padding: 1vh;
+}
+
 @keyframes scrollLeft {
   to {
     left: -300px;

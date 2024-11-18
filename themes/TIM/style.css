@@ -816,6 +816,8 @@ li {
   color: #fff;
   text-align: center; /* Centre le texte dans le conteneur */
   width: 100%; /* Assure que le texte occupe toute la largeur de son parent */
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
 
 /* Glitch animations */
@@ -1401,6 +1403,14 @@ button {
 .galerie .iamge_galerie .wp-block-gallery .wp-block-image img :hover {
   transform: scale(1.3);
   filter: saturate(1);
+}
+
+.wp-element-caption {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  color: white;
+  padding: 1vh;
 }
 
 @keyframes scrollLeft {

@@ -14,12 +14,12 @@
         $cat = get_category_by_slug($_GET['category']);
         if (!$cat) {
             // Rediriger vers la page 404 si la catégorie n'est pas trouvée
-            require_once '404.php';
+            require_once '404.php'; //fait que le cube ne tourne pas
             exit;
         }
     }else{
         //amener a la page 404
-        require_once '404.php';
+        require_once '404.php'; //fait que le cube ne tourne pas
         exit;
     }
 
