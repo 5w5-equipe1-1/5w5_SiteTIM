@@ -25,88 +25,82 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // height: 100vh;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile)
-    var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
   font-family: var(--font-family-text);
-  // background-color: fuchsia;
-
-  //descativer le scroll vertical
-  // .stop-scrolling {
-  //   height: 100%;
-  //   overflow-y: hidden;
-  // }
-
-  //cacher le scroll horizontal
+//cacher le scroll horizontal
   overflow-x: hidden;
-
-  #scene {
-    width: 200px;
-    height: 200px;
-    perspective: 600px;
-    transition: perspective 1s;
+  .conteneur{
+    padding: var(--padding-ordi);
     margin: 0 auto;
-    margin-bottom: 35vh;
-    margin-top: 30vh;
-    position: relative;
-    z-index: 9;
-    transform: scale(1.5);
-
-    //Style pour tabelette
     @media screen and (max-width: 1280px) {
-      //margin-bottom: 30vh;
-      // margin-top: 610vh;
-      transform: scale(1.2);
+      padding: var(--padding-tablette);
     }
-
-    //Deuxième Style pour tabelette - Voir avec Gaby svp
-    @media screen and (max-width: 890px) {
-      //margin-bottom: 30vh;
-      // margin-top: 560vh;
-    }
-    //Style pour mobile
+ 
     @media screen and (max-width: 680px) {
-      // margin-top: 610vh;
-      // margin-bottom: 25%;
-    }
-  }
-
-  .description_multimedia {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    text-align: left;
-
-    display: flex;
-    flex-direction: column;
-
-    //garder en commentaire je fais des tests
-    // transform: translateX(50%);
-    // transition: transform 0.5s ease-out;
-
-    @media screen and (max-width: 680px) {
-      margin-top: var(--margin-top-mobile);
+      padding: var(--padding-mobil);
     }
 
-    .espace_gauche_descmulti {
-      margin-left: 2%;
+    //cube
+    #scene {
+      width: 200px;
+      height: 200px;
+      perspective: 600px;
+      transition: perspective 1s;
+      margin: 0 auto;
+      margin-bottom: 35vh;
+      margin-top: 30vh;
+      position: relative;
+      z-index: 9;
 
-      @media screen and (max-width: 680px) {
-        // margin-left: 5%;
+      transform: scale(1.5);
+  
+      //Style pour tabelette
+      @media screen and (max-width: 1280px) {
+        transform: scale(1.2);
       }
     }
+    .conteneur_info{
+      width: var(--width-text);
+      margin: 0 auto;
 
-    .bulles_contenu {
-      display: flex;
-      flex-direction: row;
-      width: 80vw;
-      transition: 1s;
-
-      @media screen and (max-width: 1280px) {
+      .description_multimedia {
+        margin-top: var(--margin-top);
+        margin-bottom: var(--margin-top);
+        margin: 0 auto;
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 100vw;
-        text-align: center;
+    
+        //garder en commentaire je fais des tests
+        // transform: translateX(50%);
+        // transition: transform 0.5s ease-out;
+    
+        @media screen and (max-width: 680px) {
+          margin-top: var(--margin-top-mobile);
+        }
+    
+        .espace_gauche_descmulti {
+          margin-left: var(--margin-mobil);
+    
+          @media screen and (max-width: 680px) {
+            // margin-left: 5%;
+          }
+        }
+    
+        .bulles_contenu {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: var(--width-text);
+          transition: 1s;
+          margin: 0 auto;
+    
+          @media screen and (max-width: 1280px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -129,8 +123,8 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2%;
     border-radius: 5px;
+    padding: 0%;
 
     // background: blue;
     // background: linear-gradient(
@@ -243,7 +237,6 @@ div {
   padding-top: 3vh;
 
   p {
-    width: 70vw;
     color: var(--couleur-secondaire);
     opacity: 0.8;
     margin: 0 auto;
@@ -251,7 +244,9 @@ div {
 }
 
 .contenufunky {
-  margin-top: 20vh;
+  margin-top: var(--margin-top);
+  width: var(--width-text);
+  margin: 0 auto;
 }
 
 .contenufunky h3 {

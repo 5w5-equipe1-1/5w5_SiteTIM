@@ -1,7 +1,24 @@
-.cours{
-    margin-top: 25vh;
 
-    .description_cours p {
-        margin-top: 1vh; //devoir convertir chaque post de la base de donne en block pour uqil y aille plusieurs p et que ca marche bien
+
+    .description_cours {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        width: 70vw;
+        height: fit-content;
+        margin: 0 auto;
+        padding: var(--padding-top-mobile);
+        padding-top: 3vh;
     }
+
+.texte_cours{
+    border-radius: 5px;
+    width: 5vh;
+    padding-top: 3vh;
+color: aqua
+;
+}
+.Sessions{
+}
+.préalable {
 }

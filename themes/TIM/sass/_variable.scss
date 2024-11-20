@@ -1,26 +1,39 @@
 :root {
-
-  --margin-mobil:5vw;
-  --padding-mobil:2vw; 
-
-  --margin-tablette:5vw;
-  --padding-tablette:2vw; 
-
-  --margin-ordi:5vw;
-  --padding-ordi:2vw; 
-
-  //police d'ecriture
-  --font-family-text: "Arial", sans-serif;
-  --font-family-titre: "ivyora-display", sans-serif;
-
+  // Mobil
+  --margin-mobil: 2vw;
+  --padding-mobil: 2vw;
+  //taille de la police
   --taille-paragrahpe-mobile: ;
+  --taille-titre-mobile: ;
+
+  // Tablette
+  --margin-tablette: 5vw;
+  --padding-tablette: 2vw;
+  //taille de la police
+  --taille-paragrahpe-tablette: ;
+  --taille-titre-tablette: ;
+
+  // Ordinateur
+  --margin-ordi: 5vw;
+  --padding-ordi: 2vw;
+  //taille de la police
+  --taille-paragrahpe-ordi: ;
+  --taille-titre-ordi: ;
+
+  //Universel
+  --margin-top: 10vh;
+  --width-text: 70vw;
+
+  //police d'ecriture - changer partout
+  --font-family-text: "Arial", sans-serif;
+  --font-family-titre: "century-gothic", sans-serif;
 
   //couleur
   --couleur-secondaire: #f0f0f0;
   --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
   --couleur-primaire-hover: #333333;
-  //Couleurs Test de Gaby
+
   --couleur-orange: #ffd472;
   --couleur-magenta: #ffaab1;
   --couleur-cyan: #96e7ff;
@@ -31,6 +44,9 @@
 
   //border radius
   --border-radius: 15px;
+
+  //Gap
+  --format-gap: 5%;
 
   //Pour le curseur personnalisé
   --mouse-x: 0px;

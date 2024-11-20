@@ -44,7 +44,7 @@ function changerCurseur(event) {
     miniPoint.style.visibility = "hidden";
 
     if (infoAction) {
-      infoAction.style.fontSize = "16pt";
+      infoAction.style.fontSize = "20pt";
       infoAction.style.opacity = "1";
     }
   } else {
@@ -53,7 +53,7 @@ function changerCurseur(event) {
 
     if (infoAction) {
       infoAction.style.fontSize = "12pt";
-      infoAction.style.opacity = "0.3";
+      infoAction.style.opacity = "0";
     }
   }
 }
@@ -92,19 +92,18 @@ window.onload = function () {
     dots.push({ dot, x: randomX, y: randomY, timeout: null });
     compteurDot++;
 
-       // Supprimer un point toutes les 5 secondes si le nombre de points dépasse la limite
-       if (compteurDot >= nombreMaxDot) {
-        setTimeout(() => {
-          // Retirer le point le plus ancien du tableau et le supprimer du DOM
-          const oldestDot = dots.shift(); // Retirer le point le plus ancien du tableau
-          if (body.contains(oldestDot.dot)) {
-            body.removeChild(oldestDot.dot); 
-            compteurDot--; // Réduire le compteur de points
-          }
-        }, 5000); // Supprimer le point après 5 secondes
-      }
+    // Supprimer un point toutes les 5 secondes si le nombre de points dépasse la limite
+    if (compteurDot >= nombreMaxDot) {
+      setTimeout(() => {
+        // Retirer le point le plus ancien du tableau et le supprimer du DOM
+        const oldestDot = dots.shift(); // Retirer le point le plus ancien du tableau
+        if (body.contains(oldestDot.dot)) {
+          body.removeChild(oldestDot.dot);
+          compteurDot--; // Réduire le compteur de points
+        }
+      }, 5000); // Supprimer le point après 5 secondes
     }
-  
+  }
 
   // Détecter la position du curseur
   body.addEventListener("mousemove", (event) => {
@@ -150,4 +149,3 @@ window.onload = function () {
   // Ajouter un nouveau point toutes les 0.2 secondes
   setInterval(positionDot, 200); // 200 ms = 0.2 sec
 };
-

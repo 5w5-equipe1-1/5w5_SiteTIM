@@ -22,15 +22,22 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /*Éléments a la racine du document*/
 /* ----------------------------------------------------- */
 :root {
-  --margin-mobil:5vw;
-  --padding-mobil:2vw;
-  --margin-tablette:5vw;
-  --padding-tablette:2vw;
-  --margin-ordi:5vw;
-  --padding-ordi:2vw;
-  --font-family-text: "Arial", sans-serif;
-  --font-family-titre: "ivyora-display", sans-serif;
+  --margin-mobil: 2vw;
+  --padding-mobil: 2vw;
   --taille-paragrahpe-mobile: ;
+  --taille-titre-mobile: ;
+  --margin-tablette: 5vw;
+  --padding-tablette: 2vw;
+  --taille-paragrahpe-tablette: ;
+  --taille-titre-tablette: ;
+  --margin-ordi: 5vw;
+  --padding-ordi: 2vw;
+  --taille-paragrahpe-ordi: ;
+  --taille-titre-ordi: ;
+  --margin-top: 10vh;
+  --width-text: 70vw;
+  --font-family-text: "Arial", sans-serif;
+  --font-family-titre: "century-gothic", sans-serif;
   --couleur-secondaire: #f0f0f0;
   --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
@@ -42,6 +49,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
   --border-radius: 15px;
+  --format-gap: 5%;
   --mouse-x: 0px;
   --mouse-y: 0px;
 }
@@ -55,7 +63,6 @@ h1 {
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
   font-family: var(--font-family-titre);
-  font-style: italic;
 }
 
 .text_hero h1 {
@@ -75,7 +82,6 @@ h2 {
   font-size: 40px;
   color: var(--couleur-secondaire);
   font-family: var(--font-family-titre);
-  font-style: italic;
   text-align: left;
 }
 
@@ -232,12 +238,25 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
   font-family: var(--font-family-text);
   overflow-x: hidden;
 }
-body #scene {
+body .conteneur {
+  padding: var(--padding-ordi);
+  margin: 0 auto;
+}
+@media screen and (max-width: 1280px) {
+  body .conteneur {
+    padding: var(--padding-tablette);
+  }
+}
+@media screen and (max-width: 680px) {
+  body .conteneur {
+    padding: var(--padding-mobil);
+  }
+}
+body .conteneur #scene {
   width: 200px;
   height: 200px;
   perspective: 600px;
@@ -250,36 +269,42 @@ body #scene {
   transform: scale(1.5);
 }
 @media screen and (max-width: 1280px) {
-  body #scene {
+  body .conteneur #scene {
     transform: scale(1.2);
   }
 }
-body .description_multimedia {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  text-align: left;
+body .conteneur .conteneur_info {
+  width: var(--width-text);
+  margin: 0 auto;
+}
+body .conteneur .conteneur_info .description_multimedia {
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-top);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 @media screen and (max-width: 680px) {
-  body .description_multimedia {
+  body .conteneur .conteneur_info .description_multimedia {
     margin-top: var(--margin-top-mobile);
   }
 }
-body .description_multimedia .espace_gauche_descmulti {
-  margin-left: 2%;
+body .conteneur .conteneur_info .description_multimedia .espace_gauche_descmulti {
+  margin-left: var(--margin-mobil);
 }
-body .description_multimedia .bulles_contenu {
+body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  justify-content: center;
+  align-items: center;
+  width: var(--width-text);
   transition: 1s;
+  margin: 0 auto;
 }
 @media screen and (max-width: 1280px) {
-  body .description_multimedia .bulles_contenu {
+  body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
     flex-direction: column;
     align-items: center;
-    width: 100vw;
     text-align: center;
   }
 }
@@ -297,8 +322,8 @@ div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2%;
   border-radius: 5px;
+  padding: 0%;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
   border-radius: 5px;
   background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
@@ -375,14 +400,15 @@ div {
   padding-top: 3vh;
 }
 .description_cours p {
-  width: 70vw;
   color: var(--couleur-secondaire);
   opacity: 0.8;
   margin: 0 auto;
 }
 
 .contenufunky {
-  margin-top: 20vh;
+  margin-top: var(--margin-top);
+  width: var(--width-text);
+  margin: 0 auto;
 }
 
 .contenufunky h3 {
@@ -458,7 +484,6 @@ footer .conteneur_logo_tim {
   justify-content: left;
   align-items: center;
   width: 100vw;
-  margin-left: 5%;
   margin-bottom: 5vh;
   gap: var(--margin-left-mobile);
 }
@@ -472,7 +497,7 @@ footer .conteneur_logo_tim .TIM_entete {
   display: block;
   font-size: 23px;
   user-select: none;
-  font-family: var(--font-family-titre);
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
 }
 footer .info_footer {
@@ -495,21 +520,6 @@ footer .info_footer .colonne_footer {
 footer .info_footer .colonne_footer .info_colonne_footer {
   margin: 0;
   width: fit-content;
-}
-footer .info_footer .colonne_footer .lesmedias {
-  display: flex;
-  gap: var(--margin-mobile);
-}
-@media screen and (max-width: 680px) {
-  footer .info_footer .colonne_footer .lesmedias {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 1280px) {
-  footer .info_footer .colonne_footer .lesmedias svg {
-    width: 30px;
-    height: 30px;
-  }
 }
 footer .info_footer .colonne_footer a {
   color: var(--couleur-secondaire);
@@ -540,6 +550,42 @@ footer h3 {
   user-select: none;
 }
 
+.les_reseaux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 680px) {
+  .les_reseaux {
+    align-content: flex-start;
+    margin-left: 10%;
+  }
+}
+.les_reseaux .lesmedias {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 680px) {
+  .les_reseaux .lesmedias {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .les_reseaux .lesmedias svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+.les_reseaux .lesmedias p {
+  filter: saturate(0) brightness(2);
+  transition: 0.5s;
+}
+.les_reseaux .lesmedias p:hover {
+  filter: saturate(1);
+}
+
 .titre_footer {
   color: var(--couleur-secondaire);
   width: 30vh;
@@ -553,7 +599,6 @@ footer h3 {
 
 p {
   color: var(--couleur-secondaire);
-  width: 90vw;
 }
 @media screen and (min-width: 1280px) {
   .espace_gauche_descmulti p {
@@ -562,7 +607,6 @@ p {
 }
 
 .bulles_contenu p {
-  font-weight: bold;
   display: flex;
   align-items: center;
   border: 1px solid white;
@@ -588,7 +632,7 @@ p {
 .info_action {
   font-size: 12pt;
   color: var(--couleur-secondaire);
-  opacity: 0.3;
+  opacity: 0;
   text-align: center;
   transform: translateY(-15vh);
   width: fit-content;
@@ -705,11 +749,22 @@ li {
   transform: translate(0.8rem, 0.6rem);
 }
 
-.cours {
-  margin-top: 25vh;
+.description_cours {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  width: 70vw;
+  height: fit-content;
+  margin: 0 auto;
+  padding: var(--padding-top-mobile);
+  padding-top: 3vh;
 }
-.cours .description_cours p {
-  margin-top: 1vh;
+
+.texte_cours {
+  border-radius: 5px;
+  width: 5vh;
+  padding-top: 3vh;
+  color: aqua;
 }
 
 .conteneur_404 {
@@ -1022,7 +1077,7 @@ button {
   gap: 3vh;
 }
 .conteneur_search .resultat_recherche .recherche_text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-text);
   font-style: normal;
 }
 

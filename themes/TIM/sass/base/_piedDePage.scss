@@ -25,7 +25,6 @@ footer {
     @media screen and (max-width: 680px) {
       width: 200%;
       left: -60%;
-
     }
   }
 
@@ -38,7 +37,7 @@ footer {
     width: 100vw;
 
     // margin-top: 20vh;
-    margin-left: 5%;
+    // margin-left: 5%;
     margin-bottom: 5vh;
     gap: var(--margin-left-mobile);
 
@@ -52,7 +51,7 @@ footer {
       display: block;
       font-size: 23px;
       user-select: none;
-      font-family: var(--font-family-titre);
+      font-family: Arial, Helvetica, sans-serif;
       font-style: normal;
     }
   }
@@ -79,23 +78,6 @@ footer {
         width: fit-content;
       }
 
-      .lesmedias {
-        display: flex;
-        gap: var(--margin-mobile);
-
-        @media screen and (max-width: 680px) {
-          flex-direction: column;
-        }
-
-        svg {
-          //Style pour tabelette
-          @media screen and (max-width: 1280px) {
-            width: 30px;
-            height: 30px;
-          }
-        }
-      }
-
       a {
         color: var(--couleur-secondaire);
         text-decoration: none;
@@ -116,7 +98,11 @@ footer {
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-evenly;
+
+      //ATTENTION MARGIN QUI PEUT RENDRE LE SITE DÉGEU
+      // //////////////////////////////////////////////////
       margin-left: 10%;
+
       margin-bottom: 25%;
       gap: var(--margin-bottom-mobile);
     }
@@ -128,6 +114,47 @@ footer {
 
   h3 {
     user-select: none;
+  }
+}
+
+.les_reseaux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 680px) {
+    align-content: flex-start;
+    margin-left: 10%;
+  }
+
+  .lesmedias {
+    display: flex;
+    align-items: center;
+    // width: 15%;
+    // gap: var(--format-gap);
+
+    @media screen and (max-width: 680px) {
+      flex-direction: column;
+    }
+
+    svg {
+      //Style pour tabelette
+      @media screen and (max-width: 1280px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    p {
+      filter: saturate(0) brightness(2);
+      transition: 0.5s;
+    }
+
+    p:hover {
+      filter: saturate(1);
+    }
   }
 }
 
