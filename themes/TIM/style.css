@@ -303,7 +303,6 @@ body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
   width: var(--width-text);
   transition: var(--transition-time);
   margin: 0 auto;
-  gap: 5%;
 }
 @media screen and (max-width: 1280px) {
   body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
