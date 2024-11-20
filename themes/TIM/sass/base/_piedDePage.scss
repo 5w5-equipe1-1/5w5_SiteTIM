@@ -37,7 +37,7 @@ footer {
     width: 100vw;
 
     // margin-top: 20vh;
-    margin-left: 5%;
+    // margin-left: 5%;
     margin-bottom: 5vh;
     gap: var(--margin-left-mobile);
 
@@ -98,7 +98,11 @@ footer {
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-evenly;
+
+      //ATTENTION MARGIN QUI PEUT RENDRE LE SITE DÉGEU
+      // //////////////////////////////////////////////////
       margin-left: 10%;
+
       margin-bottom: 25%;
       gap: var(--margin-bottom-mobile);
     }
@@ -117,11 +121,18 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 680px) {
+    align-content: flex-start;
+    margin-left: 10%;
+  }
 
   .lesmedias {
     display: flex;
     align-items: center;
-    width: 15%;
+    // width: 15%;
     // gap: var(--format-gap);
 
     @media screen and (max-width: 680px) {
