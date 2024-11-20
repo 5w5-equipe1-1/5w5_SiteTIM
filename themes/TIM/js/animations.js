@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*-----------------------------animation cligonement ecriture----------------------------------*/
 /*---------------------------------------------------------------------------------------------*/
  
-const textTableau = ["bonjour test", "comment ca va", "jaime les patates"];
+const textTableau = ["Perspective d'emplois", "Avenir", "Études suppérieures"];
 const elementBlink = document.querySelector(".contenue_desc");
  
 let i = 0;
