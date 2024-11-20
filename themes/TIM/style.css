@@ -343,11 +343,6 @@ div {
     background: linear-gradient(90deg, rgba(236, 141, 32, 0.4) 0%, rgba(230, 61, 94, 0.4) 50%, rgba(44, 246, 253, 0.2) 100%);
   }
 }
-.evenements .description_evenements p {
-  margin-left: var(--margin-left-mobile);
-  margin-right: var(--margin-right-mobile);
-  width: 98%;
-}
 @media screen and (max-width: 680px) {
   .evenements .description_evenements .contenu_img {
     margin-bottom: 5vh;

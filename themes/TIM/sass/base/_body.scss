@@ -27,15 +27,15 @@ body {
   align-items: center;
   background-color: var(--couleur-primaire);
   font-family: var(--font-family-text);
-//cacher le scroll horizontal
+  //cacher le scroll horizontal
   overflow-x: hidden;
-  .conteneur{
+  .conteneur {
     padding: var(--padding-ordi);
     margin: 0 auto;
     @media screen and (max-width: 1280px) {
       padding: var(--padding-tablette);
     }
- 
+
     @media screen and (max-width: 680px) {
       padding: var(--padding-mobil);
     }
@@ -53,13 +53,13 @@ body {
       z-index: 9;
 
       transform: scale(1.5);
-  
+
       //Style pour tabelette
       @media screen and (max-width: 1280px) {
         transform: scale(1.2);
       }
     }
-    .conteneur_info{
+    .conteneur_info {
       width: var(--width-text);
       margin: 0 auto;
 
@@ -69,23 +69,23 @@ body {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-    
+
         //garder en commentaire je fais des tests
         // transform: translateX(50%);
         // transition: transform 0.5s ease-out;
-    
+
         @media screen and (max-width: 680px) {
           margin-top: var(--margin-top-mobile);
         }
-    
+
         .espace_gauche_descmulti {
           margin-left: var(--margin-mobil);
-    
+
           @media screen and (max-width: 680px) {
             // margin-left: 5%;
           }
         }
-    
+
         .bulles_contenu {
           display: flex;
           flex-direction: row;
@@ -94,7 +94,7 @@ body {
           width: var(--width-text);
           transition: 1s;
           margin: 0 auto;
-    
+
           @media screen and (max-width: 1280px) {
             flex-direction: column;
             align-items: center;
@@ -169,10 +169,11 @@ div {
       );
     }
 
+    // ATTENTION - Contrôle du texte, balise p
     p {
-      margin-left: var(--margin-left-mobile);
-      margin-right: var(--margin-right-mobile);
-      width: 98%; //pour que les paragraphe aille la meme largeur que l'image
+      // margin-left: var(--margin-left-mobile);
+      // margin-right: var(--margin-right-mobile);
+      // width: 98%; //pour que les paragraphe aille la meme largeur que l'image
     }
 
     .contenu_img {
@@ -236,6 +237,7 @@ div {
   padding: var(--padding-top-mobile);
   padding-top: 3vh;
 
+  // ATTENTION - Contrôle du texte, balise p
   p {
     color: var(--couleur-secondaire);
     opacity: 0.8;
@@ -249,6 +251,7 @@ div {
   margin: 0 auto;
 }
 
+// ATTENTION - Contrôle du texte, balise h3
 .contenufunky h3 {
   font-size: 23pt;
   padding: 2%;
@@ -270,6 +273,7 @@ div {
   border-radius: 50%;
 }
 
+// ATTENTION - Contrôle du texte, balise p
 .lespointsfunky p {
   display: flex;
   align-items: center;
@@ -298,4 +302,3 @@ div {
 .container {
   width: 100%;
 }
-
