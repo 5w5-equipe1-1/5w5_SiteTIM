@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>">
-    <link rel="stylesheet" href="https://use.typekit.net/law8uer.css">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/law8uer.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/dnl3dwa.css">
     <title>TIM - Accueil</title>
 </head>
 <body>
@@ -98,10 +99,6 @@
         <div class="description_multimedia">
             <h1>Qu'est ce que le multimédia?</h1>
             <div class="espace_gauche_descmulti">
-                <p>Tout le long de ta formation, tu réaliseras de nombreux projets amusants, diversifiés et stimulants qui te permettront d’explorer les multiples facettes de l’intégration multimédia.  Tu créeras notamment des jeux vidéos, sites Web, animations, modélisation 3D, vidéos, applications mobiles, environnements immersifs, applications de réalité virtuelle et augmentée, etc.</p>
-                <p>Tu apprendras à concevoir et réaliser des projets numériques et interactifs tels que des jeux vidéos, sites web, modélisations 3D, animations, vidéos, application de réalité virtuelle, etc. En particulier, tu apprendras à :
-                </p>
-                <br>
                 <div class="bulles_contenu">
                 <p>Créer des médias (images, vidéos, sons, animations)</p>
                     <p>Concevoir le design et l’interactivité</p>
