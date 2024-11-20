@@ -1,17 +1,14 @@
 //scroll bar
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--couleur-secondaire);
+  background-color: transparent;
   border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--couleur-primaire);
+  background-color: var(--couleur-secondaire);
   border-radius: 15px;
   border: 1px solid var(--couleur-secondaire);
-  :hover {
-    background-color: var(--couleur-primaire-hover);
-  }
 }
 
 ::-webkit-scrollbar-button {
@@ -54,11 +51,13 @@ body {
     margin-top: 30vh;
     position: relative;
     z-index: 9;
+    transform: scale(1.5);
 
     //Style pour tabelette
     @media screen and (max-width: 1280px) {
       //margin-bottom: 30vh;
       // margin-top: 610vh;
+      transform: scale(1.2);
     }
 
     //Deuxième Style pour tabelette - Voir avec Gaby svp

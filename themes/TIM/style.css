@@ -42,9 +42,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --font-family-titre: ;
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
-  --couleur-secondaire-hover: #c0c0c0;
   --couleur-primaire: #1a1a1a;
-  --couleur-primaire-hover: #2a2a2a;
   --couleur-orange: #ffd472;
   --couleur-magenta: #ffaab1;
   --couleur-cyan: #96e7ff;
@@ -219,17 +217,14 @@ header .conteneur_burger_recherche .shrink {
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--couleur-secondaire);
+  background-color: transparent;
   border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--couleur-primaire);
+  background-color: var(--couleur-secondaire);
   border-radius: 15px;
   border: 1px solid var(--couleur-secondaire);
-}
-::-webkit-scrollbar-thumb :hover {
-  background-color: var(--couleur-primaire-hover);
 }
 
 ::-webkit-scrollbar-button {
@@ -260,6 +255,12 @@ body #scene {
   margin-top: 30vh;
   position: relative;
   z-index: 9;
+  transform: scale(1.5);
+}
+@media screen and (max-width: 1280px) {
+  body #scene {
+    transform: scale(1.2);
+  }
 }
 body .description_multimedia {
   margin-top: 10vh;
@@ -925,6 +926,7 @@ button {
   top: 15%;
   left: 5%;
   transition: 1s;
+  transform: scale(0.65);
 }
 .text_cercle .effetbulle {
   background-color: var(--couleur-primaire);
@@ -933,7 +935,7 @@ button {
   animation: rotateText 25s linear infinite;
 }
 .text_cercle .text {
-  fill: rgba(255, 255, 255, 0.836);
+  fill: rgba(255, 255, 255, 0.447);
   font-size: 1.33em;
   user-select: none;
 }
@@ -1140,6 +1142,21 @@ button {
 .lessections_infosaccueil.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.contenue_desc {
+  font-size: 2.8rem;
+  position: relative;
+}
+.contenue_desc::after {
+  content: "|";
+  animation: clignotement 500ms step-start infinite;
+  position: absolute;
+}
+@keyframes clignotement {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* ----------------------------------------------------- */
