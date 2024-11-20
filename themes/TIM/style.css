@@ -22,22 +22,15 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /*Éléments a la racine du document*/
 /* ----------------------------------------------------- */
 :root {
-  --margin-mobil:2vw;
-  --padding-mobil:2vw;
-  --taille-paragrahpe-mobile: ;
-  --taille-titre-mobile: ;
-  --margin-tablette:5vw;
-  --padding-tablette:2vw;
-  --taille-paragrahpe-tablette: ;
-  --taille-titre-tablette: ;
-  --margin-ordi:5vw;
-  --padding-ordi:2vw;
-  --taille-paragrahpe-ordi: ;
-  --taille-titre-ordi: ;
-  --margin-top: 10vh;
-  --width-text: 70vw;
+  --margin-mobil: 5vw;
+  --padding-mobil: 2vw;
+  --margin-tablette: 5vw;
+  --padding-tablette: 2vw;
+  --margin-ordi: 5vw;
+  --padding-ordi: 2vw;
   --font-family-text: "Arial", sans-serif;
-  --font-family-titre: "century-gothic", sans-serif;
+  --font-family-titre: "ivyora-display", sans-serif;
+  --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
   --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
@@ -49,6 +42,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
   --border-radius: 15px;
+  --format-gap: 5%;
   --mouse-x: 0px;
   --mouse-y: 0px;
 }
@@ -180,7 +174,10 @@ header .conteneur_burger_recherche .conteneur_barre_recherche {
   justify-content: center;
   align-items: center;
 }
-header .conteneur_burger_recherche .conteneur_barre_recherche .fa-magnifying-glass {
+header
+  .conteneur_burger_recherche
+  .conteneur_barre_recherche
+  .fa-magnifying-glass {
   color: var(--couleur-secondaire);
   font-size: 30px;
 }
@@ -188,7 +185,10 @@ header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
   display: none;
 }
 @media screen and (min-width: 1280px) {
-  header .conteneur_burger_recherche .conteneur_barre_recherche .text_recherche {
+  header
+    .conteneur_burger_recherche
+    .conteneur_barre_recherche
+    .text_recherche {
     display: block;
     text-decoration: none;
     background-color: transparent;
@@ -288,7 +288,11 @@ body .conteneur .conteneur_info .description_multimedia {
     margin-top: var(--margin-top-mobile);
   }
 }
-body .conteneur .conteneur_info .description_multimedia .espace_gauche_descmulti {
+body
+  .conteneur
+  .conteneur_info
+  .description_multimedia
+  .espace_gauche_descmulti {
   margin-left: var(--margin-mobil);
 }
 body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
@@ -325,7 +329,12 @@ div {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
   border-radius: 5px;
-  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(236, 141, 32, 0.7) 0%,
+    rgba(230, 61, 94, 0.7) 50%,
+    rgba(44, 246, 253, 0.3) 100%
+  );
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
@@ -339,7 +348,12 @@ div {
 }
 @media screen and (max-width: 680px) {
   .evenements .description_evenements {
-    background: linear-gradient(90deg, rgba(236, 141, 32, 0.4) 0%, rgba(230, 61, 94, 0.4) 50%, rgba(44, 246, 253, 0.2) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(236, 141, 32, 0.4) 0%,
+      rgba(230, 61, 94, 0.4) 50%,
+      rgba(44, 246, 253, 0.2) 100%
+    );
   }
 }
 .evenements .description_evenements p {
@@ -557,7 +571,8 @@ footer h3 {
 }
 .les_reseaux .lesmedias {
   display: flex;
-  gap: var(--format-gap);
+  align-items: center;
+  width: 15%;
 }
 @media screen and (max-width: 680px) {
   .les_reseaux .lesmedias {
@@ -566,12 +581,16 @@ footer h3 {
 }
 @media screen and (max-width: 1280px) {
   .les_reseaux .lesmedias svg {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 }
 .les_reseaux .lesmedias p {
-  width: 100%;
+  filter: saturate(0) brightness(2);
+  transition: 0.5s;
+}
+.les_reseaux .lesmedias p:hover {
+  filter: saturate(1);
 }
 
 .titre_footer {
@@ -598,7 +617,9 @@ p {
   display: flex;
   align-items: center;
   border: 1px solid white;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+    rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 5px;
   padding: 50px 10px 50px 10px;
   margin: 2%;
@@ -666,7 +687,11 @@ li {
   user-select: none;
   border-radius: 100%;
   background: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 55%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.7) 20%,
+    rgba(0, 0, 0, 0) 55%
+  );
 }
 @media screen and (max-width: 680px) {
   .section_hero .text_hero {
@@ -792,7 +817,15 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 30%, rgba(11, 152, 170, 0.4), transparent 10%), radial-gradient(circle at 80% 70%, rgba(176, 7, 61, 0.4), transparent 10%), radial-gradient(circle at 40% 80%, rgba(194, 83, 9, 0.4), transparent 10%), radial-gradient(circle at 60% 40%, rgba(65, 236, 183, 0.4), transparent 10%), radial-gradient(circle at 30% 60%, rgba(238, 99, 129, 0.3), transparent 8%);
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(11, 152, 170, 0.4),
+      transparent 10%
+    ),
+    radial-gradient(circle at 80% 70%, rgba(176, 7, 61, 0.4), transparent 10%),
+    radial-gradient(circle at 40% 80%, rgba(194, 83, 9, 0.4), transparent 10%),
+    radial-gradient(circle at 60% 40%, rgba(65, 236, 183, 0.4), transparent 10%),
+    radial-gradient(circle at 30% 60%, rgba(238, 99, 129, 0.3), transparent 8%);
   background-size: 300% 300%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -893,7 +926,9 @@ li {
 .retour {
   border: 2px solid white;
   text-align: center;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+    rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   color: #fff;
   border-radius: 20px;
   padding: 8% 8%; /* Augmente la taille du bouton avec plus de padding */
@@ -904,7 +939,9 @@ li {
 }
 
 .retour:hover {
-  box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset,
+    rgba(65, 65, 65, 0.25) -5px 10px 20px inset,
+    rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
   color: #fff;
 }
 
@@ -954,7 +991,9 @@ button {
 }
 .text_cercle .effetbulle {
   background-color: var(--couleur-primaire);
-  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset,
+    rgba(176, 7, 61, 0.2) -5px 10px 20px inset,
+    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 50%;
   animation: rotateText 25s linear infinite;
 }
@@ -1041,7 +1080,12 @@ button {
   position: absolute;
   z-index: -1000;
   background: rgb(239, 170, 91);
-  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(236, 141, 32) 0%,
+    rgb(230, 61, 94) 50%,
+    rgb(44, 246, 253) 100%
+  );
 }
 
 .conteneur_search {
@@ -1217,7 +1261,8 @@ button {
   width: 200px;
   height: 200px;
   background: black;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px, rgba(255, 255, 255, 0.6) 0px 0px 25px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.6) 0px 0px 25px 0px inset;
   border: 1.5px solid var(--couleur-secondaire);
   display: flex;
   flex-direction: column;
@@ -1281,8 +1326,14 @@ button {
   height: 200px;
   border: 2px solid rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.05);
-  background: linear-gradient(90deg, rgba(255, 167, 66, 0.1) 0%, rgba(255, 46, 64, 0.1) 50%, rgba(35, 243, 255, 0.1) 100%);
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px, rgba(255, 255, 255, 0.3) 0px 7px 29px 0px inset;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 167, 66, 0.1) 0%,
+    rgba(255, 46, 64, 0.1) 50%,
+    rgba(35, 243, 255, 0.1) 100%
+  );
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px,
+    rgba(255, 255, 255, 0.3) 0px 7px 29px 0px inset;
 }
 
 .devant_cube {
@@ -1343,7 +1394,8 @@ button {
 .degrade_blanc {
   margin: 0 auto;
   position: relative;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 60px 100px 200px, rgba(255, 255, 255, 0.3) 0px 0px 100px 10px inset;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 60px 100px 200px,
+    rgba(255, 255, 255, 0.3) 0px 0px 100px 10px inset;
   border-radius: 50%;
   width: 20vw;
   height: 30vh;
@@ -1380,7 +1432,8 @@ button {
   left: 25%;
   z-index: -100;
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px, rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px,
+    rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
 }
 /* ----------------------------------------------------- */
 /*Plugins*/
@@ -1495,4 +1548,4 @@ button {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

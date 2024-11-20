@@ -1,35 +1,34 @@
 :root {
-
-// Mobil
-  --margin-mobil:2vw;
-  --padding-mobil:2vw; 
+  // Mobil
+  --margin-mobil: 2vw;
+  --padding-mobil: 2vw;
   //taille de la police
   --taille-paragrahpe-mobile: ;
   --taille-titre-mobile: ;
 
-// Tablette
-  --margin-tablette:5vw;
-  --padding-tablette:2vw; 
+  // Tablette
+  --margin-tablette: 5vw;
+  --padding-tablette: 2vw;
   //taille de la police
   --taille-paragrahpe-tablette: ;
   --taille-titre-tablette: ;
 
-// Ordinateur
-  --margin-ordi:5vw;
-  --padding-ordi:2vw; 
+  // Ordinateur
+  --margin-ordi: 5vw;
+  --padding-ordi: 2vw;
   //taille de la police
   --taille-paragrahpe-ordi: ;
   --taille-titre-ordi: ;
 
-//Universel
---margin-top: 10vh;
---width-text : 70vw;
+  //Universel
+  --margin-top: 10vh;
+  --width-text: 70vw;
 
-//police d'ecriture - changer partout
+  //police d'ecriture - changer partout
   --font-family-text: "Arial", sans-serif;
-  --font-family-titre: "century-gothic", sans-serif;  
+  --font-family-titre: "century-gothic", sans-serif;
 
-//couleur
+  //couleur
   --couleur-secondaire: #f0f0f0;
   --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
@@ -43,10 +42,13 @@
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
 
-//border radius
+  //border radius
   --border-radius: 15px;
 
-//Pour le curseur personnalisé
+  //Gap
+  --format-gap: 5%;
+
+  //Pour le curseur personnalisé
   --mouse-x: 0px;
   --mouse-y: 0px;
 }
