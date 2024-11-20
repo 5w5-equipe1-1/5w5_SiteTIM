@@ -65,7 +65,7 @@
   position: absolute;
   border-radius: 50%;
   z-index: -9999999999;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 //animation de scroll sur les evenements
@@ -95,4 +95,11 @@
       opacity: 0;
     }
   }
+}
+
+.contenue_desc{
+  font-family: var(--font-family-titre);
+  color: var(--couleur-secondaire);
+  letter-spacing: var(--letter-spacing);
+  font-weight: bold;
 }

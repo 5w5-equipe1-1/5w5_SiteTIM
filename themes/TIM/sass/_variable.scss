@@ -17,7 +17,7 @@
   --margin-ordi: 5vw;
   --padding-ordi: 2vw;
   //taille de la police
-  --taille-paragrahpe-ordi: ;
+  --taille-paragrahpe-ordi: 1.3rem ;
   --taille-titre-ordi: ;
 
   //Universel
@@ -28,7 +28,9 @@
   --font-family-text: "Arial", sans-serif;
   --font-family-titre: "century-gothic", sans-serif;
 
-  //couleur
+  --letter-spacing: 4px;
+
+//couleur
   --couleur-secondaire: #f0f0f0;
   --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
@@ -51,4 +53,6 @@
   //Pour le curseur personnalisé
   --mouse-x: 0px;
   --mouse-y: 0px;
+
+  --transition-time: 1s;
 }

@@ -98,20 +98,15 @@
     <div class="conteneur_info">
         <div class="description_multimedia">
             <h1>Qu'est ce que le multimédia?</h1>
-            <div class="espace_gauche_descmulti">
-                <div class="bulles_contenu">
-                <p>Créer des médias (images, vidéos, sons, animations)</p>
-                    <p>Concevoir le design et l’interactivité</p>
-                    <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
-                    <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
-                    <p>Travailler en équipe</p>
-                    <br>
-                </div>
+            <div class="bulles_contenu">
+                <p>Créer des médias</p>
+                <p>Concevoir le design et l’interactivité</p>
+                <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
+                <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
+                <p>Travailler en équipe</p>
+                
             </div>
         </div>
-        
-        <!-- test animation -->
-        <div class="contenue_desc"></div>
 
         <div class="evenements">
             <div class="commundegrade degrade1event"></div>
@@ -157,6 +152,8 @@
             <h2>Compétences Techniques</h2>
         </div>
         <div class="contenufunky">
+            <!-- test animation -->
+            <div class="contenue_desc"></div> 
             <h3>85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>
             <ul class="lespointsfunky">
                 <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo;</p>
