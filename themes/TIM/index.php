@@ -104,7 +104,6 @@
                 <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
                 <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
                 <p>Travailler en équipe</p>
-                
             </div>
         </div>
 
@@ -134,7 +133,7 @@
                     <div class="contenu_img">
                         <h3>Game Jams</h3>
                         <p>Les étudiants peuvent participer à des concours de création de 
-                            mini jeux vidéo, comme ceux organisés par le Cégep de Valleyfield. 
+                            jeux vidéo, comme ceux organisés par le Cégep de Valleyfield. 
                             Ces événements permettent de développer leurs compétences dans le 
                             domaine du jeu. Des prix de 1 500 $, 1 000 $ et 750 $ sont offerts 
                             aux trois meilleures équipes.

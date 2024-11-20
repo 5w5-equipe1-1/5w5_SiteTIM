@@ -277,7 +277,7 @@ body .conteneur #scene {
   transition: perspective var(--transition-time);
   margin: 0 auto;
   margin-bottom: 35vh;
-  margin-top: 30vh;
+  margin-top: 40vh;
   position: relative;
   z-index: 9;
   transform: scale(1.5);
@@ -310,6 +310,7 @@ body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
   width: var(--width-text);
   transition: var(--transition-time);
   margin: 0 auto;
+  gap: 5%;
 }
 @media screen and (max-width: 1280px) {
   body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
@@ -393,6 +394,7 @@ div {
   width: 70vw;
   margin: 0 auto;
   margin-top: 10vh;
+  margin-bottom: 6vh;
 }
 
 .description_cours {
@@ -972,19 +974,12 @@ button {
   }
 }
 
-.wp-element-caption {
-  position: fixed;
-  width: 20px;
-  height: 50px;
-  color: white;
-}
-
 .text_cercle {
   position: absolute;
   top: 15%;
   left: 5%;
   transition: 1s;
-  transform: scale(0.65);
+  transform: scale(0.5);
 }
 .text_cercle .effetbulle {
   background-color: var(--couleur-primaire);
@@ -1441,8 +1436,8 @@ button {
   margin-bottom: 10vh;
 }
 .galerie .iamge_galerie {
-  margin-top: 30vh;
-  margin-bottom: 20vh;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
 }
 .galerie .iamge_galerie .wp-block-gallery {
   display: flex;
@@ -1451,54 +1446,66 @@ button {
   overflow: hidden;
   margin: 0;
 }
-.galerie .iamge_galerie .wp-block-gallery .wp-block-image {
-  width: 13vw;
+.galerie .iamge_galerie .wp-block-gallery figure.wp-block-image {
+  width: 40vh;
   height: 40vh;
   transform: scale(1);
   margin: 0;
   position: absolute;
-  border: 2px solid var(--couleur-secondaire);
-  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
   animation-name: scrollLeft;
-  animation-duration: 30s;
+  animation-duration: 50s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  transition: var(--transition-time);
 }
-.galerie .iamge_galerie .wp-block-gallery .wp-block-image :hover {
+.galerie .iamge_galerie .wp-block-gallery figure.wp-block-image:hover {
   transform: scale(1.3);
   filter: brightness(1.1);
 }
 @media screen and (max-width: 1280px) {
-  .galerie .iamge_galerie .wp-block-gallery .wp-block-image {
-    width: 50vw;
-    height: 70vh;
+  .galerie .iamge_galerie .wp-block-gallery figure.wp-block-image {
+    width: 15vh;
+    height: 15vh;
   }
 }
-.galerie .iamge_galerie .wp-block-gallery .wp-block-image img {
+.galerie .iamge_galerie .wp-block-gallery figure.wp-block-image .wp-element-caption {
+  color: white;
+  padding: 1vh;
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
+  margin: 0;
+  text-align: left;
+  filter: saturate(0);
+  transition: var(--transition-time);
+}
+@media screen and (max-width: 1280px) {
+  .galerie .iamge_galerie .wp-block-gallery figure.wp-block-image .wp-element-caption {
+    filter: saturate(1);
+  }
+}
+.galerie .iamge_galerie .wp-block-gallery figure.wp-block-image:hover .wp-element-caption {
+  filter: saturate(1);
+}
+.galerie .iamge_galerie .wp-block-gallery figure.wp-block-image img {
   width: 100%;
   height: 100%;
   cursor: pointer;
   object-fit: cover;
-  border-radius: 5px;
   filter: saturate(0);
-  transition: 1s;
+  transition: var(--transition-time);
 }
-.galerie .iamge_galerie .wp-block-gallery .wp-block-image img :hover {
-  transform: scale(1.3);
+.galerie .iamge_galerie .wp-block-gallery figure.wp-block-image img:hover {
   filter: saturate(1);
 }
-
-.wp-element-caption {
-  position: fixed;
-  width: 100%;
-  height: fit-content;
-  color: white;
-  padding: 1vh;
+@media screen and (max-width: 1280px) {
+  .galerie .iamge_galerie .wp-block-gallery figure.wp-block-image img {
+    filter: saturate(1);
+  }
 }
 
 @keyframes scrollLeft {
   to {
-    left: -300px;
+    left: -400px;
   }
 }
 .carrousel {

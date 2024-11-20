@@ -13,8 +13,8 @@
   }
 
   .iamge_galerie{
-    margin-top: 30vh;
-    margin-bottom: 20vh;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
 
     .wp-block-gallery {
       display: flex;
@@ -23,44 +23,75 @@
       overflow: hidden; // Permet le défilement horizontal si nécessaire
       margin: 0;
       
-      .wp-block-image {
+      figure.wp-block-image {
         // Animation infinie de défilement horizontal - source https://codepen.io/ramzibach-the-styleful/pen/LYoYejb
-        width: 13vw;
+        width: 40vh;
         height: 40vh;
         transform: scale(1);
         margin: 0;
         position: absolute;
-        border: 2px solid var(--couleur-secondaire);
-        border-radius: 5px;
-        // box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px ,
-        //   rgba(176, 7, 61, 0.2) -5px 10px 20px ,
-        //   rgba(194, 83, 9, 0.3) 0px -10px 20px ;
-        // left: max(calc(200px * 8), 100%); - fait en JS
-        //animation-delay: calc(30s / 8 * (8 - 1) * -1); - fait en JS
+        background: linear-gradient(
+          90deg,
+          rgb(236, 141, 32, 0.7) 0%,
+          rgb(230, 61, 94, 0.7) 50%,
+          rgb(44, 246, 253, 0.3) 100%
+        );
+        // Avec du JS aussi
         animation-name: scrollLeft;
-        animation-duration: 30s;
+        animation-duration: 50s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        :hover{
+        transition: var(--transition-time);
+        &:hover {
           transform: scale(1.3);
           filter: brightness(1.1);
         }
 
         @media screen and (max-width: 1280px) {
-          width: 50vw;
-          height: 70vh;
+          width: 15vh;
+          height: 15vh;
         }
+
+        .wp-element-caption {
+          color: white;
+          padding: 1vh;
+          background: linear-gradient(
+            90deg,
+            rgb(236, 141, 32, 0.7) 0%,
+            rgb(230, 61, 94, 0.7) 50%,
+            rgb(44, 246, 253, 0.3) 100%
+          );
+          margin: 0;
+          text-align: left;
+          filter: saturate(0);
+          transition: var(--transition-time);
+
+          @media screen and (max-width: 1280px) {
+            filter: saturate(1);
+          }
+        }
+
+        &:hover .wp-element-caption {
+          filter: saturate(1);
+        }
+        
+       
 
         img {
           width: 100%;
           height: 100%;
+          // border-radius: var(--border-radius);
+          // border: 2px solid var(--couleur-secondaire);
           cursor: pointer;
           object-fit: cover;
-          border-radius: 5px;
           filter: saturate(0);
-          transition: 1s;
-          :hover{
-            transform: scale(1.3);
+          transition: var(--transition-time);
+          
+          &:hover{
+            filter: saturate(1);
+          }
+
+          @media screen and (max-width: 1280px) {
             filter: saturate(1);
           }
         }
@@ -69,19 +100,12 @@
   }
 }
 
-.wp-element-caption {
-  position: fixed;
-  width: 100%;
-  height: fit-content;
-  color: white;
-  padding: 1vh;
-}
-
 @keyframes scrollLeft {
   to {
-    left: -300px;
+    left: -400px;
   }
 }
+
 
 .carrousel {
   display: none;
