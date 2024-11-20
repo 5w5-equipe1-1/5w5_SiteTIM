@@ -1,6 +1,5 @@
 p {
   color: var(--couleur-secondaire);
-  width: 90vw;
   //Style pour tabelette
   @media screen and (min-width: 1280px) {
     // width: 57vw;
@@ -13,8 +12,7 @@ p {
   }
 }
 
-.bulles_contenu p {
-  font-weight: bold;
+.bulles_contenu p{
   display: flex;
   align-items: center;
   border: 1px solid white;
