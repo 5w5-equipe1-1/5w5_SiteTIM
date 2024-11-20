@@ -45,7 +45,7 @@ body {
       width: 200px;
       height: 200px;
       perspective: 600px;
-      transition: perspective 1s;
+      transition: perspective var(--transition-time);
       margin: 0 auto;
       margin-bottom: 35vh;
       margin-top: 30vh;
@@ -78,21 +78,12 @@ body {
           margin-top: var(--margin-top-mobile);
         }
 
-        .espace_gauche_descmulti {
-          margin-left: var(--margin-mobil);
-
-          @media screen and (max-width: 680px) {
-            // margin-left: 5%;
-          }
-        }
-
         .bulles_contenu {
           display: flex;
           flex-direction: row;
-          justify-content: center;
-          align-items: center;
+          justify-content: space-between;
           width: var(--width-text);
-          transition: 1s;
+          transition: var(--transition-time);
           margin: 0 auto;
 
           @media screen and (max-width: 1280px) {
@@ -124,8 +115,6 @@ div {
     flex-direction: row;
     justify-content: space-between;
     padding: 2%;
-    border-radius: 5px;
-
     // background: blue;
     // background: linear-gradient(
     //   90deg,
@@ -192,7 +181,7 @@ div {
   .lessections_infosaccueil {
     margin-bottom: 25vh;
     filter: saturate(0);
-    transition: 0.5s;
+    transition: var(--transition-time);
 
     @media screen and (max-width: 680px) {
       margin-bottom: 5vh;
@@ -246,27 +235,44 @@ div {
 }
 
 .contenufunky {
-  margin-top: var(--margin-top);
   width: var(--width-text);
   margin: 0 auto;
-}
+  margin-top: 25vh;
 
-// ATTENTION - Contrôle du texte, balise h3
-.contenufunky h3 {
-  font-size: 23pt;
-  padding: 2%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px inset;
-  border-radius: 20px;
+  // ATTENTION - Contrôle du texte, balise h3
+  h3 {
+    font-size: 23pt;
+    padding: 2%;
+    box-shadow: rgb(0 0 0 / 0.5) 0px 0px 100px 20px inset;
+    border-radius: 5px;
+    background: linear-gradient(
+      90deg,
+      rgb(236, 141, 32, 0.7) 0%,
+      rgb(230, 61, 94, 0.7) 50%,
+      rgb(44, 246, 253, 0.3) 100%
+    );
+    filter: saturate(0);
+    transition: var(--transition-time);
+    &:hover {
+      filter: saturate(1);
+    }
+  }
 }
 
 .lespointsfunky {
   margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: var(--padding-ordi);
+  padding-right: var(--padding-ordi);
 }
 
 .lespointsfunky b {
-  width: 20px;
-  height: 20px;
-  margin-right: 3vw;
+  width: 10px;
+  height: 10px;
+  margin-right: 1vw;
 
   background-color: white;
   box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
@@ -278,6 +284,7 @@ div {
   display: flex;
   align-items: center;
   margin: 0px 0px 50px 0px;
+  font-size: 25px;
 }
 
 //Style pour tabelette

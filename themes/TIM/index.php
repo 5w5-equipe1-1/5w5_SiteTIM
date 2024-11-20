@@ -98,20 +98,15 @@
     <div class="conteneur_info">
         <div class="description_multimedia">
             <h1>Qu'est ce que le multimédia?</h1>
-            <div class="espace_gauche_descmulti">
-                <div class="bulles_contenu">
-                <p>Créer des médias (images, vidéos, sons, animations)</p>
-                    <p>Concevoir le design et l’interactivité</p>
-                    <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
-                    <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
-                    <p>Travailler en équipe</p>
-                    <br>
-                </div>
+            <div class="bulles_contenu">
+                <p>Créer des médias</p>
+                <p>Concevoir le design et l’interactivité</p>
+                <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
+                <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
+                <p>Travailler en équipe</p>
+                
             </div>
         </div>
-        
-        <!-- test animation -->
-        <div class="contenue_desc"></div>
 
         <div class="evenements">
             <div class="commundegrade degrade1event"></div>
@@ -121,14 +116,12 @@
                     <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/export_arcade.png" alt="">
                     <div class="contenu_img">
                         <h3>L'arcade</h3>
-                        <p>L'arcade est un évènement prévu pour les étudiants du programme dans le but d'afficher les jeux
-                            réalisés dans le cadre du cours de jeu en équipe (582-4J4) et de permettre à tout les élèves
-                            de jouer aux créations étudiantes.
+                        <p>L'Arcade est un événement pour les étudiants du programme 
+                            où sont présentés les jeux créés dans le cadre du cours de jeu en équipe (582-4J4).
                         </p>
                         <p>
-                            Cet évènement permet aussi à tout les élèves des autres programmes de venir voter pour le meilleur
-                            jeu en plus de tester les différents jeux proposés. L'équipe qui avait le plus de votes avait droit 
-                            à un prix de récompense de 200$! Il y a donc de la compétition... 
+                        Tous les élèves peuvent y jouer et voter pour leur jeu préféré. 
+                        L'équipe qui obtient le plus de votes gagne un prix de 200 $. C'est donc une compétition amusante !
                         </p>
                     </div>
                 </div>
@@ -140,14 +133,11 @@
                 <div class="description_evenements">
                     <div class="contenu_img">
                         <h3>Game Jams</h3>
-                        <p>Entre les étudiants du programme ainsi que des concours officiels entre les écoles, les élèves 
-                            peuvent participer à des journées ou des semaines de création de mini jeux vidéos. Ces concours
-                            permettent aux étudiants de développer leurs talents et leurs connaissances dans le domaine
-                            du jeu. 
-                        </p>
-                        <p>De plus, selon le Game Jam du Cégep de Valleyfield, des prix sont remis aux participant(e)s. 
-                            Il y a trois prix valant 1 500 $, 1 000 $ et 750 $ sont remis aux équipes remportant les trois 
-                            premières places!
+                        <p>Les étudiants peuvent participer à des concours de création de 
+                            mini jeux vidéo, comme ceux organisés par le Cégep de Valleyfield. 
+                            Ces événements permettent de développer leurs compétences dans le 
+                            domaine du jeu. Des prix de 1 500 $, 1 000 $ et 750 $ sont offerts 
+                            aux trois meilleures équipes.
                         </p>
                         <a href="https://www.cegepvalleyfield.ca/vie-etudiante/activites-socioculturelles/intercollegial-de-creation-de-jeux-video/">Plus d'infos sur le site du Cégep de Valleyfield</a>
                     </div>
@@ -162,14 +152,20 @@
             <h2>Compétences Techniques</h2>
         </div>
         <div class="contenufunky">
+            <!-- test animation -->
+            <div class="contenue_desc"></div> 
             <h3>85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>
             <ul class="lespointsfunky">
-                <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo;</p>
-                <p><b></b>&nbsp;Développeur Web (front end et back end);</p>
-                <p><b></b>&nbsp;Développeur d’applications mobiles;</p>
-                <p><b></b>&nbsp;Designer / infographiste;</p>
-                <p><b></b>&nbsp;Animateurs 2D / 3D;</p>
-                <p><b></b>&nbsp;...et bien plus encore!</p>
+                <div>
+                    <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo</p>
+                    <p><b></b>&nbsp;Développeur Web (front end et back end)</p>
+                    <p><b></b>&nbsp;Développeur d’applications mobiles</p>
+                </div>
+                <div>
+                    <p><b></b>&nbsp;Designer / infographiste</p>
+                    <p><b></b>&nbsp;Animateurs 2D / 3D</p>
+                    <p><b></b>&nbsp;...et bien plus encore!</p>
+                </div>
             </ul>
         </div>
     </main>

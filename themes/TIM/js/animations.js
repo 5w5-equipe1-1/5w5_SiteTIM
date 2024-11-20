@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*-----------------------------animation cligonement ecriture----------------------------------*/
 /*---------------------------------------------------------------------------------------------*/
  
-const textTableau = ["bonjour test", "comment ca va", "jaime les patates"];
+const textTableau = ["Perspective d'emplois", "Avenir", "Études suppérieures"];
 const elementBlink = document.querySelector(".contenue_desc");
  
 let i = 0;
@@ -191,7 +191,7 @@ function typeText(){
     elementBlink.innerHTML = elementBlink.innerHTML.slice(0, -1);
  
     i--;
-    setTimeout(typeText, 100);
+    setTimeout(typeText, 70);
   } else {
     effacer = false;
     //passe au texte suivant dans le tableau

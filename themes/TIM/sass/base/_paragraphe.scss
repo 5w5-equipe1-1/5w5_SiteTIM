@@ -1,5 +1,6 @@
 p {
   color: var(--couleur-secondaire);
+  font-weight: 100;
   //Style pour tabelette
   @media screen and (min-width: 1280px) {
     // width: 57vw;
@@ -10,6 +11,7 @@ p {
   @media screen and (min-width: 1280px) {
     font-size: 20px;
   }
+  font-weight: 100;
 }
 
 .bulles_contenu p{
@@ -20,10 +22,14 @@ p {
     rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
     rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 5px;
-
-  padding: 50px 10px 50px 10px;
-  margin: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  // margin: 2%;
   text-align: center;
+  font-weight: 100;
+  font-size: var(--taille-paragrahpe-ordi);
 
   @media screen and (max-width: 1280px) {
     padding: 5%;
