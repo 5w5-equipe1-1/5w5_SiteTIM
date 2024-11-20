@@ -1,6 +1,14 @@
-.wp-element-caption{
-    position: fixed;
-    width: 20px;
-    height: 50px;
-    color: white;
+.galerie{
+  margin-top: 30vh;
+  @media screen and (max-width: 1280px) {
+    margin-top: -20vh;
+  }
 }
+
+.wp-element-caption {
+  position: fixed;
+  width: 20px;
+  height: 50px;
+  color: white;
+}
+

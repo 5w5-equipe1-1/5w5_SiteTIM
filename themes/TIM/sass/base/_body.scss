@@ -1,17 +1,14 @@
 //scroll bar
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--couleur-secondaire);
+  background-color: transparent;
   border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--couleur-primaire);
+  background-color: var(--couleur-secondaire);
   border-radius: 15px;
   border: 1px solid var(--couleur-secondaire);
-  :hover {
-    background-color: var(--couleur-primaire-hover);
-  }
 }
 
 ::-webkit-scrollbar-button {
@@ -32,7 +29,7 @@ body {
   margin: var(--margin-top-mobile) var(--margin-right-mobile)
     var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-text);
   // background-color: fuchsia;
 
   //descativer le scroll vertical
@@ -43,7 +40,6 @@ body {
 
   //cacher le scroll horizontal
   overflow-x: hidden;
-  
 
   #scene {
     width: 200px;
@@ -55,11 +51,13 @@ body {
     margin-top: 30vh;
     position: relative;
     z-index: 9;
+    transform: scale(1.5);
 
     //Style pour tabelette
     @media screen and (max-width: 1280px) {
       //margin-bottom: 30vh;
       // margin-top: 610vh;
+      transform: scale(1.2);
     }
 
     //Deuxième Style pour tabelette - Voir avec Gaby svp
@@ -102,33 +100,13 @@ body {
       display: flex;
       flex-direction: row;
       width: 80vw;
+      transition: 1s;
 
       @media screen and (max-width: 1280px) {
         flex-direction: column;
         align-items: center;
         width: 100vw;
         text-align: center;
-      }
-
-      p {
-        border: 1px solid white;
-        box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
-          rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
-          rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-        border-radius: 20px;
-
-        padding: 3% 1% 3% 1%;
-        margin: 2%;
-
-        @media screen and (max-width: 1280px) {
-          padding: 5%;
-          width: 50%;
-        }
-
-        @media screen and (max-width: 680px) {
-          padding: 10%;
-          width: 50%;
-        }
       }
     }
   }
@@ -152,7 +130,7 @@ div {
     flex-direction: row;
     justify-content: space-between;
     padding: 2%;
-    // border-radius: 20px;
+    border-radius: 5px;
 
     // background: blue;
     // background: linear-gradient(
@@ -170,11 +148,14 @@ div {
     //   rgb(230, 61, 94, 0.7) 100%
     // );
 
+    box-shadow: rgb(0 0 0 / 0.5) 0px 0px 100px 20px inset;
+    border-radius: 5px;
+
     background: linear-gradient(
       90deg,
       rgb(236, 141, 32, 0.7) 0%,
       rgb(230, 61, 94, 0.7) 50%,
-      rgb(44, 246, 253, 0.5) 100%
+      rgb(44, 246, 253, 0.3) 100%
     );
 
     @media screen and (max-width: 1280px) {
@@ -183,6 +164,15 @@ div {
 
     @media screen and (min-width: 1280px) {
       height: 40vh;
+    }
+
+    @media screen and (max-width: 680px) {
+      background: linear-gradient(
+        90deg,
+        rgb(236, 141, 32, 0.4) 0%,
+        rgb(230, 61, 94, 0.4) 50%,
+        rgb(44, 246, 253, 0.2) 100%
+      );
     }
 
     p {
@@ -211,6 +201,7 @@ div {
 
     @media screen and (max-width: 680px) {
       margin-bottom: 5vh;
+      filter: saturate(1);
     }
 
     a {
@@ -233,22 +224,28 @@ div {
 .cours {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 3vh;
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 10vh;
 }
 
 .description_cours {
-  color: var(--couleur-primaire);
-  background-color: var(--couleur-secondaire);
-  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  border-radius: 5px;
+
   width: 70vw;
   height: fit-content;
   margin: 0 auto;
   padding: var(--padding-top-mobile);
-  padding-top: 5vh;
+  padding-top: 3vh;
+
   p {
     width: 70vw;
-    color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    opacity: 0.8;
     margin: 0 auto;
   }
 }
@@ -306,11 +303,4 @@ div {
 .container {
   width: 100%;
 }
-.dot{
-  height: 5px;
-  width: 5px;
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  z-index: 9999999999;
-}
+

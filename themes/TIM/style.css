@@ -22,29 +22,19 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /*Éléments a la racine du document*/
 /* ----------------------------------------------------- */
 :root {
-  --margin-left-mobile: 10px;
-  --margin-right-mobile: 10px;
-  --margin-top-mobile: 10px;
-  --margin-bottom-mobile: 10px;
-  --padding-left-mobile: 8px;
-  --padding-right-mobile: 8px;
-  --padding-top-mobile: 8px;
-  --padding-bottom-mobile: 8px;
-  --margin-left-tablette: 30px;
-  --margin-right-tablette: 30px;
-  --margin-top-tablette: 30px;
-  --margin-bottom-tablette: 30px;
-  --margin-left-ordi: 20px;
-  --margin-right-ordi: 20px;
-  --margin-top-ordi: 20px;
-  --margin-bottom-ordi: 20px;
+  --margin-mobil:5vw;
+  --padding-mobil:2vw;
+  --margin-tablette:5vw;
+  --padding-tablette:2vw;
+  --margin-ordi:5vw;
+  --padding-ordi:2vw;
   --font-family-text: "Arial", sans-serif;
-  --font-family-titre: ;
+  --font-family-titre: "ivyora-display", sans-serif;
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
-  --couleur-secondaire-hover: #c0c0c0;
+  --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
-  --couleur-primaire-hover: #2a2a2a;
+  --couleur-primaire-hover: #333333;
   --couleur-orange: #ffd472;
   --couleur-magenta: #ffaab1;
   --couleur-cyan: #96e7ff;
@@ -61,15 +51,32 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /* ----------------------------------------------------- */
 h1 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 60px;
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
+  font-family: var(--font-family-titre);
+  font-style: italic;
+}
+
+.text_hero h1 {
+  font-family: var(--font-family-text);
+  font-size: 40px;
+  font-style: normal;
+}
+
+.conteneur_logo_tim a h2 {
+  font-family: var(--font-family-text);
+  font-size: 25px;
+  font-style: normal;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 40px;
   color: var(--couleur-secondaire);
+  font-family: var(--font-family-titre);
+  font-style: italic;
+  text-align: left;
 }
 
 .bannieres h2 {
@@ -91,16 +98,16 @@ h4 {
 }
 
 summary {
-  color: var(--couleur-primaire);
-  background-color: var(--couleur-secondaire);
-  padding: var(--padding-top-mobile);
-  font-size: larger;
-  width: 70vw;
   margin: 0 auto;
-  border-radius: var(--border-radius);
-  box-shadow: var(--couleur-orange) 0px 5px 15px;
-  transform: translateY(2vh);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 70vw;
+  padding: var(--padding-top-mobile);
+  color: var(--couleur-secondaire);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.335);
+  border-radius: 5px;
+  font-size: larger;
+  font-family: var(--font-family-text);
+  transform: translateY(0vh);
   user-select: none;
 }
 
@@ -202,17 +209,14 @@ header .conteneur_burger_recherche .shrink {
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--couleur-secondaire);
+  background-color: transparent;
   border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--couleur-primaire);
+  background-color: var(--couleur-secondaire);
   border-radius: 15px;
   border: 1px solid var(--couleur-secondaire);
-}
-::-webkit-scrollbar-thumb :hover {
-  background-color: var(--couleur-primaire-hover);
 }
 
 ::-webkit-scrollbar-button {
@@ -230,7 +234,7 @@ body {
   align-items: center;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-text);
   overflow-x: hidden;
 }
 body #scene {
@@ -243,6 +247,12 @@ body #scene {
   margin-top: 30vh;
   position: relative;
   z-index: 9;
+  transform: scale(1.5);
+}
+@media screen and (max-width: 1280px) {
+  body #scene {
+    transform: scale(1.2);
+  }
 }
 body .description_multimedia {
   margin-top: 10vh;
@@ -263,6 +273,7 @@ body .description_multimedia .bulles_contenu {
   display: flex;
   flex-direction: row;
   width: 80vw;
+  transition: 1s;
 }
 @media screen and (max-width: 1280px) {
   body .description_multimedia .bulles_contenu {
@@ -270,25 +281,6 @@ body .description_multimedia .bulles_contenu {
     align-items: center;
     width: 100vw;
     text-align: center;
-  }
-}
-body .description_multimedia .bulles_contenu p {
-  border: 1px solid white;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-  border-radius: 20px;
-  padding: 3% 1% 3% 1%;
-  margin: 2%;
-}
-@media screen and (max-width: 1280px) {
-  body .description_multimedia .bulles_contenu p {
-    padding: 5%;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 680px) {
-  body .description_multimedia .bulles_contenu p {
-    padding: 10%;
-    width: 50%;
   }
 }
 
@@ -306,7 +298,10 @@ div {
   flex-direction: row;
   justify-content: space-between;
   padding: 2%;
-  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.5) 100%);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
@@ -316,6 +311,11 @@ div {
 @media screen and (min-width: 1280px) {
   .evenements .description_evenements {
     height: 40vh;
+  }
+}
+@media screen and (max-width: 680px) {
+  .evenements .description_evenements {
+    background: linear-gradient(90deg, rgba(236, 141, 32, 0.4) 0%, rgba(230, 61, 94, 0.4) 50%, rgba(44, 246, 253, 0.2) 100%);
   }
 }
 .evenements .description_evenements p {
@@ -339,6 +339,7 @@ div {
 @media screen and (max-width: 680px) {
   .evenements .lessections_infosaccueil {
     margin-bottom: 5vh;
+    filter: saturate(1);
   }
 }
 .evenements .lessections_infosaccueil a {
@@ -356,23 +357,27 @@ div {
 .cours {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 3vh;
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 10vh;
 }
 
 .description_cours {
-  color: var(--couleur-primaire);
-  background-color: var(--couleur-secondaire);
-  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
   width: 70vw;
   height: fit-content;
   margin: 0 auto;
   padding: var(--padding-top-mobile);
-  padding-top: 5vh;
+  padding-top: 3vh;
 }
 .description_cours p {
   width: 70vw;
-  color: var(--couleur-primaire);
+  color: var(--couleur-secondaire);
+  opacity: 0.8;
   margin: 0 auto;
 }
 
@@ -419,27 +424,18 @@ div {
   width: 100%;
 }
 
-.dot {
-  height: 5px;
-  width: 5px;
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  z-index: 9999999999;
-}
-
 footer {
   width: 100%;
   margin-top: 60vh;
 }
 @media screen and (max-width: 1280px) {
   footer {
-    margin-top: 40vh;
+    margin-top: 70vh;
   }
 }
 @media screen and (max-width: 680px) {
   footer {
-    margin-top: 20vh;
+    margin-top: 50vh;
   }
 }
 footer .section_montagne img {
@@ -450,13 +446,19 @@ footer .section_montagne img {
   user-select: none;
   pointer-events: none;
 }
+@media screen and (max-width: 680px) {
+  footer .section_montagne img {
+    width: 200%;
+    left: -60%;
+  }
+}
 footer .conteneur_logo_tim {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   width: 100vw;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-bottom: 5vh;
   gap: var(--margin-left-mobile);
 }
@@ -470,6 +472,8 @@ footer .conteneur_logo_tim .TIM_entete {
   display: block;
   font-size: 23px;
   user-select: none;
+  font-family: var(--font-family-titre);
+  font-style: normal;
 }
 footer .info_footer {
   display: flex;
@@ -494,7 +498,7 @@ footer .info_footer .colonne_footer .info_colonne_footer {
 }
 footer .info_footer .colonne_footer .lesmedias {
   display: flex;
-  gap: var(--margin-left-mobile);
+  gap: var(--margin-mobile);
 }
 @media screen and (max-width: 680px) {
   footer .info_footer .colonne_footer .lesmedias {
@@ -551,6 +555,36 @@ p {
   color: var(--couleur-secondaire);
   width: 90vw;
 }
+@media screen and (min-width: 1280px) {
+  .espace_gauche_descmulti p {
+    font-size: 20px;
+  }
+}
+
+.bulles_contenu p {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 5px;
+  padding: 50px 10px 50px 10px;
+  margin: 2%;
+  text-align: center;
+}
+@media screen and (max-width: 1280px) {
+  .bulles_contenu p {
+    padding: 5%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .bulles_contenu p {
+    padding: 10%;
+    width: 50%;
+  }
+}
+
 .info_action {
   font-size: 12pt;
   color: var(--couleur-secondaire);
@@ -575,10 +609,11 @@ li {
 
 .section_hero {
   width: 100%;
+  height: 130vh;
 }
 @media screen and (max-width: 680px) {
   .section_hero {
-    margin-top: 225vh;
+    height: 60vh;
   }
 }
 .section_hero .video_hero {
@@ -603,7 +638,6 @@ li {
 }
 @media screen and (max-width: 680px) {
   .section_hero .text_hero {
-    margin-top: 14vh;
     width: 50vw;
   }
 }
@@ -612,9 +646,19 @@ li {
   padding: 1%;
   border-radius: 5px;
 }
+@media screen and (max-width: 680px) {
+  .section_hero .text_hero h1 {
+    font-size: 60px;
+  }
+}
 .section_hero .text_hero h3 {
   font-size: 4rem;
   padding: 3%;
+}
+@media screen and (max-width: 680px) {
+  .section_hero .text_hero h3 {
+    font-size: 20px;
+  }
 }
 
 .hovercurseur {
@@ -661,7 +705,10 @@ li {
   transform: translate(0.8rem, 0.6rem);
 }
 
-.description_cours p {
+.cours {
+  margin-top: 25vh;
+}
+.cours .description_cours p {
   margin-top: 1vh;
 }
 
@@ -762,6 +809,8 @@ li {
   color: #fff;
   text-align: center; /* Centre le texte dans le conteneur */
   width: 100%; /* Assure que le texte occupe toute la largeur de son parent */
+  font-family: var(--font-family-text);
+  font-style: normal;
 }
 
 /* Glitch animations */
@@ -848,6 +897,15 @@ button {
   color: var(--couleur-primaire);
 }
 
+.galerie {
+  margin-top: 30vh;
+}
+@media screen and (max-width: 1280px) {
+  .galerie {
+    margin-top: -20vh;
+  }
+}
+
 .wp-element-caption {
   position: fixed;
   width: 20px;
@@ -860,6 +918,7 @@ button {
   top: 15%;
   left: 5%;
   transition: 1s;
+  transform: scale(0.65);
 }
 .text_cercle .effetbulle {
   background-color: var(--couleur-primaire);
@@ -868,7 +927,7 @@ button {
   animation: rotateText 25s linear infinite;
 }
 .text_cercle .text {
-  fill: rgba(255, 255, 255, 0.836);
+  fill: rgba(255, 255, 255, 0.447);
   font-size: 1.33em;
   user-select: none;
 }
@@ -927,7 +986,7 @@ button {
   background-color: lightgreen;
 }
 .bannieres h2 {
-  font-family: "ivyora-display", sans-serif;
+  font-family: var(--font-family-titre);
   font-size: 50pt;
   font-style: italic;
   color: white;
@@ -951,6 +1010,20 @@ button {
   z-index: -1000;
   background: rgb(239, 170, 91);
   background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
+}
+
+.conteneur_search {
+  margin-top: 20vh;
+}
+.conteneur_search .resultat_recherche {
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  gap: 3vh;
+}
+.conteneur_search .resultat_recherche .recherche_text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
 
 .search-container {
@@ -1048,7 +1121,34 @@ button {
   background-color: white;
   position: absolute;
   border-radius: 50%;
-  z-index: 9999999999;
+  z-index: -9999999999;
+  opacity: 0.5;
+}
+
+.lessections_infosaccueil {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.lessections_infosaccueil.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contenue_desc {
+  font-size: 2.8rem;
+  position: relative;
+}
+.contenue_desc::after {
+  content: "|";
+  animation: clignotement 500ms step-start infinite;
+  position: absolute;
+}
+@keyframes clignotement {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* ----------------------------------------------------- */
@@ -1127,6 +1227,11 @@ button {
   margin: 0 auto;
   transform: translateY(-400px) translateX(300px);
   z-index: -128;
+}
+@media screen and (max-width: 680px) {
+  .cube_container {
+    transform: translateY(-300px) translateX(200px);
+  }
 }
 
 .minicube {
@@ -1250,26 +1355,78 @@ button {
 /* ----------------------------------------------------- */
 .galerie {
   display: flex;
-  height: 20rem;
+  width: 70vw;
+  margin: 0 auto;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
-.galerie .wp-block-gallery {
+.galerie h2 {
+  margin-bottom: 10vh;
+}
+.galerie .iamge_galerie {
+  margin-top: 30vh;
+  margin-bottom: 20vh;
+}
+.galerie .iamge_galerie .wp-block-gallery {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
   margin: 0;
 }
-.galerie .wp-block-gallery .wp-block-image {
-  margin: 10px;
-  width: 100%;
-  flex: 0 0 20%;
+.galerie .iamge_galerie .wp-block-gallery .wp-block-image {
+  width: 13vw;
+  height: 40vh;
+  transform: scale(1);
+  margin: 0;
+  position: absolute;
+  border: 2px solid var(--couleur-secondaire);
+  border-radius: 5px;
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
-.galerie .wp-block-gallery .wp-block-image img {
+.galerie .iamge_galerie .wp-block-gallery .wp-block-image :hover {
+  transform: scale(1.3);
+  filter: brightness(1.1);
+}
+@media screen and (max-width: 1280px) {
+  .galerie .iamge_galerie .wp-block-gallery .wp-block-image {
+    width: 50vw;
+    height: 70vh;
+  }
+}
+.galerie .iamge_galerie .wp-block-gallery .wp-block-image img {
   width: 100%;
   height: 100%;
   cursor: pointer;
   object-fit: cover;
   border-radius: 5px;
+  filter: saturate(0);
+  transition: 1s;
+}
+.galerie .iamge_galerie .wp-block-gallery .wp-block-image img :hover {
+  transform: scale(1.3);
+  filter: saturate(1);
 }
 
+.wp-element-caption {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  color: white;
+  padding: 1vh;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -300px;
+  }
+}
 .carrousel {
   display: none;
   position: fixed;
