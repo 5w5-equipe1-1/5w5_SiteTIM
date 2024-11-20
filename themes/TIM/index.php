@@ -10,7 +10,7 @@
     <title>TIM - Accueil</title>
 </head>
 <body>
-    <<header>
+    <header>
         <div class="conteneur_logo_tim">
         <a href="<?php echo get_home_url();?>">
             <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
@@ -103,15 +103,19 @@
                 </p>
                 <br>
                 <div class="bulles_contenu">
-                <p>Créer des médias (images, vidéos, sons, animations);</p>
-                    <p>Concevoir le design et l’interactivité;</p>
-                    <p>Planifier la réalisation d’un projet et en effectuer le suivi;</p>
-                    <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université.</p>
-                    <p>Travailler en équipe;</p>
+                <p>Créer des médias (images, vidéos, sons, animations)</p>
+                    <p>Concevoir le design et l’interactivité</p>
+                    <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
+                    <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
+                    <p>Travailler en équipe</p>
                     <br>
                 </div>
             </div>
         </div>
+        
+        <!-- test animation -->
+        <div class="contenue_desc"></div>
+
         <div class="evenements">
             <div class="commundegrade degrade1event"></div>
             <div class="lessections_infosaccueil">

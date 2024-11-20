@@ -7,6 +7,37 @@ p {
   }
 }
 
+.espace_gauche_descmulti p{
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+
+.bulles_contenu p{
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+          rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+          rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 5px;
+
+  padding: 50px 10px 50px 10px;
+  margin: 2%;
+  text-align: center;
+
+  @media screen and (max-width: 1280px) {
+    padding: 5%;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 680px) {
+    padding: 10%;
+    width: 50%;
+  }
+}
+
 //texte disant interaction pour le cube
 .info_action {
   // font-size: large;

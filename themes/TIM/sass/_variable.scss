@@ -1,39 +1,25 @@
 :root {
-  //margin - mobile
-  --margin-left-mobile: 10px;
-  --margin-right-mobile: 10px;
-  --margin-top-mobile: 10px;
-  --margin-bottom-mobile: 10px;
 
-  //padding - mobile
-  --padding-left-mobile: 8px;
-  --padding-right-mobile: 8px;
-  --padding-top-mobile: 8px;
-  --padding-bottom-mobile: 8px;
+  --margin-mobil:5vw;
+  --padding-mobil:2vw; 
 
-  //margin - tablette
-  --margin-left-tablette: 30px;
-  --margin-right-tablette: 30px;
-  --margin-top-tablette: 30px;
-  --margin-bottom-tablette: 30px;
+  --margin-tablette:5vw;
+  --padding-tablette:2vw; 
 
-  //margin - ordinateur
-  --margin-left-ordi: 20px;
-  --margin-right-ordi: 20px;
-  --margin-top-ordi: 20px;
-  --margin-bottom-ordi: 20px;
+  --margin-ordi:5vw;
+  --padding-ordi:2vw; 
 
   //police d'ecriture
   --font-family-text: "Arial", sans-serif;
-  --font-family-titre: ;
+  --font-family-titre: "ivyora-display", sans-serif;
 
   --taille-paragrahpe-mobile: ;
 
   //couleur
   --couleur-secondaire: #f0f0f0;
-  --couleur-secondaire-hover: #c0c0c0;
+  --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
-  --couleur-primaire-hover: #2a2a2a;
+  --couleur-primaire-hover: #333333;
   //Couleurs Test de Gaby
   --couleur-orange: #ffd472;
   --couleur-magenta: #ffaab1;

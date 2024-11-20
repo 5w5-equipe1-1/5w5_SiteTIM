@@ -102,6 +102,8 @@
     color: #fff;
     text-align: center; /* Centre le texte dans le conteneur */
     width: 100%; /* Assure que le texte occupe toute la largeur de son parent */
+    font-family: var(--font-family-text);
+    font-style: normal;
   }
   /* Glitch animations */
   @keyframes glitch-horizontal {
