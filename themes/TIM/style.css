@@ -42,7 +42,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
   --border-radius: 15px;
-  --format-gap: 2%;
+  --format-gap: 5%;
   --mouse-x: 0px;
   --mouse-y: 0px;
 }
@@ -533,7 +533,8 @@ footer h3 {
 }
 .les_reseaux .lesmedias {
   display: flex;
-  gap: var(--format-gap);
+  align-items: center;
+  width: 15%;
 }
 @media screen and (max-width: 680px) {
   .les_reseaux .lesmedias {
@@ -542,12 +543,16 @@ footer h3 {
 }
 @media screen and (max-width: 1280px) {
   .les_reseaux .lesmedias svg {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 }
 .les_reseaux .lesmedias p {
-  width: 100%;
+  filter: saturate(0) brightness(2);
+  transition: 0.5s;
+}
+.les_reseaux .lesmedias p:hover {
+  filter: saturate(1);
 }
 
 .titre_footer {
