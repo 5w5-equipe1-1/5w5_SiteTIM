@@ -103,6 +103,9 @@ lesFaces.forEach(face => {
             // Empêche le défilement de la page lors de la sélection d'une face du cube
             document.body.style.overflowY = 'hidden';
             // Empêche la propagation de l'événement de click
+            for(let explorerButton of LesButtonsExplorer) {
+                explorerButton.style.display = 'block';
+            }
             event.stopPropagation(); 
         } else {
             isCubeSelected = true;
@@ -155,6 +158,9 @@ document.addEventListener('click', function(event) {
             scene.style.perspective = '600px';
             //remettre le scroll par défaut
             document.body.style.overflowY = 'auto';
+            for(let explorerButton of LesButtonsExplorer) {
+                explorerButton.style.display = 'none';
+            }
         }
     }
 });
@@ -168,6 +174,9 @@ boutonChangement.addEventListener('click', function() {
         // Disable user rotation and enable auto-rotation
         disableUserRotation();
         autoRotate = true;  
+        for(let explorerButton of LesButtonsExplorer) {
+            explorerButton.style.display = 'none';
+        }
     } else {
         // Enable user rotation when returning to normal state
         enableUserRotation();
@@ -209,3 +218,9 @@ for(let explorerButton of LesButtonsExplorer) {
 window.onload = function() {
     scene.classList.add('shrink');
 };
+
+if(scene.classList.contains('shrink')) {
+    for(let explorerButton of LesButtonsExplorer) {
+        explorerButton.style.display = 'none';
+    }
+}
