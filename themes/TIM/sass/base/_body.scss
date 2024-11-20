@@ -259,12 +259,18 @@ div {
 
 .lespointsfunky {
   margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: var(--padding-ordi);
+  padding-right : var(--padding-ordi);
 }
 
 .lespointsfunky b {
-  width: 20px;
-  height: 20px;
-  margin-right: 3vw;
+  width: 10px;
+  height: 10px;
+  margin-right: 1vw;
 
   background-color: white;
   box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
@@ -275,6 +281,7 @@ div {
   display: flex;
   align-items: center;
   margin: 0px 0px 50px 0px;
+  font-size: 25px;
 }
 
 //Style pour tabelette

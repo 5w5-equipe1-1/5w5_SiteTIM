@@ -191,7 +191,7 @@ function typeText(){
     elementBlink.innerHTML = elementBlink.innerHTML.slice(0, -1);
  
     i--;
-    setTimeout(typeText, 100);
+    setTimeout(typeText, 70);
   } else {
     effacer = false;
     //passe au texte suivant dans le tableau

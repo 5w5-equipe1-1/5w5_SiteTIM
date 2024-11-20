@@ -156,12 +156,16 @@
             <div class="contenue_desc"></div> 
             <h3>85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>
             <ul class="lespointsfunky">
-                <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo;</p>
-                <p><b></b>&nbsp;Développeur Web (front end et back end);</p>
-                <p><b></b>&nbsp;Développeur d’applications mobiles;</p>
-                <p><b></b>&nbsp;Designer / infographiste;</p>
-                <p><b></b>&nbsp;Animateurs 2D / 3D;</p>
-                <p><b></b>&nbsp;...et bien plus encore!</p>
+                <div>
+                    <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo</p>
+                    <p><b></b>&nbsp;Développeur Web (front end et back end)</p>
+                    <p><b></b>&nbsp;Développeur d’applications mobiles</p>
+                </div>
+                <div>
+                    <p><b></b>&nbsp;Designer / infographiste</p>
+                    <p><b></b>&nbsp;Animateurs 2D / 3D</p>
+                    <p><b></b>&nbsp;...et bien plus encore!</p>
+                </div>
             </ul>
         </div>
     </main>

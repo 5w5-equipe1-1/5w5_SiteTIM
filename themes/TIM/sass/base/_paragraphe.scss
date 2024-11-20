@@ -1,5 +1,6 @@
 p {
   color: var(--couleur-secondaire);
+  font-weight: 100;
   //Style pour tabelette
   @media screen and (min-width: 1280px) {
     // width: 57vw;
@@ -10,6 +11,7 @@ p {
   @media screen and (min-width: 1280px) {
     font-size: 20px;
   }
+  font-weight: 100;
 }
 
 .bulles_contenu p{
@@ -26,7 +28,7 @@ p {
   padding-right: 3%;
   // margin: 2%;
   text-align: center;
-
+  font-weight: 100;
   font-size: var(--taille-paragrahpe-ordi);
 
   @media screen and (max-width: 1280px) {

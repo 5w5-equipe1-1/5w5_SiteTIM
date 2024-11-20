@@ -36,7 +36,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --taille-titre-ordi: ;
   --margin-top: 10vh;
   --width-text: 70vw;
-  --font-family-text: "Arial", sans-serif;
+  --font-family-text: "niveau-grotesk", sans-serif;
   --font-family-titre: "century-gothic", sans-serif;
   --letter-spacing: 4px;
   --couleur-secondaire: #f0f0f0;
@@ -428,12 +428,18 @@ div {
 
 .lespointsfunky {
   margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: var(--padding-ordi);
+  padding-right: var(--padding-ordi);
 }
 
 .lespointsfunky b {
-  width: 20px;
-  height: 20px;
-  margin-right: 3vw;
+  width: 10px;
+  height: 10px;
+  margin-right: 1vw;
   background-color: white;
   box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
   border-radius: 50%;
@@ -443,6 +449,7 @@ div {
   display: flex;
   align-items: center;
   margin: 0px 0px 50px 0px;
+  font-size: 25px;
 }
 
 .parallax {
@@ -608,6 +615,10 @@ footer h3 {
 
 p {
   color: var(--couleur-secondaire);
+  font-weight: 100;
+}
+.espace_gauche_descmulti p {
+  font-weight: 100;
 }
 @media screen and (min-width: 1280px) {
   .espace_gauche_descmulti p {
@@ -626,6 +637,7 @@ p {
   padding-left: 3%;
   padding-right: 3%;
   text-align: center;
+  font-weight: 100;
   font-size: var(--taille-paragrahpe-ordi);
 }
 @media screen and (max-width: 1280px) {
@@ -1212,6 +1224,7 @@ button {
   color: var(--couleur-secondaire);
   letter-spacing: var(--letter-spacing);
   font-weight: bold;
+  height: 5vh;
 }
 
 /* ----------------------------------------------------- */
