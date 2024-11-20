@@ -267,6 +267,7 @@ body .conteneur {
 @media screen and (max-width: 680px) {
   body .conteneur {
     padding: var(--padding-mobil);
+    margin: 0;
   }
 }
 body .conteneur #scene {

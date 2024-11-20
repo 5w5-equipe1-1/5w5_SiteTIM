@@ -29,15 +29,18 @@ body {
   font-family: var(--font-family-text);
   //cacher le scroll horizontal
   overflow-x: hidden;
+
   .conteneur {
     padding: var(--padding-ordi);
     margin: 0 auto;
+
     @media screen and (max-width: 1280px) {
       padding: var(--padding-tablette);
     }
 
     @media screen and (max-width: 680px) {
       padding: var(--padding-mobil);
+      margin: 0;
     }
 
     //cube
