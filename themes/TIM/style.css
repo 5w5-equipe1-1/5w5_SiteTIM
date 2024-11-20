@@ -22,27 +22,19 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /*Éléments a la racine du document*/
 /* ----------------------------------------------------- */
 :root {
-  --margin-left-mobile: 10px;
-  --margin-right-mobile: 10px;
-  --margin-top-mobile: 10px;
-  --margin-bottom-mobile: 10px;
-  --padding-left-mobile: 8px;
-  --padding-right-mobile: 8px;
-  --padding-top-mobile: 8px;
-  --padding-bottom-mobile: 8px;
-  --margin-left-tablette: 30px;
-  --margin-right-tablette: 30px;
-  --margin-top-tablette: 30px;
-  --margin-bottom-tablette: 30px;
-  --margin-left-ordi: 20px;
-  --margin-right-ordi: 20px;
-  --margin-top-ordi: 20px;
-  --margin-bottom-ordi: 20px;
+  --margin-mobil:5vw;
+  --padding-mobil:2vw;
+  --margin-tablette:5vw;
+  --padding-tablette:2vw;
+  --margin-ordi:5vw;
+  --padding-ordi:2vw;
   --font-family-text: "Arial", sans-serif;
-  --font-family-titre: ;
+  --font-family-titre: "ivyora-display", sans-serif;
   --taille-paragrahpe-mobile: ;
   --couleur-secondaire: #f0f0f0;
+  --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
+  --couleur-primaire-hover: #333333;
   --couleur-orange: #ffd472;
   --couleur-magenta: #ffaab1;
   --couleur-cyan: #96e7ff;
@@ -62,18 +54,18 @@ h1 {
   font-size: 60px;
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
-  font-family: "ivyora-display", sans-serif;
+  font-family: var(--font-family-titre);
   font-style: italic;
 }
 
 .text_hero h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-text);
   font-size: 40px;
   font-style: normal;
 }
 
 .conteneur_logo_tim a h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-text);
   font-size: 25px;
   font-style: normal;
 }
@@ -82,7 +74,7 @@ h2 {
   font-weight: bold;
   font-size: 40px;
   color: var(--couleur-secondaire);
-  font-family: "ivyora-display", sans-serif;
+  font-family: var(--font-family-titre);
   font-style: italic;
   text-align: left;
 }
@@ -114,7 +106,7 @@ summary {
   border: 1px solid rgba(255, 255, 255, 0.335);
   border-radius: 5px;
   font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-text);
   transform: translateY(0vh);
   user-select: none;
 }
@@ -242,7 +234,7 @@ body {
   align-items: center;
   margin: var(--margin-top-mobile) var(--margin-right-mobile) var(--margin-bottom-mobile) var(--margin-left-mobile);
   background-color: var(--couleur-primaire);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-text);
   overflow-x: hidden;
 }
 body #scene {
@@ -480,7 +472,7 @@ footer .conteneur_logo_tim .TIM_entete {
   display: block;
   font-size: 23px;
   user-select: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-titre);
   font-style: normal;
 }
 footer .info_footer {
@@ -506,7 +498,7 @@ footer .info_footer .colonne_footer .info_colonne_footer {
 }
 footer .info_footer .colonne_footer .lesmedias {
   display: flex;
-  gap: var(--margin-left-mobile);
+  gap: var(--margin-mobile);
 }
 @media screen and (max-width: 680px) {
   footer .info_footer .colonne_footer .lesmedias {
@@ -817,7 +809,7 @@ li {
   color: #fff;
   text-align: center; /* Centre le texte dans le conteneur */
   width: 100%; /* Assure que le texte occupe toute la largeur de son parent */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-text);
   font-style: normal;
 }
 
@@ -994,7 +986,7 @@ button {
   background-color: lightgreen;
 }
 .bannieres h2 {
-  font-family: "ivyora-display", sans-serif;
+  font-family: var(--font-family-titre);
   font-size: 50pt;
   font-style: italic;
   color: white;
