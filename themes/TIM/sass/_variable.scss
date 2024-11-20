@@ -1,13 +1,12 @@
 :root {
+  --margin-mobil: 5vw;
+  --padding-mobil: 2vw;
 
-  --margin-mobil:5vw;
-  --padding-mobil:2vw; 
+  --margin-tablette: 5vw;
+  --padding-tablette: 2vw;
 
-  --margin-tablette:5vw;
-  --padding-tablette:2vw; 
-
-  --margin-ordi:5vw;
-  --padding-ordi:2vw; 
+  --margin-ordi: 5vw;
+  --padding-ordi: 2vw;
 
   //police d'ecriture
   --font-family-text: "Arial", sans-serif;
@@ -31,6 +30,9 @@
 
   //border radius
   --border-radius: 15px;
+
+  //Gap
+  --format-gap: 2%;
 
   //Pour le curseur personnalisé
   --mouse-x: 0px;

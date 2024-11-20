@@ -22,12 +22,12 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
 /*Éléments a la racine du document*/
 /* ----------------------------------------------------- */
 :root {
-  --margin-mobil:5vw;
-  --padding-mobil:2vw;
-  --margin-tablette:5vw;
-  --padding-tablette:2vw;
-  --margin-ordi:5vw;
-  --padding-ordi:2vw;
+  --margin-mobil: 5vw;
+  --padding-mobil: 2vw;
+  --margin-tablette: 5vw;
+  --padding-tablette: 2vw;
+  --margin-ordi: 5vw;
+  --padding-ordi: 2vw;
   --font-family-text: "Arial", sans-serif;
   --font-family-titre: "ivyora-display", sans-serif;
   --taille-paragrahpe-mobile: ;
@@ -42,6 +42,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
   --border-radius: 15px;
+  --format-gap: 2%;
   --mouse-x: 0px;
   --mouse-y: 0px;
 }
@@ -472,7 +473,7 @@ footer .conteneur_logo_tim .TIM_entete {
   display: block;
   font-size: 23px;
   user-select: none;
-  font-family: var(--font-family-titre);
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
 }
 footer .info_footer {
@@ -495,21 +496,6 @@ footer .info_footer .colonne_footer {
 footer .info_footer .colonne_footer .info_colonne_footer {
   margin: 0;
   width: fit-content;
-}
-footer .info_footer .colonne_footer .lesmedias {
-  display: flex;
-  gap: var(--margin-mobile);
-}
-@media screen and (max-width: 680px) {
-  footer .info_footer .colonne_footer .lesmedias {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 1280px) {
-  footer .info_footer .colonne_footer .lesmedias svg {
-    width: 30px;
-    height: 30px;
-  }
 }
 footer .info_footer .colonne_footer a {
   color: var(--couleur-secondaire);
@@ -538,6 +524,30 @@ footer p {
 }
 footer h3 {
   user-select: none;
+}
+
+.les_reseaux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.les_reseaux .lesmedias {
+  display: flex;
+  gap: var(--format-gap);
+}
+@media screen and (max-width: 680px) {
+  .les_reseaux .lesmedias {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .les_reseaux .lesmedias svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+.les_reseaux .lesmedias p {
+  width: 100%;
 }
 
 .titre_footer {
@@ -588,7 +598,7 @@ p {
 .info_action {
   font-size: 12pt;
   color: var(--couleur-secondaire);
-  opacity: 0.3;
+  opacity: 0;
   text-align: center;
   transform: translateY(-15vh);
   width: fit-content;

@@ -7,20 +7,20 @@ p {
   }
 }
 
-.espace_gauche_descmulti p{
+.espace_gauche_descmulti p {
   @media screen and (min-width: 1280px) {
     font-size: 20px;
   }
 }
 
-.bulles_contenu p{
+.bulles_contenu p {
   font-weight: bold;
   display: flex;
   align-items: center;
   border: 1px solid white;
   box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
-          rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
-          rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+    rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 5px;
 
   padding: 50px 10px 50px 10px;
@@ -43,7 +43,7 @@ p {
   // font-size: large;
   font-size: 12pt;
   color: var(--couleur-secondaire);
-  opacity: 0.3;
+  opacity: 0;
   text-align: center;
   transform: translateY(-15vh);
   width: fit-content;
