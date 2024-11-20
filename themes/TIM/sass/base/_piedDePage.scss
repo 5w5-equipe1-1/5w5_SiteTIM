@@ -37,7 +37,9 @@ footer {
     width: 100vw;
 
     // margin-top: 20vh;
-    // margin-left: 5%;
+    // Attention ici margin left
+    margin-left: var(--logo-pas-colle);
+
     margin-bottom: 5vh;
     gap: var(--margin-left-mobile);
 
@@ -89,6 +91,7 @@ footer {
         text-decoration: underline;
       }
 
+      // ATTENTION - Contrôle du texte, balise p
       p:hover {
         color: var(--couleur-secondaire-hover);
         text-decoration: underline;
@@ -109,10 +112,12 @@ footer {
     }
   }
 
+  // ATTENTION - Contrôle du texte, balise p
   p {
     user-select: none;
   }
 
+  // ATTENTION - Contrôle du texte, balise p
   h3 {
     user-select: none;
   }
@@ -148,6 +153,7 @@ footer {
       }
     }
 
+    // ATTENTION - Contrôle du texte, balise p
     p {
       filter: saturate(0) brightness(2);
       transition: 0.5s;

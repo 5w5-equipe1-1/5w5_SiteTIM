@@ -56,7 +56,7 @@
                     <svg viewBox="0 0 150 150">
                         <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
                         <text class="text">
-                            <textPath class="text-path" href="#curve">Descendre - Descendre - </textPath>
+                            <textPath class="text-path" href="#curve">Descendre➔Descendre➔</textPath>
                         </text>
                     </svg>
                     </div>

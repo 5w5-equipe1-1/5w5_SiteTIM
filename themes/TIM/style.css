@@ -32,7 +32,10 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --taille-titre-tablette: ;
   --margin-ordi: 5vw;
   --padding-ordi: 2vw;
-  --taille-paragrahpe-ordi: 1.3rem ;
+  --padding-regulier-ordi: 2%;
+  --font-size-text: 14pt;
+  --font-size-titre: 16pt;
+  --taille-paragrahpe-ordi: 1.3rem;
   --taille-titre-ordi: ;
   --margin-top: 10vh;
   --width-text: 70vw;
@@ -51,6 +54,7 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-test-cyan: #67d7f9;
   --border-radius: 15px;
   --format-gap: 5%;
+  --logo-pas-colle: 2%;
   --mouse-x: 0px;
   --mouse-y: 0px;
   --transition-time: 1s;
@@ -92,6 +96,7 @@ h2 {
 }
 
 h3 {
+  font-size: var(--font-size-titre);
   font-weight: bold;
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
@@ -145,6 +150,7 @@ header .conteneur_logo_tim {
   align-items: center;
   gap: var(--margin-left-mobile);
   transition: 0.5s;
+  margin-left: var(--logo-pas-colle);
 }
 header .conteneur_logo_tim .logo_tim {
   width: 50px;
@@ -325,7 +331,6 @@ div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2%;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
   border-radius: 5px;
   background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
@@ -344,6 +349,9 @@ div {
   .evenements .description_evenements {
     background: linear-gradient(90deg, rgba(236, 141, 32, 0.4) 0%, rgba(230, 61, 94, 0.4) 50%, rgba(44, 246, 253, 0.2) 100%);
   }
+}
+.evenements .description_evenements .contenu_img {
+  padding: 2%;
 }
 @media screen and (max-width: 680px) {
   .evenements .description_evenements .contenu_img {
@@ -369,7 +377,7 @@ div {
   text-decoration: none;
 }
 .evenements .lessections_infosaccueil a:hover {
-  color: var(--couleur-test-orange);
+  color: var(--couleur-secondaire);
   text-decoration: underline;
 }
 .evenements .lessections_infosaccueil:hover {
@@ -493,6 +501,7 @@ footer .conteneur_logo_tim {
   justify-content: left;
   align-items: center;
   width: 100vw;
+  margin-left: var(--logo-pas-colle);
   margin-bottom: 5vh;
   gap: var(--margin-left-mobile);
 }
@@ -609,20 +618,17 @@ footer h3 {
 
 p {
   color: var(--couleur-secondaire);
-  font-weight: 100;
+  font-weight: 300;
+  font-size: var(--font-size-text);
 }
-.espace_gauche_descmulti p {
-  font-weight: 100;
-}
-@media screen and (min-width: 1280px) {
-  .espace_gauche_descmulti p {
-    font-size: 20px;
+@media screen and (max-width: 680px) {
+  p {
+    padding: 10%;
+    width: 50%;
   }
 }
 
 .bulles_contenu p {
-  display: flex;
-  align-items: center;
   border: 1px solid white;
   box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
   border-radius: 5px;
@@ -631,8 +637,6 @@ p {
   padding-left: 3%;
   padding-right: 3%;
   text-align: center;
-  font-weight: 100;
-  font-size: var(--taille-paragrahpe-ordi);
 }
 @media screen and (max-width: 1280px) {
   .bulles_contenu p {
@@ -648,10 +652,9 @@ p {
 }
 
 .info_action {
-  font-size: 12pt;
+  text-align: center;
   color: var(--couleur-secondaire);
   opacity: 0;
-  text-align: center;
   transform: translateY(-15vh);
   width: fit-content;
   margin: 0 auto;
