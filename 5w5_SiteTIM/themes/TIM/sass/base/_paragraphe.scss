@@ -1,0 +1,74 @@
+p {
+  color: var(--couleur-secondaire);
+  width: 90vw;
+  //Style pour tabelette
+  @media screen and (min-width: 1280px) {
+    // width: 57vw;
+  }
+}
+
+.espace_gauche_descmulti p{
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+
+.bulles_contenu p{
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+          rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+          rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border-radius: 5px;
+
+  padding: 50px 10px 50px 10px;
+  margin: 2%;
+  text-align: center;
+
+  @media screen and (max-width: 1280px) {
+    padding: 5%;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 680px) {
+    padding: 10%;
+    width: 50%;
+  }
+}
+
+//texte disant interaction pour le cube
+.info_action {
+  // font-size: large;
+  font-size: 12pt;
+  color: var(--couleur-secondaire);
+  opacity: 0.3;
+  text-align: center;
+  transform: translateY(-15vh);
+  width: fit-content;
+  margin: 0 auto;
+  user-select: none;
+
+  transition: 1s;
+}
+
+li {
+  color: var(--couleur-secondaire);
+  margin: 10px;
+}
+
+.texte_hero {
+  h1,
+  h3 {
+    color: var(--couleur-secondaire);
+  }
+}
+
+//Style pour tabelette
+@media screen and (min-width: 1280px) {
+}
+
+//Style pour Ordinateur
+@media screen and (min-width: 1920px) {
+}

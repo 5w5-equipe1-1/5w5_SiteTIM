@@ -1,0 +1,106 @@
+// Section qui s'applique à tout les dégradés
+
+.commundegrade {
+  position: absolute;
+  height: 1vh;
+  width: 1px;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 50%;
+  transform: scale(1.2) translateX(80px) translateY(80px);
+
+  @media screen and (max-width: 1280px) {
+    // width: 16vw;
+  }
+
+  @media screen and (max-width: 680px) {
+    // width: 30vw;
+  }
+}
+
+// Les dégradés individuels
+/////////////////////////////////////////////////
+
+.testdegrade {
+  //border: 10px solid blueviolet;
+  box-shadow: rgba(255, 255, 255, 0.739) 0px 0px 200px 40px;
+}
+
+.degrade1orange {
+  //effet de glow en background
+  box-shadow: var(--couleur-test-orange) 50px -60px 500px 90px;
+  filter: saturate(2);
+}
+
+.degrade1cyan {
+  //effet de glow en background
+  box-shadow: var(--couleur-test-cyan) -30px 0px 500px 90px;
+  filter: saturate(3);
+}
+
+.degrade1magenta {
+  //effet de glow en background
+  box-shadow: var(--couleur-test-magenta) 25px 50px 500px 90px;
+  filter: saturate(3);
+}
+
+.degrade_blanc {
+  margin: 0 auto;
+  position: relative;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 60px 100px 200px,
+    rgba(255, 255, 255, 0.3) 0px 0px 100px 10px inset;
+  border-radius: 50%;
+
+  width: 20vw;
+  height: 30vh;
+  z-index: -130;
+  transform: translateY(-440px) translateX(0px);
+}
+
+// Partie dédié pour la section évènement
+
+.degrade1event {
+  box-shadow: #ef925b 0px 0px 500px 130px;
+  filter: saturate(3);
+  opacity: 0.5;
+  transform: translateX(50px) translateY(370px);
+}
+
+.degrade2event {
+  box-shadow: var(--couleur-test-magenta) 25px 50px 500px 100px;
+  filter: saturate(3);
+  opacity: 0.7;
+  transform: translateX(900px) translateY(60px);
+}
+
+.degrade3event {
+  box-shadow: var(--couleur-test-cyan) 25px 50px 500px 100px;
+  filter: saturate(3);
+  opacity: 0.4;
+  transform: translateX(600px) translateY(350px);
+}
+
+// Partie de test qui n'est pas utilisé
+
+.degrade1noir {
+  position: absolute;
+  // border: 1px solid red;
+  width: 700px;
+  height: 700px;
+  // height: 50%;
+  // width: 50%;
+  top: 10%;
+  left: 25%;
+  z-index: -100;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 25px 50px 300px 40px,
+    rgba(0, 0, 0, 0.4) 25px 50px 300px 40px inset;
+
+  @media screen and (max-width: 1280px) {
+    // width: 16vw;
+  }
+
+  @media screen and (max-width: 680px) {
+    // width: 30vw=-098//123456789
+  }
+}

@@ -1,0 +1,307 @@
+//scroll bar
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--couleur-secondaire);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--couleur-primaire);
+  border-radius: 15px;
+  border: 1px solid var(--couleur-secondaire);
+  :hover {
+    background-color: var(--couleur-primaire-hover);
+  }
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+//body
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  margin: var(--margin-top-mobile) var(--margin-right-mobile)
+    var(--margin-bottom-mobile) var(--margin-left-mobile);
+  background-color: var(--couleur-primaire);
+  font-family: Arial, Helvetica, sans-serif;
+  // background-color: fuchsia;
+
+  //descativer le scroll vertical
+  // .stop-scrolling {
+  //   height: 100%;
+  //   overflow-y: hidden;
+  // }
+
+  //cacher le scroll horizontal
+  overflow-x: hidden;
+
+  #scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    transition: perspective 1s;
+    margin: 0 auto;
+    margin-bottom: 35vh;
+    margin-top: 30vh;
+    position: relative;
+    z-index: 9;
+
+    //Style pour tabelette
+    @media screen and (max-width: 1280px) {
+      //margin-bottom: 30vh;
+      // margin-top: 610vh;
+    }
+
+    //Deuxième Style pour tabelette - Voir avec Gaby svp
+    @media screen and (max-width: 890px) {
+      //margin-bottom: 30vh;
+      // margin-top: 560vh;
+    }
+    //Style pour mobile
+    @media screen and (max-width: 680px) {
+      // margin-top: 610vh;
+      // margin-bottom: 25%;
+    }
+  }
+
+  .description_multimedia {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+
+    //garder en commentaire je fais des tests
+    // transform: translateX(50%);
+    // transition: transform 0.5s ease-out;
+
+    @media screen and (max-width: 680px) {
+      margin-top: var(--margin-top-mobile);
+    }
+
+    .espace_gauche_descmulti {
+      margin-left: 2%;
+
+      @media screen and (max-width: 680px) {
+        // margin-left: 5%;
+      }
+    }
+
+    .bulles_contenu {
+      display: flex;
+      flex-direction: row;
+      width: 80vw;
+      transition: 1s;
+
+      @media screen and (max-width: 1280px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        text-align: center;
+      }
+    }
+  }
+}
+
+div {
+  margin: 0;
+}
+
+//section ou on décrit quest ce que le multimédia
+
+//section ou on montre les concours et les événements
+
+.evenements {
+  width: 70vw;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+
+  .description_evenements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2%;
+    border-radius: 5px;
+
+    // background: blue;
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(35, 243, 255, 0.3) 0%,
+    //   rgba(255, 167, 66, 0.3) 23%,
+    //   rgba(255, 46, 64, 0.3) 50%,
+    //   rgba(255, 167, 66, 0.3) 76%,
+    //   rgba(35, 243, 255, 0.3) 100%
+    // );
+
+    // background: linear-gradient(
+    //   90deg,
+    //   rgb(236, 141, 32, 0.7) 0%,
+    //   rgb(230, 61, 94, 0.7) 100%
+    // );
+
+    box-shadow: rgb(0 0 0 / 0.5) 0px 0px 100px 20px inset;
+    border-radius: 5px;
+
+    background: linear-gradient(
+      90deg,
+      rgb(236, 141, 32, 0.7) 0%,
+      rgb(230, 61, 94, 0.7) 50%,
+      rgb(44, 246, 253, 0.3) 100%
+    );
+
+    @media screen and (max-width: 1280px) {
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: 40vh;
+    }
+
+    @media screen and (max-width: 680px) {
+      background: linear-gradient(
+        90deg,
+        rgb(236, 141, 32, 0.4) 0%,
+        rgb(230, 61, 94, 0.4) 50%,
+        rgb(44, 246, 253, 0.2) 100%
+      );
+    }
+
+    p {
+      margin-left: var(--margin-left-mobile);
+      margin-right: var(--margin-right-mobile);
+      width: 98%; //pour que les paragraphe aille la meme largeur que l'image
+    }
+
+    .contenu_img {
+      // border: 1px solid red;
+      @media screen and (max-width: 680px) {
+        margin-bottom: 5vh;
+      }
+    }
+  }
+
+  .description_evenements:nth-of-type(even) {
+    //   background-color: green;
+    flex-direction: row-reverse;
+  }
+
+  .lessections_infosaccueil {
+    margin-bottom: 25vh;
+    filter: saturate(0);
+    transition: 0.5s;
+
+    @media screen and (max-width: 680px) {
+      margin-bottom: 5vh;
+      filter: saturate(1);
+    }
+
+    a {
+      color: var(--couleur-orange);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--couleur-test-orange);
+      text-decoration: underline;
+    }
+  }
+
+  .lessections_infosaccueil:hover {
+    filter: saturate(1);
+  }
+}
+
+//cours
+.cours {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 3vh;
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.description_cours {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  border-radius: 5px;
+
+  width: 70vw;
+  height: fit-content;
+  margin: 0 auto;
+  padding: var(--padding-top-mobile);
+  padding-top: 3vh;
+
+  p {
+    width: 70vw;
+    color: var(--couleur-secondaire);
+    opacity: 0.8;
+    margin: 0 auto;
+  }
+}
+
+.contenufunky {
+  margin-top: 20vh;
+}
+
+.contenufunky h3 {
+  font-size: 23pt;
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px inset;
+  border-radius: 20px;
+}
+
+.lespointsfunky {
+  margin-top: 10vh;
+}
+
+.lespointsfunky b {
+  width: 20px;
+  height: 20px;
+  margin-right: 3vw;
+
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
+}
+
+.lespointsfunky p {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
+}
+
+//Style pour tabelette
+@media screen and (min-width: 1280px) {
+}
+
+//Style pour Ordinateur
+@media screen and (min-width: 1920px) {
+}
+
+.parallax {
+  display: flex;
+  //justify-content: center;
+  position: relative;
+  z-index: 1;
+  /* Grandeur du defilement du cube */
+  height: 400vh;
+  padding: 50px;
+  //background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+  width: 100%;
+}
+
