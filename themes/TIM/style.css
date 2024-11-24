@@ -431,30 +431,54 @@ div {
   filter: saturate(1);
 }
 
+ul {
+  padding: 0px;
+}
+
 .lespointsfunky {
   margin-top: 10vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: var(--padding-ordi);
-  padding-right: var(--padding-ordi);
+  align-items: start;
 }
-
-.lespointsfunky b {
-  width: 10px;
-  height: 10px;
-  margin-right: 1vw;
-  background-color: white;
-  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
-  border-radius: 50%;
+@media screen and (max-width: 1280px) {
+  .lespointsfunky {
+    flex-direction: column;
+  }
 }
-
-.lespointsfunky p {
+.lespointsfunky div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 40%;
+  margin-left: var(--margin-mobil);
+}
+@media screen and (max-width: 1280px) {
+  .lespointsfunky div {
+    width: 90%;
+  }
+}
+.lespointsfunky div p {
   display: flex;
   align-items: center;
   margin: 0px 0px 50px 0px;
   font-size: 25px;
+}
+@media screen and (max-width: 680px) {
+  .lespointsfunky div p {
+    padding: 0%;
+    width: 100%;
+  }
+}
+.lespointsfunky div p b {
+  width: 10px;
+  height: 10px;
+  margin-right: 1vh;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
 }
 
 .parallax {
@@ -1218,6 +1242,11 @@ button {
   letter-spacing: var(--letter-spacing);
   font-weight: bold;
   height: 5vh;
+}
+@media screen and (max-width: 768px) {
+  .contenue_desc {
+    height: 15vh;
+  }
 }
 
 /* ----------------------------------------------------- */
