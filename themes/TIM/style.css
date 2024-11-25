@@ -52,6 +52,9 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-test-orange: #efaa5b;
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
+  --coulleur-degrade-1: rgb(236, 141, 32) 0%;
+  --coulleur-degrade-2: rgb(230, 61, 94) 50%;
+  --coulleur-degrade-3: rgb(44, 246, 253) 100%;
   --border-radius: 15px;
   --format-gap: 5%;
   --logo-pas-colle: 2%;
@@ -798,33 +801,31 @@ li {
 }
 
 .description_cours {
-  max-width: 70vw; /* Largeur maximale basée sur la largeur de la vue */
-  width: 90%; /* Largeur relative pour s'adapter à différents écrans */
+  width: 83vh;
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
+  width: 70vw;
+  height: fit-content;
   margin: 0 auto;
-  padding: 3vh 2%; /* Espacement vertical et horizontal */
+  padding: var(--padding-top-mobile);
+  padding-top: 3vh;
+  padding-bottom: 3vh;
 }
 
 .texte_cours, .Sessions, .préalable {
-  max-width: 70vw;
-  width: 90%; /* S'adapte à l'écran */
+  width: 83vh;
   border-radius: 5px;
-  margin: 0 auto; /* Centrage */
 }
 
-.Sessions, .préalable {
-  padding: 1em; /* Unité relative pour le padding */
+.Sessions {
+  padding: 1vh;
 }
 
-/* Requêtes media pour l'adaptabilité */
-@media (max-width: 768px) {
-  .description_cours, .texte_cours, .Sessions, .préalable {
-    max-width: 90%; /* Plus étroit sur les petits écrans */
-    padding: 2vh 1em; /* Ajuster l'espacement */
-  }
+.préalable {
+  padding: 1vh;
 }
+
 .conteneur_404 {
   display: flex;
   justify-content: center;
@@ -1115,7 +1116,7 @@ button {
   position: absolute;
   z-index: -1000;
   background: rgb(239, 170, 91);
-  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
+  background: linear-gradient(90deg, var(--coulleur-degrade-1), var(--coulleur-degrade-2), var(--coulleur-degrade-3));
 }
 
 .conteneur_search {
