@@ -60,8 +60,8 @@
   background: rgb(239, 170, 91);
   background: linear-gradient(
     90deg,
-    rgb(236, 141, 32) 0%,
-    rgb(230, 61, 94) 50%,
-    rgb(44, 246, 253) 100%
+    var(--coulleur-degrade-1),
+    var(--coulleur-degrade-2),
+    var(--coulleur-degrade-3)
   );
 }

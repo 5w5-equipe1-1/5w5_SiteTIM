@@ -246,6 +246,10 @@ header .conteneur_burger_recherche .shrink {
   display: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -431,30 +435,54 @@ div {
   filter: saturate(1);
 }
 
+ul {
+  padding: 0px;
+}
+
 .lespointsfunky {
   margin-top: 10vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: var(--padding-ordi);
-  padding-right: var(--padding-ordi);
+  align-items: start;
 }
-
-.lespointsfunky b {
-  width: 10px;
-  height: 10px;
-  margin-right: 1vw;
-  background-color: white;
-  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
-  border-radius: 50%;
+@media screen and (max-width: 1280px) {
+  .lespointsfunky {
+    flex-direction: column;
+  }
 }
-
-.lespointsfunky p {
+.lespointsfunky div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 40%;
+  margin-left: var(--margin-mobil);
+}
+@media screen and (max-width: 1280px) {
+  .lespointsfunky div {
+    width: 90%;
+  }
+}
+.lespointsfunky div p {
   display: flex;
   align-items: center;
   margin: 0px 0px 50px 0px;
   font-size: 25px;
+}
+@media screen and (max-width: 680px) {
+  .lespointsfunky div p {
+    padding: 0%;
+    width: 100%;
+  }
+}
+.lespointsfunky div p b {
+  width: 10px;
+  height: 10px;
+  margin-right: 1vh;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
 }
 
 .parallax {
@@ -473,6 +501,7 @@ div {
 footer {
   width: 100%;
   margin-top: 60vh;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 1280px) {
   footer {
@@ -1219,6 +1248,11 @@ button {
   font-weight: bold;
   height: 5vh;
 }
+@media screen and (max-width: 768px) {
+  .contenue_desc {
+    height: 15vh;
+  }
+}
 
 /* ----------------------------------------------------- */
 /*Le Cube*/
@@ -1394,6 +1428,11 @@ button {
   opacity: 0.5;
   transform: translateX(50px) translateY(370px);
 }
+@media screen and (max-width: 1280px) {
+  .degrade1event {
+    display: none;
+  }
+}
 
 .degrade2event {
   box-shadow: var(--couleur-test-magenta) 25px 50px 500px 100px;
@@ -1401,12 +1440,22 @@ button {
   opacity: 0.7;
   transform: translateX(900px) translateY(60px);
 }
+@media screen and (max-width: 1280px) {
+  .degrade2event {
+    display: none;
+  }
+}
 
 .degrade3event {
   box-shadow: var(--couleur-test-cyan) 25px 50px 500px 100px;
   filter: saturate(3);
   opacity: 0.4;
   transform: translateX(600px) translateY(350px);
+}
+@media screen and (max-width: 1280px) {
+  .degrade3event {
+    display: none;
+  }
 }
 
 .degrade1noir {
@@ -1450,9 +1499,10 @@ button {
   width: 40vh;
   height: 40vh;
   transform: scale(1);
-  margin: 0;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
   animation-name: scrollLeft;
   animation-duration: 50s;
   animation-timing-function: linear;
@@ -1472,6 +1522,7 @@ button {
 .galerie .iamge_galerie .wp-block-gallery figure.wp-block-image .wp-element-caption {
   color: white;
   padding: 1vh;
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
   background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
   margin: 0;
   text-align: left;
@@ -1489,6 +1540,7 @@ button {
 .galerie .iamge_galerie .wp-block-gallery figure.wp-block-image img {
   width: 100%;
   height: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   cursor: pointer;
   object-fit: cover;
   filter: saturate(0);
