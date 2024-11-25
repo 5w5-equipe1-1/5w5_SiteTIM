@@ -44,18 +44,18 @@
                 <p class="info_colonne_footer"><a href="">Nous rejoindre</a></p>
             </div>
             <div class="colonne_footer">
-                <h3>Utilisateurs</h3>
-                <p class="info_colonne_footer"><a href="">Accessibilité</a></p>
-                <p class="info_colonne_footer"><a href="">Support</a></p>
-                <p class="info_colonne_footer"><a href="">Personnaliser les témoins</a></p>
-                <p class="info_colonne_footer"><a href="">Confidentialité</a></p>
-                <p class="info_colonne_footer"><a href="">Conditions d'utilisation</a></p>
+                <h3>Créateurs</h3>
+                <p class="info_colonne_footer magenta">Eloi Yuri Chayer</p>
+                <p class="info_colonne_footer orange">Yannick Bastien</p>
+                <p class="info_colonne_footer orange">Gabrielle Pelletier</p>
+                <p class="info_colonne_footer cyan">Syphax Mokraoui</p>
+                <p class="info_colonne_footer cyan">Salma Bourakkadi Zarrouki</p>
             </div>
         </div>
         <div class="les_reseaux">
             <h3>Suivez-nous</h3>
             <div class="lesmedias">
-                <p class="info_colonne_footer"><a href="https://www.facebook.com/CollegeMaisonneuve"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+                <p class="info_colonne_footer"><a href="https://www.facebook.com/maisonneuvetim"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
                     <g fill="var(--couleur-test-cyan)" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM37,19h-2c-2.14,0 -3,0.5 -3,2v3h5l-1,5h-4v15h-5v-15h-4v-5h4v-3c0,-4 2,-7 6,-7c2.9,0 4,1 4,1z"></path></g></g>
                     </svg></a></p>
                 <p class="info_colonne_footer"><a href="https://www.instagram.com/collegemaisonneuve/"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
