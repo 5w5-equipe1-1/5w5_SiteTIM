@@ -11,6 +11,7 @@
 
   @media screen and (max-width: 1280px) {
     // width: 16vw;
+
   }
 
   @media screen and (max-width: 680px) {
@@ -64,6 +65,10 @@
   filter: saturate(3);
   opacity: 0.5;
   transform: translateX(50px) translateY(370px);
+  @media screen and (max-width: 1280px) {
+    // width: 16vw;
+    display: none;
+  }
 }
 
 .degrade2event {
@@ -71,6 +76,10 @@
   filter: saturate(3);
   opacity: 0.7;
   transform: translateX(900px) translateY(60px);
+  @media screen and (max-width: 1280px) {
+    // width: 16vw;
+    display: none;
+  }
 }
 
 .degrade3event {
@@ -78,6 +87,10 @@
   filter: saturate(3);
   opacity: 0.4;
   transform: translateX(600px) translateY(350px);
+  @media screen and (max-width: 1280px) {
+    // width: 16vw;
+    display: none;
+  }
 }
 
 // Partie de test qui n'est pas utilisé
