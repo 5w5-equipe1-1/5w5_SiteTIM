@@ -17,7 +17,7 @@
     }
 
 ?>
-        <maim>
+        <main>
           <div class="conteneur_search">
               <div class="resultat_recherche"><h2>Votre recherche : </h2> <h2 class="recherche_text"><?php echo $recherche;?></h2></div>
                     <div>
@@ -29,7 +29,7 @@
                     <?php endif; ?>
                 </div>
           </div>  
-        </maim>
+        </main>
         <?php get_footer(); ?>
         <!-- API fontawsome pour les icones -->
         <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
