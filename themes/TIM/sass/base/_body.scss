@@ -19,6 +19,10 @@
   display: none;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 //body
 body {
   display: flex;
