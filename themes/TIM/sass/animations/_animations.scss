@@ -103,4 +103,7 @@
   letter-spacing: var(--letter-spacing);
   font-weight: bold;
   height: 5vh;
+  @media screen and (max-width: 768px){
+    height: 15vh;
+  }
 }
