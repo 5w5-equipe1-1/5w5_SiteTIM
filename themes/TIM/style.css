@@ -46,12 +46,15 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
   --couleur-primaire-hover: #333333;
-  --couleur-orange: #ffd472;
-  --couleur-magenta: #ffaab1;
+  --couleur-orange: #ffde90;
+  --couleur-magenta: #ff8989;
   --couleur-cyan: #96e7ff;
   --couleur-test-orange: #efaa5b;
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
+  --coulleur-degrade-1: rgb(236, 141, 32) 0%;
+  --coulleur-degrade-2: rgb(230, 61, 94) 50%;
+  --coulleur-degrade-3: rgb(44, 246, 253) 100%;
   --border-radius: 15px;
   --format-gap: 5%;
   --logo-pas-colle: 2%;
@@ -582,7 +585,6 @@ footer .info_footer .colonne_footer a:hover {
 }
 footer .info_footer .colonne_footer p:hover {
   color: var(--couleur-secondaire-hover);
-  text-decoration: underline;
 }
 @media screen and (max-width: 680px) {
   footer .info_footer {
@@ -646,6 +648,18 @@ footer h3 {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.magenta {
+  color: var(--couleur-magenta);
+}
+
+.cyan {
+  color: var(--couleur-cyan);
+}
+
+.orange {
+  color: var(--couleur-orange);
 }
 
 p {
@@ -1099,7 +1113,7 @@ button {
   position: absolute;
   z-index: -1000;
   background: rgb(239, 170, 91);
-  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
+  background: linear-gradient(90deg, var(--coulleur-degrade-1), var(--coulleur-degrade-2), var(--coulleur-degrade-3));
 }
 
 .conteneur_search {

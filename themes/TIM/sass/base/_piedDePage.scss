@@ -95,7 +95,6 @@ footer {
       // ATTENTION - Contrôle du texte, balise p
       p:hover {
         color: var(--couleur-secondaire-hover);
-        text-decoration: underline;
       }
     }
 
@@ -177,4 +176,16 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.magenta {
+  color: var(--couleur-magenta);
+}
+
+.cyan {
+  color: var(--couleur-cyan);
+}
+
+.orange {
+  color: var(--couleur-orange);
 }
