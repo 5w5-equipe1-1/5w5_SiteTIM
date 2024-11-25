@@ -126,7 +126,7 @@ requestAnimationFrame(animer);
 
 //animation de scoll 
 document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.lessections_infosaccueil');
+  const sections = document.querySelectorAll('.animation_apparait');
 
   const observerOptions = {
    

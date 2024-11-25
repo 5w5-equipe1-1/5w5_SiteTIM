@@ -100,5 +100,5 @@ document.addEventListener("DOMContentLoaded", function () {
 let images = document.querySelectorAll('.wp-block-image');
 for (let index = 0; index < images.length; index++) {
   images[index].style.animationDelay = "calc(50s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
-  images[index].style.left =  "max(calc(10px * " + images.length + "), 100%)";
+  images[index].style.left =  "max(calc(400px * " + images.length + "), 100%)";
 }
