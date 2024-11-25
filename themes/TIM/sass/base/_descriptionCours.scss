@@ -1,25 +1,39 @@
-
-
-    .description_cours{
-        width: 83vh;
-        background-color: rgba(0, 0, 0, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 5px;
-        width: 70vw;
-        height: fit-content;
-        margin: 0 auto;
-        padding: var(--padding-top-mobile);
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-    }
-
-.texte_cours,.Sessions,.préalable{
-    width: 83vh;
+.description_cours {
+    max-width: 70vw; /* Largeur maximale basée sur la largeur de la vue */
+    // width: 90%; /* Largeur relative pour s'adapter à différents écrans */
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+    margin: 0 auto;
+    padding: 3vh 1.5%; /* Espacement vertical et horizontal */
 }
-.Sessions{
-    padding: 1vh;
+
+.texte_cours, .Sessions, .préalable {
+    max-width: 70vw;
+    width: 90%; /* S'adapte à l'écran */
+    border-radius: 5px;
+    margin: 0 auto; /* Centrage */
 }
-.préalable {
-    padding: 1vh;
+summary::marker {
+    font-size: 1.2em; /* Ajuste la taille de la flèche */
+    padding-right: 10px; /* Ajoute un padding à droite de la flèche */
+    color: var(--couleur-secondaire); /* Change la couleur */
+}
+.Sessions, .préalable {
+    padding: 1em; /* Unité relative pour le padding */
+}
+
+/* Requêtes media pour l'adaptabilité */
+@media (max-width: 768px) {
+    .description_cours, .texte_cours, .Sessions, .préalable {
+        max-width: 90%; /* Plus étroit sur les petits écrans */
+        padding: 2vh 1em; /* Ajuster l'espacement */
+    }
+}
+
+@media (max-width: 480px) {
+    .description_cours, .texte_cours, .Sessions, .préalable {
+        width: 100%; /* Utiliser toute la largeur */
+        padding: 2em 1em; /* Plus d'espace interne sur les petits écrans */
+    }
 }

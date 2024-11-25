@@ -48,8 +48,7 @@ h4 {
 summary {
   margin: 0 auto;
   width: 70vw;
-  padding: var(--padding-top-mobile);
-
+  padding: 1.5%;
   color: var(--couleur-secondaire);
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.335);
@@ -60,12 +59,12 @@ summary {
   // box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
 
   border-radius: 5px;
-  // background: linear-gradient(
-  //   90deg,
-  //   rgb(93, 51, 3) 0%,
-  //   rgb(57, 3, 12) 50%,
-  //   rgb(3, 45, 47) 100%
-  // );
+  background: linear-gradient(
+    90deg,
+    rgb(93, 51, 3) 0%,
+    rgb(57, 3, 12) 50%,
+    rgb(3, 45, 47) 100%
+  );
 
   // box-shadow: rgba(11, 152, 170, 0.5) 10px 10px 10px,
   //   rgba(176, 7, 61, 0.5) -10px 10px 10px, rgba(194, 83, 9, 0.8) 0px -5px 10px;
