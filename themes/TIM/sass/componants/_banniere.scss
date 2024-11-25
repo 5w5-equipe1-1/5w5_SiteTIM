@@ -4,7 +4,7 @@
   align-items: center;
 
   text-align: center;
-  height: 20vh;
+  height: 30vh;
   width: 200%;
   transition: transform 0.3s ease-out;
 
@@ -36,7 +36,7 @@
   h2 {
     font-family: var(--font-family-titre);
     font-size: 50pt;
-    font-style: italic;
+    letter-spacing: var(--letter-spacing);
     color: white;
 
     @media screen and (max-width: 1280px) {

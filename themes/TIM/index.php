@@ -89,7 +89,7 @@
             <svg viewBox="0 0 150 150">
                 <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
                 <text class="text">
-                    <textPath class="text-path" href="#curve">Descendre - Descendre - </textPath>
+                    <textPath class="text-path" href="#curve">Descendre ➔Descendre ➔</textPath>
                 </text>
             </svg>
         </div>
@@ -98,20 +98,14 @@
     <div class="conteneur_info">
         <div class="description_multimedia">
             <h1>Qu'est ce que le multimédia?</h1>
-            <div class="espace_gauche_descmulti">
-                <div class="bulles_contenu">
-                <p>Créer des médias (images, vidéos, sons, animations)</p>
-                    <p>Concevoir le design et l’interactivité</p>
-                    <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
-                    <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
-                    <p>Travailler en équipe</p>
-                    <br>
-                </div>
+            <div class="bulles_contenu">
+                <p>Créer des médias</p>
+                <p>Concevoir le design et l’interactivité</p>
+                <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
+                <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
+                <p>Travailler en équipe</p>
             </div>
         </div>
-        
-        <!-- test animation -->
-        <div class="contenue_desc"></div>
 
         <div class="evenements">
             <div class="commundegrade degrade1event"></div>
@@ -139,7 +133,7 @@
                     <div class="contenu_img">
                         <h3>Game Jams</h3>
                         <p>Les étudiants peuvent participer à des concours de création de 
-                            mini jeux vidéo, comme ceux organisés par le Cégep de Valleyfield. 
+                            jeux vidéo, comme ceux organisés par le Cégep de Valleyfield. 
                             Ces événements permettent de développer leurs compétences dans le 
                             domaine du jeu. Des prix de 1 500 $, 1 000 $ et 750 $ sont offerts 
                             aux trois meilleures équipes.
@@ -155,16 +149,24 @@
             <h2>Collaboration</h2>
             <h2>Création</h2>
             <h2>Compétences Techniques</h2>
+            <!-- <h2>Intégration</h2>
+            <h2>Conception</h2> -->
         </div>
         <div class="contenufunky">
+            <!-- test animation -->
+            <div class="contenue_desc"></div> 
             <h3>85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>
             <ul class="lespointsfunky">
-                <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo;</p>
-                <p><b></b>&nbsp;Développeur Web (front end et back end);</p>
-                <p><b></b>&nbsp;Développeur d’applications mobiles;</p>
-                <p><b></b>&nbsp;Designer / infographiste;</p>
-                <p><b></b>&nbsp;Animateurs 2D / 3D;</p>
-                <p><b></b>&nbsp;...et bien plus encore!</p>
+                <div>
+                    <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo</p>
+                    <p><b></b>&nbsp;Développeur Web (front end et back end)</p>
+                    <p><b></b>&nbsp;Développeur d’applications mobiles</p>
+                </div>
+                <div>
+                    <p><b></b>&nbsp;Designer / infographiste</p>
+                    <p><b></b>&nbsp;Animateurs 2D / 3D</p>
+                    <p><b></b>&nbsp;...et bien plus encore!</p>
+                </div>
             </ul>
         </div>
     </main>

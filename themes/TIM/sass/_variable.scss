@@ -1,34 +1,47 @@
 :root {
-  // Mobil
+  // MOBILE
+  // ////////////////////////////
   --margin-mobil: 2vw;
   --padding-mobil: 2vw;
-  //taille de la police
+
+  // taille de la police
   --taille-paragrahpe-mobile: ;
   --taille-titre-mobile: ;
 
-  // Tablette
+  // TABLETTE
+  // /////////////////////////////
   --margin-tablette: 5vw;
   --padding-tablette: 2vw;
-  //taille de la police
+
+  // taille de la police
   --taille-paragrahpe-tablette: ;
   --taille-titre-tablette: ;
 
-  // Ordinateur
+  // ORDINATEUR
+  // /////////////////////////////
   --margin-ordi: 5vw;
   --padding-ordi: 2vw;
-  //taille de la police
-  --taille-paragrahpe-ordi: ;
+
+  --padding-regulier-ordi: 2%;
+
+  // taille de la police
+  --font-size-text: 14pt;
+  --font-size-titre: 16pt;
+
+  --taille-paragrahpe-ordi: 1.3rem;
   --taille-titre-ordi: ;
 
-  //Universel
+  // UNIVERSEL
+  // ////////////////////////////
   --margin-top: 10vh;
   --width-text: 70vw;
 
-  //police d'ecriture - changer partout
-  --font-family-text: "Arial", sans-serif;
+  // Police d'ecriture - changer partout
+  --font-family-text: "niveau-grotesk", sans-serif;
   --font-family-titre: "century-gothic", sans-serif;
+  --letter-spacing: 4px;
 
-  //couleur
+  // Couleur
   --couleur-secondaire: #f0f0f0;
   --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
@@ -42,13 +55,18 @@
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
 
-  //border radius
+  // Border radius
   --border-radius: 15px;
 
-  //Gap
+  // Gap
   --format-gap: 5%;
 
-  //Pour le curseur personnalisé
+  // Pour les logos
+  --logo-pas-colle: 2%;
+
+  // Pour le curseur personnalisé
   --mouse-x: 0px;
   --mouse-y: 0px;
+
+  --transition-time: 1s;
 }

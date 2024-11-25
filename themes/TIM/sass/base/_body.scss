@@ -27,17 +27,20 @@ body {
   align-items: center;
   background-color: var(--couleur-primaire);
   font-family: var(--font-family-text);
-//cacher le scroll horizontal
+  //cacher le scroll horizontal
   overflow-x: hidden;
-  .conteneur{
+
+  .conteneur {
     padding: var(--padding-ordi);
     margin: 0 auto;
+
     @media screen and (max-width: 1280px) {
       padding: var(--padding-tablette);
     }
- 
+
     @media screen and (max-width: 680px) {
       padding: var(--padding-mobil);
+      margin: 0;
     }
 
     //cube
@@ -45,21 +48,21 @@ body {
       width: 200px;
       height: 200px;
       perspective: 600px;
-      transition: perspective 1s;
+      transition: perspective var(--transition-time);
       margin: 0 auto;
       margin-bottom: 35vh;
-      margin-top: 30vh;
+      margin-top: 40vh;
       position: relative;
       z-index: 9;
 
       transform: scale(1.5);
-  
+
       //Style pour tabelette
       @media screen and (max-width: 1280px) {
         transform: scale(1.2);
       }
     }
-    .conteneur_info{
+    .conteneur_info {
       width: var(--width-text);
       margin: 0 auto;
 
@@ -69,32 +72,24 @@ body {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-    
+
         //garder en commentaire je fais des tests
         // transform: translateX(50%);
         // transition: transform 0.5s ease-out;
-    
+
         @media screen and (max-width: 680px) {
           margin-top: var(--margin-top-mobile);
         }
-    
-        .espace_gauche_descmulti {
-          margin-left: var(--margin-mobil);
-    
-          @media screen and (max-width: 680px) {
-            // margin-left: 5%;
-          }
-        }
-    
+
         .bulles_contenu {
           display: flex;
           flex-direction: row;
-          justify-content: center;
-          align-items: center;
+          justify-content: space-between;
           width: var(--width-text);
-          transition: 1s;
+          transition: var(--transition-time);
           margin: 0 auto;
-    
+          gap: 5%;
+
           @media screen and (max-width: 1280px) {
             flex-direction: column;
             align-items: center;
@@ -123,8 +118,6 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-radius: 5px;
-    padding: 0%;
 
     // background: blue;
     // background: linear-gradient(
@@ -169,14 +162,17 @@ div {
       );
     }
 
-    p {
-      margin-left: var(--margin-left-mobile);
-      margin-right: var(--margin-right-mobile);
-      width: 98%; //pour que les paragraphe aille la meme largeur que l'image
-    }
+    // ATTENTION - Contrôle du texte, balise p
+    // p {
+    // margin-left: var(--margin-left-mobile);
+    // margin-right: var(--margin-right-mobile);
+    // width: 98%; //pour que les paragraphe aille la meme largeur que l'image
+    // }
 
     .contenu_img {
       // border: 1px solid red;
+      padding: 2%;
+
       @media screen and (max-width: 680px) {
         margin-bottom: 5vh;
       }
@@ -191,7 +187,7 @@ div {
   .lessections_infosaccueil {
     margin-bottom: 25vh;
     filter: saturate(0);
-    transition: 0.5s;
+    transition: var(--transition-time);
 
     @media screen and (max-width: 680px) {
       margin-bottom: 5vh;
@@ -204,7 +200,7 @@ div {
     }
 
     a:hover {
-      color: var(--couleur-test-orange);
+      color: var(--couleur-secondaire);
       text-decoration: underline;
     }
   }
@@ -223,6 +219,7 @@ div {
   width: 70vw;
   margin: 0 auto;
   margin-top: 10vh;
+  margin-bottom: 6vh;
 }
 
 .description_cours {
@@ -236,6 +233,7 @@ div {
   padding: var(--padding-top-mobile);
   padding-top: 3vh;
 
+  // ATTENTION - Contrôle du texte, balise p
   p {
     color: var(--couleur-secondaire);
     opacity: 0.8;
@@ -244,45 +242,82 @@ div {
 }
 
 .contenufunky {
-  margin-top: var(--margin-top);
   width: var(--width-text);
   margin: 0 auto;
+  margin-top: 25vh;
+
+  // ATTENTION - Contrôle du texte, balise h3
+  h3 {
+    font-size: 23pt;
+    padding: 2%;
+    box-shadow: rgb(0 0 0 / 0.5) 0px 0px 100px 20px inset;
+    border-radius: 5px;
+    background: linear-gradient(
+      90deg,
+      rgb(236, 141, 32, 0.7) 0%,
+      rgb(230, 61, 94, 0.7) 50%,
+      rgb(44, 246, 253, 0.3) 100%
+    );
+    filter: saturate(0);
+    transition: var(--transition-time);
+    &:hover {
+      filter: saturate(1);
+    }
+  }
 }
 
-.contenufunky h3 {
-  font-size: 23pt;
-  padding: 2%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px inset;
-  border-radius: 20px;
+ul{
+  padding: 0px;
 }
 
 .lespointsfunky {
   margin-top: 10vh;
-}
-
-.lespointsfunky b {
-  width: 20px;
-  height: 20px;
-  margin-right: 3vw;
-
-  background-color: white;
-  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
-  border-radius: 50%;
-}
-
-.lespointsfunky p {
   display: flex;
-  align-items: center;
-  margin: 0px 0px 50px 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  // padding-left: var(--padding-ordi);
+  // padding-right: var(--padding-ordi);
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+  }
+
+  
+  // ATTENTION - Contrôle du texte, balise p
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 40%;
+    margin-left: var(--margin-mobil);
+    @media screen and (max-width: 1280px) {
+      width: 90%;
+    }
+    
+    p {
+      display: flex;
+      align-items: center;
+      margin: 0px 0px 50px 0px;
+      font-size: 25px;
+
+      @media screen and (max-width: 680px) {
+        padding: 0%;
+        width: 100%;
+      }
+
+      b {
+        width: 10px;
+        height: 10px;
+        margin-right: 1vh;
+        background-color: white;
+        box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
-//Style pour tabelette
-@media screen and (min-width: 1280px) {
-}
-
-//Style pour Ordinateur
-@media screen and (min-width: 1920px) {
-}
 
 .parallax {
   display: flex;
@@ -298,4 +333,3 @@ div {
 .container {
   width: 100%;
 }
-

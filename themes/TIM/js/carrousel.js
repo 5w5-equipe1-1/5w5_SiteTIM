@@ -99,6 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // Avec le CSS caroussel 
 let images = document.querySelectorAll('.wp-block-image');
 for (let index = 0; index < images.length; index++) {
-  images[index].style.animationDelay = "calc(30s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
-  images[index].style.left =  "max(calc(300px * " + images.length + "), 100%)";
+  images[index].style.animationDelay = "calc(50s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
+  images[index].style.left =  "max(calc(10px * " + images.length + "), 100%)";
 }

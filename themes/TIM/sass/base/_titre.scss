@@ -4,10 +4,9 @@ h1 {
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
   font-family: var(--font-family-titre);
-
 }
 
-.text_hero h1{
+.text_hero h1 {
   font-family: var(--font-family-text);
   font-size: 40px;
   font-style: normal;
@@ -18,7 +17,6 @@ h1 {
   font-size: 25px;
   font-style: normal;
 }
-
 
 h2 {
   font-weight: bold;
@@ -33,6 +31,7 @@ h2 {
 }
 
 h3 {
+  font-size: var(--font-size-titre);
   font-weight: bold;
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
