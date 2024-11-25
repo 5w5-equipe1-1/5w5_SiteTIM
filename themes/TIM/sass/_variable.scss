@@ -55,6 +55,12 @@
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
 
+
+  //dégradé
+  --coulleur-degrade-1: rgb(236, 141, 32) 0%;
+  --coulleur-degrade-2: rgb(230, 61, 94) 50%;
+  --coulleur-degrade-3: rgb(44, 246, 253) 100%;
+
   // Border radius
   --border-radius: 15px;
 
@@ -69,4 +75,6 @@
   --mouse-y: 0px;
 
   --transition-time: 1s;
+
+
 }
