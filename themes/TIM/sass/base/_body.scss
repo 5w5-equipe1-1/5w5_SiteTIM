@@ -29,6 +29,7 @@ body {
   font-family: var(--font-family-text);
   //cacher le scroll horizontal
   overflow-x: hidden;
+  width: 100vw;
 
   .conteneur {
     padding: var(--padding-ordi);
@@ -54,7 +55,6 @@ body {
       margin-top: 40vh;
       position: relative;
       z-index: 9;
-
       transform: scale(1.5);
 
       //Style pour tabelette

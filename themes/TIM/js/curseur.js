@@ -59,7 +59,7 @@ function changerCurseur(event) {
 }
 
 window.onload = function () {
-  const body = document.body;
+  const body = document.footer;
   const nombreMaxDot = 250; // Nombre initial de points à générer
   const maxDistance = 100; // Rayon de 60px pour détecter le curseur
 

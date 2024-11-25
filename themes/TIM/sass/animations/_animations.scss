@@ -66,15 +66,18 @@
   border-radius: 50%;
   z-index: -9999999999;
   opacity: 0.3;
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
 }
 
 //animation de scroll sur les evenements
-.lessections_infosaccueil {
+.animation_apparait {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-.lessections_infosaccueil.visible {
+.animation_apparait.visible {
   opacity: 1;
   transform: translateY(0);
 }

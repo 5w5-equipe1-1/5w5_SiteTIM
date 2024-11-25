@@ -109,7 +109,7 @@
 
         <div class="evenements">
             <div class="commundegrade degrade1event"></div>
-            <div class="lessections_infosaccueil">
+            <div class="lessections_infosaccueil animation_apparait">
                 <h2>Événements</h2>
                 <div class="description_evenements">
                     <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/export_arcade.png" alt="">
@@ -127,7 +127,7 @@
             </div>
             <div class="commundegrade degrade2event"></div>
             <div class="commundegrade degrade3event"></div>
-            <div class="lessections_infosaccueil">
+            <div class="lessections_infosaccueil animation_apparait">
                 <h2>Concours</h2>
                 <div class="description_evenements">
                     <div class="contenu_img">
@@ -145,17 +145,17 @@
             </div>
         </div>
         </div>
-        <div class="bannieres">
-            <h2>Collaboration</h2>
-            <h2>Création</h2>
-            <h2>Compétences Techniques</h2>
-            <!-- <h2>Intégration</h2>
-            <h2>Conception</h2> -->
-        </div>
+            <div class="bannieres">
+                <h2>Collaboration</h2>
+                <h2>Création</h2>
+                <h2>Compétences Techniques</h2>
+                <!-- <h2>Intégration</h2>
+                <h2>Conception</h2> -->
+            </div>
         <div class="contenufunky">
             <!-- test animation -->
             <div class="contenue_desc"></div> 
-            <h3>85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>
+            <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>
             <ul class="lespointsfunky">
                 <div>
                     <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo</p>
