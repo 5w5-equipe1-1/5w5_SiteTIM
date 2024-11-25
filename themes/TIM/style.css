@@ -828,6 +828,10 @@ summary::marker {
   color: var(--couleur-secondaire); /* Change la couleur */
 }
 
+.titre-cours {
+  padding: 1%;
+}
+
 .Sessions, .préalable {
   padding: 1em; /* Unité relative pour le padding */
 }
