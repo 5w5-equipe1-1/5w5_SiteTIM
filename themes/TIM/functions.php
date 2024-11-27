@@ -25,6 +25,8 @@ function custom_search_form($form) {
     return $form;
 }
 add_filter('get_search_form', 'custom_search_form');
+
+
  
  
 ?>

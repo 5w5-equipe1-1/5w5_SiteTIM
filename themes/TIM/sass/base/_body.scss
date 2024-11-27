@@ -142,13 +142,18 @@ div {
 
     box-shadow: rgb(0 0 0 / 0.5) 0px 0px 100px 20px inset;
     border-radius: 5px;
-
+    filter: saturate(0);
+    transition: all var(--transition-time);
     background: linear-gradient(
       90deg,
       rgb(236, 141, 32, 0.7) 0%,
       rgb(230, 61, 94, 0.7) 50%,
       rgb(44, 246, 253, 0.3) 100%
     );
+
+    &:hover{
+      filter: saturate(1);
+    }
 
     @media screen and (max-width: 1280px) {
       flex-direction: column;
@@ -199,7 +204,7 @@ div {
 
   .lessections_infosaccueil {
     margin-bottom: 25vh;
-    filter: saturate(0);
+    
     transition: var(--transition-time);
 
     @media screen and (max-width: 680px) {
@@ -218,9 +223,7 @@ div {
     }
   }
 
-  .lessections_infosaccueil:hover {
-    filter: saturate(1);
-  }
+ 
 }
 
 //cours

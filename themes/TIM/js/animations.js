@@ -208,3 +208,4 @@ function typeText(){
  
 //appelle la fonction
 typeText();
+

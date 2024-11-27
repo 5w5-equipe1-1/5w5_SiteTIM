@@ -356,7 +356,12 @@ div {
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
   border-radius: 5px;
+  filter: saturate(0);
+  transition: all var(--transition-time);
   background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
+}
+.evenements .description_evenements:hover {
+  filter: saturate(1);
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
@@ -392,7 +397,6 @@ div {
 }
 .evenements .lessections_infosaccueil {
   margin-bottom: 25vh;
-  filter: saturate(0);
   transition: var(--transition-time);
 }
 @media screen and (max-width: 680px) {
@@ -408,9 +412,6 @@ div {
 .evenements .lessections_infosaccueil a:hover {
   color: var(--couleur-secondaire);
   text-decoration: underline;
-}
-.evenements .lessections_infosaccueil:hover {
-  filter: saturate(1);
 }
 
 .cours {
@@ -880,6 +881,32 @@ summary::marker {
     padding: 2em 1em; /* Plus d'espace interne sur les petits écrans */
   }
 }
+details {
+  position: relative;
+  overflow: hidden;
+}
+
+details summary {
+  cursor: pointer; /* Curseur interactif */
+}
+
+details .description_cours {
+  max-height: 0; /* Cache le contenu par défaut */
+  opacity: 0; /* Transparent par défaut */
+  overflow: hidden; /* Cache les débordements */
+}
+
+details[open] .description_cours {
+  max-height: 500px; /* Hauteur maximale lorsque ouvert */
+  opacity: 1; /* Contenu visible */
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Transition fluide pour ouverture/fermeture */
+}
+
+details:not([open]) .description_cours {
+  max-height: 0; /* Retour à la hauteur minimale */
+  opacity: 0; /* Rendre invisible */
+}
+
 .conteneur_404 {
   display: flex;
   justify-content: center;
@@ -1170,65 +1197,7 @@ button {
   position: absolute;
   z-index: -1000;
   background: rgb(239, 170, 91);
-  background: linear-gradient(90deg, var(--coulleur-degrade-1), var(--coulleur-degrade-2), var(--coulleur-degrade-3));
-}
-
-.bannieres {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  height: 30vh;
-  width: 200%;
-  transition: transform 0.3s ease-out;
-}
-.bannieres .photo {
-  width: 10%;
-  height: 80%;
-}
-.bannieres .p1 {
-  background-color: green;
-}
-.bannieres .p2 {
-  background-color: purple;
-}
-.bannieres .p3 {
-  background-color: peru;
-}
-.bannieres .p4 {
-  background-color: lightcoral;
-}
-.bannieres .p5 {
-  background-color: lightblue;
-}
-.bannieres .p6 {
-  background-color: lightgreen;
-}
-.bannieres h2 {
-  font-family: var(--font-family-titre);
-  font-size: 50pt;
-  letter-spacing: var(--letter-spacing);
-  color: white;
-}
-@media screen and (max-width: 1280px) {
-  .bannieres h2 {
-    font-size: 30pt;
-  }
-}
-@media screen and (max-width: 680px) {
-  .bannieres h2 {
-    font-size: 20pt;
-  }
-}
-
-.bannieres::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1000;
-  background: rgb(239, 170, 91);
-  background: linear-gradient(90deg, var(--coulleur-degrade-1), var(--coulleur-degrade-2), var(--coulleur-degrade-3));
+  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
 }
 
 .bannieres {

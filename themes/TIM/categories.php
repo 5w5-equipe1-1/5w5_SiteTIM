@@ -125,6 +125,28 @@
             <div class="minipoint"></div>
             <img class="lesflechescurseur" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/flecheHoverCube.png" alt="">
         </div>
+        <!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const details = document.querySelectorAll("details");
+
+        details.forEach((detail) => {
+            const description = detail.querySelector(".description_cours");
+
+            // Ajoute un événement toggle pour gérer les animations
+            detail.addEventListener("toggle", function () {
+                if (detail.open) {
+                    // Ajoute une classe lors de l'ouverture
+                    description.classList.add("description_cours--ouvrir");
+                } else {
+                    // Retire la classe avec un léger délai pour laisser le temps à l'animation de fermeture
+                    setTimeout(() => {
+                        description.classList.remove("description_cours--ouvrir");
+                    }, 500); // Doit correspondre à la durée de la transition en CSS
+                }
+            });
+        });
+    });
+</script> -->
 
             <!-- API fontawsome pour les icones -->
             <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
@@ -140,5 +162,6 @@
             <script src="<?php echo get_template_directory_uri() . "/js/curseur.js"?>"></script>
             <!-- inclure le script qui gere le minicube -->
             <script src="<?php echo get_template_directory_uri() . "/js/miniCube.js"?>"></script>
+
         </body>
         </html>
