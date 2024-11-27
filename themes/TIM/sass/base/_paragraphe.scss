@@ -41,10 +41,13 @@ p.info_colonne_footer{
   // display: flex;
   // align-items: center;
 
-  border: 1px solid white;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
-    rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
-    rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  border: 2px solid white;
+  // box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
+  //   rgba(176, 7, 61, 0.25) -5px 10px 20px inset,
+  //   rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;
   border-radius: 5px;
 
   // Pas de variables ici, à voir
@@ -55,6 +58,7 @@ p.info_colonne_footer{
   // margin: 2%;
 
   text-align: center;
+  transition: 1s;
 
   // Est-ce que le font-size ici est essentiel?
   // font-size: var(--taille-paragrahpe-ordi);
@@ -68,6 +72,36 @@ p.info_colonne_footer{
   @media screen and (max-width: 680px) {
     padding: 10%;
     width: 50%;
+  }
+}
+
+.bulles_contenu p:hover {
+  //Le display flex déplace le contenu à gauche sans raison...
+  // ///////////////////////////////
+
+  // border: 2px solid rgba(255, 255, 255, 0.3);
+  // animation: changerFondCouleur 3s infinite;
+  // Les medias ici à vérifier...
+}
+
+@keyframes changerFondCouleur {
+  0% {
+    background-color: transparent;
+  }
+  5% {
+    background-color: transparent;
+  }
+  30% {
+    background-color: rgba(236, 141, 32, 0.7); //orange
+  }
+  60% {
+    background-color: rgba(230, 61, 94, 0.7); //magenta
+  }
+  90% {
+    background-color: rgba(44, 211, 253, 0.3); //cyan
+  }
+  100% {
+    background-color: transparent;
   }
 }
 
