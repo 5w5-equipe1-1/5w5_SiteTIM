@@ -644,7 +644,6 @@ footer h3 {
 .les_reseaux {
   display: flex;
   flex-direction: column;
-  align-items: center;
   align-content: center;
   flex-wrap: wrap;
 }
