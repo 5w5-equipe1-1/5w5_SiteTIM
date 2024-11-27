@@ -267,6 +267,11 @@ div {
     &:hover {
       filter: saturate(1);
     }
+
+    @media screen and (max-width: 1280px) {
+      filter: saturate(1);
+    }
+
   }
 }
 
