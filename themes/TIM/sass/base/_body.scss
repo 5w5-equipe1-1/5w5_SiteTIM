@@ -124,6 +124,9 @@ div {
     flex-direction: row;
     justify-content: space-between;
     box-shadow: rgb(0 0 0 / 0.5) 0px 0px 100px 20px inset;
+    border-radius: 5px;
+    filter: saturate(0);
+    transition: all var(--transition-time);
     border-radius: var(--border-radius);
     background: linear-gradient(
       90deg,
@@ -131,6 +134,10 @@ div {
       rgb(230, 61, 94, 0.7) 50%,
       rgb(44, 246, 253, 0.3) 100%
     );
+
+    &:hover{
+      filter: saturate(1);
+    }
 
     &:nth-of-type(even) {
       //   background-color: green;
@@ -189,7 +196,7 @@ div {
 
   .lessections_infosaccueil {
     margin-bottom: 25vh;
-    filter: saturate(0);
+    
     transition: var(--transition-time);
     border-radius: var(--border-radius);
 
@@ -209,9 +216,7 @@ div {
     }
   }
 
-  .lessections_infosaccueil:hover {
-    filter: saturate(1);
-  }
+ 
 }
 
 //cours
