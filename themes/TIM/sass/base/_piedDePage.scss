@@ -2,18 +2,25 @@
 footer {
   // background-color: purple;
   width: 100%;
-  margin-top: 60vh;
+  // margin-top: 20vh;
+
   overflow-x: hidden;
 
   @media screen and (max-width: 1280px) {
-    margin-top: 70vh;
+    // margin-top: 70vh;
   }
 
   @media screen and (max-width: 680px) {
-    margin-top: 50vh;
+    // margin-top: 50vh;
   }
 
-  .section_montagne img {
+
+  .section_montagne {
+    overflow-x: hidden;
+    height: fit-content;
+    display: none;
+    width: 100vw;
+    img {
     position: absolute;
     width: 120%;
     left: -5%;
@@ -23,12 +30,12 @@ footer {
     // top: 1000vh;
     // border: 1px solid red;
 
-    @media screen and (max-width: 680px) {
-      width: 200%;
-      left: -60%;
+      @media screen and (max-width: 680px) {
+        width: 200%;
+        left: -60%;
+      }
     }
   }
-
   //titre et logo
   .conteneur_logo_tim {
     display: flex;
@@ -63,10 +70,10 @@ footer {
   .info_footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    align-items: start;
     height: 60%;
-    width: 100vw;
+    width: var(--width-text);
     margin: 0 auto;
     line-height: 3vh;
 
@@ -95,7 +102,6 @@ footer {
       // ATTENTION - Contrôle du texte, balise p
       p:hover {
         color: var(--couleur-secondaire-hover);
-        text-decoration: underline;
       }
     }
 
@@ -177,4 +183,16 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.magenta {
+  color: var(--couleur-magenta);
+}
+
+.cyan {
+  color: var(--couleur-cyan);
+}
+
+.orange {
+  color: var(--couleur-orange);
 }

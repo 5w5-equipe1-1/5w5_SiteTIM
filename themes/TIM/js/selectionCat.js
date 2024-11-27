@@ -26,7 +26,7 @@
       let url = `http://localhost/5w5/wp-content/themes/TIM/categories.php?category=${cat}`;
       //let url = `http://localhost/5w5gabrielle/wp-content/themes/TIM/categories.php?category=${cat}`;
       //let url = `https://gftnth00.mywhc.ca/tim23/wp-content/themes/TIM/categories.php?category=${cat}`;
-      //let url = `http://localhost:8080/5w5_syphax/wp-content/themes/TIM/categories.php?category=${cat}`;
+      //let url = `http://localhost:8080/5w5/wp-content/themes/TIM/categories.php?category=${cat}`;
       // Rediriger l'utilisateur vers la nouvelle page
       window.location.href = url;
     });
@@ -56,6 +56,7 @@
       //let url = `http://localhost/5w5gabrielle/wp-content/themes/TIM/categories.php?category=${cat}`;
       //let url = `http://localhost/5w5_ELOI_v2/wp-content/themes/TIM/categories.php?category=${cat}`;
       //let url = `https://gftnth00.mywhc.ca/tim23/wp-content/themes/TIM/categories.php?category=${cat}`;
+      //let url = `http://localhost:8080/5w5/wp-content/themes/TIM/categories.php?category=${cat}`;
       // Rediriger l'utilisateur vers la nouvelle page
       let url = `http://localhost:81/5w5/wp-content/themes/TIM/categories.php?category=${cat}`;
 

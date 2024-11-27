@@ -4,6 +4,18 @@ h1 {
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
   font-family: var(--font-family-titre);
+
+  .text_multimedia {
+    letter-spacing: var(--letter-spacing);
+    color: transparent; /* Make text transparent */
+    background: linear-gradient(90deg, rgba(236, 141, 32) 0%, rgba(230, 61, 94) 50%, rgba(44, 246, 253) 100%);
+    -webkit-background-clip: text; /* Apply the gradient to the text */
+    background-clip: text; /* Standard property */
+  }
+  
+  @media  screen and (max-width: 1280px) {
+    font-size: 50px;
+  }
 }
 
 .text_hero h1 {
@@ -24,6 +36,7 @@ h2 {
   color: var(--couleur-secondaire);
   font-family: var(--font-family-titre);
   text-align: left;
+  letter-spacing: var(--letter-spacing);
 }
 
 .bannieres h2 {

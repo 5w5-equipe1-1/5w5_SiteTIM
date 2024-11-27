@@ -33,6 +33,7 @@ body {
   font-family: var(--font-family-text);
   //cacher le scroll horizontal
   overflow-x: hidden;
+  width: 100vw;
 
   .conteneur {
     padding: var(--padding-ordi);
@@ -58,7 +59,6 @@ body {
       margin-top: 40vh;
       position: relative;
       z-index: 9;
-
       transform: scale(1.5);
 
       //Style pour tabelette
@@ -117,6 +117,7 @@ div {
   width: 70vw;
   margin: 0 auto;
   margin-bottom: 5vh;
+  margin-top: 10vh;
 
   .description_evenements {
     display: flex;
@@ -175,10 +176,18 @@ div {
 
     .contenu_img {
       // border: 1px solid red;
-      padding: 2%;
+      padding: 5%;
 
       @media screen and (max-width: 680px) {
         margin-bottom: 5vh;
+      }
+
+      h3{
+        letter-spacing: var(--letter-spacing);
+      }
+
+      p{
+        letter-spacing: var(--letter-spacing);
       }
     }
   }
@@ -267,6 +276,11 @@ div {
     &:hover {
       filter: saturate(1);
     }
+
+    @media screen and (max-width: 1280px) {
+      filter: saturate(1);
+    }
+
   }
 }
 
@@ -304,7 +318,7 @@ ul{
       align-items: center;
       margin: 0px 0px 50px 0px;
       font-size: 25px;
-
+      line-height: 1.6;
       @media screen and (max-width: 680px) {
         padding: 0%;
         width: 100%;
