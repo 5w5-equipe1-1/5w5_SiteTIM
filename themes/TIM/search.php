@@ -1,20 +1,21 @@
 <?php  
-    // Assurez-vous que WordPress est chargé
-    if (!function_exists('get_header')) {
-        require_once(dirname(__FILE__) . '/../../../wp-load.php');
-    }
+// Assurez-vous que WordPress est chargé
+if (!function_exists('get_header')) {
+    require_once(dirname(__FILE__) . '/../../../wp-load.php');
+}
 
-    // Inclure le header
-    get_header();
+// Inclure le header
+get_header();
 
-    // Vérifier si la recherche est vide
-    $recherche = '';
-    if (isset($_GET['s'])) {
-        $recherche = sanitize_text_field($_GET['s']);
-    }
+// Vérifier si la recherche est vide
+$recherche = '';
+if (isset($_GET['s'])) {
+    $recherche = sanitize_text_field($_GET['s']);
+}
 ?>
 
 <main>
+<link rel="stylesheet" href="https://use.typekit.net/dnl3dwa.css">
     <div class="conteneur_search">
         <div class="resultat_recherche">
             <h2>Votre recherche : </h2>
@@ -22,9 +23,11 @@
         </div>
         <div>
             <?php
-            // Arguments pour WP_Query
+            // Arguments pour WP_Query pour les posts dans la catégorie 'cours'
             $args = array(
                 's' => $recherche, // Le terme de recherche
+                'category_name' => 'cours', // Filtrer par la catégorie 'cours'
+                'post_type' => array('post', 'page'), // Inclure les articles et les pages
             );
 
             // Exécuter la requête
@@ -34,11 +37,23 @@
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post();      
                     // Afficher le titre et le contenu des posts
-                    echo '<h3>' . get_the_title() . '</h3>';
-                    echo '<div>' . get_the_excerpt() . '</div>';
+                    echo '<h3 class="titre_r_search">' . get_the_title() . '</h3>';
+                    echo '<div class="texte_r_search">' . get_the_excerpt() . '</div>';
+
+                    // Récupérer les images associées au post
+                    $images = get_attached_media('image', $post->ID);
+
+                    // Afficher les images
+                    if ($images) {
+                        echo '<div class="image_container">';
+                        foreach ($images as $image) {
+                            echo '<img src="' . wp_get_attachment_image_url($image->ID, 'thumbnail') . '" alt="' . $image->post_title . '">';
+                        }
+                        echo '</div>';
+                    }
                 endwhile;
             else :
-                echo '<p>Aucun résultat trouvé pour "' . esc_html($recherche) . '"</p>';
+                echo '<p>Aucun résultat trouvé pour "' . esc_html($recherche) . '" dans la catégorie "cours".</p>';
             endif;
 
             // Réinitialiser la requête
