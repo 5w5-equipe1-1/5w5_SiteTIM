@@ -654,6 +654,9 @@ footer h3 {
     margin-left: 10%;
   }
 }
+.les_reseaux h3 {
+  margin: 0px;
+}
 .les_reseaux .lesmedias {
   display: flex;
   align-items: center;
