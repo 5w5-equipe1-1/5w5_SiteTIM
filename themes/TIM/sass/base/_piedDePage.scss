@@ -149,7 +149,8 @@ footer {
     // gap: var(--format-gap);
 
     @media screen and (max-width: 680px) {
-      flex-direction: column;
+      flex-direction: row;
+      align-items: left;
     }
 
     svg {

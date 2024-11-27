@@ -130,6 +130,7 @@
             <div class="lessections_infosaccueil animation_apparait">
                 <h2>Concours</h2>
                 <div class="description_evenements">
+                    <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/edit_concours.png" alt="">
                     <div class="contenu_img">
                         <h3>Game Jams</h3>
                         <p>Les étudiants peuvent participer à des concours de création de 
@@ -140,7 +141,6 @@
                         </p>
                         <a href="https://www.cegepvalleyfield.ca/vie-etudiante/activites-socioculturelles/intercollegial-de-creation-de-jeux-video/">Plus d'infos sur le site du Cégep de Valleyfield</a>
                     </div>
-                    <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/edit_concours.png" alt="">
                 </div>
             </div>
         </div>
