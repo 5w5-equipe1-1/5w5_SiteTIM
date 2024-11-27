@@ -133,13 +133,16 @@ footer {
 .les_reseaux {
   display: flex;
   flex-direction: column;
-  align-items: center;
   align-content: center;
   flex-wrap: wrap;
 
   @media screen and (max-width: 680px) {
     align-content: flex-start;
     margin-left: 10%;
+  }
+
+  h3{
+    margin: 0px;
   }
 
   .lesmedias {
@@ -149,7 +152,8 @@ footer {
     // gap: var(--format-gap);
 
     @media screen and (max-width: 680px) {
-      flex-direction: column;
+      flex-direction: row;
+      align-items: left;
     }
 
     svg {

@@ -360,10 +360,20 @@ div {
   flex-direction: row-reverse;
 }
 .evenements .description_evenements:nth-of-type(odd) > img {
-  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+  border-radius: var(--border-radius) 0px 0px var(--border-radius);
+}
+@media screen and (max-width: 1280px) {
+  .evenements .description_evenements:nth-of-type(odd) > img {
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+  }
 }
 .evenements .description_evenements:nth-of-type(even) > img {
-  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+@media screen and (max-width: 1280px) {
+  .evenements .description_evenements:nth-of-type(even) > img {
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  }
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements {
@@ -392,7 +402,7 @@ div {
   letter-spacing: var(--letter-spacing);
 }
 .evenements .description_evenements .contenu_img p {
-  letter-spacing: var(--letter-spacing);
+  font-family: var(--font-family-text);
 }
 .evenements .lessections_infosaccueil {
   margin-bottom: 25vh;
@@ -452,7 +462,7 @@ div {
 }
 .contenufunky h3 {
   font-size: 23pt;
-  padding: 10%;
+  padding: 2%;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
   border-radius: 5px;
   letter-spacing: var(--letter-spacing);
@@ -466,6 +476,7 @@ div {
 @media screen and (max-width: 1280px) {
   .contenufunky h3 {
     filter: saturate(1);
+    padding: 10%;
   }
 }
 
@@ -633,7 +644,6 @@ footer h3 {
 .les_reseaux {
   display: flex;
   flex-direction: column;
-  align-items: center;
   align-content: center;
   flex-wrap: wrap;
 }
@@ -643,13 +653,17 @@ footer h3 {
     margin-left: 10%;
   }
 }
+.les_reseaux h3 {
+  margin: 0px;
+}
 .les_reseaux .lesmedias {
   display: flex;
   align-items: center;
 }
 @media screen and (max-width: 680px) {
   .les_reseaux .lesmedias {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: left;
   }
 }
 @media screen and (max-width: 1280px) {
