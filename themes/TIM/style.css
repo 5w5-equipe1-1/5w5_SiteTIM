@@ -104,6 +104,7 @@ h2 {
   color: var(--couleur-secondaire);
   font-family: var(--font-family-titre);
   text-align: left;
+  letter-spacing: var(--letter-spacing);
 }
 
 .bannieres h2 {
@@ -346,6 +347,7 @@ div {
   width: 70vw;
   margin: 0 auto;
   margin-bottom: 5vh;
+  margin-top: 10vh;
 }
 .evenements .description_evenements {
   display: flex;
@@ -371,12 +373,18 @@ div {
   }
 }
 .evenements .description_evenements .contenu_img {
-  padding: 2%;
+  padding: 5%;
 }
 @media screen and (max-width: 680px) {
   .evenements .description_evenements .contenu_img {
     margin-bottom: 5vh;
   }
+}
+.evenements .description_evenements .contenu_img h3 {
+  letter-spacing: var(--letter-spacing);
+}
+.evenements .description_evenements .contenu_img p {
+  letter-spacing: var(--letter-spacing);
 }
 .evenements .description_evenements:nth-of-type(even) {
   flex-direction: row-reverse;
@@ -488,6 +496,7 @@ ul {
   align-items: center;
   margin: 0px 0px 50px 0px;
   font-size: 25px;
+  line-height: 1.6;
 }
 @media screen and (max-width: 680px) {
   .lespointsfunky div p {
