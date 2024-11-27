@@ -14,7 +14,15 @@ p {
   // Style pour Mobile
   @media screen and (max-width: 680px) {
     padding: 10%;
-    width: 50%;
+    width: 80%;
+
+  }
+}
+
+p.info_colonne_footer{
+  @media screen and (max-width: 680px) {
+    padding: 1%;
+    padding-left: 10%;
   }
 }
 

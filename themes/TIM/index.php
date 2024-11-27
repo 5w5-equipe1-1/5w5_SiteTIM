@@ -98,7 +98,7 @@
     <div class="conteneur_info">
         <div class="description_multimedia">
             <h1>Qu'est ce que le <span class="text_multimedia"> multimédia</span>?</h1>
-            <div class="bulles_contenu">
+            <div class="bulles_contenu animation_apparait">
                 <p>Créer des médias</p>
                 <p>Concevoir le design et l’interactivité</p>
                 <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
