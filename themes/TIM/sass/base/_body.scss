@@ -181,7 +181,8 @@ div {
       }
 
       p{
-        letter-spacing: var(--letter-spacing);
+        // letter-spacing: var(--letter-spacing);
+        font-family: var(--font-family-text);
       }
     }
   }

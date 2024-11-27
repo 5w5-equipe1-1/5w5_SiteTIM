@@ -402,7 +402,7 @@ div {
   letter-spacing: var(--letter-spacing);
 }
 .evenements .description_evenements .contenu_img p {
-  letter-spacing: var(--letter-spacing);
+  font-family: var(--font-family-text);
 }
 .evenements .lessections_infosaccueil {
   margin-bottom: 25vh;
