@@ -1253,6 +1253,25 @@ button {
   transition: fill 0.3s ease;
 }
 
+.conteneur_search {
+  padding-bottom: 10%;
+}
+
+.recherche_text {
+  letter-spacing: var(--letter-spacing);
+  color: transparent; /* Make text transparent */
+  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
+  -webkit-background-clip: text; /* Apply the gradient to the text */
+  background-clip: text; /* Standard property */
+}
+
+.texte_r_search {
+  color: white;
+  font-family: "niveau-grotesk", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
 /* ----------------------------------------------------- */
 /*Animations*/
 /* ----------------------------------------------------- */
