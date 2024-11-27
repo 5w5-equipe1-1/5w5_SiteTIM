@@ -44,6 +44,7 @@
             <div class=".conteneur">
                 <div class="section_hero">
                     <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
+                    <div class="test_division"></div>
                     <div class="text_hero">
                         <div class="decor_hero">
                         <div class="commundegrade decordegrade1"></div>

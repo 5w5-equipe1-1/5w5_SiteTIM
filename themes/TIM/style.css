@@ -148,7 +148,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
   background-color: var(--couleur-primaire);
   box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
@@ -786,9 +786,14 @@ li {
   width: 100%;
   opacity: 0.4;
 }
+@media screen and (max-width: 1280px) {
+  .section_hero .video_hero {
+    margin-top: 10vh;
+  }
+}
 @media screen and (max-width: 680px) {
   .section_hero .video_hero {
-    margin-top: 15vh;
+    margin-top: 12vh;
   }
 }
 .section_hero .text_hero {
@@ -798,6 +803,11 @@ li {
   margin: 0 auto;
   padding: 2%;
   user-select: none;
+}
+@media screen and (max-width: 1280px) {
+  .section_hero .text_hero {
+    transform: translateY(-85%);
+  }
 }
 @media screen and (max-width: 680px) {
   .section_hero .text_hero {
@@ -838,6 +848,12 @@ li {
   border-radius: 100%;
   background: rgb(0, 0, 0);
   background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 45%);
+}
+.section_hero .test_division {
+  width: 100vw;
+  height: 10vh;
+  transform: translateY(-100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--couleur-primaire) 100%);
 }
 
 .hovercurseur {
