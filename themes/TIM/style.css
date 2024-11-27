@@ -164,6 +164,7 @@ header .conteneur_logo_tim {
   gap: var(--margin-left-mobile);
   transition: 0.5s;
   margin-left: var(--logo-pas-colle);
+  margin-right: var(--logo-pas-colle);
 }
 header .conteneur_logo_tim .logo_tim {
   width: 50px;
