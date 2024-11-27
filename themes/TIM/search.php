@@ -23,10 +23,13 @@ if (isset($_GET['s'])) {
         </div>
         <div>
             <?php
+            $category_slug = array("cours", "evenements", "concours"); // Noms des catégories à rechercher
+            $categories = array_map('get_cat_ID', $category_slug); // Convertir les noms en IDs
+
             // Arguments pour WP_Query pour les posts dans la catégorie 'cours'
             $args = array(
                 's' => $recherche, // Le terme de recherche
-                'category_name' => 'cours', // Filtrer par la catégorie 'cours'
+                'category__in' => $categories, // Filtrer par la catégorie 'cours'
                 'post_type' => array('post', 'page'), // Inclure les articles et les pages
             );
 

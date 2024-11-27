@@ -134,11 +134,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
   flex-wrap: wrap;
 
   @media screen and (max-width: 680px) {
     align-content: flex-start;
     margin-left: 10%;
+    align-items: start;
   }
 
   h3{

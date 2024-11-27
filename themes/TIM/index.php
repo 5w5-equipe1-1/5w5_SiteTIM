@@ -111,17 +111,36 @@
             <div class="commundegrade degrade1event"></div>
             <div class="lessections_infosaccueil ">
                 <h2>Événements</h2>
-                <div class="description_evenements animation_apparait">
-                    <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/evenement-2.jpg" alt="">
-                    <div class="contenu_img">
-                        <h3>Sortie Oasis Immersion : Inspirés par la technologie émergente</h3>
-                        <p>Une visite enrichissante organisée dans le cadre du cours Technologie émergente, où 
-                            les étudiants ont exploré l'art immersif pour nourrir leur créativité. Cette sortie 
-                            a permis d’ouvrir des perspectives sur l’impact des environnements immersifs dans le domaine du multimédia.
-                        </p>
-                         </div>
-                </div><br><br><br>
-                <div class="description_evenements animation_apparait">
+                <?php 
+                    $evenement = new WP_Query(array(
+                        'category_name' => 'evenements',
+                        'posts_per_page' => -1 // -1 pour récupérer tous les posts
+                    ));
+                    while($evenement->have_posts()): $evenement->the_post();
+
+                    $content = apply_filters('the_content', get_the_content());
+                    // Extract images
+                    preg_match_all('/<img[^>]+>/i', $content, $images); 
+                    // Remove images from content
+                    $content_without_images = preg_replace('/<img[^>]+>/i', '', $content);
+                ?>
+                   
+                    <div class="description_evenements animation_apparait">
+                        <div class="contenu_img">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php echo $content_without_images; ?></p>
+                        </div>
+                        <?php 
+                            // Display images
+                            if (!empty($images[0])) {
+                                foreach ($images[0] as $image) {
+                                    echo $image;
+                                }
+                            }
+                        ?>
+                    </div><br><br><br>
+                <?php endwhile; ?>
+                <!-- <div class="description_evenements animation_apparait">
                     <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/evenement-1.jpg" alt="">
                     <div class="contenu_img">
                         <h3>Accueil chaleureux des professeurs</h3>
@@ -136,19 +155,48 @@
                     <div class="contenu_img">
                         <h3>Exposition pour la Journée de la Terre 
                         </h3>
-                        <p>Exposition pour la Journée de la Terre 
+                        <p>
                         Les affiches symboliques créées par les étudiants de première année pour sensibiliser à l’environnement 
                         ont été exposées au centre de l’école, inspirant toute la communauté. Cet événement a mis en valeur l’engagement
                          artistique et écologique des futurs professionnels du multimédia. 
                         </p>
                 </div>
-            </div>
+            </div> -->
                 </div>
             <div class="commundegrade degrade2event"></div>
             <div class="commundegrade degrade3event"></div>
             <div class="lessections_infosaccueil ">
                 <h2>Concours</h2>
-                <div class="description_evenements animation_apparait">
+                <?php 
+                    $evenement = new WP_Query(array(
+                        'category_name' => 'concours',
+                        'posts_per_page' => -1 // -1 pour récupérer tous les posts
+                    ));
+                    while($evenement->have_posts()): $evenement->the_post();
+
+                    $content = apply_filters('the_content', get_the_content());
+                    // Extract images
+                    preg_match_all('/<img[^>]+>/i', $content, $images); 
+                    // Remove images from content
+                    $content_without_images = preg_replace('/<img[^>]+>/i', '', $content);
+                ?>
+                   
+                    <div class="description_evenements animation_apparait">
+                        <div class="contenu_img">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php echo $content_without_images; ?></p>
+                        </div>
+                        <?php 
+                            // Display images
+                            if (!empty($images[0])) {
+                                foreach ($images[0] as $image) {
+                                    echo $image;
+                                }
+                            }
+                        ?>
+                    </div><br><br><br>
+                <?php endwhile; ?>
+                <!-- <div class="description_evenements animation_apparait">
                     <div class="contenu_img">
                         <h3>Game Jams</h3>
                         <p>Les étudiants peuvent participer à des concours de création de 
@@ -173,9 +221,8 @@
                         L'équipe qui obtient le plus de votes gagne un prix de 200 $. C'est donc une compétition amusante !
                         </p>
                     </div>
-
+                </div> -->
             </div>
-        </div>
         </div>
             <div class="bannieres">
                 <h2>Collaboration</h2>

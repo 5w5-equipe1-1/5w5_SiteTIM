@@ -367,19 +367,19 @@ div {
 .evenements .description_evenements:nth-of-type(even) {
   flex-direction: row-reverse;
 }
-.evenements .description_evenements:nth-of-type(odd) > img {
+.evenements .description_evenements:nth-of-type(even) > img {
   border-radius: var(--border-radius) 0px 0px var(--border-radius);
 }
 @media screen and (max-width: 1280px) {
-  .evenements .description_evenements:nth-of-type(odd) > img {
+  .evenements .description_evenements:nth-of-type(even) > img {
     border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   }
 }
-.evenements .description_evenements:nth-of-type(even) > img {
+.evenements .description_evenements:nth-of-type(odd) > img {
   border-radius: 0px var(--border-radius) var(--border-radius) 0px;
 }
 @media screen and (max-width: 1280px) {
-  .evenements .description_evenements:nth-of-type(even) > img {
+  .evenements .description_evenements:nth-of-type(odd) > img {
     border-radius: 0px 0px var(--border-radius) var(--border-radius);
   }
 }
@@ -400,6 +400,7 @@ div {
 }
 .evenements .description_evenements .contenu_img {
   padding: 5%;
+  width: 90%;
 }
 @media screen and (max-width: 680px) {
   .evenements .description_evenements .contenu_img {
@@ -649,12 +650,14 @@ footer h3 {
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 680px) {
   .les_reseaux {
     align-content: flex-start;
     margin-left: 10%;
+    align-items: start;
   }
 }
 .les_reseaux h3 {

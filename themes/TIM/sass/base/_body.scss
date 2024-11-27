@@ -144,14 +144,14 @@ div {
       flex-direction: row-reverse;
     }
 
-    &:nth-of-type(odd)>img{
+    &:nth-of-type(even)>img{
       border-radius: var(--border-radius) 0px 0px var(--border-radius);
       @media screen and (max-width: 1280px) {
         border-radius: var(--border-radius) var(--border-radius) 0px 0px;
       }
     }
 
-    &:nth-of-type(even)>img{
+    &:nth-of-type(odd)>img{
       border-radius: 0px var(--border-radius) var(--border-radius) 0px;
       @media screen and (max-width: 1280px) {
         border-radius:  0px 0px var(--border-radius) var(--border-radius);
@@ -178,6 +178,7 @@ div {
     .contenu_img {
       // border: 1px solid red;
       padding: 5%;
+      width: 90%;
 
       @media screen and (max-width: 680px) {
         margin-bottom: 5vh;
