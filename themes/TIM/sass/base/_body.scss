@@ -123,32 +123,33 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    // background: blue;
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(35, 243, 255, 0.3) 0%,
-    //   rgba(255, 167, 66, 0.3) 23%,
-    //   rgba(255, 46, 64, 0.3) 50%,
-    //   rgba(255, 167, 66, 0.3) 76%,
-    //   rgba(35, 243, 255, 0.3) 100%
-    // );
-
-    // background: linear-gradient(
-    //   90deg,
-    //   rgb(236, 141, 32, 0.7) 0%,
-    //   rgb(230, 61, 94, 0.7) 100%
-    // );
-
     box-shadow: rgb(0 0 0 / 0.5) 0px 0px 100px 20px inset;
-    border-radius: 5px;
-
+    border-radius: var(--border-radius);
     background: linear-gradient(
       90deg,
       rgb(236, 141, 32, 0.7) 0%,
       rgb(230, 61, 94, 0.7) 50%,
       rgb(44, 246, 253, 0.3) 100%
     );
+
+    &:nth-of-type(even) {
+      //   background-color: green;
+      flex-direction: row-reverse;
+    }
+
+    &:nth-of-type(odd)>img{
+      border-radius: var(--border-radius) 0px 0px var(--border-radius);
+      @media screen and (max-width: 1280px) {
+        border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+      }
+    }
+
+    &:nth-of-type(even)>img{
+      border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+      @media screen and (max-width: 1280px) {
+        border-radius:  0px 0px var(--border-radius) var(--border-radius);
+      }
+    }
 
     @media screen and (max-width: 1280px) {
       flex-direction: column;
@@ -167,13 +168,6 @@ div {
       );
     }
 
-    // ATTENTION - Contrôle du texte, balise p
-    // p {
-    // margin-left: var(--margin-left-mobile);
-    // margin-right: var(--margin-right-mobile);
-    // width: 98%; //pour que les paragraphe aille la meme largeur que l'image
-    // }
-
     .contenu_img {
       // border: 1px solid red;
       padding: 5%;
@@ -187,20 +181,17 @@ div {
       }
 
       p{
-        letter-spacing: var(--letter-spacing);
+        // letter-spacing: var(--letter-spacing);
+        font-family: var(--font-family-text);
       }
     }
-  }
-
-  .description_evenements:nth-of-type(even) {
-    //   background-color: green;
-    flex-direction: row-reverse;
   }
 
   .lessections_infosaccueil {
     margin-bottom: 25vh;
     filter: saturate(0);
     transition: var(--transition-time);
+    border-radius: var(--border-radius);
 
     @media screen and (max-width: 680px) {
       margin-bottom: 5vh;
@@ -265,6 +256,7 @@ div {
     padding: 2%;
     box-shadow: rgb(0 0 0 / 0.5) 0px 0px 100px 20px inset;
     border-radius: 5px;
+    letter-spacing: var(--letter-spacing);
     background: linear-gradient(
       90deg,
       rgb(236, 141, 32, 0.7) 0%,
@@ -279,6 +271,7 @@ div {
 
     @media screen and (max-width: 1280px) {
       filter: saturate(1);
+      padding: 10%;
     }
 
   }

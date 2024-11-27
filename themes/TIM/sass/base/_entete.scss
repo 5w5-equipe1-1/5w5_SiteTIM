@@ -1,13 +1,13 @@
 header {
   z-index: 10;
-  position: absolute;
+  position: fixed;
   top: 0%;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
   background-color: var(--couleur-primaire);
   box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
@@ -24,6 +24,7 @@ header {
     transition: 0.5s;
 
     margin-left: var(--logo-pas-colle);
+    margin-right: var(--logo-pas-colle);
 
     .logo_tim {
       width: 50px;
