@@ -46,12 +46,15 @@ Ce theme a ete developpe dans le cadre du cours 5w5.
   --couleur-secondaire-hover: #d6d6d6;
   --couleur-primaire: #1a1a1a;
   --couleur-primaire-hover: #333333;
-  --couleur-orange: #ffd472;
-  --couleur-magenta: #ffaab1;
+  --couleur-orange: #ffde90;
+  --couleur-magenta: #ff8989;
   --couleur-cyan: #96e7ff;
   --couleur-test-orange: #efaa5b;
   --couleur-test-magenta: #ed5360;
   --couleur-test-cyan: #67d7f9;
+  --coulleur-degrade-1: rgb(236, 141, 32) 0%;
+  --coulleur-degrade-2: rgb(230, 61, 94) 50%;
+  --coulleur-degrade-3: rgb(44, 246, 253) 100%;
   --border-radius: 15px;
   --format-gap: 5%;
   --logo-pas-colle: 2%;
@@ -69,6 +72,18 @@ h1 {
   color: var(--couleur-secondaire);
   margin-left: var(--margin-left-mobile);
   font-family: var(--font-family-titre);
+}
+h1 .text_multimedia {
+  letter-spacing: var(--letter-spacing);
+  color: transparent; /* Make text transparent */
+  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
+  -webkit-background-clip: text; /* Apply the gradient to the text */
+  background-clip: text; /* Standard property */
+}
+@media screen and (max-width: 1280px) {
+  h1 {
+    font-size: 50px;
+  }
 }
 
 .text_hero h1 {
@@ -89,6 +104,7 @@ h2 {
   color: var(--couleur-secondaire);
   font-family: var(--font-family-titre);
   text-align: left;
+  letter-spacing: var(--letter-spacing);
 }
 
 .bannieres h2 {
@@ -139,8 +155,6 @@ header {
   height: 10vh;
   background-color: var(--couleur-primaire);
   box-shadow: var(--couleur-primaire) 0px 10px 10px -10px;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 header a {
   text-decoration: none;
@@ -252,6 +266,10 @@ header .conteneur_burger_recherche .shrink {
   display: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -260,6 +278,7 @@ body {
   background-color: var(--couleur-primaire);
   font-family: var(--font-family-text);
   overflow-x: hidden;
+  width: 100vw;
 }
 body .conteneur {
   padding: var(--padding-ordi);
@@ -334,6 +353,7 @@ div {
   width: 70vw;
   margin: 0 auto;
   margin-bottom: 5vh;
+  margin-top: 10vh;
 }
 .evenements .description_evenements {
   display: flex;
@@ -359,12 +379,18 @@ div {
   }
 }
 .evenements .description_evenements .contenu_img {
-  padding: 2%;
+  padding: 5%;
 }
 @media screen and (max-width: 680px) {
   .evenements .description_evenements .contenu_img {
     margin-bottom: 5vh;
   }
+}
+.evenements .description_evenements .contenu_img h3 {
+  letter-spacing: var(--letter-spacing);
+}
+.evenements .description_evenements .contenu_img p {
+  letter-spacing: var(--letter-spacing);
 }
 .evenements .description_evenements:nth-of-type(even) {
   flex-direction: row-reverse;
@@ -437,6 +463,15 @@ div {
 .contenufunky h3:hover {
   filter: saturate(1);
 }
+@media screen and (max-width: 1280px) {
+  .contenufunky h3 {
+    filter: saturate(1);
+  }
+}
+
+ul {
+  padding: 0px;
+}
 
 .lespointsfunky {
   margin-top: 10vh;
@@ -444,24 +479,45 @@ div {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: var(--padding-ordi);
-  padding-right: var(--padding-ordi);
+  align-items: start;
 }
-
-.lespointsfunky b {
-  width: 10px;
-  height: 10px;
-  margin-right: 1vw;
-  background-color: white;
-  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
-  border-radius: 50%;
+@media screen and (max-width: 1280px) {
+  .lespointsfunky {
+    flex-direction: column;
+  }
 }
-
-.lespointsfunky p {
+.lespointsfunky div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 40%;
+  margin-left: var(--margin-mobil);
+}
+@media screen and (max-width: 1280px) {
+  .lespointsfunky div {
+    width: 90%;
+  }
+}
+.lespointsfunky div p {
   display: flex;
   align-items: center;
   margin: 0px 0px 50px 0px;
   font-size: 25px;
+  line-height: 1.6;
+}
+@media screen and (max-width: 680px) {
+  .lespointsfunky div p {
+    padding: 0%;
+    width: 100%;
+  }
+}
+.lespointsfunky div p b {
+  width: 10px;
+  height: 10px;
+  margin-right: 1vh;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
+  border-radius: 50%;
 }
 
 .parallax {
@@ -479,17 +535,14 @@ div {
 
 footer {
   width: 100%;
-  margin-top: 60vh;
+  overflow-x: hidden;
 }
-@media screen and (max-width: 1280px) {
-  footer {
-    margin-top: 70vh;
-  }
-}
-@media screen and (max-width: 680px) {
-  footer {
-    margin-top: 50vh;
-  }
+footer .section_montagne {
+  overflow-x: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: none;
+  width: 100vw;
 }
 footer .section_montagne img {
   position: absolute;
@@ -538,10 +591,10 @@ footer .conteneur_logo_tim .TIM_entete {
 footer .info_footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  align-items: start;
   height: 60%;
-  width: 100vw;
+  width: var(--width-text);
   margin: 0 auto;
   line-height: 3vh;
 }
@@ -569,7 +622,6 @@ footer .info_footer .colonne_footer a:hover {
 }
 footer .info_footer .colonne_footer p:hover {
   color: var(--couleur-secondaire-hover);
-  text-decoration: underline;
 }
 @media screen and (max-width: 680px) {
   footer .info_footer {
@@ -637,6 +689,18 @@ footer h3 {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.magenta {
+  color: var(--couleur-magenta);
+}
+
+.cyan {
+  color: var(--couleur-cyan);
+}
+
+.orange {
+  color: var(--couleur-orange);
 }
 
 p {
@@ -1113,6 +1177,64 @@ button {
   background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
 }
 
+.bannieres {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 30vh;
+  width: 200%;
+  transition: transform 0.3s ease-out;
+}
+.bannieres .photo {
+  width: 10%;
+  height: 80%;
+}
+.bannieres .p1 {
+  background-color: green;
+}
+.bannieres .p2 {
+  background-color: purple;
+}
+.bannieres .p3 {
+  background-color: peru;
+}
+.bannieres .p4 {
+  background-color: lightcoral;
+}
+.bannieres .p5 {
+  background-color: lightblue;
+}
+.bannieres .p6 {
+  background-color: lightgreen;
+}
+.bannieres h2 {
+  font-family: var(--font-family-titre);
+  font-size: 50pt;
+  letter-spacing: var(--letter-spacing);
+  color: white;
+}
+@media screen and (max-width: 1280px) {
+  .bannieres h2 {
+    font-size: 30pt;
+  }
+}
+@media screen and (max-width: 680px) {
+  .bannieres h2 {
+    font-size: 20pt;
+  }
+}
+
+.bannieres::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1000;
+  background: rgb(239, 170, 91);
+  background: linear-gradient(90deg, var(--coulleur-degrade-1), var(--coulleur-degrade-2), var(--coulleur-degrade-3));
+}
+
 .conteneur_search {
   margin-top: 20vh;
 }
@@ -1172,6 +1294,14 @@ button {
   transition: fill 0.3s ease;
 }
 
+.recherche_text {
+  letter-spacing: var(--letter-spacing);
+  color: transparent; /* Make text transparent */
+  background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
+  -webkit-background-clip: text; /* Apply the gradient to the text */
+  background-clip: text; /* Standard property */
+}
+
 /* ----------------------------------------------------- */
 /*Animations*/
 /* ----------------------------------------------------- */
@@ -1225,14 +1355,19 @@ button {
   z-index: -9999999999;
   opacity: 0.3;
 }
+@media screen and (max-width: 1280px) {
+  .dot {
+    display: none;
+  }
+}
 
-.lessections_infosaccueil {
+.animation_apparait {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.lessections_infosaccueil.visible {
+.animation_apparait.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1258,6 +1393,11 @@ button {
   letter-spacing: var(--letter-spacing);
   font-weight: bold;
   height: 5vh;
+}
+@media screen and (max-width: 768px) {
+  .contenue_desc {
+    height: 15vh;
+  }
 }
 
 /* ----------------------------------------------------- */
@@ -1331,6 +1471,7 @@ button {
 }
 
 .cube_container {
+  display: none;
   width: 200px;
   height: 200px;
   position: relative;
@@ -1430,6 +1571,7 @@ button {
   height: 30vh;
   z-index: -130;
   transform: translateY(-440px) translateX(0px);
+  display: none;
 }
 
 .degrade1event {
@@ -1438,6 +1580,16 @@ button {
   opacity: 0.5;
   transform: translateX(50px) translateY(370px);
 }
+@media screen and (max-width: 1280px) {
+  .degrade1event {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .degrade1event {
+    display: none;
+  }
+}
 
 .degrade2event {
   box-shadow: var(--couleur-test-magenta) 25px 50px 500px 100px;
@@ -1445,12 +1597,32 @@ button {
   opacity: 0.7;
   transform: translateX(900px) translateY(60px);
 }
+@media screen and (max-width: 1280px) {
+  .degrade2event {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .degrade2event {
+    display: none;
+  }
+}
 
 .degrade3event {
   box-shadow: var(--couleur-test-cyan) 25px 50px 500px 100px;
   filter: saturate(3);
   opacity: 0.4;
   transform: translateX(600px) translateY(350px);
+}
+@media screen and (max-width: 1280px) {
+  .degrade3event {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .degrade3event {
+    display: none;
+  }
 }
 
 .degrade1noir {
@@ -1494,9 +1666,10 @@ button {
   width: 40vh;
   height: 40vh;
   transform: scale(1);
-  margin: 0;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
   animation-name: scrollLeft;
   animation-duration: 50s;
   animation-timing-function: linear;
@@ -1516,6 +1689,7 @@ button {
 .galerie .iamge_galerie .wp-block-gallery figure.wp-block-image .wp-element-caption {
   color: white;
   padding: 1vh;
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
   background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
   margin: 0;
   text-align: left;
@@ -1533,6 +1707,7 @@ button {
 .galerie .iamge_galerie .wp-block-gallery figure.wp-block-image img {
   width: 100%;
   height: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
