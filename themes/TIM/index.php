@@ -224,17 +224,19 @@
                 </div> -->
             </div>
         </div>
-            <div class="bannieres">
+            <div class="bannieres" data-position="-5">
                 <h2>Collaboration</h2>
                 <h2>Création</h2>
                 <h2>Compétences Techniques</h2>
                 <!-- <h2>Intégration</h2>
                 <h2>Conception</h2> -->
             </div>
-        <div class="contenufunky">
+
             <!-- test animation -->
+           
+            <div class="bannieres" data-position="-40"> <h3>85 % des diplômés occupent un emploi ou poursuivent leurs études </h3></div>
             <div class="contenue_desc"></div> 
-            <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études:</h3>
+            <div class="contenufunky">
             <ul class="lespointsfunky">
                 <div>
                     <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo</p>

@@ -1,106 +1,12 @@
-
-  .bannieres {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    height: 30vh;
-    width: 200%;
-    transition: transform 0.3s ease-out;
-  
-    // background-color: var(--couleur-secondaire);
-    // background-color: black;
-  
-    .photo {
-      width: 10%;
-      height: 80%;
-    }
-    .p1 {
-      background-color: green;
-    }
-    .p2 {
-      background-color: purple;
-    }
-    .p3 {
-      background-color: peru;
-    }
-    .p4 {
-      background-color: lightcoral;
-    }
-    .p5 {
-      background-color: lightblue;
-    }
-    .p6 {
-      background-color: lightgreen;
-    }
-    h2 {
-      font-family: var(--font-family-titre);
-      font-size: 50pt;
-      letter-spacing: var(--letter-spacing);
-      color: white;
-  
-      @media screen and (max-width: 1280px) {
-        font-size: 30pt;
-      }
-  
-      @media screen and (max-width: 680px) {
-        font-size: 20pt;
-      }
-    }
-  }
-  
-  .bannieres::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  
-    z-index: -1000;
-  
-    background: rgb(239, 170, 91);
-    background: linear-gradient(
-      90deg,
-      rgb(236, 141, 32) 0%,
-      rgb(230, 61, 94) 50%,
-      rgb(44, 246, 253) 100%
-    );
-  }
-
 .bannieres {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
   text-align: center;
   height: 30vh;
   width: 200%;
   transition: transform 0.3s ease-out;
 
-  // background-color: var(--couleur-secondaire);
-  // background-color: black;
-
-  .photo {
-    width: 10%;
-    height: 80%;
-  }
-  .p1 {
-    background-color: green;
-  }
-  .p2 {
-    background-color: purple;
-  }
-  .p3 {
-    background-color: peru;
-  }
-  .p4 {
-    background-color: lightcoral;
-  }
-  .p5 {
-    background-color: lightblue;
-  }
-  .p6 {
-    background-color: lightgreen;
-  }
   h2 {
     font-family: var(--font-family-titre);
     font-size: 50pt;
@@ -115,21 +21,24 @@
       font-size: 20pt;
     }
   }
+   h3{
+    font-family: var(--font-family-titre);
+    font-size: 35pt;
+    letter-spacing: var(--letter-spacing);
+    color: white;
+   }
 }
 
 .bannieres::before {
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 15rem;
   position: absolute;
-
   z-index: -1000;
-
-  background: rgb(239, 170, 91);
   background: linear-gradient(
     90deg,
-    var(--coulleur-degrade-1),
-    var(--coulleur-degrade-2),
-    var(--coulleur-degrade-3)
+    rgb(236, 141, 32) 0%,
+    rgb(230, 61, 94) 50%,
+    rgb(44, 246, 253) 100%
   );
 }

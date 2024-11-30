@@ -52,32 +52,47 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollElement.style.transition = "transform 0.5s ease";
     });
   }
-
+});
   // Scroll animation
-  let scrollAnim = document.querySelector(".bannieres");
 
-  if (scrollAnim) {
+  /*---------------------------------------------------------------------------------------------*/
+/*-----------------------------Scroll animation bannieres----------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+  let scrollAnims = document.querySelectorAll(".bannieres");
+
+  if (scrollAnims.length > 0) {
     window.addEventListener("scroll", () => {
-      let value = window.scrollY;
-      let elementTop = scrollAnim.getBoundingClientRect().top + window.scrollY;
       let windowHeight = window.innerHeight;
 
-      // Calculer le pourcentage de défilement par rapport à la hauteur de la fenêtre
-      let scrollPourcentage =
-        ((value + windowHeight - elementTop) / windowHeight) * 100;
+      scrollAnims.forEach((scrollAnim, index) => {
+        let elementTop = scrollAnim.getBoundingClientRect().top + window.scrollY;
+        let value = window.scrollY;
 
-      // Limiter le pourcentage de défilement entre 0 et 100
-      scrollPourcentage = Math.min(Math.max(scrollPourcentage, 0), 100);
+        // Lire la position initiale depuis l'attribut data-position
+        let positionDepart = parseFloat(scrollAnim.getAttribute("data-position")) || 40;
 
-      // Calculer la nouvelle position en pourcentage
-      let nouvPosition = 40 - scrollPourcentage * 0.3;
+        // Calculer le pourcentage de défilement par rapport à la hauteur de la fenêtre
+        let scrollPourcentage =
+          ((value + windowHeight - elementTop) / windowHeight) * 100;
 
-      // Appliquer la nouvelle position
-      scrollAnim.style.transform = `translateX(${-nouvPosition}%)`;
+        // Limiter le pourcentage de défilement entre 0 et 100
+        scrollPourcentage = Math.min(Math.max(scrollPourcentage, 0), 100);
+
+        // Alterner la direction : sens normal ou inverse
+        let direction = index % 2 === 0 ? 1 : -1;
+
+        // Calculer la nouvelle position en pourcentage
+        let nouvPosition = positionDepart - scrollPourcentage * 0.3 * direction;
+
+        // Appliquer la nouvelle position
+        scrollAnim.style.transform = `translateX(${nouvPosition}%)`;
+      });
     });
   }
 });
 
+  
 // Sélectionne l'élément à animer
 const elementAnime = document.querySelector(".conteneur");
 
@@ -170,6 +185,10 @@ function typeText(){
     //ajoute une lettre 
     //chatAt(i) permet de selectionner ou extraire une lettre a la position i
     elementBlink.innerHTML += text.charAt(i);
+
+     // Ajuste la largeur de la sous-ligne (proportionnelle au contenu)
+     const underline = elementBlink.querySelector("::before");
+     elementBlink.style.setProperty("--line-width", `${(i + 1) / text.length * 100}%`);
  
     //donne +1 a i pour sauter a la lettre suivante
     i++;
