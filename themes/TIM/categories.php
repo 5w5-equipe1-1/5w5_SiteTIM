@@ -108,9 +108,9 @@
                         if ($query->have_posts()):
                             while ($query->have_posts()): $query->the_post();
                     ?>
-                                <details>
+                                <details class="details">
                                     <summary class="summary_1"><span class="titre-cours"><?php the_title(); ?></span></summary>
-                                    <div class="description_cours">
+                                    <div class="description_cours2">
                                         <?php echo wp_kses_post(apply_filters('the_content', get_the_content())); ?>
                                     </div>
                                 </details>

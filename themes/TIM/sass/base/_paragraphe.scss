@@ -7,6 +7,7 @@ p {
   font-size: var(--font-size-text);
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
 
   //Style pour Tabelette
   @media screen and (min-width: 1280px) {

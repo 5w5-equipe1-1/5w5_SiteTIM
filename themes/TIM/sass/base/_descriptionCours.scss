@@ -1,13 +1,7 @@
-
-.description_cours {
-    max-width: 70vw; /* Largeur maximale basée sur la largeur de la vue */
-    // width: 90%; /* Largeur relative pour s'adapter à différents écrans */
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    margin: 0 auto;
-    padding: 3vh 1.5%; /* Espacement vertical et horizontal */
+:root{
+    interpolate-size: allow-keywords;
 }
+
 
 .texte_cours, .Sessions, .préalable {
     max-width: 70vw;
@@ -15,11 +9,7 @@
     border-radius: 5px;
     margin: 0 auto; /* Centrage */
 }
-summary::marker {
-    font-size: 1.2em; /* Ajuste la taille de la flèche */
-    padding-right: 10px; /* Ajoute un padding à droite de la flèche */
-    color: var(--couleur-secondaire); /* Change la couleur */
-}
+
 .titre-cours{
     padding: 1%;
 }
@@ -30,39 +20,30 @@ summary::marker {
 /* Requêtes media pour l'adaptabilité */
 @media (max-width: 768px) {
     .description_cours, .texte_cours, .Sessions, .préalable {
-        max-width: 90%; /* Plus étroit sur les petits écrans */
-        padding: 2vh 1em; /* Ajuster l'espacement */
+        // max-width: 90%; /* Plus étroit sur les petits écrans */
+        // padding: 2vh 1em; /* Ajuster l'espacement */
     }
 }
 
 @media (max-width: 480px) {
     .description_cours, .texte_cours, .Sessions, .préalable {
-        width: 100%; /* Utiliser toute la largeur */
-        padding: 2em 1em; /* Plus d'espace interne sur les petits écrans */
+        // width: 100%; /* Utiliser toute la largeur */
+        // padding: 2em 1em; /* Plus d'espace interne sur les petits écrans */
     }
 }
-details {
-    position: relative;
-    overflow: hidden;
+.details::details-content {
+    block-size: 0;
+    transition: block-size 0.5s, content-visibility 1s ease-in-out;
+
+    transition-behavior: allow-discrete;
 }
+
+.details[open]::details-content {
+    block-size: auto;
+    block-size: calc-size(auto);
+}
+
 
 details summary {
     cursor: pointer; /* Curseur interactif */
-}
-
-details .description_cours {
-    max-height: 0; /* Cache le contenu par défaut */
-    opacity: 0; /* Transparent par défaut */
-    overflow: hidden; /* Cache les débordements */
-
-}
-
-details[open] .description_cours {
-    max-height: 500px; /* Hauteur maximale lorsque ouvert */
-    opacity: 1; /* Contenu visible */
-    transition: max-height 0.5s ease, opacity 0.5s ease; /* Transition fluide pour ouverture/fermeture */
-}
-details:not([open]) .description_cours {
-    max-height: 0; /* Retour à la hauteur minimale */
-    opacity: 0; /* Rendre invisible */
 }
