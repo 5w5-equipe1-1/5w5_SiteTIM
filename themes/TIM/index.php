@@ -175,7 +175,7 @@
                         ?>
                     </div><br><br><br>
                 <?php endwhile; ?>
-    
+            </div>
         <!-- banniere -->
         <div class="bannieres" data-position="-5">
                 <h2>Collaboration</h2>
@@ -188,8 +188,20 @@
             <div class="contenue_desc"></div> 
             <div class="contenufunky">
                 
-                <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études.</h3>
+                <!-- <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études.</h3> -->
                 <h3 class="animation_apparait">64 % des diplômés occupent un emploi lié à la formation.</h3>
+                <ul class="lespointsfunky animation_apparait">
+                    <div>
+                        <p><b></b>Concepteur et Développeur de jeux vidéo</p>
+                        <p><b></b>Développeur Web (front end et back end)</p>
+                        <p><b></b>Développeur d’applications mobiles</p>
+                    </div>
+                    <div>
+                        <p><b></b>Designer / infographiste</p>
+                        <p><b></b>Animateurs 2D / 3D</p>
+                        <p><b></b>...et bien plus encore!</p>
+                    </div>
+                </ul>
                 <h3 class="animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
 
                 <a href="https://admission.sram.qc.ca/" class="inscription_bouton">Inscrivez-vous!</a>
