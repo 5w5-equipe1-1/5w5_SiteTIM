@@ -107,57 +107,93 @@
             </div>
         </div>
 
+        
         <div class="evenements">
             <div class="commundegrade degrade1event"></div>
-            <div class="lessections_infosaccueil animation_apparait">
+            <div class="lessections_infosaccueil ">
                 <h2>Événements</h2>
-                <div class="description_evenements">
-                    <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/export_arcade.png" alt="">
-                    <div class="contenu_img">
-                        <h3>L'arcade</h3>
-                        <p>L'Arcade est un événement pour les étudiants du programme 
-                            où sont présentés les jeux créés dans le cadre du cours de jeu en équipe (582-4J4).
-                        </p>
-                        <p>
-                        Tous les élèves peuvent y jouer et voter pour leur jeu préféré. 
-                        L'équipe qui obtient le plus de votes gagne un prix de 200 $. C'est donc une compétition amusante !
-                        </p>
-                    </div>
+                <?php 
+                    $evenement = new WP_Query(array(
+                        'category_name' => 'evenements',
+                        'posts_per_page' => -1 // -1 pour récupérer tous les posts
+                    ));
+                    while($evenement->have_posts()): $evenement->the_post();
+
+                    $content = apply_filters('the_content', get_the_content());
+                    // Extract images
+                    preg_match_all('/<img[^>]+>/i', $content, $images); 
+                    // Remove images from content
+                    $content_without_images = preg_replace('/<img[^>]+>/i', '', $content);
+                ?>
+                   
+                    <div class="description_evenements animation_apparait">
+                        <div class="contenu_img">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php echo $content_without_images; ?></p>
+                        </div>
+                        <?php 
+                            // Display images
+                            if (!empty($images[0])) {
+                                foreach ($images[0] as $image) {
+                                    echo $image;
+                                }
+                            }
+                        ?>
+                    </div><br><br><br>
+                <?php endwhile; ?>
                 </div>
-            </div>
             <div class="commundegrade degrade2event"></div>
             <div class="commundegrade degrade3event"></div>
-            <div class="lessections_infosaccueil animation_apparait">
+            <div class="lessections_infosaccueil ">
                 <h2>Concours</h2>
-                <div class="description_evenements">
-                    <div class="contenu_img">
-                        <h3>Game Jams</h3>
-                        <p>Les étudiants peuvent participer à des concours de création de 
-                            jeux vidéo, comme ceux organisés par le Cégep de Valleyfield. 
-                            Ces événements permettent de développer leurs compétences dans le 
-                            domaine du jeu. Des prix de 1 500 $, 1 000 $ et 750 $ sont offerts 
-                            aux trois meilleures équipes.
-                        </p>
-                        <a href="https://www.cegepvalleyfield.ca/vie-etudiante/activites-socioculturelles/intercollegial-de-creation-de-jeux-video/">Plus d'infos sur le site du Cégep de Valleyfield</a>
-                    </div>
-                    <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/edit_concours.png" alt="">
-                </div>
-            </div>
-        </div>
-        </div>
+                <?php 
+                    $evenement = new WP_Query(array(
+                        'category_name' => 'concours',
+                        'posts_per_page' => -1 // -1 pour récupérer tous les posts
+                    ));
+                    while($evenement->have_posts()): $evenement->the_post();
+
+                    $content = apply_filters('the_content', get_the_content());
+                    // Extract images
+                    preg_match_all('/<img[^>]+>/i', $content, $images); 
+                    // Remove images from content
+                    $content_without_images = preg_replace('/<img[^>]+>/i', '', $content);
+                ?>
+                   
+                    <div class="description_evenements animation_apparait">
+                        <div class="contenu_img">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php echo $content_without_images; ?></p>
+                        </div>
+                        <?php 
+                            // Display images
+                            if (!empty($images[0])) {
+                                foreach ($images[0] as $image) {
+                                    echo $image;
+                                }
+                            }
+                        ?>
+                    </div><br><br><br>
+                <?php endwhile; ?>
+    
+        <!-- banniere -->
         <div class="bannieres" data-position="-5">
                 <h2>Collaboration</h2>
                 <h2>Création</h2>
                 <h2>Compétences Techniques</h2>
                 <!-- <h2>Intégration</h2>
                 <h2>Conception</h2> -->
-            </div>
+        </div>
+        <!-- Perspective d'Avenir -->
             <div class="contenue_desc"></div> 
-        <div class="contenufunky">
-            <!-- test animation -->
+            <div class="contenufunky">
+                
+                <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études.</h3>
+                <h3 class="animation_apparait">64 % des diplômés occupent un emploi lié à la formation.</h3>
+                <h3 class="animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
 
-            <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études</h3>
-            <ul class="lespointsfunky">
+                <a href="https://admission.sram.qc.ca/" class="inscription_bouton">Inscrivez-vous!</a>
+            <!-- <ul class="lespointsfunky">
                 <div>
                     <p><b></b>&nbsp;Concepteur et Développeur de jeux vidéo</p>
                     <p><b></b>&nbsp;Développeur Web (front end et back end)</p>
@@ -168,7 +204,8 @@
                     <p><b></b>&nbsp;Animateurs 2D / 3D</p>
                     <p><b></b>&nbsp;...et bien plus encore!</p>
                 </div>
-            </ul>
+            </ul> -->
+            </div>
         </div>
     </main>
     <?php get_footer();?>
