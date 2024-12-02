@@ -24,10 +24,27 @@
   .screen-reader-text {
     display: none;
   }
-   
+   /////////////////////////////ancien code search bar/////////////
   /* Styles the search input field */
+  // #s {
+  //   width: 250px;
+  //   padding: 10px;
+  //   border: 1px solid #ccc;
+  //   border-radius: 20px;
+  //   font-size: 16px;
+  //   outline: none;
+  //   transition: border-color 0.3s ease;
+  //   background-color: rgba(0, 0, 255, 0);
+  //   flex: 1;
+  //   color: #ccc;
+  // }
+  // /* Changes border color on focus */
+  // #s:focus {
+  //   border-color: #0073e6; /* Highlight color */
+  // }
+   /////////////////////////test css animation search barre ///////////////////////////////
   #s {
-    width: 400px;
+    width: 250px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -38,11 +55,27 @@
     flex: 1;
     color: #ccc;
   }
-  /* Changes border color on focus */
+  
   #s:focus {
-    border-color: #0073e6; /* Highlight color */
+    border-color: transparent; /* Cache le bord initial */
+    animation: border-glow 2s ease-out; /* Animation sur 2.5 secondes */
   }
-   
+  
+  @keyframes border-glow {
+    0% {
+      box-shadow: 0 0 10px rgba(236, 141, 32, 1), 0 0 20px rgba(236, 141, 32, 1);
+    }
+    30% {
+      box-shadow: 0 0 15px rgb(255, 105, 135), 0 0 30px rgba(230, 61, 94, 1);
+    }
+    60% {
+      box-shadow: 0 0 20px rgba(44, 246, 253, 1), 0 0 40px rgba(44, 246, 253, 1);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0), 0 0 20px rgba(255, 255, 255, 0);
+    }
+  }
+   /////////////////////////test css animation search barre ///////////////////////////////
   /* Changes button color on hover */
   #searchsubmit {
     background: none;

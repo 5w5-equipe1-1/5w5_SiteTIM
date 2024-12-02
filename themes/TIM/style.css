@@ -949,6 +949,86 @@ details summary {
   cursor: pointer; /* Curseur interactif */
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--couleur-primaire);
+  font-family: var(--font-family-text);
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body .conteneur_404 {
+  padding: var(--padding-ordi);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1280px) {
+  body .conteneur_404 {
+    padding: var(--padding-tablette);
+  }
+}
+@media screen and (max-width: 680px) {
+  body .contconteneur_404 {
+    padding: var(--padding-mobil);
+    margin: 0;
+  }
+}
+body .conteneur_404 #scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  transition: perspective var(--transition-time);
+  margin: 0 auto;
+  margin-bottom: 35vh;
+  margin-top: 40vh;
+  position: relative;
+  z-index: 9;
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 1280px) {
+  body .conteneur_404 #scene {
+    transform: scale(1.2);
+  }
+}
+body .conteneur_404 {
+  width: var(--width-text);
+  margin: 0 auto;
+}
+
+body .conteneur_404 {
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-top);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 680px) {
+  body .conteneur_404 {
+    margin-top: var(--margin-top-mobile);
+  }
+}
+body .conteneur_404 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: var(--width-text);
+  transition: var(--transition-time);
+  margin: 0 auto;
+  gap: 5%;
+}
+
+@media screen and (max-width: 1280px) {
+  body .conteneur_404 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 .conteneur_404 {
   display: flex;
   justify-content: center;
@@ -1257,7 +1337,7 @@ button {
 
 /* Styles the search input field */
 #s {
-  width: 400px;
+  width: 250px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -1269,11 +1349,25 @@ button {
   color: #ccc;
 }
 
-/* Changes border color on focus */
 #s:focus {
-  border-color: #0073e6; /* Highlight color */
+  border-color: transparent; /* Cache le bord initial */
+  animation: border-glow 2s ease-out; /* Animation sur 2.5 secondes */
 }
 
+@keyframes border-glow {
+  0% {
+    box-shadow: 0 0 10px rgb(236, 141, 32), 0 0 20px rgb(236, 141, 32);
+  }
+  30% {
+    box-shadow: 0 0 15px rgb(255, 105, 135), 0 0 30px rgb(230, 61, 94);
+  }
+  60% {
+    box-shadow: 0 0 20px rgb(44, 246, 253), 0 0 40px rgb(44, 246, 253);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0), 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
 /* Changes button color on hover */
 #searchsubmit {
   background: none;
