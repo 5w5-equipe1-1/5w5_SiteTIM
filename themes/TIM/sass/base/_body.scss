@@ -19,7 +19,7 @@
   display: none;
 }
 
-html{
+html {
   overflow-x: hidden;
 }
 
@@ -135,7 +135,7 @@ div {
       rgb(44, 246, 253, 0.3) 100%
     );
 
-    &:hover{
+    &:hover {
       filter: saturate(1);
     }
 
@@ -144,17 +144,17 @@ div {
       flex-direction: row-reverse;
     }
 
-    &:nth-of-type(even)>img{
+    &:nth-of-type(even) > img {
       border-radius: var(--border-radius) 0px 0px var(--border-radius);
       @media screen and (max-width: 1280px) {
         border-radius: var(--border-radius) var(--border-radius) 0px 0px;
       }
     }
 
-    &:nth-of-type(odd)>img{
+    &:nth-of-type(odd) > img {
       border-radius: 0px var(--border-radius) var(--border-radius) 0px;
       @media screen and (max-width: 1280px) {
-        border-radius:  0px 0px var(--border-radius) var(--border-radius);
+        border-radius: 0px 0px var(--border-radius) var(--border-radius);
       }
     }
 
@@ -184,11 +184,11 @@ div {
         margin-bottom: 5vh;
       }
 
-      h3{
+      h3 {
         letter-spacing: var(--letter-spacing);
       }
 
-      p{
+      p {
         // letter-spacing: var(--letter-spacing);
         font-family: var(--font-family-text);
       }
@@ -197,7 +197,7 @@ div {
 
   .lessections_infosaccueil {
     margin-bottom: 25vh;
-    
+
     transition: var(--transition-time);
     border-radius: var(--border-radius);
 
@@ -216,20 +216,17 @@ div {
       text-decoration: underline;
     }
   }
-
- 
 }
 
 //cours
 .cours {
   display: flex;
   flex-direction: column;
-  align-items: left;
   gap: 3vh;
   width: 70vw;
   margin: 0 auto;
-  margin-top: 10vh;
-  margin-bottom: 6vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 .description_cours {
@@ -258,7 +255,6 @@ div {
   flex-direction: column;
   align-items: center;
 
-
   // ATTENTION - Contrôle du texte, balise h3
   h3 {
     width: 100%;
@@ -285,11 +281,10 @@ div {
       padding: 10%;
       font-size: 20px;
     }
-
   }
 }
 
-ul{
+ul {
   padding: 0px;
 }
 
@@ -306,9 +301,8 @@ ul{
     flex-direction: column;
   }
 
-  
   // ATTENTION - Contrôle du texte, balise p
-  div{
+  div {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -317,7 +311,7 @@ ul{
     @media screen and (max-width: 1280px) {
       width: 90%;
     }
-    
+
     p {
       display: flex;
       align-items: center;
@@ -340,7 +334,6 @@ ul{
     }
   }
 }
-
 
 .parallax {
   display: flex;

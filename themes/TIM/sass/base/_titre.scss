@@ -8,13 +8,22 @@ h1 {
   .text_multimedia {
     letter-spacing: var(--letter-spacing);
     color: transparent; /* Make text transparent */
-    background: linear-gradient(90deg, rgba(236, 141, 32) 0%, rgba(230, 61, 94) 50%, rgba(44, 246, 253) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(236, 141, 32) 0%,
+      rgba(230, 61, 94) 50%,
+      rgba(44, 246, 253) 100%
+    );
     -webkit-background-clip: text; /* Apply the gradient to the text */
     background-clip: text; /* Standard property */
   }
-  
-  @media  screen and (max-width: 1280px) {
+
+  @media screen and (max-width: 1280px) {
     font-size: 50px;
+  }
+
+  @media screen and (max-width: 680px) {
+    font-size: 40px;
   }
 }
 
