@@ -2,10 +2,11 @@
   margin-top: 20vh;
 
   .resultat_recherche{
-    width: 70vw;
-    display: flex;
-    flex-direction: row;
-    gap: 3vh;
+        display: flex;   
+        gap: 3vh;
+        width: 88%;
+        scale: 1.3;
+        justify-content: center;
     
     .recherche_text{
       font-family: var(--font-family-text);
@@ -58,7 +59,11 @@
   }
 
   .conteneur_search{
-    padding-bottom: 10%;
+    margin-bottom: 10%;
+  }
+
+  .resultat_recherche{
+
   }
 
   .recherche_text{
@@ -71,6 +76,16 @@
   .texte_r_search {
     color: white;
     font-family: "niveau-grotesk", sans-serif;
-font-weight: 200;
-font-style: normal;
+    font-weight: 200;
+    font-style: normal;
+    border: 1px solid white;
+    padding: 3%;
+    margin: 3%;
+  }
+
+  .details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vw;
+    margin-right: 20vw;
   }

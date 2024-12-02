@@ -175,7 +175,7 @@
                         ?>
                     </div><br><br><br>
                 <?php endwhile; ?>
-    
+    </div>
         <!-- banniere -->
         <div class="bannieres" data-position="-5">
                 <h2>Collaboration</h2>

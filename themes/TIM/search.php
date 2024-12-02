@@ -21,7 +21,7 @@ if (isset($_GET['s'])) {
             <h2>Votre recherche : </h2>
             <h2 class="recherche_text"><?php echo esc_html($recherche); ?></h2>
         </div>
-        <div>
+        <div class="details">
             <?php
             $category_slug = array("cours", "evenements", "concours"); // Noms des catégories à rechercher
             $categories = array_map('get_cat_ID', $category_slug); // Convertir les noms en IDs
