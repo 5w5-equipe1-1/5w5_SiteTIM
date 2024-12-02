@@ -35,53 +35,53 @@
         <br /><br /><br /><br />
         <a href="<?php echo get_home_url();?>" class="retour">Retourner à la page d'accueil</a>
       </div>
-
-      <div class="scene" id="scene">
-        <!-- Les degradés derrière le cube -->
-        <div class="commundegrade degrade1orange"></div>
-        <div class="commundegrade degrade1cyan"></div>
-        <div class="commundegrade degrade1magenta"></div>
-
-        <!-- le cube en tant que tel -->
-        <div class="cube" id="cube">
-          <div class="front" id="front">
-            <h3>3D</h3>
-            <button class="bouton_cube" id="3d">
-              <a href="categories.php">En savoir plus</a>
-            </button>
-          </div>
-          <div class="back" id="back">
-            <h3>Jeux vidéos</h3>
-            <button class="bouton_cube" id="jeux_video">
-              <a href="categories.php">En savoir plus</a>
-            </button>
-          </div>
-          <div class="right" id="right">
-            <h3>Films</h3>
-            <button class="bouton_cube" id="film">
-              <a href="categories.php">En savoir plus</a>
-            </button>
-          </div>
-          <div class="left" id="left">
-            <h3>Design</h3>
-            <button class="bouton_cube" id="design">
-              <a href="categories.php">En savoir plus</a>
-            </button>
-          </div>
-          <div class="top" id="top">
-            <h3>Web</h3>
-            <button class="bouton_cube" id="web">
-              <a href="categories.php">En savoir plus</a>
-            </button>
-          </div>
-          <div class="bottom" id="bottom">
-            <h3>Formation spécifique</h3>
-            <button class="bouton_cube" id="formation_specifique">
-              <a href="categories.php">En savoir plus</a>
-            </button>
-          </div>
+   <div class="scene" id="scene">
+            <!-- Les degradés derrière le cube -->
+            <div class="commundegrade degrade1orange"></div>
+            <div class="commundegrade degrade1cyan"></div>
+            <div class="commundegrade degrade1magenta"></div>
+ 
+            <!-- le cube en tant que tel -->
+            <div class="cube" id="cube">
+                <div class="front" id="front">
+                    <h3>3D</h3>
+                    <button class="bouton_cube" id="3d">
+                        <a href="categories.php">En savoir plus</a>
+                    </button>
+                </div>
+                <div class="back" id="back">
+                    <h3>Jeux vidéos</h3>
+                    <button class="bouton_cube" id="jeux_video">
+                        <a href="categories.php">En savoir plus</a>
+                    </button>
+                </div>
+                <div class="right" id="right">
+                    <h3>Films</h3>
+                    <button class="bouton_cube" id="film">
+                        <a href="categories.php">En savoir plus</a>
+                    </button>
+                </div>
+                <div class="left" id="left">
+                    <h3>Design</h3>
+                    <button class="bouton_cube" id="design">
+                        <a href="categories.php">En savoir plus</a>
+                    </button>
+                </div>
+                <div class="top" id="top">
+                    <h3>Web</h3>
+                    <button class="bouton_cube" id="web">
+                        <a href="categories.php">En savoir plus</a>
+                    </button>
+                </div>
+                <div class="bottom" id="bottom">
+                    <h3>Formation spécifique</h3>
+                    <button class="bouton_cube" id="formation_specifique">
+                        <a href="categories.php">En savoir plus</a>
+                    </button>
+                </div>
+            </div>
+ 
         </div>
-      </div>
     </main>
 <?php 
     get_footer(); // Afficher le footer

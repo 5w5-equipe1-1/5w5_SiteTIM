@@ -497,6 +497,7 @@ div {
 
 ul {
   padding: 0px;
+  width: 100%;
 }
 
 .lespointsfunky {
@@ -515,9 +516,8 @@ ul {
 .lespointsfunky div {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: start;
   width: 40%;
-  margin-left: var(--margin-mobil);
 }
 @media screen and (max-width: 1280px) {
   .lespointsfunky div {
@@ -526,7 +526,9 @@ ul {
 }
 .lespointsfunky div p {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  width: 100%;
   margin: 0px 0px 50px 0px;
   font-size: 25px;
   line-height: 1.6;
@@ -541,6 +543,7 @@ ul {
   width: 10px;
   height: 10px;
   margin-right: 1vh;
+  margin-left: 1vh;
   background-color: white;
   box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
   border-radius: 50%;
@@ -561,6 +564,7 @@ ul {
 
 footer {
   width: 100%;
+  background: linear-gradient(0deg, rgba(236, 141, 32, 0.5) 0%, rgba(230, 61, 94, 0.3) 50%, rgba(44, 246, 253, 0) 100%);
   overflow-x: hidden;
 }
 footer .section_montagne {
@@ -589,6 +593,7 @@ footer .conteneur_logo_tim {
   justify-content: left;
   align-items: center;
   width: 100vw;
+  display: none;
   margin-left: var(--logo-pas-colle);
   margin-bottom: 5vh;
   gap: var(--margin-left-mobile);
@@ -972,6 +977,86 @@ details summary {
   cursor: pointer; /* Curseur interactif */
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--couleur-primaire);
+  font-family: var(--font-family-text);
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body .conteneur_404 {
+  padding: var(--padding-ordi);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1280px) {
+  body .conteneur_404 {
+    padding: var(--padding-tablette);
+  }
+}
+@media screen and (max-width: 680px) {
+  body .contconteneur_404 {
+    padding: var(--padding-mobil);
+    margin: 0;
+  }
+}
+body .conteneur_404 #scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  transition: perspective var(--transition-time);
+  margin: 0 auto;
+  margin-bottom: 35vh;
+  margin-top: 40vh;
+  position: relative;
+  z-index: 9;
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 1280px) {
+  body .conteneur_404 #scene {
+    transform: scale(1.2);
+  }
+}
+body .conteneur_404 {
+  width: var(--width-text);
+  margin: 0 auto;
+}
+
+body .conteneur_404 {
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-top);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 680px) {
+  body .conteneur_404 {
+    margin-top: var(--margin-top-mobile);
+  }
+}
+body .conteneur_404 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: var(--width-text);
+  transition: var(--transition-time);
+  margin: 0 auto;
+  gap: 5%;
+}
+
+@media screen and (max-width: 1280px) {
+  body .conteneur_404 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 .conteneur_404 {
   display: flex;
   justify-content: center;
@@ -1168,7 +1253,7 @@ button {
   margin-top: 5%;
   transition: box-shadow 0.4s ease, color 0.4s ease;
   text-decoration: none;
-  width: 60%;
+  width: 40%;
 }
 @media screen and (min-width: 1280px) {
   .inscription_bouton {
