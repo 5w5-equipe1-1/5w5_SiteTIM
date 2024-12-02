@@ -453,9 +453,13 @@ div {
 .contenufunky {
   width: var(--width-text);
   margin: 0 auto;
-  margin-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contenufunky h3 {
+  width: 100%;
+  font-weight: normal;
   font-size: 23pt;
   padding: 2%;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
@@ -472,6 +476,7 @@ div {
   .contenufunky h3 {
     filter: saturate(1);
     padding: 10%;
+    font-size: 20px;
   }
 }
 
@@ -1098,24 +1103,6 @@ details summary {
     transform: translateY(-5px);
   }
 }
-.retour {
-  border: 2px solid white;
-  text-align: center;
-  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-  color: #fff;
-  border-radius: 20px;
-  padding: 8% 8%; /* Augmente la taille du bouton avec plus de padding */
-  font-size: 1.5rem; /* Augmente la taille du texte */
-  margin-top: 5%;
-  transition: box-shadow 0.4s ease, color 0.4s ease;
-  text-decoration: none;
-}
-
-.retour:hover {
-  box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
-  color: #fff;
-}
-
 /* ----------------------------------------------------- */
 /*Composants*/
 /* ----------------------------------------------------- */
@@ -1135,6 +1122,47 @@ button {
 .bouton_cube a {
   text-decoration: none;
   color: var(--couleur-primaire);
+}
+
+.retour {
+  border: 2px solid white;
+  text-align: center;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8% 8%; /* Augmente la taille du bouton avec plus de padding */
+  font-size: 1.5rem; /* Augmente la taille du texte */
+  margin-top: 5%;
+  transition: box-shadow 0.4s ease, color 0.4s ease;
+  text-decoration: none;
+}
+
+.retour:hover {
+  box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
+  color: #fff;
+}
+
+.inscription_bouton {
+  border: 2px solid white;
+  text-align: center;
+  box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5% 5%; /* Augmente la taille du bouton avec plus de padding */
+  font-size: 1.5rem; /* Augmente la taille du texte */
+  margin-top: 5%;
+  transition: box-shadow 0.4s ease, color 0.4s ease;
+  text-decoration: none;
+  width: 60%;
+}
+@media screen and (min-width: 1280px) {
+  .inscription_bouton {
+    padding: 2% 2%;
+  }
+}
+.inscription_bouton:hover {
+  box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
+  color: #fff;
 }
 
 .galerie {
@@ -1382,9 +1410,10 @@ button {
 }
 
 .contenue_desc {
-  font-size: 2.8rem;
+  font-size: 50px;
   position: relative;
-  text-decoration: underline;
+  margin-bottom: var(--margin-top);
+  margin-top: var(--margin-top);
 }
 .contenue_desc::after {
   content: "|";

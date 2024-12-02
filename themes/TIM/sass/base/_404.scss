@@ -151,21 +151,4 @@
         transform: translateY(-5px);
     }
   }
-  .retour {
-    border: 2px solid white;
-    text-align: center;
-    box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
-    color: #fff;
-    border-radius: 20px;
-    padding: 8% 8%; /* Augmente la taille du bouton avec plus de padding */
-    font-size: 1.5rem; /* Augmente la taille du texte */
-    margin-top: 5%;
-    transition: box-shadow 0.4s ease, color 0.4s ease;
-    text-decoration: none;
-  }
   
-  
-  .retour:hover {
-   box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
-   color: #fff;
-  }
