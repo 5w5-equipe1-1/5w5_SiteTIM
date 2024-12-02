@@ -3,12 +3,7 @@
 }
 
 
-.texte_cours, .Sessions, .préalable {
-    max-width: 70vw;
-    width: 90%; /* S'adapte à l'écran */
-    border-radius: 5px;
-    margin: 0 auto; /* Centrage */
-}
+
 
 .titre-cours{
     padding: 1%;
@@ -31,16 +26,29 @@
         // padding: 2em 1em; /* Plus d'espace interne sur les petits écrans */
     }
 }
+/* Demo Code */
 .details::details-content {
-    block-size: 0;
-    transition: block-size 0.5s, content-visibility 1s ease-in-out;
-
-    transition-behavior: allow-discrete;
+	display: block;
+	margin-inline: 2rem;
+	block-size: 0;
+	overflow: hidden;
+	transition-property: block-size, content-visibility;
+	transition-duration: 0.5s;
+	transition-behavior: allow-discrete;
 }
 
 .details[open]::details-content {
-    block-size: auto;
-    block-size: calc-size(auto);
+
+	block-size: auto;
+	
+
+	block-size: calc-size(auto, size);
+}
+
+
+.details[open] summary::before {
+	rotate: 90deg;
+	inset-block-start: 0.05rem;
 }
 
 
