@@ -316,7 +316,9 @@ ul {
     p {
       display: flex;
       flex-direction: row;
-      align-items: start;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2%;
       width: 100%;
       margin: 0px 0px 50px 0px;
       font-size: 25px;
@@ -324,6 +326,10 @@ ul {
       @media screen and (max-width: 680px) {
         padding: 0%;
         width: 100%;
+      }
+
+      .travail_info{
+        width: 90%;
       }
 
       b {

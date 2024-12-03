@@ -197,14 +197,14 @@
                 <h3 class="animation_apparait">64 % des diplômés occupent un emploi lié à la formation.</h3>
                 <ul class="lespointsfunky animation_apparait">
                     <div>
-                        <p><b></b>Concepteur et Développeur de jeux vidéo</p>
-                        <p><b></b>Développeur Web (front end et back end)</p>
-                        <p><b></b>Développeur d’applications mobiles</p>
+                        <p><b></b><span class="travail_info">Concepteur et Développeur de jeux vidéo</span></p>
+                        <p><b></b><span class="travail_info">Développeur Web (front end et back end)</span></p>
+                        <p><b></b><span class="travail_info">Développeur d’applications mobiles</span></p>
                     </div>
                     <div>
-                        <p><b></b>Designer / infographiste</p>
-                        <p><b></b>Animateurs 2D / 3D</p>
-                        <p><b></b>...et bien plus encore!</p>
+                        <p><b></b><span class="travail_info">Designer / infographiste</span></p>
+                        <p><b></b><span class="travail_info">Animateurs 2D / 3D</span></p>
+                        <p><b></b><span class="travail_info">...et bien plus encore!</span></p>
                     </div>
                 </ul>
                 <h3 class="animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
