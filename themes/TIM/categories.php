@@ -41,7 +41,7 @@
     }
 ?>
         <main>
-            <div class=".conteneur">
+            <div class="conteneur">
                 <div class="section_hero">
                     <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
                     <div class="test_division"></div>

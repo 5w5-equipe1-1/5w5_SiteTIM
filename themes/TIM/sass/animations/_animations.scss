@@ -103,13 +103,15 @@
   }
 }
 
+//aniamtion du texte qui s'écris
 .contenue_desc{
   font-family: var(--font-family-titre);
   color: var(--couleur-secondaire);
   letter-spacing: var(--letter-spacing);
   font-weight: bold;
   height: 5vh;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 608px){
     height: 15vh;
+    font-size: 35px;
   }
 }

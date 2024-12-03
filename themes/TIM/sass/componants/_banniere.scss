@@ -1,3 +1,4 @@
+// Baniere qui défile selon le scroll de l'utilisateur
 .bannieres {
   display: flex;
   justify-content: space-evenly;
@@ -6,6 +7,7 @@
   height: 30vh;
   width: 200%;
   transition: transform 0.3s ease-out;
+  gap: var(--format-gap);
 
   h2 {
     font-family: var(--font-family-titre);

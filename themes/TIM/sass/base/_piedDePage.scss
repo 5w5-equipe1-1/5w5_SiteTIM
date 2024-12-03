@@ -2,7 +2,7 @@
 footer {
   // background-color: purple;
   width: 100%;
-  // margin-top: 20vh;
+  margin-top: var(--margin-top);
   //background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(236, 141, 32, 0.5) 33%, rgba(230, 61, 94, 0.3) 66%, rgba(44, 246, 253, 0.1) 100%);
   background: linear-gradient(0deg, rgba(236, 141, 32, 0.5) 0%, rgba(230, 61, 94, 0.3) 50%, rgba(44, 246, 253, 0) 100%);
   overflow-x: hidden;

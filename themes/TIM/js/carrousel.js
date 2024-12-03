@@ -96,9 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
 //     observer.observe(img);
 // }
 
+//Animation de la galerie
 // Avec le CSS caroussel 
 let images = document.querySelectorAll('.wp-block-image');
+let tempsAnimation = images.length * 10;
+let espaceImage = images.length * 55;
 for (let index = 0; index < images.length; index++) {
-  images[index].style.animationDelay = "calc(50s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
-  images[index].style.left =  "max(calc(400px * " + images.length + "), 100%)";
+  images[index].style.animationDelay = "calc("+ tempsAnimation + "s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
+  images[index].style.left =  "max(calc("+ espaceImage +"px * " + images.length + "), 100%)";
+  images[index].style.animationDuration = tempsAnimation + "s";
 }

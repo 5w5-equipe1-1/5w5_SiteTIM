@@ -96,6 +96,7 @@
     </div>
     <p class="info_action">Pssst! Hey! Tournez-moi!</p>
     <div class="conteneur_info">
+        <!-- Explication du multimédia -->
         <div class="description_multimedia">
             <h1>Qu'est ce que le <span class="text_multimedia"> multimédia</span>?</h1>
             <div class="bulles_contenu">
@@ -206,9 +207,22 @@
                         <p><b></b><span class="travail_info">Animateurs 2D / 3D</span></p>
                         <p><b></b><span class="travail_info">...et bien plus encore!</span></p>
                     </div>
+                    
                 </ul>
                 <h3 class="animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
-
+                <ul class="lespointsfunky animation_apparait">
+                    <div>
+                        <p><b></b><span class="travail_info">DEC-BAC en création de jeux vidéo – concentration Intégration logicielle à l’UQAT</span></p>
+                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en génie des technologies de l’information à l’ÉTS (admission garantie)</span></p>
+                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en génie logiciel à l’ÉTS (admission garantie)</span></p>
+                    </div>
+                    <div>
+                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en médias interactifs à l’UQAM (5 cours crédités)</span></p>
+                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en création 3D pour le cinéma à l’UQAC (NAD) à Montréal</span></p>
+                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en création 3D pour le jeu vidéo à l’UQAC (NAD) à Montréal</span></p>
+                    </div>
+                </ul>
+                <!-- Bouton inscription au SRAM  -->
                 <a href="https://admission.sram.qc.ca/" class="inscription_bouton">Inscrivez-vous!</a>
             <!-- <ul class="lespointsfunky">
                 <div>
