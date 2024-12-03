@@ -175,7 +175,11 @@
                         ?>
                     </div><br><br><br>
                 <?php endwhile; ?>
+<<<<<<< HEAD
+    </div>
+=======
             </div>
+>>>>>>> sprint-f
         <!-- banniere -->
         <div class="bannieres" data-position="-5">
                 <h2>Collaboration</h2>
