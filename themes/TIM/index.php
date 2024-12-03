@@ -113,6 +113,7 @@
             <div class="lessections_infosaccueil ">
                 <h2>Événements</h2>
                 <?php 
+                //afficher les evenements qui sont dans la base de donne WP
                     $evenement = new WP_Query(array(
                         'category_name' => 'evenements',
                         'posts_per_page' => -1 // -1 pour récupérer tous les posts
@@ -147,6 +148,7 @@
             <div class="lessections_infosaccueil ">
                 <h2>Concours</h2>
                 <?php 
+                    //afficher les concours qui sont dans la base de donne WP
                     $evenement = new WP_Query(array(
                         'category_name' => 'concours',
                         'posts_per_page' => -1 // -1 pour récupérer tous les posts
@@ -175,11 +177,10 @@
                         ?>
                     </div><br><br><br>
                 <?php endwhile; ?>
-<<<<<<< HEAD
+
     </div>
-=======
             </div>
->>>>>>> sprint-f
+
         <!-- banniere -->
         <div class="bannieres" data-position="-5">
                 <h2>Collaboration</h2>
