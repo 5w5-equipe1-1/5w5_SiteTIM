@@ -193,6 +193,9 @@
         <!-- Perspective d'Avenir -->
             <div class="contenue_desc"></div> 
             <div class="contenufunky">
+            <div class="commundegrade degradepoint1"></div>
+            <div class="commundegrade degradepoint2"></div>
+            <div class="commundegrade degradepoint3"></div>
                 
                 <!-- <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études.</h3> -->
                 <h3 class="animation_apparait">64 % des diplômés occupent un emploi lié à la formation.</h3>

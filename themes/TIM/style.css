@@ -1905,6 +1905,44 @@ h3.titre_r_search {
   filter: saturate(3);
 }
 
+.degradepoint1 {
+  position: absolute;
+  left: 0%;
+  width: 0px;
+  height: 0px;
+  z-index: -100;
+  opacity: 0.2;
+  border-radius: 50%;
+  box-shadow: var(--couleur-test-cyan) 25px 50px 500px 100px;
+  filter: saturate(3);
+}
+
+.degradepoint2 {
+  position: absolute;
+  top: 83%;
+  right: 20%;
+  width: 0px;
+  height: 0px;
+  z-index: -100;
+  opacity: 0.2;
+  border-radius: 50%;
+  box-shadow: var(--couleur-test-magenta) 25px 50px 500px 100px;
+  filter: saturate(3);
+}
+
+.degradepoint3 {
+  position: absolute;
+  top: 93%;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  z-index: -100;
+  opacity: 0.2;
+  border-radius: 50%;
+  box-shadow: var(--couleur-test-orange) 25px 50px 500px 100px;
+  filter: saturate(3);
+}
+
 /* ----------------------------------------------------- */
 /*Plugins*/
 /* ----------------------------------------------------- */
