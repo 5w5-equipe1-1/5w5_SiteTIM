@@ -209,7 +209,7 @@
                     </div>
                     
                 </ul>
-                <h3 class="animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
+                <h3 class=" barre_information animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
                 <ul class="lespointsfunky animation_apparait">
                     <div>
                         <p><b></b><span class="travail_info">DEC-BAC en création de jeux vidéo – concentration Intégration logicielle à l’UQAT</span></p>
