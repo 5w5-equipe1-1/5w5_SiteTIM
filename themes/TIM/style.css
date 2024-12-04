@@ -390,6 +390,9 @@ div {
 }
 .evenements .description_evenements:nth-of-type(even) > img {
   border-radius: var(--border-radius) 0px 0px var(--border-radius);
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements:nth-of-type(even) > img {
@@ -398,6 +401,9 @@ div {
 }
 .evenements .description_evenements:nth-of-type(odd) > img {
   border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 @media screen and (max-width: 1280px) {
   .evenements .description_evenements:nth-of-type(odd) > img {

@@ -68,7 +68,7 @@
                         </div>
                 </div>
                 <div class="galerie">
-                    <h2>Galerie</h2>
+                    <h2>Projets étudiants</h2>
                     <div class="iamge_galerie">
                         <?php
                             if($cat->slug == 'jeux_video'){
@@ -131,28 +131,6 @@
             <div class="minipoint"></div>
             <img class="lesflechescurseur" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/flecheHoverCube.png" alt="">
         </div>
-        <!-- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const details = document.querySelectorAll("details");
-
-        details.forEach((detail) => {
-            const description = detail.querySelector(".description_cours");
-
-            // Ajoute un événement toggle pour gérer les animations
-            detail.addEventListener("toggle", function () {
-                if (detail.open) {
-                    // Ajoute une classe lors de l'ouverture
-                    description.classList.add("description_cours--ouvrir");
-                } else {
-                    // Retire la classe avec un léger délai pour laisser le temps à l'animation de fermeture
-                    setTimeout(() => {
-                        description.classList.remove("description_cours--ouvrir");
-                    }, 500); // Doit correspondre à la durée de la transition en CSS
-                }
-            });
-        });
-    });
-</script> -->
 
             <!-- API fontawsome pour les icones -->
             <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
