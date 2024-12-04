@@ -958,15 +958,10 @@ li {
   interpolate-size: allow-keywords;
 }
 
-.titre-cours {
-  padding: 1%;
+.texte_cours {
+  margin: 5% 0 5% 0;
 }
 
-.Sessions, .préalable {
-  padding: 1em; /* Unité relative pour le padding */
-}
-
-/* Requêtes media pour l'adaptabilité */
 /* Demo Code */
 .details::details-content {
   display: block;
