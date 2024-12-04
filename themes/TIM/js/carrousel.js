@@ -100,9 +100,29 @@ document.addEventListener("DOMContentLoaded", function () {
 // Avec le CSS caroussel 
 let images = document.querySelectorAll('.wp-block-image');
 let tempsAnimation = images.length * 10;
-let espaceImage = images.length * 55;
+
 for (let index = 0; index < images.length; index++) {
-  images[index].style.animationDelay = "calc("+ tempsAnimation + "s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
-  images[index].style.left =  "max(calc("+ espaceImage +"px * " + images.length + "), 100%)";
-  images[index].style.animationDuration = tempsAnimation + "s";
+  //pour ordinateur
+  if(document.body.clientWidth >= 1280) {
+    let espaceImage = images.length * 40;
+
+    images[index].style.animationDelay = "calc("+ tempsAnimation + "s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
+    images[index].style.left =  "max(calc("+ espaceImage +"px * " + images.length + "), 100%)";
+    images[index].style.animationDuration = tempsAnimation + "s";
+
+  //pour tablette
+  }else if(document.body.clientWidth >= 680){
+    let espaceImage = images.length * 40; 
+
+    images[index].style.animationDelay = "calc("+ tempsAnimation + "s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
+    images[index].style.left =  "max(calc("+ espaceImage +"px * " + images.length + "), 100%)";
+    images[index].style.animationDuration = tempsAnimation + "s";
+  //pour téléphone
+  }else if(document.body.clientWidth < 680){
+    let espaceImage = images.length * 40;
+
+    images[index].style.animationDelay = "calc("+ tempsAnimation + "s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
+    images[index].style.left =  "max(calc("+ espaceImage +"px * " + images.length + "), 100%)";
+    images[index].style.animationDuration = tempsAnimation + "s";
+  }
 }

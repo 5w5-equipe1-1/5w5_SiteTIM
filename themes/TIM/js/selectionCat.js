@@ -3,7 +3,7 @@
   let boutons_cube = document.querySelectorAll(".bouton_cube");
   let boutons_footer = document.querySelectorAll(".bouton_footer");
 
-  //pour le footer
+  //pour les liens dans le footer
   boutons_footer.forEach((elm) => {
     elm.addEventListener("click", function (e) {
       e.preventDefault(); // Prevent the default link behavior
@@ -32,7 +32,7 @@
     });
   });
 
-  //pour le cube
+  //pour les liens dans le cube
   boutons_cube.forEach((elm) => {
     elm.addEventListener("click", function (e) {
       e.preventDefault(); // Prevent the default link behavior
