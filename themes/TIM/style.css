@@ -82,12 +82,12 @@ h1 .text_multimedia {
 }
 @media screen and (max-width: 1280px) {
   h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 680px) {
   h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -987,6 +987,12 @@ details summary {
   cursor: pointer; /* Curseur interactif */
 }
 
+@media screen and (max-width: 680px) {
+  .description_cours2 p {
+    padding: 5%;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -1270,6 +1276,11 @@ button {
     padding: 2% 2%;
   }
 }
+@media screen and (max-width: 680px) {
+  .inscription_bouton {
+    padding: 5% 10%; /* Augmente la taille du bouton avec plus de padding */
+  }
+}
 .inscription_bouton:hover {
   box-shadow: rgba(36, 36, 36, 0.25) 10px 15px 20px inset, rgba(65, 65, 65, 0.25) -5px 10px 20px inset, rgba(46, 34, 26, 0.3) 0px -10px 20px inset;
   color: #fff;
@@ -1277,7 +1288,7 @@ button {
 
 .text_cercle {
   position: absolute;
-  top: 15%;
+  top: 9%;
   left: 5%;
   transition: 1s;
   transform: scale(0.5);
@@ -1296,11 +1307,6 @@ button {
 .text_cercle svg {
   transform-origin: center;
   height: 25vh;
-}
-@media screen and (max-width: 1280px) {
-  .text_cercle {
-    top: 10%;
-  }
 }
 @media screen and (max-width: 680px) {
   .text_cercle {

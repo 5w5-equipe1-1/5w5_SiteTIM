@@ -1,7 +1,7 @@
 // Il y a eu quelques changement de design par test pour l'animation du scroll down
 .text_cercle {
   position: absolute;
-  top: 15%;
+  top: 9%;
   left: 5%;
   transition: 1s;
   transform: scale(0.5);
@@ -30,12 +30,6 @@
     transform-origin: center;
     // width: 30vw;
     height: 25vh;
-  }
-
-  // A voir si besoin?***
-  @media screen and (max-width: 1280px) {
-    // width: 16vw;
-    top: 10%;
   }
 
   @media screen and (max-width: 680px) {
