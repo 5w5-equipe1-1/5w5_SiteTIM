@@ -758,7 +758,7 @@ p {
 @media screen and (max-width: 680px) {
   p.info_colonne_footer {
     padding: 1%;
-    padding-left: 10%;
+    padding-left: 5%;
   }
 }
 
