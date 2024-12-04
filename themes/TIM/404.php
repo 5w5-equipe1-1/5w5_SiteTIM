@@ -35,7 +35,7 @@
         <br /><br /><br /><br />
         <a href="<?php echo get_home_url();?>" class="retour">Retourner à la page d'accueil</a>
       </div>
-   <div class="scene" id="scene">
+        <div class="scene" id="scene">
             <!-- Les degradés derrière le cube -->
             <div class="commundegrade degrade1orange"></div>
             <div class="commundegrade degrade1cyan"></div>

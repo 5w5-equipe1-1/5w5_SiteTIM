@@ -100,9 +100,27 @@ document.addEventListener("DOMContentLoaded", function () {
 // Avec le CSS caroussel 
 let images = document.querySelectorAll('.wp-block-image');
 let tempsAnimation = images.length * 10;
-let espaceImage = images.length * 55;
-for (let index = 0; index < images.length; index++) {
-  images[index].style.animationDelay = "calc("+ tempsAnimation + "s / "+ images.length +" * ("+ images.length +" - " + index + ") * -1)";
-  images[index].style.left =  "max(calc("+ espaceImage +"px * " + images.length + "), 100%)";
-  images[index].style.animationDuration = tempsAnimation + "s";
+
+
+// Fonction pour mettre à jour les styles d'animation
+function updateAnimationStyles() {
+  images.forEach((image, index) => {
+    let largeurImage = image.getBoundingClientRect().width ; // Récupération dynamique de la largeur
+    
+    image.style.animationDelay = `calc(${tempsAnimation}s / ${images.length} * (${images.length} - ${index}) * -1)`;
+    image.style.left = `max(calc(${largeurImage}px * ${images.length}), 100%)`;
+    image.style.animationDuration = `${tempsAnimation}s`;
+  });
 }
+
+// Observateur pour surveiller les changements de taille des images
+const resizeObserver = new ResizeObserver(() => {
+  updateAnimationStyles();
+});
+
+// Ajouter l'observateur à chaque image
+images.forEach(image => resizeObserver.observe(image));
+
+// Mise à jour initiale des styles
+updateAnimationStyles();
+
