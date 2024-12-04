@@ -987,6 +987,10 @@ details summary {
   cursor: pointer; /* Curseur interactif */
 }
 
+.cours .description_cours2 p {
+  padding: 5%;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -1388,7 +1392,6 @@ button {
   margin-right: var(--logo-pas-colle);
 }
 
-/* Hides the screen reader text */
 .screen-reader-text {
   display: none;
 }
@@ -1399,20 +1402,10 @@ button {
 
 .recherche_text {
   letter-spacing: var(--letter-spacing);
-  color: transparent; /* Make text transparent */
+  color: transparent;
   background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
-  -webkit-background-clip: text; /* Apply the gradient to the text */
-  background-clip: text; /* Standard property */
-}
-
-.texte_r_search {
-  color: white;
-  font-family: "niveau-grotesk", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  border: 1px solid white;
-  padding: 3%;
-  margin: 3%;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .details {
@@ -1420,7 +1413,6 @@ button {
   flex-direction: column;
 }
 
-/* Styles the search input field */
 #s {
   width: 35vw;
   padding: 10px;
@@ -1434,21 +1426,18 @@ button {
   color: #ccc;
 }
 
-/* Changes border color on focus */
 #s:focus {
-  border-color: #0073e6; /* Highlight color */
+  border-color: #0073e6;
 }
 
-/* Changes button color on hover */
 #searchsubmit {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-/* Styles the search submit button */
 #searchsubmit {
-  fill: white; /* White icon color */
+  fill: white;
   height: 20px;
   transition: fill 0.3s ease;
 }
@@ -1457,19 +1446,43 @@ button {
   padding-bottom: 10%;
 }
 
+.conteneur-resultat-search {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 70vw;
+}
+
 .recherche_text {
   letter-spacing: var(--letter-spacing);
-  color: transparent; /* Make text transparent */
+  color: transparent;
   background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
-  -webkit-background-clip: text; /* Apply the gradient to the text */
-  background-clip: text; /* Standard property */
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+h3.titre_r_search {
+  font-size: xx-large;
+  margin-bottom: 2%;
 }
 
 .texte_r_search {
   color: white;
+  border: 2px solid white;
   font-family: "niveau-grotesk", sans-serif;
   font-weight: 200;
+  font-size: larger;
+  padding: 3%;
+  margin: 3%;
   font-style: normal;
+  margin-top: 0;
+  border-radius: var(--border-radius);
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px, rgba(0, 0, 0, 0.3) -5px 10px 20px, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  transition: box-shadow var(--transition-time); /* Add background-color to transition */
+}
+
+.texte_r_search:hover {
+  box-shadow: rgba(11, 152, 170, 0.6) 10px 15px 20px, rgba(176, 7, 61, 0.6) -5px 10px 20px, rgba(194, 83, 9, 0.6) 0px -10px 20px;
 }
 
 /* ----------------------------------------------------- */
