@@ -18,7 +18,7 @@
             exit;
         }
     }else{
-        //amener a la page 404
+        //amener a la page 404 si la categorie existe pas
         require_once '404.php'; //fait que le cube ne tourne pas
         exit;
     }
