@@ -1864,6 +1864,7 @@ button {
 }
 .galerie h2 {
   margin-bottom: 10vh;
+  z-index: 100;
 }
 .galerie .iamge_galerie {
   margin-top: 20vh;
@@ -1966,25 +1967,35 @@ button {
 .carrousel .carrousel_prev,
 .carrousel .carrousel_next {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
   padding: 10px;
+  top: 50%;
   cursor: pointer;
   z-index: 10;
+  transform: translateY(-50%) scale(1.5);
+  transition: 0.5s;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  border-radius: 50%;
+  box-shadow: rgba(11, 152, 170, 0.3) 10px 10px 10px inset, rgba(176, 7, 61, 0) 0px 0px 5px inset, rgba(194, 83, 9, 0.4) 5px -10px 10px inset;
 }
 .carrousel .carrousel_prev.carrousel_prev,
 .carrousel .carrousel_next.carrousel_prev {
-  left: 10px;
+  left: 10%;
 }
 .carrousel .carrousel_prev.carrousel_next,
 .carrousel .carrousel_next.carrousel_next {
-  right: 10px;
+  right: 10%;
+}
+.carrousel .carrousel_prev:hover,
+.carrousel .carrousel_next:hover {
+  filter: saturate(3);
 }
 .carrousel .carrousel_figure img {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
+}
+.carrousel .carrousel_figure {
+  transform: scale(0.7);
 }/*# sourceMappingURL=style.css.map */

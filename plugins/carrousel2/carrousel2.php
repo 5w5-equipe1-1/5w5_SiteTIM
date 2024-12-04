@@ -15,9 +15,9 @@ add_action('wp_enqueue_scripts', 'carrousel_enqueue');
 function genere_html() {
     $contenu = '
        <div class="carrousel">
-            <button class="carrousel_prev">←</button>
+            <button class="carrousel_prev">⇦</button>
             <figure class="carrousel_figure"></figure>
-            <button class="carrousel_next">→</button>
+            <button class="carrousel_next">⇨</button>
        </div>';
     return $contenu;
 }

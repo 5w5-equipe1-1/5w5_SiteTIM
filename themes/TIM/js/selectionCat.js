@@ -53,9 +53,9 @@
       // Construire l'URL avec l'ID de la catégorie
       // Rediriger l'utilisateur vers la nouvelle page
       //url yannick
-      let url = `http://localhost/5w5/wp-content/themes/TIM/categories.php?category=${cat}`;
+      //let url = `http://localhost/5w5/wp-content/themes/TIM/categories.php?category=${cat}`;
       //url gabrielle
-      //let url = `http://localhost/5w5gabrielle/wp-content/themes/TIM/categories.php?category=${cat}`;
+      let url = `http://localhost/5w5gabrielle/wp-content/themes/TIM/categories.php?category=${cat}`;
       //url eloi
       //let url = `http://localhost/5w5_ELOI_v2/wp-content/themes/TIM/categories.php?category=${cat}`;
       //Url serveur distant
