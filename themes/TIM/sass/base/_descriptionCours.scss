@@ -1,57 +1,62 @@
-:root{
-    interpolate-size: allow-keywords;
+:root {
+  interpolate-size: allow-keywords;
 }
 
-
-
-
-.titre-cours{
-    padding: 1%;
+.titre-cours {
+  padding: 1%;
 }
-.Sessions, .préalable {
-    padding: 1em; /* Unité relative pour le padding */
+
+.texte_cours {
+  margin: 5% 0 5% 0;
+}
+
+.Sessions,
+.préalable {
+  /* Unité relative pour le padding */
 }
 
 /* Requêtes media pour l'adaptabilité */
 @media (max-width: 768px) {
-    .description_cours, .texte_cours, .Sessions, .préalable {
-        // max-width: 90%; /* Plus étroit sur les petits écrans */
-        // padding: 2vh 1em; /* Ajuster l'espacement */
-    }
+  .description_cours,
+  .texte_cours,
+  .Sessions,
+  .préalable {
+    // max-width: 90%; /* Plus étroit sur les petits écrans */
+    // padding: 2vh 1em; /* Ajuster l'espacement */
+  }
 }
 
 @media (max-width: 480px) {
-    .description_cours, .texte_cours, .Sessions, .préalable {
-        // width: 100%; /* Utiliser toute la largeur */
-        // padding: 2em 1em; /* Plus d'espace interne sur les petits écrans */
-    }
+  .description_cours,
+  .texte_cours,
+  .Sessions,
+  .préalable {
+    // width: 100%; /* Utiliser toute la largeur */
+    // padding: 2em 1em; /* Plus d'espace interne sur les petits écrans */
+  }
 }
 /* Demo Code */
 .details::details-content {
-	display: block;
-	margin-inline: 2rem;
-	block-size: 0;
-	overflow: hidden;
-	transition-property: block-size, content-visibility;
-	transition-duration: 0.5s;
-	transition-behavior: allow-discrete;
+  display: block;
+  margin-inline: 2rem;
+  block-size: 0;
+  overflow: hidden;
+  transition-property: block-size, content-visibility;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
 }
 
 .details[open]::details-content {
+  block-size: auto;
 
-	block-size: auto;
-	
-
-	block-size: calc-size(auto, size);
+  block-size: calc-size(auto, size);
 }
-
 
 .details[open] summary::before {
-	rotate: 90deg;
-	inset-block-start: 0.05rem;
+  rotate: 90deg;
+  inset-block-start: 0.05rem;
 }
 
-
 details summary {
-    cursor: pointer; /* Curseur interactif */
+  cursor: pointer; /* Curseur interactif */
 }
