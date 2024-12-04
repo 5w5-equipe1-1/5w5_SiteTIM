@@ -115,3 +115,47 @@
     font-size: 35px;
   }
 }
+
+/* Animation d'apparition */
+.animation_apparait.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Query pour les écrans plus petits (max-width: 1280px) */
+@media screen and (max-width: 1280px) {
+  .contenufunky h3 {
+      filter: saturate(1) brightness(1.1); /* Augmenter la luminosité pour compenser la désaturation */
+      padding: 10%;
+      font-size: 20px;
+  }
+}
+
+/* Styles de base pour .contenufunky h3 */
+.contenufunky h3 {
+  width: 100%;
+  font-weight: normal;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
+  border-radius: 5px;
+  letter-spacing: var(--letter-spacing);
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
+  filter: saturate(0) brightness(1.2); /* Désaturer la partie droite mais augmenter la luminosité */
+  transition: filter 0.5s ease, mask-image 0.5s ease;
+
+  mask-image: linear-gradient(to right, black 36%, #0000005c 36%);
+  
+  /* Appliquer un effet de désaturation uniquement à la partie droite du texte */
+  position: relative;
+}
+
+.contenufunky h3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 36%;
+  width: 64%;
+  height: 100%;
+  background: inherit; /* Prendre le fond de l'élément parent */
+  filter: saturate(0); /* Désaturer uniquement la partie droite */
+  z-index: -1; /* Placer l'élément derrière le texte */
+}

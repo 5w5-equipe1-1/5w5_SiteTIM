@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*-----------------------------animation cligonement ecriture----------------------------------*/
 /*---------------------------------------------------------------------------------------------*/
  
-const textTableau = ["Perspectives d'emplois", "Avenir", "Études suppérieures"];
+const textTableau = ["Perspectives d'emplois", "Avenir", "Études supérieures"];
 const elementBlink = document.querySelector(".contenue_desc");
  
 let i = 0;
