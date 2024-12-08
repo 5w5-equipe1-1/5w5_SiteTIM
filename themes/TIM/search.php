@@ -18,7 +18,7 @@ if (isset($_GET['s'])) {
 <link rel="stylesheet" href="https://use.typekit.net/dnl3dwa.css">
     <div class="conteneur_search">
         <div class="resultat_recherche">
-            <h2>Votre recherche : </h2>
+            <h2 class="recherche_titre">Votre recherche : </h2>
             <h2 class="recherche_text"><?php echo esc_html($recherche); ?></h2>
         </div>
         <div class="conteneur-resultat-search">
@@ -64,7 +64,8 @@ if (isset($_GET['s'])) {
             ?>
         </div>
     </div>  
-</main>
+    <h3 class="texte_fin_recherche">Fin des résultats de recherche</h3>
+    </main>
 <?php get_footer(); ?>
 <!-- API fontawesome pour les icones -->
 <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
