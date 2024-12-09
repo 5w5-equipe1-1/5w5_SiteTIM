@@ -29,7 +29,7 @@
     if($cat->slug == 'jeux_video'){
         $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/video-mise-en-avant-jeux_PC.mp4";
     }else if($cat->slug == 'film'){
-        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/trailer_films_PC.mp4";
+        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/12/trailer_film_final.mp4";
     }else if($cat->slug == 'web'){
         $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/vid_web_PC.mp4";
     }else if($cat->slug == 'design'){
