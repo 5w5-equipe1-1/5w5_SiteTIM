@@ -1,3 +1,8 @@
+//renitialisations supplémentaires
+div {
+  margin: 0;
+}
+
 //scroll bar
 ::-webkit-scrollbar {
   width: 10px;
@@ -7,8 +12,14 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--couleur-secondaire);
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   border: 1px solid var(--couleur-secondaire);
+  transition: all var(--transition-time);
+
+  &:hover {
+    background-color: var(--couleur-secondaire);
+    opacity: 0.5;
+  }
 }
 
 ::-webkit-scrollbar-button {
@@ -103,10 +114,6 @@ body {
       }
     }
   }
-}
-
-div {
-  margin: 0;
 }
 
 //section ou on décrit quest ce que le multimédia
