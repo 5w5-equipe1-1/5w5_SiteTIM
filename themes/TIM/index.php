@@ -198,7 +198,7 @@
             <div class="commundegrade degradepoint3"></div>
                 
                 <!-- <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études.</h3> -->
-                <h3 class="animation_apparait">64 % des diplômés occupent un emploi lié à la formation.</h3>
+                <h3 class="animation_apparait first-element">64 % des diplômés occupent un emploi lié à la formation.</h3>
                 <ul class="lespointsfunky animation_apparait">
                     <div>
                         <p><b></b><span class="travail_info">Concepteur et Développeur de jeux vidéo</span></p>
@@ -212,7 +212,7 @@
                     </div>
                     
                 </ul>
-                <h3 class=" barre_information animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
+                <h3 class=" barre_information second-element animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
                 <ul class="lespointsfunky animation_apparait">
                     <div>
                         <p><b></b><span class="travail_info">DEC-BAC en création de jeux vidéo – concentration Intégration logicielle à l’UQAT</span></p>

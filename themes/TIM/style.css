@@ -1661,8 +1661,14 @@ h3.titre_r_search {
   transition: left 0.5s ease; /* Ajoute une transition fluide pour le déplacement */
 }
 
-.contenufunky h3:hover::before {
+/* Premier élément - 64% */
+.first-element:hover::before {
   left: 64%; /* Déplace le masque vers la droite */
+}
+
+/* Second élément - 36% */
+.second-element:hover::before {
+  left: 36%; /* Déplace le masque à 36% */
 }
 
 /* ----------------------------------------------------- */
