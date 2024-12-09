@@ -64,7 +64,7 @@ if (isset($_GET['s'])) {
             ?>
         </div>
     </div>  
-    <h3 class="texte_fin_recherche">Fin des résultats de recherche</h3>
+    <h3 class="texte_fin_recherche">Fin des résultats de recherches</h3>
     </main>
 <?php get_footer(); ?>
 <!-- API fontawesome pour les icones -->
