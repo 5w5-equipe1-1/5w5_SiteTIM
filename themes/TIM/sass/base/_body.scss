@@ -201,6 +201,14 @@ div {
       p {
         // letter-spacing: var(--letter-spacing);
         font-family: var(--font-family-text);
+
+        &:first-of-type{
+          display: none;
+        }
+
+        &:last-of-type {
+          display: none;
+        }
       }
     }
   }
@@ -330,7 +338,7 @@ ul {
     p {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: start;
       justify-content: space-between;
       gap: 2%;
       width: 100%;
@@ -351,6 +359,7 @@ ul {
         height: 10px;
         margin-right: 1vh;
         margin-left: 1vh;
+        margin-top: 2vh;
         background-color: white;
         box-shadow: rgba(255, 255, 255, 0.46) 0px 5px 20px 2px;
         border-radius: 50%;
