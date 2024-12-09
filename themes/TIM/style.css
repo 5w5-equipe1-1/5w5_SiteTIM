@@ -1316,7 +1316,7 @@ button {
 }
 @media screen and (max-width: 1280px) {
   .text_cercle {
-    top: 1%;
+    top: 6.5%;
   }
 }
 @media screen and (max-width: 680px) {
@@ -1380,8 +1380,12 @@ button {
   background: linear-gradient(90deg, rgb(236, 141, 32) 0%, rgb(230, 61, 94) 50%, rgb(44, 246, 253) 100%);
 }
 
+/**********************************************************************/
+/**************************DESKTOP**************************************/
+/**********************************************************************/
 .conteneur_search {
   margin-top: 20vh;
+  padding-bottom: 10%;
 }
 .conteneur_search .resultat_recherche {
   display: flex;
@@ -1449,10 +1453,6 @@ button {
   transition: fill 0.3s ease;
 }
 
-.conteneur_search {
-  padding-bottom: 10%;
-}
-
 .conteneur-resultat-search {
   display: flex;
   flex-direction: column;
@@ -1497,6 +1497,9 @@ h3.titre_r_search {
   margin-bottom: 10%;
 }
 
+/**********************************************************************/
+/**************************MOBILE**************************************/
+/**********************************************************************/
 @media screen and (max-width: 680px) {
   .conteneur_search {
     display: flex;

@@ -1,6 +1,11 @@
+/**********************************************************************/
+/**************************DESKTOP**************************************/
+/**********************************************************************/
+// Style pour le conteneur search au complet
 .conteneur_search {
   margin-top: 20vh;
-
+  padding-bottom: 10%;
+  // Style pour le résultat de recherche
   .resultat_recherche {
     display: flex;
     justify-content: center;
@@ -9,7 +14,7 @@
     scale: 1.3;
     width: 70vw;
     gap: 3vh;
-
+    // Le style de font pour le contenu du résultat de la recherche
     .recherche_text {
       font-family: var(--font-family-text);
       font-style: normal;
@@ -17,6 +22,7 @@
   }
 }
 
+// style pour la barre de recherche
 .search-container {
   display: flex;
   align-items: center;
@@ -26,11 +32,7 @@
 .screen-reader-text {
   display: none;
 }
-
-// .conteneur_search {
-//   margin-bottom: 10%;
-// }
-
+// Style en général pour le contenu de la recherche
 .recherche_text {
   letter-spacing: var(--letter-spacing);
   color: transparent;
@@ -47,7 +49,7 @@
   display: flex;
   flex-direction: column;
 }
-
+// Style pour le texte écrit dans la barre de recherche
 #s {
   width: 35vw;
   padding: 10px;
@@ -64,7 +66,7 @@
 #s:focus {
   border-color: #0073e6;
 }
-
+// Style pour le bouton de recherche
 #searchsubmit {
   background: none;
   border: none;
@@ -77,9 +79,6 @@
   transition: fill 0.3s ease;
 }
 
-.conteneur_search {
-  padding-bottom: 10%;
-}
 
 .conteneur-resultat-search {
   display: flex;
@@ -131,6 +130,10 @@ h3.titre_r_search {
   margin-bottom: 10%;
 }
 
+/**********************************************************************/
+/**************************MOBILE**************************************/
+/**********************************************************************/
+
 @media screen and (max-width: 680px) {
 
   .conteneur_search{
@@ -170,26 +173,3 @@ h3.titre_r_search {
     font-size: 1rem;
   }
 }
-// .texte_r_search:hover {
-//   box-shadow: rgba(11, 152, 170, 0.6) 10px 15px 20px , rgba(176, 7, 61, 0.6) -5px 10px 20px , rgba(194, 83, 9, 0.6) 0px -10px 20px ;
-// }
-
-// .texte_r_search {
-//   color: white;
-//   border: 2px solid white;
-//   font-family: "niveau-grotesk", sans-serif;
-//   font-weight: 200;
-//   font-size: larger;
-//   padding: 3%;
-//   margin: 3%;
-//   font-style: normal;
-//   margin-top: 0;
-//   border-radius: var(--border-radius);
-//   box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;;
-//   transition: box-shadow 1s;
-
-// }
-// .texte_r_search:hover{
-//   box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset, rgba(176, 7, 61, 0.25) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;;
-
-// }
