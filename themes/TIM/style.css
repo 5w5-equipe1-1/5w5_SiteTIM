@@ -1316,7 +1316,7 @@ button {
 }
 @media screen and (max-width: 1280px) {
   .text_cercle {
-    top: 1%;
+    top: 6.5%;
   }
 }
 @media screen and (max-width: 680px) {
@@ -2122,6 +2122,20 @@ h3.titre_r_search {
 .carrousel .carrousel_next.carrousel_next {
   right: 10%;
 }
+@media screen and (max-width: 680px) {
+  .carrousel .carrousel_prev,
+  .carrousel .carrousel_next {
+    top: 65%;
+  }
+  .carrousel .carrousel_prev.carrousel_prev,
+  .carrousel .carrousel_next.carrousel_prev {
+    left: 30%;
+  }
+  .carrousel .carrousel_prev.carrousel_next,
+  .carrousel .carrousel_next.carrousel_next {
+    right: 30%;
+  }
+}
 .carrousel .carrousel_prev:hover,
 .carrousel .carrousel_next:hover {
   filter: saturate(3);
@@ -2132,5 +2146,5 @@ h3.titre_r_search {
   object-fit: contain;
 }
 .carrousel .carrousel_figure {
-  transform: scale(0.7);
+  transform: scale(0.9);
 }/*# sourceMappingURL=style.css.map */
