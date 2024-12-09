@@ -131,7 +131,6 @@
   }
 }
 
-/* Styles de base pour .contenufunky h3 */
 .contenufunky h3 {
   width: 100%;
   font-weight: normal;
@@ -139,23 +138,30 @@
   border-radius: 5px;
   letter-spacing: var(--letter-spacing);
   background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
-  filter: saturate(0) brightness(1.2); /* Désaturer la partie droite mais augmenter la luminosité */
-  transition: filter 0.5s ease, mask-image 0.5s ease;
-
-  mask-image: linear-gradient(to right, black 36%, #0000005c 36%);
-  
-  /* Appliquer un effet de désaturation uniquement à la partie droite du texte */
+  filter: brightness(1.2);
   position: relative;
+  overflow: hidden; /* Empêche l'animation de déborder */
 }
 
-.contenufunky h3::after {
+.contenufunky h3 span {
+  position: relative;
+  z-index: 2; /* Place le texte devant */
+}
+
+.contenufunky h3::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 36%;
-  width: 64%;
+  left: 0; /* Définit la position initiale */
+  width: 100%;
   height: 100%;
-  background: inherit; /* Prendre le fond de l'élément parent */
-  filter: saturate(0); /* Désaturer uniquement la partie droite */
-  z-index: -1; /* Placer l'élément derrière le texte */
+  background: inherit; /* Hérite du background de l'élément parent */
+  filter: saturate(0); /* Désature tout ce qui se trouve derrière */
+  z-index: 1; /* Place le masque derrière le texte */
+  transition: left 0.5s ease; /* Ajoute une transition fluide pour le déplacement */
 }
+
+.contenufunky h3:hover::before {
+  left: 64%; /* Déplace le masque vers la droite */
+}
+
