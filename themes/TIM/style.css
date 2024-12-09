@@ -1314,6 +1314,11 @@ button {
   transform-origin: center;
   height: 25vh;
 }
+@media screen and (max-width: 1280px) {
+  .text_cercle {
+    top: 1%;
+  }
+}
 @media screen and (max-width: 680px) {
   .text_cercle {
     display: none;
@@ -1993,7 +1998,7 @@ h3.titre_r_search {
   overflow-x: hidden;
 }
 .galerie h2 {
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
   z-index: 100;
 }
 .galerie .iamge_galerie {

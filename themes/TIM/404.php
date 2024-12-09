@@ -80,12 +80,20 @@
                     </button>
                 </div>
             </div>
- 
+            <p class="info_action"><!--Pssst! Hey! Tournez-moi!--></p>
         </div>
     </main>
 <?php 
     get_footer(); // Afficher le footer
 ?>
+
+        <!-- Pas touche! C'est un curseur qui est sous la souris  
+    lorsque l'utilisateur est dessus le cube! -->
+    <div class="hovercurseur">
+        <div class="minipoint"></div>
+        <img class="lesflechescurseur" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/flecheHoverCube.png" alt="">
+    </div>
+
         <!-- API fontawsome pour les icones -->
         <script src="https://kit.fontawesome.com/a189675535.js" crossorigin="anonymous"></script>
         <!-- Script pour les animations de scroll -->
