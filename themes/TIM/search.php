@@ -18,7 +18,7 @@ if (isset($_GET['s'])) {
 <link rel="stylesheet" href="https://use.typekit.net/dnl3dwa.css">
     <div class="conteneur_search">
         <div class="resultat_recherche">
-            <h2 class="recherche_titre">Votre recherche : </h2>
+            <h2 class="recherche_titre">Résultats : </h2>
             <h2 class="recherche_text"><?php echo esc_html($recherche); ?></h2>
         </div>
         <div class="conteneur-resultat-search">
