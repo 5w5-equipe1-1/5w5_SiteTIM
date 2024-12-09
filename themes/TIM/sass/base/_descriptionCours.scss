@@ -30,6 +30,10 @@
 
 details summary {
   cursor: pointer; /* Curseur interactif */
+  @media screen and (max-width: 680px) {
+    padding: var(--padding-ordi);
+    padding-left: 3vw;
+  }
 }
 
 .description_cours2 p {

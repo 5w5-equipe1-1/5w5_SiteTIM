@@ -151,6 +151,18 @@
     &.carrousel_next {
       right: 10%;
     }
+
+    @media screen and (max-width: 680px) {
+      top: 65%;
+
+      &.carrousel_prev {
+        left: 30%;
+      }
+
+      &.carrousel_next {
+        right: 30%;
+      }
+    }
   }
 
   .carrousel_prev:hover,
@@ -167,6 +179,6 @@
   }
 
   .carrousel_figure {
-    transform: scale(0.7);
+    transform: scale(0.9);
   }
 }
