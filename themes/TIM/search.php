@@ -43,8 +43,8 @@ if (isset($_GET['s'])) {
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post();      
                     // Afficher le titre et le contenu des posts
-                    echo '<h3 class="titre_r_search">' . get_the_title() . '</h3>';
-                    echo '<div class="texte_r_search">' . get_the_excerpt() . '</div>';
+                    echo '<h3 class="titre_r_search animation_apparait">' . get_the_title() . '</h3>';
+                    echo '<div class="texte_r_search animation_apparait">' . get_the_excerpt() . '</div>';
 
                     // Récupérer les images associées au post
                     $images = get_attached_media('image', $post->ID);

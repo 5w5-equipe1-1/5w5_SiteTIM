@@ -13,7 +13,8 @@
     width: 88%;
     scale: 1.3;
     width: 70vw;
-    gap: 3vh;
+    gap: var(--format-gap);
+    margin-bottom: 5vh;
     // Le style de font pour le contenu du résultat de la recherche
     .recherche_text {
       font-family: var(--font-family-text);
@@ -32,7 +33,12 @@
 .screen-reader-text {
   display: none;
 }
-// Style en général pour le contenu de la recherche
+
+.recherche_titre{
+  margin: 0px;
+}
+
+// Style pour le résultat de notre recherche avec le gradient
 .recherche_text {
   letter-spacing: var(--letter-spacing);
   color: transparent;
@@ -44,11 +50,15 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
+  margin: 0px;
 }
+
+// Style en général pour le contenu de la recherche
 .details {
   display: flex;
   flex-direction: column;
 }
+
 // Style pour le texte écrit dans la barre de recherche
 #s {
   width: 35vw;
@@ -87,19 +97,6 @@
   width: 70vw;
 }
 
-// Style pour le résultat de notre recherche avec le gradient
-.recherche_text {
-  letter-spacing: var(--letter-spacing);
-  color: transparent;
-  background: linear-gradient(
-    90deg,
-    rgba(236, 141, 32) 0%,
-    rgba(230, 61, 94) 50%,
-    rgba(44, 246, 253) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-}
 // Style pour le titre de la recherche
 h3.titre_r_search {
   font-size: xx-large;
@@ -111,7 +108,7 @@ h3.titre_r_search {
 // Style pour l'encadrée qui montre l'explication de la recherche
 .texte_r_search {
   color: white;
-  border: 2px solid white;
+  border-bottom: 2px solid var(--couleur-secondaire);
   font-family: "niveau-grotesk", sans-serif;
   font-weight: 200;
   font-size: 1.5rem;
@@ -119,8 +116,9 @@ h3.titre_r_search {
   margin: 3%;
   font-style: normal;
   margin-top: 0;
-  border-radius: var(--border-radius);
-  box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;
+  box-shadow: rgba(255, 255, 255, 0.673) 0px 14px 10px -14px;
+  //border-radius: var(--border-radius);
+  //box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;
 }
 // Style pour indiquer que c'est la fin des recherches
 .texte_fin_recherche{
@@ -131,6 +129,17 @@ h3.titre_r_search {
   margin-top: 0;
   margin-bottom: 10%;
 }
+
+/**********************************************************************/
+/**************************tablette************************************/
+/**********************************************************************/
+@media screen and (max-width: 1280px) {
+  .resultat_recherche{
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
 
 /**********************************************************************/
 /**************************MOBILE**************************************/
@@ -153,7 +162,7 @@ h3.titre_r_search {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    }
+  }
   
 
   .recherche_text{
