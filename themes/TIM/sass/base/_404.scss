@@ -153,56 +153,9 @@ body {
   .error-text {
     font-size: 2rem;
     margin-top: 10px;
-    color: #fff;
+    color: var(--couleur-secondaire);
     text-align: center; /* Centre le texte dans le conteneur */
     width: 100%; /* Assure que le texte occupe toute la largeur de son parent */
     font-family: var(--font-family-text);
     font-style: normal;
   }
-  /* Glitch animations */
-  @keyframes glitch-horizontal {
-    0% {
-        clip-path: inset(0% 0 25% 0);
-        transform: translate(-5px);
-    }
-    25% {
-        clip-path: inset(25% 0 50% 0);
-        transform: translate(5px);
-    }
-    50% {
-        clip-path: inset(50% 0 75% 0);
-        transform: translate(-5px);
-    }
-    75% {
-        clip-path: inset(75% 0 100% 0);
-        transform: translate(5px);
-    }
-    100% {
-        clip-path: inset(100% 0 0% 0);
-        transform: translate(-5px);
-    }
-  }
-  
-  @keyframes glitch-vertical {
-    0% {
-        clip-path: inset(0 25% 0 0);
-        transform: translateY(-5px);
-    }
-    25% {
-        clip-path: inset(25% 0 0 0);
-        transform: translateY(5px);
-    }
-    50% {
-        clip-path: inset(50% 0 0 0);
-        transform: translateY(-5px);
-    }
-    75% {
-        clip-path: inset(75% 0 0 0);
-        transform: translateY(5px);
-    }
-    100% {
-        clip-path: inset(100% 0 0 0);
-        transform: translateY(-5px);
-    }
-  }
-  
