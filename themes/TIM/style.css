@@ -1473,12 +1473,13 @@ h3.titre_r_search {
     margin-bottom: 0;
   }
   .resultat_recherche {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
   .recherche_text {
-    margin-top: 5%;
-    font-size: 2rem;
+    margin-top: 0;
+    font-size: 1.5rem;
   }
   h3.titre_r_search {
     font-size: 1.6rem;

@@ -41,7 +41,7 @@
     }else if($cat->slug == '3d'){
         $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/vid3_3D.mp4";
     }else if($cat->slug == 'formation_specifique'){
-        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/vid_formaspec.mp4";
+        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/12/vid_formationSpec.mp4";
     }
 ?>
 
