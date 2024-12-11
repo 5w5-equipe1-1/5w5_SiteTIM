@@ -296,7 +296,7 @@ body {
 
   // Section perspective d'Aveneir
 .contenufunky {
-  width: var(--width-text);
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -304,7 +304,7 @@ body {
 
   // ATTENTION - Contrôle du texte, balise h3
   h3 {
-    width: 100%;
+    width: 80%;
     font-weight: normal;
     font-size: 23pt;
     padding: 2%;
