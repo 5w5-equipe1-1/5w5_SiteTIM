@@ -1,3 +1,5 @@
+//code pour le cube burger en haut a droite des pages autres que la page d'accueil et 404
+
 let cube = document.getElementById('cube');
 let lesFaces = document.querySelectorAll('.face');
 let scene = document.getElementById('sceneBurguer');

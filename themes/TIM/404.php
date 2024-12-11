@@ -1,4 +1,13 @@
-<!-- Entete personnaliser pour la page d'Accueil et 404 -->
+<?php 
+    // Récupérer la catégorie sélectionnée
+    if (isset($_GET['category']) && term_exists($_GET['category'])) {
+        $cat = get_category_by_slug($_GET['category']);
+    }else{
+        
+    }
+?>
+
+<!-- Entete personnaliser pour les autres page que la page d'Accueil et 404 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,7 +16,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>">
     <link rel="stylesheet" href="https://use.typekit.net/law8uer.css">
-    <title>TIM - Accueil</title>
+    <title>TIM - <?php echo $cat; ?></title>
 </head>
 <body>
     <<header>

@@ -15,6 +15,7 @@ header {
     text-decoration: none;
   }
 
+  //conteneur du logo et du titre
   .conteneur_logo_tim {
     display: flex;
     flex-direction: row;
@@ -55,7 +56,8 @@ header {
   .conteneur_logo_tim:hover {
     opacity: 0.5;
   }
-
+  
+//conteneur du menu burger et de la barre de recherche
   .conteneur_burger_recherche {
     display: flex;
     flex-direction: row;

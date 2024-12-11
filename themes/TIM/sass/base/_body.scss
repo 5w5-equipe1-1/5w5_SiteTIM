@@ -208,6 +208,7 @@ body {
       p {
         // letter-spacing: var(--letter-spacing);
         font-family: var(--font-family-text);
+        font-size: var(--font-size-text);
 
         &:first-of-type{
           display: none;

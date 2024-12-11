@@ -1,4 +1,4 @@
-//code JS pour le cube - le menu burger quand il est ouvert et un élément de la page d'accueil
+//code JS pour le cube de la page d'accueil et 404 - le code de quand le cube est un éléments important et non un menu burger
 let cube = document.getElementById("cube");
 let lesFaces = document.querySelectorAll(".face");
 let scene = document.getElementById("scene");

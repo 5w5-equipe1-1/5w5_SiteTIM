@@ -27,13 +27,12 @@
     //   transform: translate(-2.2rem, -2.2rem);
     animation: rotatefleche 5s linear infinite;
   }
-
+  //desactiver les curseur lorsque sur mobile ou tablette
   @media screen and (max-width: 1280px) {
     display: none;
   }
     
 }
-
 
 .hovercurseur::before {
   content: "";

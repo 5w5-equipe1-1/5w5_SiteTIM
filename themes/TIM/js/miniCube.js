@@ -1,3 +1,5 @@
+//PAS utilisier dans le site - le cube html est en display none puisque il n'avait pas sa place
+
 const miniCube = document.querySelector(".minicube");
 const footer = document.querySelector("body");
 

@@ -1,3 +1,5 @@
+//Code du carrousel - creation de la galerie d'images qui defile et qui s'agrandit
+
 document.addEventListener("DOMContentLoaded", function () {
   const carrousel = document.querySelector(".carrousel");
   const carrouselFigure = carrousel.querySelector(".carrousel_figure");

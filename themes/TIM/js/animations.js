@@ -1,3 +1,5 @@
+//Pas utiliser
+
 document.addEventListener("DOMContentLoaded", () => {
   const hiddenElements = document.querySelectorAll(".hidden");
 
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //     fencedroite.style.transform = `translateX(${value * -0.4}px)`;
 // });
 
-//quand tu clique sur le cercle, tu scroll
+//quand tu clique sur le cercle, tu scroll down
 document.addEventListener("DOMContentLoaded", () => {
   // Scroll in view
   let scrollElement = document.querySelector(".text_cercle");

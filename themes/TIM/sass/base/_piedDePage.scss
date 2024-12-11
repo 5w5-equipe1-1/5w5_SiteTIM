@@ -15,7 +15,7 @@ footer {
     // margin-top: 50vh;
   }
 
-
+//section montagne display none parce que modification du footer depuis maquette
   .section_montagne {
     overflow-x: hidden;
     height: fit-content;
@@ -37,6 +37,7 @@ footer {
       }
     }
   }
+  
   //titre et logo
   .conteneur_logo_tim {
     display: flex;
