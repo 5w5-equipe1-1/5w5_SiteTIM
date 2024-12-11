@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>">
     <link rel="stylesheet" href="https://use.typekit.net/law8uer.css">
+    <link rel="icon" href="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/12/icone.png">
     <title>TIM - <?php echo esc_html($cat); ?></title>
 </head>
 <body>
