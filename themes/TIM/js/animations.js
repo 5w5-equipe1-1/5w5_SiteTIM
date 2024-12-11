@@ -105,14 +105,16 @@ let translateY = 0;
 let cibleTranslateY = 0;
 
 function animer() {
-  // Interpole la position actuelle vers la cible pour un effet de lissage
-  translateY += (cibleTranslateY - translateY) * 0.1;
-
-  // Applique la transformation et l'opacité
-  elementAnime.style.transform = `translateY(${translateY}px)`;
-
-  // Continue à appeler animer pour des mises à jour fluides
-  requestAnimationFrame(animer);
+  if(elementAnime){
+    // Interpole la position actuelle vers la cible pour un effet de lissage
+    translateY += (cibleTranslateY - translateY) * 0.1;
+  
+    // Applique la transformation et l'opacité
+    elementAnime.style.transform = `translateY(${translateY}px)`;
+  
+    // Continue à appeler animer pour des mises à jour fluides
+    requestAnimationFrame(animer);
+  }
 }
 
 // Écoute l'événement de scroll pour mettre à jour la cible de translation

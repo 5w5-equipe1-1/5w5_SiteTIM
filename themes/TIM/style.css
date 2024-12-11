@@ -309,6 +309,7 @@ body .conteneur {
 @media screen and (max-width: 680px) {
   body .conteneur {
     margin: 0;
+    width: 90%;
   }
 }
 body .conteneur #scene {
@@ -329,7 +330,7 @@ body .conteneur #scene {
   }
 }
 body .conteneur .conteneur_info {
-  width: var(--width-text);
+  width: 100%;
   margin: 0 auto;
 }
 body .conteneur .conteneur_info .description_multimedia {
@@ -362,7 +363,7 @@ body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
 }
 
 .evenements {
-  width: 70vw;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 5vh;
   margin-top: 10vh;
@@ -377,6 +378,7 @@ body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
   transition: all var(--transition-time);
   border-radius: var(--border-radius);
   background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
+  width: 100%;
 }
 .evenements .description_evenements:hover {
   filter: saturate(1);
@@ -431,11 +433,6 @@ body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
   padding: 5%;
   width: 90%;
 }
-@media screen and (max-width: 680px) {
-  .evenements .description_evenements .contenu_img {
-    margin-bottom: 5vh;
-  }
-}
 .evenements .description_evenements .contenu_img h3 {
   letter-spacing: var(--letter-spacing);
 }
@@ -443,10 +440,19 @@ body .conteneur .conteneur_info .description_multimedia .bulles_contenu {
   font-family: var(--font-family-text);
   font-size: var(--font-size-text);
 }
+@media screen and (max-width: 680px) {
+  .evenements .description_evenements .contenu_img p {
+    width: 90%;
+    padding: 5%;
+  }
+}
 .evenements .description_evenements .contenu_img p:first-of-type {
   display: none;
 }
 .evenements .description_evenements .contenu_img p:last-of-type {
+  display: none;
+}
+.evenements .description_evenements .contenu_img .wp-block-image {
   display: none;
 }
 .evenements .lessections_infosaccueil {

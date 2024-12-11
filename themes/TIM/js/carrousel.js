@@ -2,9 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const carrousel = document.querySelector(".carrousel");
-  const carrouselFigure = carrousel.querySelector(".carrousel_figure");
-  const prevButton = carrousel.querySelector(".carrousel_prev");
-  const nextButton = carrousel.querySelector(".carrousel_next");
+  const carrouselFigure = document.querySelector(".carrousel_figure");
+  const prevButton = document.querySelector(".carrousel_prev");
+  const nextButton = document.querySelector(".carrousel_next");
   const galleryImages = document.querySelectorAll(".wp-block-image img");
   let currentIndex = 0;
 
