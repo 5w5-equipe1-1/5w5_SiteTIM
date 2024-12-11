@@ -47,20 +47,20 @@
 
 <!-- Section de contenu de la page -->
         <main>
-            <div class="conteneur">
-                <div class="section_hero">
-                    <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
-                    <div class="test_division"></div>
-                    <div class="text_hero">
-                        <div class="decor_hero">
-                        <div class="commundegrade decordegrade1"></div>
-                        <div class="commundegrade decordegrade2"></div>
-                        <div class="commundegrade decordegrade3"></div>
-                        </div>
-                        <h1><?php echo esc_html($cat->name); ?></h1>
-                        <h3><?php echo esc_html($cat->description); ?></h3>
+            <div class="section_hero">
+                <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
+                <div class="test_division"></div>
+                <div class="text_hero">
+                    <div class="decor_hero">
+                    <div class="commundegrade decordegrade1"></div>
+                    <div class="commundegrade decordegrade2"></div>
+                    <div class="commundegrade decordegrade3"></div>
                     </div>
+                    <h1><?php echo esc_html($cat->name); ?></h1>
+                    <h3><?php echo esc_html($cat->description); ?></h3>
                 </div>
+            </div>
+            <div class="conteneur">
 
                 <!-- Scroll down répété de la page d'accueil -->
                 <div class="text_cercle">
