@@ -1317,6 +1317,9 @@ button {
   left: 5%;
   transition: 1s;
   transform: scale(0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .text_cercle .effetbulle {
   background-color: var(--couleur-primaire);
@@ -1353,7 +1356,6 @@ button {
   width: 3.5rem;
   height: 3rem;
   user-select: none;
-  transform: translate(5.6rem, 5.6rem);
   z-index: 100;
 }
 

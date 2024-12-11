@@ -5,6 +5,9 @@
   left: 5%;
   transition: 1s;
   transform: scale(0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   .effetbulle {
     //Test Background vidéo
@@ -53,7 +56,5 @@
   height: 3rem;
   // opacity: 0.5;
   user-select: none;
-
-  transform: translate(5.6rem, 5.6rem);
   z-index: 100;
 }
