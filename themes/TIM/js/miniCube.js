@@ -1,3 +1,7 @@
+// Javascript d'un cube qui suit la souris de l'utilisateur
+// Relié avec la page gaby_cubetest
+// ////////////////////////////////////////////////////////////
+
 const miniCube = document.querySelector(".minicube");
 const footer = document.querySelector("body");
 

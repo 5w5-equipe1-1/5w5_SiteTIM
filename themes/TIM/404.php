@@ -1,6 +1,9 @@
 <!-- Entete personnaliser pour la page d'Accueil et 404 -->
+<!-- ////////////////////////////////////////////////// -->
+ 
 <!DOCTYPE html>
 <html lang="fr">
+<!-- Balise head -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +12,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/law8uer.css">
     <title>TIM - Accueil</title>
 </head>
+<!-- Partie du contenu de la page 404 -->
 <body>
     <<header>
         <div class="conteneur_logo_tim">

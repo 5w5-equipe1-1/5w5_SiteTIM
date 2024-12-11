@@ -1,8 +1,16 @@
+// Fonction de carrousel sur la galerie
+// /////////////////////////////////////////////
+
+// Aller chercher les éléments ayant les classes suivantes
+// Le document du contenu
+
 document.addEventListener("DOMContentLoaded", function () {
   const carrousel = document.querySelector(".carrousel");
   const carrouselFigure = carrousel.querySelector(".carrousel_figure");
+  // Les deux boutons pour changer d'image dans la galerie
   const prevButton = carrousel.querySelector(".carrousel_prev");
   const nextButton = carrousel.querySelector(".carrousel_next");
+  // Galerie d'images
   const galleryImages = document.querySelectorAll(".wp-block-image img");
   let currentIndex = 0;
 
@@ -43,12 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// LA SECTION ICI EST NON FONCTIONNEL ET À REVÉRIFIER POUR IMPLÉMENTER
+// ////////////////////////////////////////////////////////////////////////
+
 // // //pour faire scroll la galerie
 // let images = document.querySelectorAll('.wp-block-image');
 // let indexOrder = images.length;
 
 // for(img of images) {
-//   let indexTranslate = 0; 
+//   let indexTranslate = 0;
 //   setInterval(() => {
 //     //pour faire scroll la galerie
 //     indexTranslate ++;
@@ -66,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // // Crée un nouvel observateur pour détecter l'intersection de l'image avec le viewport
 // const observer = new IntersectionObserver((entries) => {
 //   entries.forEach(entry => {
-    
-//     let remiseA0 = false; 
+
+//     let remiseA0 = false;
 //       if (!entry.isIntersecting) {
 //         if(remiseA0 == false) {
 //           remiseA0 = true;
@@ -75,9 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //           indexOrder ++;
 //           //quand limage est en dehors du viewport
 //           entry.target.style.order = indexOrder;
-//           // entry.target.style.transform = 'translateX(0)';  
+//           // entry.target.style.transform = 'translateX(0)';
 //           observer.unobserve(entry.target);
-          
+
 //         }
 //       } else {
 //         //quand limage est dans le viewport
@@ -89,24 +100,24 @@ document.addEventListener("DOMContentLoaded", function () {
 //   threshold: 0 // Détecte quand l'image est complètement sortie
 // });
 
-
-
 // // Observer chaque image et les envoayer à l'observateur
 // for(img of images) {
 //     observer.observe(img);
 // }
 
-//Animation de la galerie
-// Avec le CSS caroussel 
-let images = document.querySelectorAll('.wp-block-image');
-let tempsAnimation = images.length * 10;
+// /////// - FIN DU CODE À RÉGLER - ///////////////////////////
+// //////////////////////////////////////////////////////////
 
+//Animation de la galerie
+// Avec le CSS caroussel
+let images = document.querySelectorAll(".wp-block-image");
+let tempsAnimation = images.length * 10;
 
 // Fonction pour mettre à jour les styles d'animation
 function updateAnimationStyles() {
   images.forEach((image, index) => {
-    let largeurImage = image.getBoundingClientRect().width ; // Récupération dynamique de la largeur
-    
+    let largeurImage = image.getBoundingClientRect().width; // Récupération dynamique de la largeur
+
     image.style.animationDelay = `calc(${tempsAnimation}s / ${images.length} * (${images.length} - ${index}) * -1)`;
     image.style.left = `max(calc(${largeurImage}px * ${images.length}), 100%)`;
     image.style.animationDuration = `${tempsAnimation}s`;
@@ -119,8 +130,7 @@ const resizeObserver = new ResizeObserver(() => {
 });
 
 // Ajouter l'observateur à chaque image
-images.forEach(image => resizeObserver.observe(image));
+images.forEach((image) => resizeObserver.observe(image));
 
 // Mise à jour initiale des styles
 updateAnimationStyles();
-

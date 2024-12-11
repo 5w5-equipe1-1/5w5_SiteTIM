@@ -1,4 +1,8 @@
 //code JS pour le cube - le menu burger quand il est ouvert et un élément de la page d'accueil
+// CODE OFFICIEL DE PERSPECTIVE DU CUBE (menu principal et page des catégories combinés)
+// /////////////////////////////////////////////////////////////////////////////////////////
+
+// Définition des variables
 let cube = document.getElementById("cube");
 let lesFaces = document.querySelectorAll(".face");
 let scene = document.getElementById("scene");
@@ -56,7 +60,7 @@ function onMouseMove(event) {
 
 //interactions du toucher sur le cube
 function onTouchMove(event) {
-  if(!isCubeSelected){
+  if (!isCubeSelected) {
     if (!scene.classList.contains("shrink") && event.touches.length > 0) {
       autoRotate = false;
       const touch = event.touches[0];
@@ -92,12 +96,14 @@ function onTouchEnd() {
   isCubeSelected = false;
 }
 
+// Event listener sur la souris (enlevé)
 document.addEventListener("mousedown", function (event) {
   mouseStart = { x: event.clientX, y: event.clientY };
   document.addEventListener("mousemove", onMouseMove);
   document.addEventListener("mouseup", onMouseUp);
 });
 
+// Event listener sur la souris (par dessus)
 document.addEventListener("touchstart", function (event) {
   const touch = event.touches[0];
   touchStart = { x: touch.clientX, y: touch.clientY };
@@ -113,7 +119,7 @@ document.querySelectorAll(".cube div").forEach((face) => {
     }
     isCubeSelected = true;
     // Empêche le défilement de la page lors de la sélection d'une face du cube
-    document.body.style.overflowY = 'hidden';
+    document.body.style.overflowY = "hidden";
     autoRotate = false;
     clearTimeout(rotateTimeout);
     cube.style.transition = "transform 1s";
@@ -154,6 +160,7 @@ document.querySelectorAll(".cube div").forEach((face) => {
   });
 });
 
+// Event listener de click sur le cube (style et perspective, animation)
 document.addEventListener("click", function (event) {
   if (!event.target.closest(".cube")) {
     if (scene.classList.contains("shrink")) return; // Ignore click if not in shrink state
@@ -166,7 +173,7 @@ document.addEventListener("click", function (event) {
     setTimeout(() => {
       autoRotate = true;
     }, 0);
-    document.body.style.overflowY = 'auto';
+    document.body.style.overflowY = "auto";
   }
 });
 

@@ -1,3 +1,6 @@
+<!-- PARTIE DU FOOTER - CHERCHER EN PHP -->
+<!-- //////////////////////////////////////// -->
+
 <footer>
 <!-- Montagne -->
     <div class="section_montagne">
@@ -24,6 +27,7 @@
             <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
             <h2 class="TIM_entete">Techniques <br>d'intégration multimédia</h2>
         </div>
+        <!-- Section des infos du site -->
         <div class="info_footer">
             <div class="colonne_footer">
                 <!-- afficher les categories du site et le lien vers la page (ne pas montrer la categorie cours et projets parce qu'il n'y a pas de page lier a eux) -->
@@ -52,6 +56,8 @@
                 <p class="info_colonne_footer cyan">Salma Bourakkadi Zarrouki</p>
             </div>
         </div>
+
+        <!-- Section des médias et des réseaux sociaux -->
         <div class="les_reseaux">
             <h3>Suivez-nous</h3>
             <div class="lesmedias">
