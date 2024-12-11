@@ -7,7 +7,6 @@
         $cat = "404";
     }
 ?>
-
 <!-- Entete personnaliser pour les autres page que la page d'Accueil et 404 -->
 <!DOCTYPE html>
 <html lang="fr">

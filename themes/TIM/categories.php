@@ -7,21 +7,19 @@
     // Récupérer la catégorie sélectionnée
     require_once 'functions.php';
 
-    get_header(); // Afficher le header
-
     // Récupérer la catégorie sélectionnée
     if (isset($_GET['category']) && term_exists($_GET['category'])) {
         $cat = get_category_by_slug($_GET['category']);
         if (!$cat) {
-            // Rediriger vers la page 404 si la catégorie n'est pas trouvée
-            require_once '404.php'; //fait que le cube ne tourne pas
-            exit;
+            wp_redirect(home_url('/404'));
+            exit; // Arrêter le script
         }
     }else{
-        //amener a la page 404 si la categorie existe pas
-        require_once '404.php'; //fait que le cube ne tourne pas
-        exit;
+        wp_redirect(home_url('/404'));
+        exit; // Arrêter le script
     }
+
+    get_header(); // Afficher le header
 
     //Choisir la video en fonction de la catégorie
     $srcVideo = "";
