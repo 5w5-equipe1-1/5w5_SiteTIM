@@ -1504,7 +1504,7 @@ h3.titre_r_search {
   font-style: normal;
   margin-top: 0;
   border-radius: var(--border-radius);
-  box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px, rgba(0, 0, 0, 0.3) -5px 10px 20px, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;
 }
 
 .texte_fin_recherche {
