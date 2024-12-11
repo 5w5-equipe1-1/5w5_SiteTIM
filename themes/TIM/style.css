@@ -1269,6 +1269,11 @@ button {
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (max-width: 1280px) {
+  .text_cercle {
+    display: none;
+  }
+}
 .text_cercle .effetbulle {
   background-color: var(--couleur-primaire);
   box-shadow: rgba(11, 152, 170, 0.2) 10px 15px 20px inset, rgba(176, 7, 61, 0.2) -5px 10px 20px inset, rgba(194, 83, 9, 0.3) 0px -10px 20px inset;
@@ -2086,7 +2091,7 @@ h3.titre_r_search {
 
 @keyframes scrollLeft {
   to {
-    left: -400px;
+    left: -800px;
   }
 }
 .carrousel {

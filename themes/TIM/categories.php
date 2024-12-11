@@ -50,6 +50,7 @@
             <div class="section_hero">
                 <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
                 <div class="test_division"></div>
+                <!-- text hero, titre et description de la categorie -->
                 <div class="text_hero">
                     <div class="decor_hero">
                     <div class="commundegrade decordegrade1"></div>
@@ -59,9 +60,6 @@
                     <h1><?php echo esc_html($cat->name); ?></h1>
                     <h3><?php echo esc_html($cat->description); ?></h3>
                 </div>
-            </div>
-            <div class="conteneur">
-
                 <!-- Scroll down répété de la page d'accueil -->
                 <div class="text_cercle">
                     <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="fleche">
@@ -74,7 +72,8 @@
                         </svg>
                         </div>
                 </div>
-
+            </div>
+            <div class="conteneur">
                 <!-- Section des projets étudiants -->
                 <div class="galerie">
                     <h2>Projets étudiants</h2>
