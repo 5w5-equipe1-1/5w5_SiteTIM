@@ -1,3 +1,9 @@
+<!-- SECTION DE GÉNÉRATION DYNAMIQUE DES PAGES DE CONTENU-->
+
+ <!-- La page catégories affiche toutes les pages du programme:  -->
+  <!-- 3D, Design, Film, Jeux vidéos, Web, Formation spécifique -->
+   <!-- ///////////////////////////////////////////////////////////// -->
+
 <?php 
     // Assurez-vous que WordPress est chargé
     if (!function_exists('get_header')) {
@@ -40,6 +46,8 @@
         $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/vid_formaspec.mp4";
     }
 ?>
+
+<!-- Section de contenu de la page -->
         <main>
             <div class="conteneur">
                 <div class="section_hero">
@@ -56,6 +64,7 @@
                     </div>
                 </div>
 
+                <!-- Scroll down répété de la page d'accueil -->
                 <div class="text_cercle">
                     <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="fleche">
                         <div class="effetbulle">
@@ -67,6 +76,8 @@
                         </svg>
                         </div>
                 </div>
+
+                <!-- Section des projets étudiants -->
                 <div class="galerie">
                     <h2>Projets étudiants</h2>
                     <div class="iamge_galerie">
@@ -87,8 +98,11 @@
                         ?>
                     </div>
                 </div>
+                <!-- Décoration des dégradés -->
                 <div class="commundegrade degrade2event"></div>
                 <div class="commundegrade degrade3event"></div>
+
+                <!-- Section des accordéons et des cours (contenu des cours) -->
                 <div class="cours">
                     <h2>Cours</h2>
                     <?php
@@ -124,6 +138,7 @@
                 </div>
             </div>
         </main>
+        <!-- Aller chercher le footer -->
         <?php get_footer(); ?>
 
         <!-- Partie pour le curseur, ne pas enlever s.v.p -->

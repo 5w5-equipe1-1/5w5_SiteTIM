@@ -1,3 +1,5 @@
+<!-- Début de la page de recherche -->
+
 <?php  
 // Assurez-vous que WordPress est chargé
 if (!function_exists('get_header')) {
@@ -14,6 +16,7 @@ if (isset($_GET['s'])) {
 }
 ?>
 
+<!-- Style et éléments HTML/PHP -->
 <main>
 <link rel="stylesheet" href="https://use.typekit.net/dnl3dwa.css">
     <div class="conteneur_search">

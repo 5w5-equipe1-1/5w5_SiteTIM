@@ -1,6 +1,9 @@
 <!-- Entete personnaliser pour la page d'Accueil et 404 -->
+<!-- /////////////////////////////////////////////////////// -->
+
 <!DOCTYPE html>
 <html lang="fr">
+<!-- Liens et balise de tête -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +14,7 @@
     <link rel="icon" href="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/12/icone.png">
     <title>TIM - Accueil</title>
 </head>
+<!-- Partie du contenu de la page principale -->
 <body>
     <header>
         <div class="conteneur_logo_tim">
@@ -109,8 +113,9 @@
             </div>
         </div>
 
-        
+        <!-- Sections des évènements et des concours -->
         <div class="evenements">
+            <!-- Décoration de dégradé -->
             <div class="commundegrade degrade1event"></div>
             <div class="lessections_infosaccueil ">
                 <h2>Événements</h2>
@@ -145,6 +150,7 @@
                     </div><br><br><br>
                 <?php endwhile; ?>
                 </div>
+                <!-- Décoration de dégradé -->
             <div class="commundegrade degrade2event"></div>
             <div class="commundegrade degrade3event"></div>
             <div class="lessections_infosaccueil ">
