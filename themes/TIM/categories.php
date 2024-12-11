@@ -73,7 +73,7 @@
                         </div>
                 </div>
             </div>
-            <div class="conteneur">
+            
                 <!-- Section des projets étudiants -->
                 <div class="galerie">
                     <h2>Projets étudiants</h2>
@@ -95,6 +95,7 @@
                         ?>
                     </div>
                 </div>
+            <div class="conteneur">
                 <!-- Décoration des dégradés -->
                 <div class="commundegrade degrade2event"></div>
                 <div class="commundegrade degrade3event"></div>
