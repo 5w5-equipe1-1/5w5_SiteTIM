@@ -105,11 +105,11 @@
         <div class="description_multimedia">
             <h1>Qu'est ce que le <span class="text_multimedia"> multimédia</span>?</h1>
             <div class="bulles_contenu">
-                <p>Créer des médias</p>
-                <p>Concevoir le design et l’interactivité</p>
-                <p>Planifier la réalisation d’un projet et en effectuer le suivi</p>
-                <p>Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
-                <p>Travailler en équipe</p>
+                <p class="animation_apparait">Créer des médias</p>
+                <p class="animation_apparait">Concevoir le design et l’interactivité</p>
+                <p class="animation_apparait">Planifier la réalisation d’un projet et en effectuer le suivi</p>
+                <p class="animation_apparait">Préparer ton insertion professionnelle dans le milieu du travail ou à l’université</p>
+                <p class="animation_apparait">Travailler en équipe</p>
             </div>
         </div>
 
@@ -205,31 +205,31 @@
             <div class="commundegrade degradepoint3"></div>
                 
                 <!-- <h3 class="animation_apparait">85 % des diplômés occupent un emploi ou poursuivent leurs études.</h3> -->
-                <h3 class="animation_apparait first-element">64 % des diplômés occupent un emploi lié à la formation.</h3>
-                <ul class="lespointsfunky animation_apparait">
+                <h3 class="animation_apparait element first-element">64 % des diplômés occupent un emploi lié à la formation.</h3>
+                <ul class="lespointsfunky ">
                     <div>
-                        <p><b></b><span class="travail_info">Concepteur et Développeur de jeux vidéo</span></p>
-                        <p><b></b><span class="travail_info">Développeur Web (front end et back end)</span></p>
-                        <p><b></b><span class="travail_info">Développeur d’applications mobiles</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">Concepteur et Développeur de jeux vidéo</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">Développeur Web (front end et back end)</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">Développeur d’applications mobiles</span></p>
                     </div>
                     <div>
-                        <p><b></b><span class="travail_info">Designer / infographiste</span></p>
-                        <p><b></b><span class="travail_info">Animateurs 2D / 3D</span></p>
-                        <p><b></b><span class="travail_info">...et bien plus encore!</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info animation_apparait">Designer / infographiste</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info animation_apparait">Animateurs 2D / 3D</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info animation_apparait">...et bien plus encore!</span></p>
                     </div>
                     
                 </ul>
-                <h3 class=" barre_information second-element animation_apparait">36 % des diplômés poursuivent leurs études à l'université.</h3>
-                <ul class="lespointsfunky animation_apparait">
+                <h3 class=" barre_information second-element">36 % des diplômés poursuivent leurs études à l'université.</h3>
+                <ul class="lespointsfunky">
                     <div>
-                        <p><b></b><span class="travail_info">DEC-BAC en création de jeux vidéo – concentration Intégration logicielle à l’UQAT</span></p>
-                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en génie des technologies de l’information à l’ÉTS (admission garantie)</span></p>
-                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en génie logiciel à l’ÉTS (admission garantie)</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">DEC-BAC en création de jeux vidéo – concentration Intégration logicielle à l’UQAT</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">Passerelle au Baccalauréat en génie des technologies de l’information à l’ÉTS (admission garantie)</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">Passerelle au Baccalauréat en génie logiciel à l’ÉTS (admission garantie)</span></p>
                     </div>
                     <div>
-                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en médias interactifs à l’UQAM (5 cours crédités)</span></p>
-                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en création 3D pour le cinéma à l’UQAC (NAD) à Montréal</span></p>
-                        <p><b></b><span class="travail_info">Passerelle au Baccalauréat en création 3D pour le jeu vidéo à l’UQAC (NAD) à Montréal</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">Passerelle au Baccalauréat en médias interactifs à l’UQAM (5 cours crédités)</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">Passerelle au Baccalauréat en création 3D pour le cinéma à l’UQAC (NAD) à Montréal</span></p>
+                        <p class="animation_apparait"><b></b><span class="travail_info">Passerelle au Baccalauréat en création 3D pour le jeu vidéo à l’UQAC (NAD) à Montréal</span></p>
                     </div>
                 </ul>
                 <!-- Bouton inscription au SRAM  -->
