@@ -147,8 +147,7 @@
       position: relative;
       z-index: 2; /* Place le texte devant */
     }
-
-      &&::before {
+    &::before {
         content: "";
         position: absolute;
         top: 0;

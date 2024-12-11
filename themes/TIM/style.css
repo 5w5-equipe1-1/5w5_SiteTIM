@@ -1311,6 +1311,9 @@ button {
   left: 5%;
   transition: 1s;
   transform: scale(0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .text_cercle .effetbulle {
   background-color: var(--couleur-primaire);
@@ -1347,7 +1350,6 @@ button {
   width: 3.5rem;
   height: 3rem;
   user-select: none;
-  transform: translate(5.6rem, 5.6rem);
   z-index: 100;
 }
 
@@ -1667,17 +1669,14 @@ h3.titre_r_search {
   border-radius: 5px;
   letter-spacing: var(--letter-spacing);
   background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
-  filter: brightness(1.2);
   position: relative;
   overflow: hidden; /* Empêche l'animation de déborder */
-  filter: saturate(0);
+  font-size: 2rem;
 }
-
 .contenufunky h3 span {
   position: relative;
   z-index: 2; /* Place le texte devant */
 }
-
 .contenufunky h3::before {
   content: "";
   position: absolute;
