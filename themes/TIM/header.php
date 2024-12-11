@@ -1,3 +1,15 @@
+<?php 
+    // Récupérer la catégorie sélectionnée
+    if (isset($_GET['category']) && term_exists($_GET['category'])) {
+        $title = get_category_by_slug($_GET['category']);
+        $title = $title->name;	
+    }else if(is_404()){
+        $title = "404";
+    }else if(is_search()){
+        $title = "Recherche";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,7 +18,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . "/normalize.css"?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . "/style.css"?>">
     <link rel="stylesheet" href="https://use.typekit.net/law8uer.css">
-    <title>TIM - Accueil</title>
+    <title>TIM - <?php echo esc_html($title); ?></title>
 </head>
 <body>
     <header>

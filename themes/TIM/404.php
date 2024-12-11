@@ -2,8 +2,9 @@
     // Récupérer la catégorie sélectionnée
     if (isset($_GET['category']) && term_exists($_GET['category'])) {
         $cat = get_category_by_slug($_GET['category']);
-    }else{
-        
+        $cat = $cat->name;	
+    }else if(is_404()){
+        $cat = "404";
     }
 ?>
 
@@ -16,10 +17,10 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>">
     <link rel="stylesheet" href="https://use.typekit.net/law8uer.css">
-    <title>TIM - <?php echo $cat; ?></title>
+    <title>TIM - <?php echo esc_html($cat); ?></title>
 </head>
 <body>
-    <<header>
+    <header>
         <div class="conteneur_logo_tim">
         <a href="<?php echo get_home_url();?>">
             <img src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/tim.png" alt="Logo TIM" class="logo_tim">
