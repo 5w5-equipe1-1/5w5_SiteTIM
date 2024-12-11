@@ -131,25 +131,30 @@
   }
 }
 
-.contenufunky {
-  h3 {
-    width: 100%;
-    font-weight: normal;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
-    border-radius: 5px;
-    letter-spacing: var(--letter-spacing);
-    background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
-    position: relative;
-    overflow: hidden; /* Empêche l'animation de déborder */
-    font-size: 2rem;
 
-    span {
+/*---------------------------------------------------------------------------------------------*/
+/*-----------------------------animation contenue funky----------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1280px) {
+  .contenufunky {
+    h3 {
+      width: 100%;
+      font-weight: normal;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
+      border-radius: 5px;
+      letter-spacing: var(--letter-spacing);
+      background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
       position: relative;
-      z-index: 2; /* Place le texte devant */
-    }
+      overflow: hidden; /* Empêche l'animation de déborder */
+      font-size: 2rem;
+
+      span {
+        position: relative;
+        z-index: 2; /* Place le texte devant */
+      }
 
       &::before {
-    &::before {
         content: "";
         position: absolute;
         top: 0;
@@ -161,9 +166,23 @@
         z-index: 1; /* Place le masque derrière le texte */
         opacity: 0;
         transition: left var(--transition-time) ease, opacity var(--transition-time); /* Ajoute une transition fluide pour le déplacement */
-   }
+      }
+    }
+  }
+
+  /* Premier élément - 64% */
+  .first-element:hover::before {
+    left: 64%; /* Déplace le masque vers la droite */
+    opacity: 1;
+  }
+
+  /* Second élément - 36% */
+  .second-element:hover::before {
+    left: 36%; /* Déplace le masque à 36% */
+    opacity: 1;
   }
 }
+
 
 
 

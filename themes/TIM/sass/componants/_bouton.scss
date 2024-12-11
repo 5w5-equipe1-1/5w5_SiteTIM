@@ -17,6 +17,7 @@ button {
 }
 
 .retour {
+  width: 100%;
   border: 2px solid white;
   text-align: center;
   box-shadow: rgba(11, 152, 170, 0.25) 10px 15px 20px inset,
@@ -29,6 +30,10 @@ button {
   margin-top: 5%;
   transition: box-shadow 0.4s ease, color 0.4s ease;
   text-decoration: none;
+  @media (max-width: 768px) {
+    width: 70%;
+    
+    }
 }
 
 .retour:hover {

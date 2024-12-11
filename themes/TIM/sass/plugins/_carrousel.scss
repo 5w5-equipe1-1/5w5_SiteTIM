@@ -11,6 +11,7 @@
   h2 {
     margin-bottom: 20vh;
     z-index: 100;
+    user-select: none;
   }
 
   .iamge_galerie {
@@ -38,9 +39,6 @@
         position: absolute;
         //----------------------- Avec du JS aussi
         animation-name: scrollLeft;
-        //animation-delay: 5s; ----JS
-        // left: 400px; ----JS
-        // animation-duration: 50s; ----JS
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         transition: var(--transition-time);

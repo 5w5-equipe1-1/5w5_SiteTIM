@@ -1,5 +1,3 @@
-//Code du carrousel - creation de la galerie d'images qui defile et qui s'agrandit
-
 document.addEventListener("DOMContentLoaded", function () {
   const carrousel = document.querySelector(".carrousel");
   const carrouselFigure = carrousel.querySelector(".carrousel_figure");
@@ -45,58 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// // //pour faire scroll la galerie
-// let images = document.querySelectorAll('.wp-block-image');
-// let indexOrder = images.length;
-
-// for(img of images) {
-//   let indexTranslate = 0; 
-//   setInterval(() => {
-//     //pour faire scroll la galerie
-//     indexTranslate ++;
-//     translationGalerie();
-//   }, 20);
-
-//   function translationGalerie() {
-//     for(img of images) {
-//       img.style.transform = `translateX(-${indexTranslate}%)`;
-//     }
-//   }
-// }
-
-// //API IntersectionObserver
-// // Crée un nouvel observateur pour détecter l'intersection de l'image avec le viewport
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach(entry => {
-    
-//     let remiseA0 = false; 
-//       if (!entry.isIntersecting) {
-//         if(remiseA0 == false) {
-//           remiseA0 = true;
-//           //incrementer le indexorder pour que les images soit a la fin du
-//           indexOrder ++;
-//           //quand limage est en dehors du viewport
-//           entry.target.style.order = indexOrder;
-//           // entry.target.style.transform = 'translateX(0)';  
-//           observer.unobserve(entry.target);
-          
-//         }
-//       } else {
-//         //quand limage est dans le viewport
-//         observer.observe(entry.target);
-//       }
-//   });
-// }, {
-//   root: null, // Utilise le viewport comme zone d'observation
-//   threshold: 0 // Détecte quand l'image est complètement sortie
-// });
-
-
-
-// // Observer chaque image et les envoayer à l'observateur
-// for(img of images) {
-//     observer.observe(img);
-// }
 
 //Animation de la galerie
 // Avec le CSS caroussel 

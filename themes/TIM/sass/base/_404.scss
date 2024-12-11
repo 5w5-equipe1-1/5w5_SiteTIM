@@ -1,17 +1,13 @@
 ///////////cube principale/////////////////////
 body {
     display: flex;
-    flex-direction: column;
+
     justify-content: center;
     align-items: center;
     background-color: var(--couleur-primaire);
     font-family: var(--font-family-text);
     overflow-x: hidden;
     width: 100vw;
-  }
-  body .conteneur_404 {
-      padding: var(--padding-ordi);
-      margin: 0 auto;
   }
       @media screen and (max-width: 1280px) {
     body .conteneur_404 {
@@ -38,20 +34,10 @@ body {
   }
         @media screen and (max-width: 1280px) {
     body .conteneur_404 #scene {
-          transform: scale(1.2);
+          transform: scale(1.1);
         }
       }
-  body .conteneur_404 {
-    width: var(--width-text);
-    margin: 0 auto;
-  }
-  body .conteneur_404{
-    margin-top: var(--margin-top);
-    margin-bottom: var(--margin-top);
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
+
   @media screen and (max-width: 680px) {
     body .conteneur_404 {
       margin-top: var(--margin-top-mobile);
@@ -59,7 +45,6 @@ body {
   }
   body .conteneur_404 {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: var(--width-text);
     transition: var(--transition-time);
@@ -76,21 +61,8 @@ body {
 ///////////////cube adapter page 404/////////////////////////////////  
 
 
-.conteneur_404 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Garde la pleine hauteur pour un centrage vertical */
-    gap: 300px;
-    padding: 20px;
-    flex-wrap: wrap;
-
-}
-
     @media (max-width: 768px) {
     .conteneur_404 {
-      display: block;
-      gap: 0; /* Retire l'espacement inutile en mode block */
       height: auto; /* Adapte la hauteur au contenu */
     }
 }
@@ -117,8 +89,11 @@ body {
       overflow: hidden;
       background-clip: text;
       text-shadow: 0 0px rgba(255, 255, 255, 0.1);
-  
-}
+
+      @media (max-width: 768px) {
+        font-size: 10rem;
+      }
+    }
 
 .error-code::before {
         content: '404';
