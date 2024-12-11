@@ -8,10 +8,10 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const carrousel = document.querySelector(".carrousel");
-  const carrouselFigure = carrousel.querySelector(".carrousel_figure");
+  const carrouselFigure = document.querySelector(".carrousel_figure");
   // Les deux boutons pour changer d'image dans la galerie
-  const prevButton = carrousel.querySelector(".carrousel_prev");
-  const nextButton = carrousel.querySelector(".carrousel_next");
+  const prevButton = document.querySelector(".carrousel_prev");
+  const nextButton = document.querySelector(".carrousel_next");
   // Galerie d'images
   const galleryImages = document.querySelectorAll(".wp-block-image img");
   let currentIndex = 0;

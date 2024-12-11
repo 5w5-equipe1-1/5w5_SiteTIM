@@ -112,14 +112,16 @@ let translateY = 0;
 let cibleTranslateY = 0;
 
 function animer() {
-  // Interpole la position actuelle vers la cible pour un effet de lissage
-  translateY += (cibleTranslateY - translateY) * 0.1;
-
-  // Applique la transformation et l'opacité
-  elementAnime.style.transform = `translateY(${translateY}px)`;
-
-  // Continue à appeler animer pour des mises à jour fluides
-  requestAnimationFrame(animer);
+  if(elementAnime){
+    // Interpole la position actuelle vers la cible pour un effet de lissage
+    translateY += (cibleTranslateY - translateY) * 0.1;
+  
+    // Applique la transformation et l'opacité
+    elementAnime.style.transform = `translateY(${translateY}px)`;
+  
+    // Continue à appeler animer pour des mises à jour fluides
+    requestAnimationFrame(animer);
+  }
 }
 
 // Écoute l'événement de scroll pour mettre à jour la cible de translation
@@ -174,53 +176,53 @@ const elementBlink = document.querySelector(".contenue_desc");
 let i = 0;
 let effacer = false;
 let textIndex = 0;
-
-function typeText() {
-  const text = textTableau[textIndex];
-
-  if (!effacer) {
-    // si i est infererieur a la longeur du texte
-    if (i < text.length) {
-      //ajoute une lettre
-      //chatAt(i) permet de selectionner ou extraire une lettre a la position i
-      elementBlink.innerHTML += text.charAt(i);
-
-      // Ajuste la largeur de la sous-ligne (proportionnelle au contenu)
-      const underline = elementBlink.querySelector("::before");
-      elementBlink.style.setProperty(
-        "--line-width",
-        `${((i + 1) / text.length) * 100}%`
-      );
-
-      //donne +1 a i pour sauter a la lettre suivante
-      i++;
-
-      // appele la fonction toute les 100ms
-      setTimeout(typeText, 200);
-    } else {
-      effacer = true;
-      //attendre avant de commencer a effacer
-      setTimeout(typeText, 5000);
-    }
-  } else {
-    if (i > 0) {
-      //Prends le texte actuel dans innerHTML, coupe le dernier caractère et mets le résultat dans innerHTML.
-
-      //(0, -1) prend la premier lettre et la derniere, (1 , -3) prend la deuxieme lettre et la troisieme derniere lettre
-      elementBlink.innerHTML = elementBlink.innerHTML.slice(0, -1);
-
-      i--;
-      setTimeout(typeText, 70);
-    } else {
-      effacer = false;
-      //passe au texte suivant dans le tableau
-      textIndex++;
-
-      //si lindex est superieur ou egal au nombre de texte dans le tableau reset lindex a 0
-      if (textIndex >= textTableau.length) {
-        textIndex = 0;
+ 
+function typeText(){
+  if(elementBlink){
+      const text = textTableau[textIndex]
+      if (!effacer) {
+      // si i est infererieur a la longeur du texte
+      if (i < text.length){
+        //ajoute une lettre 
+        //chatAt(i) permet de selectionner ou extraire une lettre a la position i
+        elementBlink.innerHTML += text.charAt(i);
+    
+        // Ajuste la largeur de la sous-ligne (proportionnelle au contenu)
+        const underline = elementBlink.querySelector("::before");
+        elementBlink.style.setProperty("--line-width", `${(i + 1) / text.length * 100}%`);
+    
+        //donne +1 a i pour sauter a la lettre suivante
+        i++;
+    
+        // appele la fonction toute les 100ms
+        setTimeout(typeText, 200);
+      } else {
+    
+        effacer = true;
+        //attendre avant de commencer a effacer
+        setTimeout(typeText, 5000);
       }
-      setTimeout(typeText, 1000);
+    } else {
+      if (i > 0){
+    
+        //Prends le texte actuel dans innerHTML, coupe le dernier caractère et mets le résultat dans innerHTML.
+    
+        //(0, -1) prend la premier lettre et la derniere, (1 , -3) prend la deuxieme lettre et la troisieme derniere lettre
+        elementBlink.innerHTML = elementBlink.innerHTML.slice(0, -1);
+    
+        i--;
+        setTimeout(typeText, 70);
+      } else {
+        effacer = false;
+        //passe au texte suivant dans le tableau
+        textIndex++;
+    
+        //si lindex est superieur ou egal au nombre de texte dans le tableau reset lindex a 0
+        if(textIndex >= textTableau.length){
+          textIndex = 0;
+        }
+        setTimeout(typeText, 1000);
+      }
     }
   }
 }
