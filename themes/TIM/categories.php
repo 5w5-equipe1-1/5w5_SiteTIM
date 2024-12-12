@@ -47,34 +47,33 @@
 
 <!-- Section de contenu de la page -->
         <main>
-            <div class="section_hero">
-                <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
-                <div class="test_division"></div>
-                <!-- text hero, titre et description de la categorie -->
-                <div class="text_hero">
-                    <div class="decor_hero">
-                    <div class="commundegrade decordegrade1"></div>
-                    <div class="commundegrade decordegrade2"></div>
-                    <div class="commundegrade decordegrade3"></div>
-                    </div>
-                    <h1><?php echo esc_html($cat->name); ?></h1>
-                    <h3><?php echo esc_html($cat->description); ?></h3>
-                </div>
-                <!-- Scroll down répété de la page d'accueil -->
-                <div class="text_cercle">
-                    <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="fleche">
-                        <div class="effetbulle">
-                        <svg viewBox="0 0 150 150">
-                            <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
-                            <text class="text">
-                                <textPath class="text-path" href="#curve">Descendre➔Descendre➔</textPath>
-                            </text>
-                        </svg>
+                <div class="section_hero">
+                    <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
+                    <div class="test_division"></div>
+                    <!-- text hero, titre et description de la categorie -->
+                    <div class="text_hero">
+                        <div class="decor_hero">
+                        <div class="commundegrade decordegrade1"></div>
+                        <div class="commundegrade decordegrade2"></div>
+                        <div class="commundegrade decordegrade3"></div>
                         </div>
+                        <h1><?php echo esc_html($cat->name); ?></h1>
+                        <h3><?php echo esc_html($cat->description); ?></h3>
+                    </div>
+                    <!-- Scroll down répété de la page d'accueil -->
+                    <div class="text_cercle">
+                        <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="fleche">
+                            <div class="effetbulle">
+                            <svg viewBox="0 0 150 150">
+                                <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
+                                <text class="text">
+                                    <textPath class="text-path" href="#curve">Descendre➔Descendre➔</textPath>
+                                </text>
+                            </svg>
+                            </div>
+                    </div>
                 </div>
-            </div>
-            
-                <!-- Section des projets étudiants -->
+                    <!-- Section des projets étudiants -->
                 <div class="galerie">
                     <h2>Projets étudiants</h2>
                     <div class="iamge_galerie">
@@ -95,46 +94,46 @@
                         ?>
                     </div>
                 </div>
-            <div class="conteneur">
-                <!-- Décoration des dégradés -->
-                <div class="commundegrade degrade2event"></div>
-                <div class="commundegrade degrade3event"></div>
-
-                <!-- Section des accordéons et des cours (contenu des cours) -->
-                <div class="cours">
-                    <h2>Cours</h2>
-                    <?php
-                    // Vérifiez si la catégorie est valide
-                    if (isset($cat)):
-                        // Obtenez l'ID de la catégorie "cours"
-                        $cours_cat = get_category_by_slug('cours');
-                        $cours_cat_id = $cours_cat ? $cours_cat->term_id : 0;
-
-                        // Créez une nouvelle requête WP_Query pour récupérer les posts de la catégorie et de la classe "cours"
-                        $query = new WP_Query(array(
-                            'category__and' => array($cat->term_id, $cours_cat_id),
-                            'posts_per_page' => -1 // -1 pour récupérer tous les posts
-                        ));
-
-                        // Vérifiez si la requête a des posts
-                        if ($query->have_posts()):
-                            while ($query->have_posts()): $query->the_post();
-                    ?>
-                                <details class="details">
-                                    <summary class="summary_1"><span class="titre-cours"><?php the_title(); ?></span></summary>
-                                    <div class="description_cours2">
-                                        <?php echo wp_kses_post(apply_filters('the_content', get_the_content())); ?>
-                                    </div>
-                                </details>
-                            <?php 
-                            endwhile; 
+                <div class="conteneur">
+                    <!-- Décoration des dégradés -->
+                    <div class="commundegrade degrade2event"></div>
+                    <div class="commundegrade degrade3event"></div>
+    
+                    <!-- Section des accordéons et des cours (contenu des cours) -->
+                    <div class="cours">
+                        <h2>Cours</h2>
+                        <?php
+                        // Vérifiez si la catégorie est valide
+                        if (isset($cat)):
+                            // Obtenez l'ID de la catégorie "cours"
+                            $cours_cat = get_category_by_slug('cours');
+                            $cours_cat_id = $cours_cat ? $cours_cat->term_id : 0;
+    
+                            // Créez une nouvelle requête WP_Query pour récupérer les posts de la catégorie et de la classe "cours"
+                            $query = new WP_Query(array(
+                                'category__and' => array($cat->term_id, $cours_cat_id),
+                                'posts_per_page' => -1 // -1 pour récupérer tous les posts
+                            ));
+    
+                            // Vérifiez si la requête a des posts
+                            if ($query->have_posts()):
+                                while ($query->have_posts()): $query->the_post();
+                        ?>
+                                    <details class="details">
+                                        <summary class="summary_1"><span class="titre-cours"><?php the_title(); ?></span></summary>
+                                        <div class="description_cours2">
+                                            <?php echo wp_kses_post(apply_filters('the_content', get_the_content())); ?>
+                                        </div>
+                                    </details>
+                                <?php 
+                                endwhile; 
+                            endif; 
+                            // Réinitialisez les données de post
+                            wp_reset_postdata();
                         endif; 
-                        // Réinitialisez les données de post
-                        wp_reset_postdata();
-                    endif; 
-                    ?>
+                        ?>
+                    </div>
                 </div>
-            </div>
         </main>
         <!-- Aller chercher le footer -->
         <?php get_footer(); ?>

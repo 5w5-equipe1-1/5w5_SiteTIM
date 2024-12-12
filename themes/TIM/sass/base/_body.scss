@@ -46,6 +46,11 @@ body {
   overflow-x: hidden;
   width: 100vw;
 
+  main{
+    //overflow-x: hidden;
+    position: relative;
+  }
+
   .conteneur {
     //padding: var(--padding-ordi);
     margin: 0 auto;
