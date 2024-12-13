@@ -1,8 +1,10 @@
+// Style pour mettre le bouton transparent
 button {
   background-color: transparent;
   border: none;
 }
 
+// Style pour les boutons du cube
 .cube .bouton_cube {
   padding: 5%;
   background-color: rgba(120, 120, 120, 0.2);
@@ -11,11 +13,13 @@ button {
   border: 1px solid rgb(0, 0, 0);
 }
 
+// Style pour les liens pour les boutons du cube
 .bouton_cube a {
   text-decoration: none;
   color: var(--couleur-primaire);
 }
 
+// Style pour le bouton pour retourner dans le menu pour la page 404
 .retour {
   width: 100%;
   border: 2px solid white;
@@ -43,6 +47,7 @@ button {
   color: #fff;
 }
 
+// Style pour le bouton qui permet de s'inscrire avec le SRAM
 .inscription_bouton {
   border: 2px solid white;
   text-align: center;
@@ -58,7 +63,7 @@ button {
   transition: box-shadow 0.4s ease, color 0.4s ease;
   text-decoration: none;
   width: 40%;
-
+  ///// Ajustement pour tablette et mobile /////
   @media screen and (min-width: 1280px) {
     padding: 2% 2%;
   }

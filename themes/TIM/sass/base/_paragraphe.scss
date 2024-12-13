@@ -38,12 +38,12 @@ p.info_colonne_footer {
 // }
 
 .bulles_contenu p {
-  border-top: 2px solid var(--couleur-secondaire);
+  //border-top: 2px solid var(--couleur-secondaire);
   border-bottom: 2px solid var(--couleur-secondaire);
-  box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;
-
+  // box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px,
+  //   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  //   rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;
+  box-shadow: rgba(255, 255, 255, 0.673) 0px 10px 10px -10px;
   // Pas de variables ici, à voir
   padding-top: 2%;
   padding-bottom: 2%;
@@ -60,12 +60,13 @@ p.info_colonne_footer {
   // Les medias ici à vérifier...
   @media screen and (max-width: 1280px) {
     padding: 5%;
-    width: 50%;
+    width: 100%;
   }
 
   @media screen and (max-width: 680px) {
     padding: 10%;
-    width: 50%;
+    padding-bottom: 3%;
+    width: 100%;
   }
 }
 

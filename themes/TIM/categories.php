@@ -1,3 +1,9 @@
+<!-- SECTION DE GÉNÉRATION DYNAMIQUE DES PAGES DE CONTENU-->
+
+ <!-- La page catégories affiche toutes les pages du programme:  -->
+  <!-- 3D, Design, Film, Jeux vidéos, Web, Formation spécifique -->
+   <!-- ///////////////////////////////////////////////////////////// -->
+
 <?php 
     // Assurez-vous que WordPress est chargé
     if (!function_exists('get_header')) {
@@ -7,21 +13,19 @@
     // Récupérer la catégorie sélectionnée
     require_once 'functions.php';
 
-    get_header(); // Afficher le header
-
     // Récupérer la catégorie sélectionnée
     if (isset($_GET['category']) && term_exists($_GET['category'])) {
         $cat = get_category_by_slug($_GET['category']);
         if (!$cat) {
-            // Rediriger vers la page 404 si la catégorie n'est pas trouvée
-            require_once '404.php'; //fait que le cube ne tourne pas
-            exit;
+            wp_redirect(home_url('/404'));
+            exit; // Arrêter le script
         }
     }else{
-        //amener a la page 404 si la categorie existe pas
-        require_once '404.php'; //fait que le cube ne tourne pas
-        exit;
+        wp_redirect(home_url('/404'));
+        exit; // Arrêter le script
     }
+
+    get_header(); // Afficher le header
 
     //Choisir la video en fonction de la catégorie
     $srcVideo = "";
@@ -37,14 +41,16 @@
     }else if($cat->slug == '3d'){
         $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/vid3_3D.mp4";
     }else if($cat->slug == 'formation_specifique'){
-        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/11/vid_formaspec.mp4";
+        $srcVideo = "https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/12/vid_formationSpec.mp4";
     }
 ?>
+
+<!-- Section de contenu de la page -->
         <main>
-            <div class="conteneur">
                 <div class="section_hero">
                     <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
                     <div class="test_division"></div>
+                    <!-- text hero, titre et description de la categorie -->
                     <div class="text_hero">
                         <div class="decor_hero">
                         <div class="commundegrade decordegrade1"></div>
@@ -54,19 +60,20 @@
                         <h1><?php echo esc_html($cat->name); ?></h1>
                         <h3><?php echo esc_html($cat->description); ?></h3>
                     </div>
+                    <!-- Scroll down répété de la page d'accueil -->
+                    <div class="text_cercle">
+                        <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="fleche">
+                            <div class="effetbulle">
+                            <svg viewBox="0 0 150 150">
+                                <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
+                                <text class="text">
+                                    <textPath class="text-path" href="#curve">Descendre➔Descendre➔</textPath>
+                                </text>
+                            </svg>
+                            </div>
+                    </div>
                 </div>
-
-                <div class="text_cercle">
-                    <img class="versbas" src="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/10/fleche_flou.png" alt="fleche">
-                        <div class="effetbulle">
-                        <svg viewBox="0 0 150 150">
-                            <path id="curve" d="M 75, 75 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none"></path>
-                            <text class="text">
-                                <textPath class="text-path" href="#curve">Descendre➔Descendre➔</textPath>
-                            </text>
-                        </svg>
-                        </div>
-                </div>
+                    <!-- Section des projets étudiants -->
                 <div class="galerie">
                     <h2>Projets étudiants</h2>
                     <div class="iamge_galerie">
@@ -87,43 +94,48 @@
                         ?>
                     </div>
                 </div>
-                <div class="commundegrade degrade2event"></div>
-                <div class="commundegrade degrade3event"></div>
-                <div class="cours">
-                    <h2>Cours</h2>
-                    <?php
-                    // Vérifiez si la catégorie est valide
-                    if (isset($cat)):
-                        // Obtenez l'ID de la catégorie "cours"
-                        $cours_cat = get_category_by_slug('cours');
-                        $cours_cat_id = $cours_cat ? $cours_cat->term_id : 0;
-
-                        // Créez une nouvelle requête WP_Query pour récupérer les posts de la catégorie et de la classe "cours"
-                        $query = new WP_Query(array(
-                            'category__and' => array($cat->term_id, $cours_cat_id),
-                            'posts_per_page' => -1 // -1 pour récupérer tous les posts
-                        ));
-
-                        // Vérifiez si la requête a des posts
-                        if ($query->have_posts()):
-                            while ($query->have_posts()): $query->the_post();
-                    ?>
-                                <details class="details">
-                                    <summary class="summary_1"><span class="titre-cours"><?php the_title(); ?></span></summary>
-                                    <div class="description_cours2">
-                                        <?php echo wp_kses_post(apply_filters('the_content', get_the_content())); ?>
-                                    </div>
-                                </details>
-                            <?php 
-                            endwhile; 
+                <div class="conteneur">
+                    <!-- Décoration des dégradés -->
+                    <div class="commundegrade degrade2event"></div>
+                    <div class="commundegrade degrade3event"></div>
+    
+                    <!-- Section des accordéons et des cours (contenu des cours) -->
+                    <div class="cours">
+                        <h2>Cours</h2>
+                        <?php
+                        // Vérifiez si la catégorie est valide
+                        if (isset($cat)):
+                            // Obtenez l'ID de la catégorie "cours"
+                            $cours_cat = get_category_by_slug('cours');
+                            $cours_cat_id = $cours_cat ? $cours_cat->term_id : 0;
+    
+                            // Créez une nouvelle requête WP_Query pour récupérer les posts de la catégorie et de la classe "cours"
+                            $query = new WP_Query(array(
+                                'category__and' => array($cat->term_id, $cours_cat_id),
+                                'posts_per_page' => -1 // -1 pour récupérer tous les posts
+                            ));
+    
+                            // Vérifiez si la requête a des posts
+                            if ($query->have_posts()):
+                                while ($query->have_posts()): $query->the_post();
+                        ?>
+                                    <details class="details">
+                                        <summary class="summary_1"><span class="titre-cours"><?php the_title(); ?></span></summary>
+                                        <div class="description_cours2">
+                                            <?php echo wp_kses_post(apply_filters('the_content', get_the_content())); ?>
+                                        </div>
+                                    </details>
+                                <?php 
+                                endwhile; 
+                            endif; 
+                            // Réinitialisez les données de post
+                            wp_reset_postdata();
                         endif; 
-                        // Réinitialisez les données de post
-                        wp_reset_postdata();
-                    endif; 
-                    ?>
+                        ?>
+                    </div>
                 </div>
-            </div>
         </main>
+        <!-- Aller chercher le footer -->
         <?php get_footer(); ?>
 
         <!-- Partie pour le curseur, ne pas enlever s.v.p -->

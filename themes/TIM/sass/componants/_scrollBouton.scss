@@ -9,6 +9,10 @@
   justify-content: space-around;
   align-items: center;
 
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
+
   .effetbulle {
     //Test Background vidéo
     background-color: var(--couleur-primaire);

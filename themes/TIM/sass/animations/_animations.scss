@@ -86,11 +86,23 @@
 .contenue_desc{
   font-size: 50px;
   position: relative;
-  margin-bottom: var(--margin-top);
+  //margin-bottom: var(--margin-top);
   margin-top: var(--margin-top);
   // text-decoration: underline;
   // simuler le curseur clignotement
-&::after{
+  font-family: var(--font-family-titre);
+  color: var(--couleur-secondaire);
+  letter-spacing: var(--letter-spacing);
+  font-weight: bold;
+  height: 5vh;
+  user-select: none;
+  
+  @media screen and (max-width: 608px){
+    height: 15vh;
+    font-size: 35px;
+  }
+
+  &::after{
     content: '|';
     animation : clignotement 500ms step-start infinite;
     position: absolute;
@@ -100,19 +112,6 @@
     50% {
       opacity: 0;
     }
-  }
-}
-
-//aniamtion du texte qui s'écris
-.contenue_desc{
-  font-family: var(--font-family-titre);
-  color: var(--couleur-secondaire);
-  letter-spacing: var(--letter-spacing);
-  font-weight: bold;
-  height: 5vh;
-  @media screen and (max-width: 608px){
-    height: 15vh;
-    font-size: 35px;
   }
 }
 

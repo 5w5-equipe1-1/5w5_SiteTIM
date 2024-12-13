@@ -7,10 +7,12 @@
         $cat = "404";
     }
 ?>
-
 <!-- Entete personnaliser pour les autres page que la page d'Accueil et 404 -->
+<!-- ////////////////////////////////////////////////// -->
+ 
 <!DOCTYPE html>
 <html lang="fr">
+<!-- Balise head -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +22,7 @@
     <link rel="icon" href="https://gftnth00.mywhc.ca/tim23/wp-content/uploads/2024/12/icone.png">
     <title>TIM - <?php echo esc_html($cat); ?></title>
 </head>
+<!-- Partie du contenu de la page 404 -->
 <body>
     <header>
         <div class="conteneur_logo_tim">

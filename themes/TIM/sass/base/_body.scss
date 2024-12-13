@@ -32,6 +32,7 @@ div {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 //body
@@ -46,17 +47,24 @@ body {
   overflow-x: hidden;
   width: 100vw;
 
+  main{
+    //overflow-x: hidden;
+    position: relative;
+  }
+
   .conteneur {
-    padding: var(--padding-ordi);
+    //padding: var(--padding-ordi);
     margin: 0 auto;
+    width: 70vw;
 
     @media screen and (max-width: 1280px) {
-      padding: var(--padding-tablette);
+      //padding: var(--padding-tablette);
     }
 
     @media screen and (max-width: 680px) {
-      padding: var(--padding-mobil);
-      margin: 0;
+      //padding: var(--padding-mobil);
+      margin: 0 auto;
+      width: 90vw;
     }
 
     //cube
@@ -78,7 +86,7 @@ body {
       }
     }
     .conteneur_info {
-      width: var(--width-text);
+      width: 100%;
       margin: 0 auto;
 
       .description_multimedia {
@@ -121,7 +129,7 @@ body {
 //section ou on montre les concours et les événements
 
 .evenements {
-  width: 70vw;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 5vh;
   margin-top: 10vh;
@@ -141,6 +149,7 @@ body {
       rgb(230, 61, 94, 0.7) 50%,
       rgb(44, 246, 253, 0.3) 100%
     );
+    width: 100%;
 
     &:hover {
       filter: saturate(1);
@@ -198,7 +207,7 @@ body {
       width: 90%;
 
       @media screen and (max-width: 680px) {
-        margin-bottom: 5vh;
+        //margin-bottom: 5vh;
       }
 
       h3 {
@@ -210,6 +219,11 @@ body {
         font-family: var(--font-family-text);
         font-size: var(--font-size-text);
 
+        @media screen and (max-width: 680px) {
+          width: 90%;
+          padding: 5%;
+        }
+
         &:first-of-type{
           display: none;
         }
@@ -217,6 +231,10 @@ body {
         &:last-of-type {
           display: none;
         }
+      }
+
+      .wp-block-image{
+        display: none;
       }
     }
   }
@@ -255,6 +273,11 @@ body {
   margin: 0 auto;
   margin-top: 20vh;
   margin-bottom: 20vh;
+
+  @media screen and (max-width: 680px) {
+    width: 90vw;
+    
+  }
 }
 
 .description_cours {
@@ -279,7 +302,7 @@ body {
 
   // Section perspective d'Aveneir
 .contenufunky {
-  width: var(--width-text);
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -287,7 +310,7 @@ body {
 
   // ATTENTION - Contrôle du texte, balise h3
   h3 {
-    width: 100%;
+    width: 80%;
     font-weight: normal;
     font-size: 23pt;
     padding: 2%;
