@@ -61,20 +61,25 @@
 
 // Style pour le texte écrit dans la barre de recherche
 #s {
-  width: 35vw;
+  width: 20vw;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 16px;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: width 0.5s, border-color 0.3s ease, border-radius 0.5s ease; 
   background-color: rgba(0, 0, 255, 0);
   flex: 1;
   color: #ccc;
 }
 
 #s:focus {
-  border-color: #0073e6;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(182, 182, 182);
+  border-radius: 0px;
+  width: 30vw;
 }
 // Style pour le bouton de recherche
 #searchsubmit {
@@ -186,3 +191,21 @@ h3.titre_r_search {
     font-size: 1rem;
   }
 }
+
+
+.search-container {
+  .search-field {
+      border: 1px solid #ccc; // Définit une bordure par défaut
+      border-radius: 4px;    // Ajoute un léger arrondi
+      outline: none;         // Supprime le contour par défaut lors de la sélection
+      transition: border-color 0.3s ease; // Animation fluide pour le changement de bordure
+
+      &:focus {
+          border-top: none;     // Supprime la bordure supérieure
+          border-left: none;    // Supprime la bordure gauche
+          border-right: none;   // Supprime la bordure droite
+          border-bottom: 2px solid #000; // Ajoute une bordure inférieure
+      }
+  }
+}
+

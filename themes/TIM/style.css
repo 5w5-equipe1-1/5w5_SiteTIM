@@ -297,6 +297,7 @@ div {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1411,20 +1412,25 @@ button {
 }
 
 #s {
-  width: 35vw;
+  width: 20vw;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 16px;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: width 0.5s, border-color 0.3s ease, border-radius 0.5s ease;
   background-color: rgba(0, 0, 255, 0);
   flex: 1;
   color: #ccc;
 }
 
 #s:focus {
-  border-color: #0073e6;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(182, 182, 182);
+  border-radius: 0px;
+  width: 30vw;
 }
 
 #searchsubmit {
@@ -1519,6 +1525,19 @@ h3.titre_r_search {
     font-size: 1rem;
   }
 }
+.search-container .search-field {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.search-container .search-field:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #000;
+}
+
 /* ----------------------------------------------------- */
 /*Animations*/
 /* ----------------------------------------------------- */
@@ -1631,59 +1650,42 @@ h3.titre_r_search {
     font-size: 20px;
   }
 }
-/*---------------------------------------------------------------------------------------------*/
-/*-----------------------------animation contenue funky----------------------------------*/
-/*---------------------------------------------------------------------------------------------*/
-@media (min-width: 1280px) {
-  .contenufunky h3 {
-    width: 100%;
-    font-weight: normal;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
-    border-radius: 5px;
-    letter-spacing: var(--letter-spacing);
-    background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
-    position: relative;
-    overflow: hidden; /* Empêche l'animation de déborder */
-    font-size: 2rem;
-  }
-  .contenufunky h3 span {
-    position: relative;
-    z-index: 2; /* Place le texte devant */
-  }
-  .contenufunky h3::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0; /* Définit la position initiale */
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.3) 100%);
-    filter: grayscale(100%) saturate(0); /* Ajout de grayscale pour un effet noir et blanc */
-    z-index: 1; /* Place le masque derrière le texte */
-    opacity: 0;
-    transition: left var(--transition-time) ease, opacity var(--transition-time); /* Ajoute une transition fluide pour le déplacement */
-  }
-  /* Premier élément - 64% */
-  .first-element:hover::before {
-    left: 64%; /* Déplace le masque vers la droite */
-    opacity: 1;
-  }
-  /* Second élément - 36% */
-  .second-element:hover::before {
-    left: 36%; /* Déplace le masque à 36% */
-    opacity: 1;
-  }
-}
-/* Premier élément - 64% */
-.first-element:hover::before {
-  left: 64%; /* Déplace le masque vers la droite */
-  opacity: 1;
+.contenufunky h3 {
+  width: 100%;
+  font-weight: normal;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 100px 20px inset;
+  border-radius: 5px;
+  letter-spacing: var(--letter-spacing);
+  background: linear-gradient(90deg, rgba(236, 141, 32, 0.7) 0%, rgba(230, 61, 94, 0.7) 50%, rgba(44, 246, 253, 0.3) 100%);
+  filter: brightness(1.2);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Second élément - 36% */
+.contenufunky h3 span {
+  position: relative;
+  z-index: 2;
+}
+
+.contenufunky h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: saturate(0);
+  z-index: 1;
+  transition: left 0.5s ease;
+}
+
+.first-element:hover::before {
+  left: 64%;
+}
+
 .second-element:hover::before {
-  left: 36%; /* Déplace le masque à 36% */
-  opacity: 1;
+  left: 36%;
 }
 
 /* ----------------------------------------------------- */
