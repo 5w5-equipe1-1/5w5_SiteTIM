@@ -36,7 +36,7 @@ html {
   width: 100vw;
 }
 
-//body
+//body et conteneur principal
 body {
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ body {
       width: 90vw;
     }
 
-    //cube
+    //cube lorsqu'il est mit en avant
     #scene {
       width: 200px;
       height: 200px;
@@ -104,7 +104,7 @@ body {
         @media screen and (max-width: 680px) {
           margin-top: var(--margin-top-mobile);
         }
-
+        //information pour répondre a la question de quest ce que le multimédia
         .bulles_contenu {
           display: flex;
           flex-direction: row;
@@ -125,10 +125,7 @@ body {
   }
 }
 
-//section ou on décrit quest ce que le multimédia
-
 //section ou on montre les concours et les événements
-
 .evenements {
   width: 100%;
   margin: 0 auto;
@@ -240,6 +237,7 @@ body {
     }
   }
 
+  //evenements et concnours dans la apge d'Acceuill
   .lessections_infosaccueil {
     margin-bottom: 25vh;
 
@@ -265,7 +263,7 @@ body {
   }
 }
 
-//cours
+//cours dans la page categorie
 .cours {
   display: flex;
   flex-direction: column;

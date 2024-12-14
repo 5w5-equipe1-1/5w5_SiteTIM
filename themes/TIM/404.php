@@ -1,5 +1,5 @@
 <?php 
-    // Récupérer la catégorie sélectionnée
+    // Récupérer la catégorie sélectionnée pour l'afficher dans le title
     if (isset($_GET['category']) && term_exists($_GET['category'])) {
         $cat = get_category_by_slug($_GET['category']);
         $cat = $cat->name;	
@@ -33,6 +33,7 @@
             <h2 class="TIM_entete">Techniques <br> d'intégration multimédia</h2>
         </a>
         </div>
+        <!-- conteneur de la recherche -->
         <div class="conteneur_burger_recherche">
             <!-- <div class="conteneur_barre_recherche">
                 <input type="text" placeholder="Rechercher..." class="text_recherche" value name="s" id="s">

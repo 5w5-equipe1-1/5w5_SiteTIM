@@ -70,14 +70,14 @@ p.info_colonne_footer {
   }
 }
 
-.bulles_contenu p:hover {
-  //Le display flex déplace le contenu à gauche sans raison...
-  // ///////////////////////////////
+// .bulles_contenu p:hover {
+//   //Le display flex déplace le contenu à gauche sans raison...
+//   // ///////////////////////////////
 
-  // border: 2px solid rgba(255, 255, 255, 0.3);
-  // animation: changerFondCouleur 3s infinite;
-  // Les medias ici à vérifier...
-}
+//   // border: 2px solid rgba(255, 255, 255, 0.3);
+//   // animation: changerFondCouleur 3s infinite;
+//   // Les medias ici à vérifier...
+// }
 
 @keyframes changerFondCouleur {
   0% {
@@ -121,17 +121,10 @@ li {
   margin: 10px;
 }
 
+// texte dans la section hero qui est dans la page categorie
 .texte_hero {
   h1,
   h3 {
     color: var(--couleur-secondaire);
   }
-}
-
-//Style pour tabelette
-@media screen and (min-width: 1280px) {
-}
-
-//Style pour Ordinateur
-@media screen and (min-width: 1920px) {
 }

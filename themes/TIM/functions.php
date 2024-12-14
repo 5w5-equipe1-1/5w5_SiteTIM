@@ -7,7 +7,7 @@ function processCategory($category) {
     return "Selected category: " . htmlspecialchars($category);
 }
 
-
+// le formulaire de recherche
 function custom_search_form($form) {
     $form = '
     <form role="search" method="get" class="search-form" action="' . home_url('/') . '">

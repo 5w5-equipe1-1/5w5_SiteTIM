@@ -39,6 +39,7 @@
                     <?php endif;?>
                 <?php endforeach;?>
             </div>
+            <!-- information supplementaire -->
             <div class="colonne_footer">
                 <h3>Contenu</h3>
                 <p class="info_colonne_footer"><a href="">À propos</a></p>
@@ -47,6 +48,7 @@
                 <p class="info_colonne_footer"><a href="https://www.cmaisonneuve.qc.ca/">Collège de Maisonneuve</a></p>
                 <p class="info_colonne_footer"><a href="">Nous rejoindre</a></p>
             </div>
+            <!-- credit -->
             <div class="colonne_footer">
                 <h3>Créateurs</h3>
                 <p class="info_colonne_footer magenta">Eloi Yuri Chayer</p>

@@ -111,7 +111,8 @@ header {
         transform: scale(1) translate(-20vh, 50vh); // changer le translate pour changer la location du cube
       }
     }
-
+    
+    // Animation pour ouvrir et fermer le cube
     .shrink {
       transform: scale(0.2) translate(0, 0);
       transform-origin: center center;

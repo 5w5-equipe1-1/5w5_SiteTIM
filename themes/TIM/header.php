@@ -1,5 +1,5 @@
 <?php 
-    // Récupérer la catégorie sélectionnée
+    // Récupérer la catégorie sélectionnée pour l'Afficher dans le title
     if (isset($_GET['category']) && term_exists($_GET['category'])) {
         $title = get_category_by_slug($_GET['category']);
         $title = $title->name;	
