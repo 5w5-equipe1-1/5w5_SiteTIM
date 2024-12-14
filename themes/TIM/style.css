@@ -298,6 +298,7 @@ div {
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  width: 100vw;
 }
 
 body {
@@ -2147,7 +2148,7 @@ h3.titre_r_search {
 @media screen and (max-width: 680px) {
   .carrousel .carrousel_prev,
   .carrousel .carrousel_next {
-    top: 65%;
+    top: 80%;
   }
   .carrousel .carrousel_prev.carrousel_prev,
   .carrousel .carrousel_next.carrousel_prev {
