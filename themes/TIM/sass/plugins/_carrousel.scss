@@ -3,7 +3,7 @@
   display: flex;
   width: 70vw;
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 10vh;
   align-items: start;
   display: flex;
   flex-direction: column;
@@ -185,8 +185,8 @@
 
   .carrousel_figure {
     img {
-      max-width: 90%;
-      max-height: 90%;
+      // max-width: 90%;
+      // max-height: 90%;
       object-fit: contain;
     }
   }

@@ -108,6 +108,7 @@ h3.titre_r_search {
   margin-bottom: 2%;
   letter-spacing: var(--letter-spacing);
   font-weight: normal;
+  font-family: var(--font-family-titre);
 }
 
 // Style pour l'encadrée qui montre l'explication de la recherche
@@ -124,6 +125,9 @@ h3.titre_r_search {
   box-shadow: rgba(255, 255, 255, 0.673) 0px 14px 10px -14px;
   //border-radius: var(--border-radius);
   //box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;
+  p{
+    font-family: var(--font-family-text);
+  }
 }
 // Style pour indiquer que c'est la fin des recherches
 .texte_fin_recherche{
