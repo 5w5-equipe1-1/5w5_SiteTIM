@@ -48,7 +48,7 @@
 <!-- Section de contenu de la page -->
         <main>
                 <div class="section_hero">
-                    <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop></video>
+                    <video class="video_hero" src=<?php echo $srcVideo; ?> autoplay loop playsinline></video>
                     <div class="test_division"></div>
                     <!-- text hero, titre et description de la categorie -->
                     <div class="text_hero">
