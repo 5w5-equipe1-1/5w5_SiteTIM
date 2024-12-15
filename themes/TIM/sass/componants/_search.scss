@@ -127,6 +127,11 @@ h3.titre_r_search {
   //box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 80px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(109, 109, 109, 0.25) 0px 30px 80px -20px inset;
   p{
     font-family: var(--font-family-text);
+    font-size: x-large;
+
+    a{
+      color: var(--couleur-orange);
+    }
   }
 }
 // Style pour indiquer que c'est la fin des recherches
@@ -186,8 +191,11 @@ h3.titre_r_search {
   }
 
   .texte_r_search{
-    padding: 10%;
+    // padding: 10%;
     font-size: large;
+    p{
+      padding: 0;
+    }
   }
 
   .texte_fin_recherche{
