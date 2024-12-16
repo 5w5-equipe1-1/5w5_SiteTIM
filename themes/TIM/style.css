@@ -6,7 +6,7 @@ Author: Eloi Chayer, Yannick Bastien, Salma Bourakkadi Zarrouki, Syphax Mokraoui
 Author URI: https://wordpress.org/
 Description: Theme de notre site web pour le departement TIM maisonneuve
 Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
-Version: 1.4
+Version: 1.5
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 0
@@ -1000,6 +1000,14 @@ li {
   margin: 5% 0 5% 0;
 }
 
+.Sessions {
+  font-size: smaller;
+}
+
+.préalable {
+  font-size: smaller;
+}
+
 /* animation des details pour afficher la description des cours */
 .details::details-content {
   display: block;
@@ -1458,6 +1466,7 @@ h3.titre_r_search {
   margin-bottom: 2%;
   letter-spacing: var(--letter-spacing);
   font-weight: normal;
+  font-family: var(--font-family-titre);
 }
 
 .texte_r_search {
@@ -1467,10 +1476,17 @@ h3.titre_r_search {
   font-weight: 200;
   font-size: 1.5rem;
   padding: 3%;
-  margin: 3%;
+  margin: 5% 0;
   font-style: normal;
   margin-top: 0;
   box-shadow: rgba(255, 255, 255, 0.673) 0px 14px 10px -14px;
+}
+.texte_r_search p {
+  font-family: var(--font-family-text);
+  font-size: x-large;
+}
+.texte_r_search p a {
+  color: var(--couleur-orange);
 }
 
 .texte_fin_recherche {
@@ -1518,8 +1534,10 @@ h3.titre_r_search {
     margin-top: 15%;
   }
   .texte_r_search {
-    padding: 10%;
     font-size: large;
+  }
+  .texte_r_search p {
+    padding: 0;
   }
   .texte_fin_recherche {
     margin-top: 5%;
@@ -2021,7 +2039,7 @@ h3.titre_r_search {
   display: flex;
   width: 70vw;
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 10vh;
   align-items: start;
   display: flex;
   flex-direction: column;
@@ -2181,8 +2199,6 @@ h3.titre_r_search {
   filter: saturate(3);
 }
 .carrousel .carrousel_figure img {
-  max-width: 90%;
-  max-height: 90%;
   object-fit: contain;
 }
 .carrousel .carrousel_figure {
